@@ -23,7 +23,7 @@ class Clients extends Component {
   	var logoList = [];
   	for(var i = 0; i < logoURL.length; i++){
   		logoList.push(
-  			<div className="fl w-100 w-third-m w-25-l pa2 tc" key={i}>
+  			<div className="fl w-50 w-third-m w-25-l pa2 tc" key={i}>
   				<img src={logoURL[i]} alt={logoURL[i].split('=')[1]}/>
   			</div>
   		)
