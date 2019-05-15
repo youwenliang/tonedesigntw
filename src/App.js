@@ -1,18 +1,33 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import Nav from './components/nav.js';
+import Footer from './components/footer.js';
+
+import Cover from './sections/cover.js';
+import Section1 from './sections/section1.js';
+import Section2 from './sections/section2.js';
+import Section3 from './sections/section3.js';
+import Section4 from './sections/section4.js';
+import Clients from './sections/clients.js';
+import Works from './sections/works.js';
+import Contact from './sections/contact.js';
+import Faq from './sections/faq.js';
 import './App.css';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React Tone Design TW</h2>
-        </div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+        <Nav/>
+        <Cover/>
+        <Section1/>
+        <Section2/>
+        <Section3/>
+        <Section4/>
+        <Clients/>
+        <Works/>
+        <Contact/>
+        <Faq/>
+        <Footer/>
       </div>
     );
   }
