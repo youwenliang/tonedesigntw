@@ -5,7 +5,7 @@ class Cover extends Component {
   	var coverStyle = {
   		width: "100%",
   		height: "100vh",
-  		background: "#ccc",
+  		background: "linear-gradient(to right, rgba(255,151,142,1) 0%,rgba(255,91,130,1) 100%)",
       paddingTop: "74px"
   	}
     return (

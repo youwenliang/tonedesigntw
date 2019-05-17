@@ -4,12 +4,12 @@ import Header from '../components/header.js';
 class Section2 extends Component {
   render() {
     var sectionStyle = {
-      background: "#ffffff"
+      background: "#f7f8fa"
     }
     return (
       <section className="section-2" style={sectionStyle}>
         <div className="content ph4 mw8 center">
-          <Header title="Section 1"/>
+          <Header title="Section 2"/>
         </div>
       </section>
     );

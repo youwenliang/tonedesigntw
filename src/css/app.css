@@ -17,12 +17,12 @@ body {
   	padding-bottom: 6rem;
   	min-height: 100%;
 	padding-bottom: 320px;
-	font-family: sans-serif;
+	font-family: aktiv-grotesk, sans-serif;
 }
 
 section {
 	width: 100%;
-	padding: 6rem 0;
+	padding: 5rem 0;
 }
 
 .collapsible {
@@ -32,22 +32,41 @@ section {
   padding: 18px;
   width: 100%;
   border: none;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 2px solid #dbe1e9;
   text-align: left;
   outline: none;
-  font-size: 15px;
+  padding-left: 68px;
+  padding-right: 56px;
+  position: relative;
+}
+
+.collapsibleCircle {
+  top: 16px;
+  margin: auto;
+  left: 16px;
+  width: 36px;
+  height: 36px;
+  border-radius: 100%;
+  background: linear-gradient(to right, rgba(255,151,142,1) 0%,rgba(255,91,130,1) 100%);
 }
 
 .collapsible:after {
-  content: '\02795'; /* Unicode character for "plus" sign (+) */
+  content: '\25BC'; /* Unicode character for "plus" sign (+) */
   font-size: 13px;
-  color: white;
+  color: #dbe1e9;
+  transform: scaleX(1.414);
   float: right;
-  margin-left: 5px;
+  margin: auto;
+  position: absolute;
+  right: 18px;
+  top: 0;
+  bottom: 0;
+  height: 11px;
 }
 
 .active:after {
-  content: "\2796"; /* Unicode character for "minus" sign (-) */
+  content: "\25B2"; /* Unicode character for "minus" sign (-) */
+  transform: scaleX(1.414) translateY(-4px);
 }
 
 .active, .collapsible:hover {
@@ -60,4 +79,38 @@ section {
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.2s ease-out;
+}
+
+.color-content {
+	color: #4c5b7f;
+}
+
+.color-content2 {
+	color: #505f81;
+}
+
+
+.mw240 {
+	max-width: 240px;
+}
+.mw320 {
+	max-width: 320px;
+}
+.mw480 {
+	max-width: 480px;
+}
+.mw640 {
+	max-width: 640px;
+}
+
+.z1 {
+	z-index: 1;
+}
+
+.z10 {
+	z-index: 10;
+}
+
+.z100 {
+	z-index: 100;
 }

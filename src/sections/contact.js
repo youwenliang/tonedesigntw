@@ -1,13 +1,45 @@
 import React, { Component } from 'react';
+import Header from '../components/header.js';
+import Button from '../components/button.js';
+import $ from 'jquery';
+
+import background from '../images/cta-background.svg';
+import waves from '../images/cta-waves.svg';
 
 class Contact extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      mobile: false
+    };
+  }
+  componentDidMount(){
+    var $this = this;
+    function checkMobile() {
+      if($(window).width() <= 959) {
+      	$this.setState({mobile:true});
+      }
+      else $this.setState({mobile:false});
+      console.log($this.state.mobile);
+    }
+    $(window).on('resize orientationchange', checkMobile);
+    $(document).ready(function(){
+      checkMobile();
+    });
+  }
   render() {
     var sectionStyle = {
-  		background: "#fe668c"
+  		backgroundImage: "url("+waves+"), url("+background+")",
+  		backgroundPosition: "right 95%, center top",
+  		backgroundSize: this.state.mobile ? "960px, cover" : "contain, cover",
+  		backgroundRepeat: "no-repeat, no-repeat",
+  		minHeight: "600px"
   	}
     return (
-      <section className="contact" style={sectionStyle}>
-      	<div className="content ph4 mw8 center">
+      <section className="contact flex items-center" style={sectionStyle}>
+      	<div className="content ph4 mw8 center tc">
+      	  <h2 className="white f2 i fw3 normal">take on a new approach that</h2>
+      	  <Button content="Contact!" scale="1.5"/>
       	</div>
       </section>
     );

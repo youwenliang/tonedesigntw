@@ -8,6 +8,7 @@ class Nav extends Component {
   		width: "100%",
   		height: "74px",
   		background: "#222222",
+  		zIndex: 100,
   	}
     return (
       <nav className="nav" style={navStyle}>

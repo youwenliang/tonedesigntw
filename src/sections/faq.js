@@ -22,35 +22,42 @@ class Faq extends Component {
     var sectionStyle = {
   		background: "#f7f8fa"
   	}
+
+  	var textStyle = {
+  		color: "#505f81"
+  	}
+
+
   	var qContent = [
   		[
-  		 "Q1:Lorem ipsum dolor sit amet, cons elit, sedt ut labore et dolore magna aliqua.",
+  		 "Lorem ipsum dolor sit amet, cons elit, sedt ut labore et dolore magna aliqua.",
   		 "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum"
   		],
   		[
-  		 "Q2:Lorem ipsum onsectetur adipiscing elit, sedt ut labore et dolore magna aliqua.",
+  		 "Lorem ipsum onsectetur adipiscing elit, sedt ut labore et dolore magna aliqua.",
   		 "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum"
   		],
   		[
-  		 "Q3:Lorem ipsum dot, consectetur adipiscing elit, sedt ut labore et dolore magna aliqua.",
+  		 "Lorem ipsum dot, consectetur adipiscing elit, sedt ut labore et dolore magna aliqua.",
   		 "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum"
   		],
   		[
-  		 "Q4:Lorem ipsum dolor sit ipiscing elit, sedt ut labore et dolore magna aliqua.",
+  		 "Lorem ipsum dolor sit ipiscing elit, sedt ut labore et dolore magna aliqua.",
   		 "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum"
   		],
   		[
-  		 "Q5:Lorem ipsum dolor sit amet, consectetur adipisc et dolore magna aliqua.",
+  		 "Lorem ipsum dolor sit amet, consectetur adipisc et dolore magna aliqua.",
   		 "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum"
   		]
   	]
   	var qList = [];
   	for(var i = 0; i < qContent.length; i++){
   		qList.push(
-  		  <div>
-	  	    <button className="collapsible f5 fw6">{qContent[i][0]}</button>
+  		  <div className="relative" key={i}>
+  		  	<div className="collapsibleCircle absolute z1 white flex justify-center items-center f3 fw6">{i+1}</div>
+	  	    <button className="collapsible f4 lh-copy fw5" style={textStyle}>{qContent[i][0]}</button>
 			<div className="answers">
-			  <p className="o-60 lh-copy f5">{qContent[i][1]}</p>
+			  <p className="o-60 lh-copy f4">{qContent[i][1]}</p>
 			</div>
 		  </div>
   		)
@@ -59,8 +66,8 @@ class Faq extends Component {
     return (
       <section className="faq" style={sectionStyle}>
       	<div className="content ph4 mw8 center">
-      	  <Header title="Faq"/>
-      	  <div className="mt5">
+      	  <Header title="Q&A" color="#4c5b7f"/>
+      	  <div>
       	  	{qList}
       	  </div>
       	</div>
