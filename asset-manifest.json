@@ -1,8 +1,8 @@
 {
   "main.css": "static/css/main.12dc0d7c.css",
   "main.css.map": "static/css/main.12dc0d7c.css.map",
-  "main.js": "static/js/main.0f81fecc.js",
-  "main.js.map": "static/js/main.0f81fecc.js.map",
+  "main.js": "static/js/main.ace4bc5c.js",
+  "main.js.map": "static/js/main.ace4bc5c.js.map",
   "static/media/1-1.svg": "static/media/1-1.933c4e6e.svg",
   "static/media/1-2.svg": "static/media/1-2.9e767f29.svg",
   "static/media/1-3.svg": "static/media/1-3.0d4e8eac.svg",
@@ -15,10 +15,13 @@
   "static/media/3-2.svg": "static/media/3-2.ab23316e.svg",
   "static/media/3-3.svg": "static/media/3-3.d549ddb6.svg",
   "static/media/3-4.svg": "static/media/3-4.2030d13a.svg",
+  "static/media/bg.svg": "static/media/bg.47fa57d8.svg",
   "static/media/circle.png": "static/media/circle.87b49d23.png",
   "static/media/cta-background.svg": "static/media/cta-background.883328fa.svg",
   "static/media/cta-waves.svg": "static/media/cta-waves.8a751782.svg",
+  "static/media/scroll.svg": "static/media/scroll.c2217139.svg",
   "static/media/shadow.png": "static/media/shadow.70cdd281.png",
+  "static/media/shadow2.png": "static/media/shadow2.30647338.png",
   "static/media/tonedesign.svg": "static/media/tonedesign.a4836003.svg",
   "static/media/waves.png": "static/media/waves.ec852c29.png"
 }
