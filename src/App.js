@@ -11,18 +11,26 @@ import Clients from './sections/clients.js';
 import Works from './sections/works.js';
 import Contact from './sections/contact.js';
 import Faq from './sections/faq.js';
+
+import data from './data/data.js';
 import './App.css';
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      data: data["topic1"]
+    };
+  }
   render() {
     return (
       <div className="App">
-        <Nav/>
-        <Cover/>
-        <Section1/>
-        <Section2/>
-        <Section3/>
-        <Section4/>
+        {/*<Nav/>*/}
+        <Cover data={this.state.data}/>
+        <Section1 data={this.state.data}/>
+        <Section2 data={this.state.data}/>
+        <Section3 data={this.state.data}/>
+        <Section4 data={this.state.data}/>
         <Clients/>
         <Works/>
         <Contact/>

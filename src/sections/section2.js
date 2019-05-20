@@ -4,7 +4,8 @@ import Header from '../components/header.js';
 class Section2 extends Component {
   render() {
     var sectionStyle = {
-      background: "#f7f8fa"
+      background: "#f7f8fa",
+      borderTop: "2px #dbe1e9 solid"
     }
     return (
       <section className="section-2" style={sectionStyle}>

@@ -10,8 +10,8 @@ class LottieControl extends React.Component {
       isStopped: false, 
       isPaused: false,
       options: {
-        loop: false,
-        autoplay: false,
+        loop: this.props.open ? false : true,
+        autoplay: this.props.open ? false : true,
         animationData: this.props.data1,
         rendererSettings: {
           preserveAspectRatio: 'xMidYMid slice'
@@ -35,7 +35,7 @@ class LottieControl extends React.Component {
               return (
                 <Lottie 
                   options={$t.state.options}
-                  eventListeners={[
+                  eventListeners= {!this.props.open ? [] : [
                     {
                       eventName: 'complete',
                       callback: () => {

@@ -7,7 +7,7 @@ class Nav extends Component {
   		position: "fixed",
   		width: "100%",
   		height: "74px",
-  		background: "#222222",
+  		background: "#4c5b7f",
   		zIndex: 100,
   	}
     return (
