@@ -4,6 +4,7 @@ import shadow from '../images/shadow2.png';
 import scroll from '../images/scroll.svg';
 import bg from '../images/bg.svg';
 import $ from 'jquery';
+import gData from '../data/data.js'
 
 import Button from '../components/button.js';
 import * as animationDataCover from '../images/animations/data1_loop.json';
@@ -71,7 +72,7 @@ class Cover extends Component {
       <div className="cf ph2-ns pt2 flex items-center flex-column flex-row-l justify-center z1 relative">
         <div className="fl w-100 w-50-l tr-l tc relative relative" style={img}>
           <LottieControl data1={animationDataCover} open={false} id="animationCover"/>
-          <img src={shadow} width="90%" style={shadowStyle}/>
+          <img src={shadow} width="90%" style={shadowStyle} alt="shadow"/>
         </div>
         <div className="fl w-100 w-50-l tl-l tc mt4 mt0-l mw6-l mw9">
           <h1 className="f1 white fw6 mt0">{data.title}</h1>
@@ -88,21 +89,21 @@ class Cover extends Component {
         </div>
         <div className="fl w-100 w-50-l tr-l tc relative">
           <LottieControl data1={animationDataCover} open={false} id="animationCover"/>
-          <img src={shadow} width="90%" style={shadowStyle}/>
+          <img src={shadow} width="90%" style={shadowStyle} alt="shadow"/>
         </div>
       </div>
     )
 
     return (
-      <header className="cover flex justify-center items-center relative" style={coverStyle}>
+      <header id={gData["sections"][0]} className="cover flex justify-center items-center relative" style={coverStyle}>
         <div className="content ph4 mw9-l center w-90-l w-100">
           {contents}
         </div>
         <div style={scrollStyle}>
-          <img src={scroll} width="40px"/>
+          <img src={scroll} width="40px" alt="arrow"/>
           <p className="ma2">Scroll</p>
         </div>
-        <img src={bg} style={bgStyle}/>
+        <img src={bg} style={bgStyle} alt="background"/>
       </header>
     );
   }

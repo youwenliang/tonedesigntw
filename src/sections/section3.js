@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Header from '../components/header.js';
 import Button from '../components/button.js';
+import gData from '../data/data.js';
 
 import circle from '../images/circle.png';
 import waves from '../images/waves.png';
@@ -8,7 +9,7 @@ import waves from '../images/waves.png';
 class Section3 extends Component {
   render() {
   	// import data
-  	var data = this.props.data["section3"];
+  	var data = this.props.data[gData["sections"][3]];
     var sectionStyle = {
       background: "#ffffff",
       borderTop: "2px #dbe1e9 solid"
@@ -19,7 +20,7 @@ class Section3 extends Component {
       zIndex: 0
     }
     return (
-      <section className="section-3" style={sectionStyle}>
+      <section id={gData["sections"][3]} style={sectionStyle}>
         <div className="content ph4 mw9 center">
           <Header title={data.sectionTitle} color="#4c5b7f"/>
           <div className="cf ph2-ns pt2 flex items-center flex-column flex-row-l">

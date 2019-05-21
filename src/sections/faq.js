@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Header from '../components/header.js';
+import gData from '../data/data.js';
 
 class Faq extends Component {
   componentDidMount(){
@@ -64,7 +65,7 @@ class Faq extends Component {
   	}
 
     return (
-      <section className="faq" style={sectionStyle}>
+      <section id={gData["sections"][8]} style={sectionStyle}>
       	<div className="content ph4 mw8 center">
       	  <Header title="Q&A" color="#4c5b7f"/>
       	  <div>

@@ -15,7 +15,7 @@ class Footer extends Component {
     return (
       <footer className="footer flex items-center" style={footerStyle}>
         <div className="content ph4 mw8 center w-100">
-          <img src={logo} height="45px"/>
+          <img src={logo} height="45px" alt="Tone Design"/>
         </div>
       </footer>
     );

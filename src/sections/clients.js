@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import Header from '../components/header.js';
+import Parallax from '../components/parallax.js';
+import gData from '../data/data.js';
+import imgURL from '../images/taipei@2x.png';
 
 import logo1 from '../images/logos/1-1.svg';
 import logo2 from '../images/logos/1-2.svg';
@@ -17,7 +20,7 @@ import logo12 from '../images/logos/3-4.svg';
 class Clients extends Component {
   render() {
   	var sectionStyle = {
-  		background: "#4c5b7f"
+  		background: "#ffffff"
   	}
   	var logoURL = [logo1, logo2, logo3, logo4, logo5, logo6, logo7, logo8, logo9, logo10, logo11, logo12];
   	var logoList = [];
@@ -28,15 +31,18 @@ class Clients extends Component {
   			</div>
   		)
   	}
+    var content = (
+        <div className="content ph4 mw8 w-100 center z2 pv5rem relative">
+          <Header title="Our Client" color="#fff"/>
+          <div className="cf ph2-ns">
+            {logoList}
+          </div>
+        </div>
+    )
 
     return (
-      <section className="clients" style={sectionStyle}>
-      	<div className="content ph4 mw8 w-100 center">
-      	  <Header title="Our Client" color="#fff"/>
-      	  <div className="cf ph2-ns">
-		    {logoList}
-		  </div>
-      	</div>
+      <section id={gData["sections"][5]} style={sectionStyle} className="relative pv0">
+        <Parallax content={content} img={imgURL} mask={"#4c5b7f"}/>
       </section>
     );
   }

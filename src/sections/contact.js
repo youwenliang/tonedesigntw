@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import Header from '../components/header.js';
 import Button from '../components/button.js';
+import gData from '../data/data.js';
 import $ from 'jquery';
 
 import background from '../images/cta-background.svg';
@@ -36,7 +36,7 @@ class Contact extends Component {
   		minHeight: "600px"
   	}
     return (
-      <section className="contact flex items-center" style={sectionStyle}>
+      <section id={gData["sections"][7]} className="flex items-center" style={sectionStyle}>
       	<div className="content ph4 mw8 center tc">
       	  <h2 className="white f2 i fw3 normal">take on a new approach that</h2>
       	  <Button content="Contact!" scale="1.5"/>

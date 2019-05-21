@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import Nav from './components/nav.js';
 import Footer from './components/footer.js';
+import Scroll from './components/scroll.js';
 
 import Cover from './sections/cover.js';
 import Section1 from './sections/section1.js';
@@ -26,6 +26,7 @@ class App extends Component {
     return (
       <div className="App">
         {/*<Nav/>*/}
+        <Scroll/>
         <Cover data={this.state.data}/>
         <Section1 data={this.state.data}/>
         <Section2 data={this.state.data}/>

@@ -9,6 +9,7 @@ html {
 *:before,
 *:after {
 	box-sizing: inherit;
+	user-select: none;
 }
 
 body {
@@ -18,11 +19,16 @@ body {
   	min-height: 100%;
 	padding-bottom: 320px;
 	font-family: aktiv-grotesk, sans-serif;
+	overflow-x: hidden;
 }
 
 section {
 	width: 100%;
 	padding: 5rem 0;
+}
+
+.pv5rem {
+	padding: 5rem 0;	
 }
 
 .collapsible {
@@ -64,12 +70,12 @@ section {
   height: 11px;
 }
 
-.active:after {
+.collapsible.active:after {
   content: "\25B2"; /* Unicode character for "minus" sign (-) */
   transform: scaleX(1.414) translateY(-4px);
 }
 
-.active, .collapsible:hover {
+.collapsible.active, .collapsible:hover {
   background-color: #eee;
 }
 
@@ -89,6 +95,73 @@ section {
 	color: #505f81;
 }
 
+/* Navigation */
+#section-nav {
+  position: fixed;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: flex-end;
+  top: calc(50% - 120px);
+  right: 32px;
+  z-index: 90;
+}
+
+@media screen and (max-width: 959px) {
+  #section-nav {
+    display: none;
+  }
+}
+
+#section-nav a {
+  font-size: 13px;
+  letter-spacing: .25px;
+  color: #000;
+  padding-right: 25px;
+  height: 25px;
+  width: 25px;
+  padding-top: 25px;
+  text-indent: 50px;
+  overflow: hidden;
+  margin: 2px 0;
+  text-align: right;
+  position: relative;
+  white-space: nowrap;
+  transition: all .1s cubic-bezier(0.23, 1, 0.32, 1);
+  text-decoration: none;
+}
+
+#section-nav a:before {
+  content: "";
+  display: block;
+  width: 15px;
+  height: 15px;
+  background: #ccc;
+  border-radius: 100%;
+  position: absolute;
+  right: 0px;
+  top: 3px;
+  margin: 3px auto;
+  transition: all .4s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+@media screen and (min-width: 769px) {
+
+	#section-nav a:hover {
+	  width: auto !important;
+	  padding-top: 5px;
+	  transition: all .4s cubic-bezier(0.23, 1, 0.32, 1);
+	}
+
+	#section-nav a:hover:before,
+	#section-nav a.active:before {
+	  width: 15px;
+	  background: #ffdf00;
+	  transition: all .4s cubic-bezier(0.23, 1, 0.32, 1);
+	}
+}
+
 .mw240 {
 	max-width: 240px;
 }
@@ -106,6 +179,10 @@ section {
 	z-index: 1;
 }
 
+.z2 {
+	z-index: 2;
+}
+
 .z10 {
 	z-index: 10;
 }
@@ -113,3 +190,4 @@ section {
 .z100 {
 	z-index: 100;
 }
+

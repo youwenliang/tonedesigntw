@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Header from '../components/header.js';
 import LottieControl from '../components/lottie.js';
 import shadow from '../images/shadow.png';
+import gData from '../data/data.js';
 
 import * as animationData1o from '../images/animations/data4_open.json'
 import * as animationData1l from '../images/animations/data4_loop.json'
@@ -16,12 +17,12 @@ class Section1 extends Component {
   }
   render() {
     // import data
-    var data = this.props.data["section1"];
+    var data = this.props.data[gData["sections"][1]];
     var sectionStyle = {
       background: "#ffffff"
     }
     return (
-      <section className="section-1" style={sectionStyle}>
+      <section id={gData["sections"][1]} style={sectionStyle}>
         <div className="content ph4 mw9 center">
           <Header title={data.sectionTitle} color="#4c5b7f"/>
           <div className="cf ph2-ns pt2">
