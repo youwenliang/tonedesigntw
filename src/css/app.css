@@ -162,6 +162,9 @@ section {
 	}
 }
 
+.mw160 {
+	max-width: 160px;
+}
 .mw240 {
 	max-width: 240px;
 }

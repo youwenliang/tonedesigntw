@@ -33,6 +33,34 @@ var data = {
 		// Section 4
 		"section-4": {
 			"sectionTitle": "Our Process",
+			"title":[
+				["title1-1", "title1-2", "title1-3", "title1-4", "title1-5"],
+				["title2-1", "title2-2", "title2-3", "title2-4", "title2-5"],
+				["title3-1", "title3-2", "title3-3", "title3-4", "title3-5"],
+			],
+			"content":[
+				[
+				"take on a new appro that speaks visual1-1",
+				"take on a new appro that speaks visual1-2",
+				"take on a new appro that speaks visual1-3",
+				"take on a new appro that speaks visual1-4",
+				"take on a new appro that speaks visual1-5"
+				],
+				[
+				"take on a new appro that speaks visual2-1",
+				"take on a new appro that speaks visual2-2",
+				"take on a new appro that speaks visual2-3",
+				"take on a new appro that speaks visual2-4",
+				"take on a new appro that speaks visual2-5"
+				],
+				[
+				"take on a new appro that speaks visual3-1",
+				"take on a new appro that speaks visual3-2",
+				"take on a new appro that speaks visual3-3",
+				"take on a new appro that speaks visual3-4",
+				"take on a new appro that speaks visual3-5",
+				]
+			],
 		},
 	},
 	"topic2": {
