@@ -35,14 +35,15 @@ class Works extends Component {
       background: "#ffffff"
     }
     var contentStyle = {
-      minWidth: "1540px",
+      width: "100%",
+      minWidth: "1024px",
       position: "relative",
       zIndex: 1,
       marginBottom: "-100px"
     }
     return (
       <section id={gData["sections"][6]} style={sectionStyle}>
-        <div className="content ph4 mw9 center tc">
+        <div className="content ph4-ns ph2 mw9 center tc">
           <Header title="Our Portfolio" color="#4c5b7f"/>
           <div className="flex justify-center">
             <div className="mb4" style={contentStyle}>

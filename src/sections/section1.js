@@ -19,11 +19,12 @@ class Section1 extends Component {
     // import data
     var data = this.props.data[gData["sections"][1]];
     var sectionStyle = {
-      background: "#ffffff"
+      background: "#ffffff",
+      borderTop: "2px #dbe1e9 solid"
     }
     return (
       <section id={gData["sections"][1]} style={sectionStyle}>
-        <div className="content ph4 mw9 center">
+        <div className="content ph4-ns ph2 mw9 center">
           <Header title={data.sectionTitle} color="#4c5b7f"/>
           <div className="cf ph2-ns pt2">
             <div className="fl w-100 w-third-l ph2 tc">

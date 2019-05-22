@@ -32,7 +32,7 @@ class Clients extends Component {
   		)
   	}
     var content = (
-        <div className="content ph4 mw8 w-100 center z2 relative">
+        <div className="content ph4-ns ph2 mw8 w-100 center z2 relative">
           <Header title="Our Client" color="#fff"/>
           <div className="cf ph2-ns">
             {logoList}

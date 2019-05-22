@@ -21,7 +21,7 @@ class Section3 extends Component {
     }
     return (
       <section id={gData["sections"][3]} style={sectionStyle}>
-        <div className="content ph4 mw9 center">
+        <div className="content ph4-ns ph2 mw9 center">
           <Header title={data.sectionTitle} color="#4c5b7f"/>
           <div className="cf ph2-ns pt2 flex items-center flex-column flex-row-l">
             <div className="fl w-100 w-50-l tr-l tc relative">

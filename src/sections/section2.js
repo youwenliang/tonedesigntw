@@ -13,7 +13,7 @@ class Section2 extends Component {
     }
     return (
       <section id={gData["sections"][2]} style={sectionStyle}>
-        <div className="content ph4 mw8 center">
+        <div className="content ph4-ns ph2 mw8 center">
           <Header title={data.sectionTitle}/>
         </div>
       </section>

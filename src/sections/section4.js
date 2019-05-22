@@ -86,7 +86,7 @@ class Section4 extends Component {
       width: "80%",
       height: "1px",
       position: "absolute",
-      top: "85px",
+      top: "55px",
       left: 0,
       right: 0,
       margin: "auto",
@@ -97,7 +97,7 @@ class Section4 extends Component {
       height: "70%",
       width: "1px",
       position: "absolute",
-      top: "100px",
+      top: "90px",
       left: this.state.mobile ? "55px" : 0,
       right: this.state.mobile ? "auto" : 0,
       transform: this.state.mobile ? "translateX(0)" : "translateX(-170px)",
@@ -110,19 +110,19 @@ class Section4 extends Component {
         <div className="content ph4-ns ph2 mw8 center relative">
           <Header title={data.sectionTitle}/>
           
-          <div className="tab mb4 f4-ns f5">
+          <div className="tab mb4 mt5 f4-ns f5">
             <button className="tablinks active ph5-l ph3 tc" onClick={(e) => this.handleClick(e, "content1")}>Content1</button>
             <button className="tablinks ph5-l ph3 tc" onClick={(e) => this.handleClick(e, "content2")}>Content2</button>
             <button className="tablinks ph5-l ph3 tc" onClick={(e) => this.handleClick(e, "content3")}>Content3</button>
           </div>
           <div className="relative">
-            <div id="content1" className="tabcontent active cf mt4-ns mt3">
+            <div id="content1" className="tabcontent active cf mt5-ns mt3">
               {contentList.slice(0,5)}
             </div>
-            <div id="content2" className="tabcontent cf mt4-ns mt3">
+            <div id="content2" className="tabcontent cf mt5-ns mt3">
               {contentList.slice(5,10)}
             </div>
-            <div id="content3" className="tabcontent cf mt4-ns mt3">
+            <div id="content3" className="tabcontent cf mt5-ns mt3">
               {contentList.slice(10,15)}
             </div>
             <div id="yellow-line1" style={line1} className="db-l dn"></div>

@@ -37,7 +37,7 @@ class Contact extends Component {
   	}
     return (
       <section id={gData["sections"][7]} className="flex items-center" style={sectionStyle}>
-      	<div className="content ph4 mw8 center tc">
+      	<div className="content ph4-ns ph2 mw8 center tc">
       	  <h2 className="white f2 i fw3 normal">take on a new approach that</h2>
       	  <Button content="Contact!" scale="1.5"/>
       	</div>
