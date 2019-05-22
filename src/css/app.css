@@ -236,3 +236,10 @@ section {
 .tabcontent.active {
 	display: block;
 }
+
+#home-video-loop {
+  z-index: -1;
+  left: 0;
+  opacity: 0;
+}
+

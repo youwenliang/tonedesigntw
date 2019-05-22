@@ -2,30 +2,63 @@ import React, { Component } from 'react';
 import Header from '../components/header.js';
 import Button from '../components/button.js';
 import gData from '../data/data.js';
-import portfolioVideo from '../images/videos/portfolio_loop.mp4';
+import portfolioVideoO from '../images/videos/portfolio_open.mp4';
+import portfolioVideoL from '../images/videos/portfolio_loop.mp4';
+import $ from 'jquery';
 
 class Works extends Component {
+  componentDidMount(){
+    var video = document.getElementById('home-video');
+    var video_loop = document.getElementById('home-video-loop');
+    video.load();
+    video.pause();
+
+    document.getElementById('home-video').addEventListener('ended', myHandler, false);
+    function myHandler(e) {
+      console.log('done');
+      $('#home-video-loop').css({'z-index': 1, 'opacity': 1});
+      video_loop.play();
+    }
+
+    video.addEventListener('canplaythrough', function() {
+      console.log('video loaded');
+    }, false);
+
+    $(window).scroll( function(){
+      if($(window).scrollTop() >= $('#'+gData["sections"][6]).offset().top) {
+        video.play();
+      }
+    });
+  }
   render() {
     var sectionStyle = {
-  		background: "#ffffff"
-  	}
-  	var contentStyle = {
-  		minWidth: "1540px"
-  	}
+      background: "#ffffff"
+    }
+    var contentStyle = {
+      minWidth: "1540px",
+      position: "relative",
+      zIndex: 1,
+      marginBottom: "-100px"
+    }
     return (
       <section id={gData["sections"][6]} style={sectionStyle}>
-      	<div className="content ph4 mw9 center tc">
-      	  <Header title="Our Portfolio" color="#4c5b7f"/>
-      	  <div className="flex justify-center">
-      	  	<div className="mb4" style={contentStyle}>
-      	  		<video width="100%" autoPlay loop muted>
-                <source src={portfolioVideo} type="video/mp4"/>
+        <div className="content ph4 mw9 center tc">
+          <Header title="Our Portfolio" color="#4c5b7f"/>
+          <div className="flex justify-center">
+            <div className="mb4" style={contentStyle}>
+              <video id="home-video" className="home-video relative" width="100%" muted playsInline preload="auto" autoPlay>
+                <source src={portfolioVideoO} type="video/mp4"/>
               </video>
-      	  	</div>
-      	  </div>
-      	  <Button content="Contact!"/>
-      	  <h2 className="mt4 f3 i fw3 normal color-content">Clinging to a one-point</h2>
-      	</div>
+              <video id="home-video-loop" className="home-video absolute" width="100%" muted playsInline preload="auto" loop>
+                <source src={portfolioVideoL} type="video/mp4"/>
+              </video>
+            </div>
+          </div>
+          <div className="z2 relative">
+            <Button content="Contact!"/>
+            <h2 className="mt4 f3 i fw3 normal color-content">Clinging to a one-point</h2>
+          </div>
+        </div>
       </section>
     );
   }
