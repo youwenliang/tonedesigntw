@@ -32,7 +32,7 @@ const Parallax = (props) => (
         triggerHook="onEnter"
       >
         <Timeline
-          wrapper={<div className="parallax" />}
+          wrapper={<div className="parallax pv5rem" />}
         >
         <div className="mask z1" style={{backgroundColor:props.mask}}/>
           <Tween

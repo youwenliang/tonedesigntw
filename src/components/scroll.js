@@ -14,7 +14,7 @@ class Scroll extends Component {
     $(window).scroll( function(){
       for (var i = 0; i < 9; i++) {
         if($(window).scrollTop() >= $('#'+id[i]).offset().top - $(window).height()/2) {
-          $('.active').removeClass('active');
+          $('.nav-link.active').removeClass('active');
           $('a[href="#'+id[i]+'"]').addClass('active');
         }
       }

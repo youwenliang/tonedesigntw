@@ -16,8 +16,10 @@ class Works extends Component {
       	<div className="content ph4 mw9 center tc">
       	  <Header title="Our Portfolio" color="#4c5b7f"/>
       	  <div className="flex justify-center">
-      	  	<div style={contentStyle}>
-      	  		<img className="mb4" width="100%" src="https://fakeimg.pl/1920x720/?text=Portfolio Video" alt="Portfolio"/>
+      	  	<div className="mb4" style={contentStyle}>
+      	  		<video width="100%" autoPlay loop muted>
+                <source src="http://clips.vorwaerts-gmbh.de/VfE_html5.mp4" type="video/mp4"/>
+              </video>
       	  	</div>
       	  </div>
       	  <Button content="Contact!"/>
