@@ -35,7 +35,7 @@ class Section4 extends Component {
   componentDidMount(){
     var $this = this;
     function checkMobile() {
-      if($(window).width() <= 959) {
+      if($(window).width() <= 507) {
         $this.setState({mobile:true});
       }
       else $this.setState({mobile:false});
@@ -62,26 +62,52 @@ class Section4 extends Component {
     }
 
     var contentList = [];
+    var mw85 = {
+      minWidth: "85px"
+    }
     for(var i = 0; i <15; i++) {
       var x = Math.floor(i/5);
       var y = i%5;
       var content = (
         <div className="fl w-20-l w-100 pv2 ph0 tc">
           <div className="flex flex-column-l flex-row justify-center items-center">
-            <img src={icons[i]} width="85" alt="icons"/>
+            <img src={icons[i]} width="85" alt="icons" style={mw85}/>
             <div className="color-content2 tl tc-l ml4 ml0-l">
               <h3 className="f4 mb0 fw4 mt0 mt3-l">{data.title[x][y]}</h3>
-              <p className="f5 mt2 mb0 mb2-l mw5-l ph3">{data.content[x][y]}</p>
+              <p className="f5 mt2 mb0 mb2-l mw5-l ph3-l ph0">{data.content[x][y]}</p>
             </div>
           </div>
         </div>
       )
       contentList.push(content);
     }
+    var line1 = {
+      borderBottom: "#ffdf00 2px solid",
+      width: "80%",
+      height: "1px",
+      position: "absolute",
+      top: "85px",
+      left: 0,
+      right: 0,
+      margin: "auto",
+      zIndex: 1
+    }
+    var line2 = {
+      borderLeft: "#ffdf00 2px solid",
+      height: "70%",
+      width: "1px",
+      position: "absolute",
+      top: "100px",
+      left: this.state.mobile ? "55px" : 0,
+      right: this.state.mobile ? "auto" : 0,
+      transform: this.state.mobile ? "translateX(0)" : "translateX(-170px)",
+      margin: "auto",
+      zIndex: 1
+    }
 
     return (
       <section id={gData["sections"][4]} style={sectionStyle}>
-        <div className="content ph4 mw8 center">
+        <div className="content ph4-ns ph2 mw8 center relative">
           <Header title={data.sectionTitle}/>
           
           <div className="tab mb4 f4-ns f5">
@@ -89,15 +115,18 @@ class Section4 extends Component {
             <button className="tablinks ph5-l ph3 tc" onClick={(e) => this.handleClick(e, "content2")}>Content2</button>
             <button className="tablinks ph5-l ph3 tc" onClick={(e) => this.handleClick(e, "content3")}>Content3</button>
           </div>
-
-          <div id="content1" className="tabcontent active cf mt5">
-            {contentList.slice(0,5)}
-          </div>
-          <div id="content2" className="tabcontent cf mt5">
-            {contentList.slice(5,10)}
-          </div>
-          <div id="content3" className="tabcontent cf mt5">
-            {contentList.slice(10,15)}
+          <div className="relative">
+            <div id="content1" className="tabcontent active cf mt4-ns mt3">
+              {contentList.slice(0,5)}
+            </div>
+            <div id="content2" className="tabcontent cf mt4-ns mt3">
+              {contentList.slice(5,10)}
+            </div>
+            <div id="content3" className="tabcontent cf mt4-ns mt3">
+              {contentList.slice(10,15)}
+            </div>
+            <div id="yellow-line1" style={line1} className="db-l dn"></div>
+            <div id="yellow-line2" style={line2} className="db dn-l"></div>
           </div>
         </div>
       </section>

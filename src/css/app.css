@@ -229,6 +229,8 @@ section {
   display: none;
   padding: 6px 12px;
   border-top: none;
+  position: relative;
+  z-index: 2;
 }
 
 .tabcontent.active {

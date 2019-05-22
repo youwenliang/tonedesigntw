@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Header from '../components/header.js';
 import Button from '../components/button.js';
 import gData from '../data/data.js';
+import portfolioVideo from '../images/videos/portfolio_loop.mp4';
 
 class Works extends Component {
   render() {
@@ -18,7 +19,7 @@ class Works extends Component {
       	  <div className="flex justify-center">
       	  	<div className="mb4" style={contentStyle}>
       	  		<video width="100%" autoPlay loop muted>
-                <source src="http://clips.vorwaerts-gmbh.de/VfE_html5.mp4" type="video/mp4"/>
+                <source src={portfolioVideo} type="video/mp4"/>
               </video>
       	  	</div>
       	  </div>
