@@ -20,7 +20,6 @@ class Contact extends Component {
       	$this.setState({mobile:true});
       }
       else $this.setState({mobile:false});
-      console.log($this.state.mobile);
     }
     $(window).on('resize orientationchange', checkMobile);
     $(document).ready(function(){
@@ -38,7 +37,7 @@ class Contact extends Component {
     return (
       <section id={gData["sections"][7]} className="flex items-center" style={sectionStyle}>
       	<div className="content ph4-ns ph2 mw8 center tc">
-      	  <h2 className="white f25 fw3">這是一段關於聯絡我們的文字</h2>
+      	  <h2 className="white f2 ls2 lh-copy fw3">這是一段關於聯絡我們的文字</h2>
       	  <Button content={"按鈕文字"} scale="1.5"/>
       	</div>
       </section>

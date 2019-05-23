@@ -13,6 +13,7 @@ import Contact from './sections/contact.js';
 import Faq from './sections/faq.js';
 
 import data from './data/data.js';
+import $ from 'jquery';
 import './App.css';
 
 class App extends Component {
@@ -22,9 +23,21 @@ class App extends Component {
       data: data["topic1"]
     };
   }
+  componentDidMount(){
+    $(document).scrollTop(0);
+    document.body.classList.add('ds');
+    document.getElementById('loading').classList.remove('fade');
+
+    setTimeout(function(){
+      document.getElementById('loading').classList.add('fade');
+      document.body.classList.remove('ds');
+    },600);
+
+  }
   render() {
     return (
       <div className="App">
+        <div id="loading" className="flex items-center justify-center"></div>
         {/*<Nav/>*/}
         <Scroll/>
         <Cover data={this.state.data}/>

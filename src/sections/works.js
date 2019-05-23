@@ -15,13 +15,13 @@ class Works extends Component {
 
     document.getElementById('home-video').addEventListener('ended', myHandler, false);
     function myHandler(e) {
-      console.log('done');
+      //console.log('done');
       $('#home-video-loop').css({'z-index': 1, 'opacity': 1});
       video_loop.play();
     }
 
     video.addEventListener('canplaythrough', function() {
-      console.log('video loaded');
+      //console.log('video loaded');
     }, false);
 
     $(window).scroll( function(){
@@ -44,7 +44,7 @@ class Works extends Component {
     return (
       <section id={gData["sections"][6]} style={sectionStyle}>
         <div className="content ph4-ns ph2 mw9 center tc">
-          <Header title={"我們的作品"} color="#4c5b7f"/>
+          <Header title={"我們的作品"} color="#333333" margin={true}/>
           <div className="flex justify-center">
             <div className="mb4" style={contentStyle}>
               <video id="home-video" className="home-video relative" width="100%" muted playsInline preload="auto" autoPlay>

@@ -4,7 +4,7 @@ import data from '../data/data.js';
 
 class Scroll extends Component {
   componentDidMount(){
-    var id = data["sections"];
+    var id = [data["sections"][0], data["sections"][2], data["sections"][4], data["sections"][6], data["sections"][7]];
     $('#section-nav a').click(function(){
       $('html, body').animate({
           scrollTop: $( $.attr(this, 'href') ).offset().top
@@ -12,7 +12,7 @@ class Scroll extends Component {
       return false;
     });
     $(window).scroll( function(){
-      for (var i = 0; i < 9; i++) {
+      for (var i = 0; i < 5; i++) {
         if($(window).scrollTop() >= $('#'+id[i]).offset().top - $(window).height()/2) {
           $('.nav-link.active').removeClass('active');
           $('a[href="#'+id[i]+'"]').addClass('active');

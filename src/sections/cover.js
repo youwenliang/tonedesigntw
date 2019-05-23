@@ -23,7 +23,6 @@ class Cover extends Component {
         $this.setState({mobile:true});
       }
       else $this.setState({mobile:false});
-      console.log($this.state.mobile);
     }
     $(window).on('resize orientationchange', checkMobile);
     $(document).ready(function(){
@@ -50,7 +49,7 @@ class Cover extends Component {
       width: "100%",
       textAlign: "center",
       position: "absolute",
-      bottom: "50px",
+      bottom: this.state.mobile ? "20px":"50px",
       left: 0,
       right: 0,
       margin: "auto",
@@ -70,25 +69,25 @@ class Cover extends Component {
     }
     var contents = this.state.mobile ? (
       <div className="cf ph2-ns pt2 flex items-center flex-column flex-row-l justify-center z1 relative">
-        <div className="fl w-100 w-50-l tr-l tc relative relative" style={img}>
-          <LottieControl data1={animationDataCover} open={false} id="animationCover"/>
+        <div className="fl w-100 w-50-l tr-l tc relative relative mt4" style={img}>
+          <LottieControl data1={animationDataCover} open={false} id="animationCover" offset={0}/>
           <img src={shadow} width="90%" style={shadowStyle} alt="shadow"/>
         </div>
         <div className="fl w-100 w-50-l tl-l tc mt4 mt0-l mw6-l mw9">
-          <h1 className="f1 white fw3 mt0">{data.title}</h1>
-          <p className="lh-copy f1375 white mb4 mt0 mw400">{data.content}</p>
+          <h1 className="w-100 f1-ns f2 white fw3 mt0">{data.title}</h1>
+          <p className="w-100 center lh-copy f1375 white mb4 mt0 mw400">{data.content}</p>
           <Button content={data.button}/>
         </div>
       </div>
     ) : (
       <div className="cf ph2-ns pt2 flex items-center flex-column flex-row-l justify-center z1 relative">
         <div className="fl w-100 w-50-l tl-l tc mt0 mw6-l mw9">
-          <h1 className="f1 white fw3 mt0">{data.title}</h1>
-          <p className="lh-copy f1375 white mb4 mt0 mw400">{data.content}</p>
+          <h1 className="w-100 f1-ns f2 white fw3 mt0">{data.title}</h1>
+          <p className="w-100 lh-copy f1375 white mb4 mt0 mw400">{data.content}</p>
           <Button content={data.button}/>
         </div>
         <div className="fl w-100 w-50-l tr-l tc relative">
-          <LottieControl data1={animationDataCover} open={false} id="animationCover"/>
+          <LottieControl data1={animationDataCover} open={false} id="animationCover" offset={0}/>
           <img src={shadow} width="90%" style={shadowStyle} alt="shadow"/>
         </div>
       </div>

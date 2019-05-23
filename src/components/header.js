@@ -7,8 +7,9 @@ class Header extends Component {
   		color: this.props.color,
       letterSpacing: ".125rem"
   	}
+    var m = this.props.margin ?  "mb5-ns mb4" : "mb0";
     return (
-      <h1 className="header tc center mt0 mb5-ns mb4 f25 fw5" style={headerStyle}>
+      <h1 className={"header tc center mt0 f25-l fw5 "+m} style={headerStyle}>
         {this.props.title}
       </h1>
     );

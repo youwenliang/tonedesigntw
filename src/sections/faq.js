@@ -50,10 +50,10 @@ class Faq extends Component {
   	for(var i = 0; i < qContent.length; i++){
   		qList.push(
   		  <div className="relative" key={i}>
-  		  	<div className="collapsibleCircle absolute z1 white flex justify-center items-center f3 fw6">{i+1}</div>
-	  	    <button className="collapsible f4 lh-copy fw4 color-content">{qContent[i][0]}</button>
+  		  	<div className="collapsibleCircle absolute z1 white flex justify-center items-center f4 fw6">{i+1}</div>
+	  	    <button className="collapsible f4-ns f5 lh-copy fw4 color-content o-80">{qContent[i][0]}</button>
 			<div className="answers">
-			  <p className="lh-copy f5 fw3 color-content2">{qContent[i][1]}</p>
+			  <p className="lh-copy f5-ns f6 fw3 color-content2">{qContent[i][1]}</p>
 			</div>
 		  </div>
   		)
@@ -61,8 +61,8 @@ class Faq extends Component {
 
     return (
       <section id={gData["sections"][8]} style={sectionStyle}>
-      	<div className="content ph4-ns ph2 mw8 center">
-      	  <Header title={"常見問題"} color="#333333"/>
+      	<div className="content ph4-ns ph2 mw56rem center">
+      	  <Header title={"常見問題"} color="#333333" margin={true}/>
       	  <div>
       	  	{qList}
       	  </div>

@@ -39,7 +39,6 @@ class Section4 extends Component {
         $this.setState({mobile:true});
       }
       else $this.setState({mobile:false});
-      console.log($this.state.mobile);
     }
     $(window).on('resize orientationchange', checkMobile);
     $(document).ready(function(){
@@ -69,7 +68,7 @@ class Section4 extends Component {
       var x = Math.floor(i/5);
       var y = i%5;
       var content = (
-        <div className="fl w-20-l w-100 pv2 ph0 tc">
+        <div className="fl w-20-l w-100 pv2 ph0 tc" key={i}>
           <div className="flex flex-column-l flex-row justify-center items-center">
             <img src={icons[i]} width="85" alt="icons" style={mw85}/>
             <div className="color-content2 tl tc-l ml4 ml0-l">
@@ -108,7 +107,7 @@ class Section4 extends Component {
     return (
       <section id={gData["sections"][4]} style={sectionStyle}>
         <div className="content ph4-ns ph2 mw8 center relative">
-          <Header title={data.sectionTitle} color="#333333"/>
+          <Header title={data.sectionTitle} color="#333333" margin={true}/>
           
           <div className="tab mb4 mt5 f4-ns f5">
             <button className="tablinks active ph5-l ph3 tc" onClick={(e) => this.handleClick(e, "content1")}>{data.section[0]}</button>

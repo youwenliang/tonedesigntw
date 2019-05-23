@@ -24,7 +24,7 @@ class Section1 extends Component {
     return (
       <section id={gData["sections"][1]} style={sectionStyle}>
         <div className="content ph4-ns ph2 mw75rem center">
-          <Header title={data.sectionTitle} color="#333333"/>
+          <Header title={data.sectionTitle} color="#333333" margin={true}/>
           <div className="cf ph2-ns pt2">
             <div className="fl w-100 w-third-l ph2 tc">
               <div className="mw320 center w-70">

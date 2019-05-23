@@ -3,6 +3,7 @@
 html {
 	height: 100%;
 	box-sizing: border-box;
+
 }
 
 *,
@@ -10,6 +11,10 @@ html {
 *:after {
 	box-sizing: inherit;
 	user-select: none;
+}
+
+#root, .App {
+	overflow-x: hidden;
 }
 
 body {
@@ -27,6 +32,31 @@ body {
 section {
 	width: 100%;
 	padding: 5rem 0;
+}
+
+
+.ds {
+	overflow-y: hidden;
+}
+/* Loading Gif */
+#loading {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background-color: #fff;
+  background-image: url(/images/loading.gif);
+  background-repeat: no-repeat;
+  background-size: 200px;
+  background-position: center center;
+  opacity: 1;
+  z-index: 100;
+  transition: opacity 0s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+#loading.fade {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .4s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
 .pv5rem {
@@ -175,8 +205,30 @@ section {
 	letter-spacing: 1px;
 }
 
+@media screen and (min-width: 769px) {
+	.f25-l {
+		font-size: 2.5rem;
+		letter-spacing: 1px;
+	}
+	.f2125 {
+		font-size: 2.125rem;
+	}
+}
+
+.f25-l {
+	font-size: 2rem;
+}
+
 .f2125 {
-	font-size: 2.125rem;
+	font-size: 1.625rem;
+}
+
+.ls2 {
+	letter-spacing: 2px;
+}
+
+.ls1 {
+	letter-spacing: 1px;
 }
 
 .mw160 {
@@ -196,6 +248,10 @@ section {
 }
 .mw640 {
 	max-width: 640px;
+}
+
+.mw56rem {
+	max-width: 56rem;
 }
 
 .mw75rem {
@@ -218,9 +274,13 @@ section {
 	z-index: 100;
 }
 
-.tab {
+.tab, .arrows {
   display: flex;
   justify-content: center;
+}
+
+.arrows {
+	transform: translateX(-16px);
 }
 
 .tab button {
@@ -267,3 +327,47 @@ section {
   opacity: 0;
 }
 
+.arrowlinks {
+  background: linear-gradient(to right, rgba(255,202,202,1) 0%,rgba(255,255,255,1) 100%);
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: 0.3s;
+  height: 90px;
+  margin: 0;
+  box-shadow: 0px 4px 16px rgba(0,0,0,.2);
+  color: #ff978e;
+  padding: 0 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.arrowlinks:before {
+	content: '';
+	width: 68px;
+	height: 68px;
+	display: block;
+	transform: rotate(45deg);
+	background: linear-gradient(45deg, rgba(255,243,243,1) 0%,rgba(255,255,255,1) 50%);
+	position: absolute;
+	right: -32px;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+	border-radius: 8px;
+}
+
+.arrowlinks:nth-child(1) {
+  border-radius: 8px 0 0 8px;
+}
+
+.arrowlinks.active {
+  background: linear-gradient(to right, rgba(255,151,142,1) 0%,rgba(255,91,130,1) 100%);
+  color: white;
+}
+
+.arrowlinks.active:before {
+  background: linear-gradient(45deg, rgba(255,107,133,1) 0%,rgba(255,91,130,1) 50%);
+}

@@ -24,6 +24,8 @@ var data = {
 		// Section 2
 		"第二區塊": {
 			"sectionTitle": "這是各區塊中等標題",
+			"tagline": "這是一段會消失的副標題，不確定會有多少字大概兩行．",
+			"section": ["區塊一", "區塊二", "區塊三"]
 		},
 		// Section 3
 		"section-3": {
