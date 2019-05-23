@@ -23,15 +23,15 @@ class Section2 extends Component {
           <div className="arrows mb4 mt5 f4-ns f5">
             <button className="z2 relative arrowlinks active ph5 tc">
               <img className="mr2" src={tone1} width="48" alt="icons"/>
-              {data.section[0]}
+              <p className="z10 relative">{data.section[0]}</p>
             </button>
             <button className="z1 relative arrowlinks ph5 tc">
               <img className="ml4 mr2" src={tone2} width="48" alt="icons"/>
-              {data.section[1]}
+              <p className="z10 relative">{data.section[1]}</p>
             </button>
             <button className="relative arrowlinks ph5 tc">
               <img className="ml4 mr2" src={tone3} width="48" alt="icons"/>
-              {data.section[2]}
+              <p className="z10 relative">{data.section[2]}</p>
             </button>
           </div>
         </div>

@@ -47,10 +47,16 @@ class Faq extends Component {
       ],
   	]
   	var qList = [];
+    var number = {
+      position: "relative",
+      top: "-1.3px"
+    };
   	for(var i = 0; i < qContent.length; i++){
   		qList.push(
   		  <div className="relative" key={i}>
-  		  	<div className="collapsibleCircle absolute z1 white flex justify-center items-center f4 fw6">{i+1}</div>
+  		  	<div className="collapsibleCircle absolute z1 white flex justify-center items-center f4 fw6">
+            <p style={number}>{i+1}</p>
+          </div>
 	  	    <button className="collapsible f4-ns f5 lh-copy fw4 color-content o-80">{qContent[i][0]}</button>
 			<div className="answers">
 			  <p className="lh-copy f5-ns f6 fw3 color-content2">{qContent[i][1]}</p>

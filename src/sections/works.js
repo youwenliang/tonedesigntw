@@ -39,7 +39,8 @@ class Works extends Component {
       minWidth: "1024px",
       position: "relative",
       zIndex: 1,
-      marginBottom: "-100px"
+      marginTop: "-80px",
+      marginBottom: "-10px"
     }
     return (
       <section id={gData["sections"][6]} style={sectionStyle}>
