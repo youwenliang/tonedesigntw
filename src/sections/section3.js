@@ -22,7 +22,7 @@ class Section3 extends Component {
     return (
       <section id={gData["sections"][3]} style={sectionStyle}>
         <div className="content ph4-ns ph2 mw9 center">
-          <Header title={data.sectionTitle} color="#4c5b7f"/>
+          <Header title={data.sectionTitle} color="#333333"/>
           <div className="cf ph2-ns pt2 flex items-center flex-column flex-row-l">
             <div className="fl w-100 w-50-l tr-l tc relative">
               <img className="z1 relative" src={circle} alt="test"/>
@@ -31,9 +31,9 @@ class Section3 extends Component {
               </div>
             </div>
             <div className="fl w-100 w-50-l ph4 tl-l tc mw6 mt4 mt0-l">
-              <h2 className="f2 color-content fw6">{data.title}</h2>
-              <p className="lh-copy f4 color-content mb4">{data.content}</p>
-              <Button content="Contact!"/>
+              <h2 className="f2125 color-content fw5">{data.title}</h2>
+              <p className="lh-copy f5 fw3 color-content2 mb4">{data.content}</p>
+              <Button content={data.button}/>
             </div>
           </div>
         </div>

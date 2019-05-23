@@ -44,7 +44,7 @@ class Works extends Component {
     return (
       <section id={gData["sections"][6]} style={sectionStyle}>
         <div className="content ph4-ns ph2 mw9 center tc">
-          <Header title="Our Portfolio" color="#4c5b7f"/>
+          <Header title={"我們的作品"} color="#4c5b7f"/>
           <div className="flex justify-center">
             <div className="mb4" style={contentStyle}>
               <video id="home-video" className="home-video relative" width="100%" muted playsInline preload="auto" autoPlay>
@@ -56,8 +56,8 @@ class Works extends Component {
             </div>
           </div>
           <div className="z2 relative">
-            <Button content="Contact!"/>
-            <h2 className="mt4 f3 i fw3 normal color-content">Clinging to a one-point</h2>
+            <Button content={"按鈕文字"}/>
+            <h2 className="mt4 f1375 fw4 normal color-content2">這是一段小文字敘述</h2>
           </div>
         </div>
       </section>

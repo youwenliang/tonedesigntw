@@ -32,7 +32,7 @@ class Cover extends Component {
   }
   render() {
     // import data
-    var data = this.props.data["cover"];
+    var data = this.props.data[gData["sections"][0]];
   	var coverStyle = {
   		width: "100%",
   		minHeight: "100vh",
@@ -75,17 +75,17 @@ class Cover extends Component {
           <img src={shadow} width="90%" style={shadowStyle} alt="shadow"/>
         </div>
         <div className="fl w-100 w-50-l tl-l tc mt4 mt0-l mw6-l mw9">
-          <h1 className="f1 white fw6 mt0">{data.title}</h1>
-          <p className="lh-copy f3 white mb4 mt0">{data.content}</p>
-          <Button content="Contact!"/>
+          <h1 className="f1 white fw3 mt0">{data.title}</h1>
+          <p className="lh-copy f1375 white mb4 mt0 mw400">{data.content}</p>
+          <Button content={data.button}/>
         </div>
       </div>
     ) : (
       <div className="cf ph2-ns pt2 flex items-center flex-column flex-row-l justify-center z1 relative">
         <div className="fl w-100 w-50-l tl-l tc mt0 mw6-l mw9">
-          <h1 className="f1 white fw6 mt0">{data.title}</h1>
-          <p className="lh-copy f3 white mb4 mt0">{data.content}</p>
-          <Button content="Contact!"/>
+          <h1 className="f1 white fw3 mt0">{data.title}</h1>
+          <p className="lh-copy f1375 white mb4 mt0 mw400">{data.content}</p>
+          <Button content={data.button}/>
         </div>
         <div className="fl w-100 w-50-l tr-l tc relative">
           <LottieControl data1={animationDataCover} open={false} id="animationCover"/>

@@ -1,64 +1,67 @@
 var data = {
-	"sections": ["cover", "section-1", "section-2", "section-3", "section-4", "clients", "works", "contact", "faq"],
+	"sections": ["首頁", "section-1", "第二區塊", "section-3", "第四區塊", "clients", "作品集", "聯絡我們", "faq"],
 	"topic1": {
 		// Cover
-		"cover": {
-			"title": "This is cover title",
-			"content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempo cover."
+		"首頁": {
+			"title": "這是首頁的大標題",
+			"content": "這是首頁的副標題，可以有比較多字，兩行的文字或三行的文字．",
+			"button": "按鈕文字"
 		},
 		// Section 1
 		"section-1": {
-			"sectionTitle": "Our Values",
+			"sectionTitle": "這是各區塊中等標題",
 			"title": [
-				"Design1",
-				"Design2",
-				"Design3"
+				"第一個項目",
+				"第二個項目",
+				"第三個項目"
 			],
 			"content": [
-				"take on a new approach that speaks visually",
-				"take on a new approach that speaks visually",
-				"take on a new approach that speaks visually"
+				"這是一段敘述給第一個項目，大約一到兩行的文字．",
+				"這是一段敘述給第二個項目，大約一到兩行的文字．",
+				"這是一段敘述給第三個項目，大約一到兩行的文字．",
 			]
 		},
 		// Section 2
-		"section-2": {
-			"sectionTitle": "Omni Channel",
+		"第二區塊": {
+			"sectionTitle": "這是各區塊中等標題",
 		},
 		// Section 3
 		"section-3": {
-			"sectionTitle": "Omni Channel",
-			"title": "This is a section 3 title",
-			"content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum d."
+			"sectionTitle": "這是各區塊中等標題",
+			"title": "這是區塊三的主要標題",
+			"content": "這是區塊三的內文，可以有比較多字，良國處怎洲立。員破策就類格做度管著把參禮今生著：類出獎流朋上、者關的天接研你力許更工會外聞年紅每己國書。運面綠何知科子舉飛究。何時話會有社；不社院能實面華可也行用適行了他想員是一定，生們話驗畫！",
+			"button": "按鈕文字"
 		},
 		// Section 4
-		"section-4": {
-			"sectionTitle": "Our Process",
+		"第四區塊": {
+			"sectionTitle": "這是各區塊中等標題",
+			"section": ["區塊一", "區塊二", "區塊三"],
 			"title":[
-				["title1-1", "title1-2", "title1-3", "title1-4", "title1-5"],
-				["title2-1", "title2-2", "title2-3", "title2-4", "title2-5"],
-				["title3-1", "title3-2", "title3-3", "title3-4", "title3-5"],
+				["小標題一", "小標題二", "小標題三", "小標題四", "小標題五"],
+				["小標題一", "小標題二", "小標題三", "小標題四", "小標題五"],
+				["小標題一", "小標題二", "小標題三", "小標題四", "小標題五"],
 			],
 			"content":[
 				[
-				"take on a new appro that speaks visual1-1",
-				"take on a new appro that speaks visual1-2",
-				"take on a new appro that speaks visual1-3",
-				"take on a new appro that speaks visual1-4",
-				"take on a new appro that speaks visual1-5"
+				"這裡會有一小段內容，大約一兩行．",
+				"這裡會有一小段內容，大約一兩行．",
+				"這裡會有一小段內容，大約一兩行．",
+				"這裡會有一小段內容，大約一兩行．",
+				"這裡會有一小段內容，大約一兩行．",
 				],
 				[
-				"take on a new appro that speaks visual2-1",
-				"take on a new appro that speaks visual2-2",
-				"take on a new appro that speaks visual2-3",
-				"take on a new appro that speaks visual2-4",
-				"take on a new appro that speaks visual2-5"
+				"這裡會有一小段內容，大約一兩行．",
+				"這裡會有一小段內容，大約一兩行．",
+				"這裡會有一小段內容，大約一兩行．",
+				"這裡會有一小段內容，大約一兩行．",
+				"這裡會有一小段內容，大約一兩行．",
 				],
 				[
-				"take on a new appro that speaks visual3-1",
-				"take on a new appro that speaks visual3-2",
-				"take on a new appro that speaks visual3-3",
-				"take on a new appro that speaks visual3-4",
-				"take on a new appro that speaks visual3-5",
+				"這裡會有一小段內容，大約一兩行．",
+				"這裡會有一小段內容，大約一兩行．",
+				"這裡會有一小段內容，大約一兩行．",
+				"這裡會有一小段內容，大約一兩行．",
+				"這裡會有一小段內容，大約一兩行．",
 				]
 			],
 		},

@@ -18,7 +18,9 @@ body {
   	padding-bottom: 6rem;
   	min-height: 100%;
 	padding-bottom: 320px;
-	font-family: aktiv-grotesk, sans-serif;
+	font-family: source-han-sans-traditional, sans-serif;
+	font-style: normal;
+	font-weight: 100;
 	overflow-x: hidden;
 }
 
@@ -88,11 +90,13 @@ section {
 }
 
 .color-content {
-	color: #4c5b7f;
+	color: #262626;
+	letter-spacing: 1px;
 }
 
 .color-content2 {
-	color: #505f81;
+	color: #83838f;
+	letter-spacing: 1px;
 }
 
 /* Navigation */
@@ -103,7 +107,7 @@ section {
   justify-content: space-around;
   flex-direction: column;
   align-items: flex-end;
-  top: calc(50% - 120px);
+  top: calc(50% - 79px);
   right: 32px;
   z-index: 90;
 }
@@ -162,6 +166,19 @@ section {
 	}
 }
 
+.f1375 {
+	font-size: 1.375rem;
+}
+
+.f25 {
+	font-size: 2.5rem;
+	letter-spacing: 1px;
+}
+
+.f2125 {
+	font-size: 2.125rem;
+}
+
 .mw160 {
 	max-width: 160px;
 }
@@ -171,11 +188,18 @@ section {
 .mw320 {
 	max-width: 320px;
 }
+.mw400 {
+	max-width: 400px;
+}
 .mw480 {
 	max-width: 480px;
 }
 .mw640 {
 	max-width: 640px;
+}
+
+.mw75rem {
+	max-width: 75rem;
 }
 
 .z1 {
