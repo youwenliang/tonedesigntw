@@ -196,6 +196,10 @@ section {
 	}
 }
 
+.f2rem {
+	font-size: 2rem;
+}
+
 .f1375 {
 	font-size: 1.375rem;
 }
@@ -281,6 +285,7 @@ section {
 
 .arrows {
 	transform: translateX(-16px);
+	transition: all .2s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
 .tab button {
@@ -338,7 +343,9 @@ section {
   margin: 0;
   box-shadow: 0px 4px 16px rgba(0,0,0,.2);
   color: #ff978e;
-  padding: 0 5vw;
+  padding: 0 32px;
+  width: 18vw;
+  min-width: 270px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -370,4 +377,22 @@ section {
 
 .arrowlinks.active:before {
   background: linear-gradient(45deg, rgba(255,107,133,1) 0%,rgba(255,91,130,1) 50%);
+}
+
+.tagline {
+	opacity: 1;
+	transition: opacity .2s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+#arrowTrigger.start {
+	/*position: fixed;*/
+}
+
+#arrowTrigger.start .arrows {
+	transform: scale(.75) translate(-12px, -120px);
+}
+
+#arrowTrigger.start .tagline {
+	opacity: 0;
+	transition: opacity .2s cubic-bezier(0.23, 1, 0.32, 1);
 }

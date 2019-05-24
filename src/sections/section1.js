@@ -21,6 +21,9 @@ class Section1 extends Component {
     var sectionStyle = {
       background: "#ffffff",
     }
+    var shadowStyle = {
+      marginTop: "-20px"
+    }
     return (
       <section id={gData["sections"][1]} style={sectionStyle}>
         <div className="content ph4-ns ph2 mw75rem center">
@@ -29,7 +32,7 @@ class Section1 extends Component {
             <div className="fl w-100 w-third-l ph2 tc">
               <div className="mw320 center w-70">
                 <LottieControl data1={animationData1o} data2={animationData1l} open={true} offset={-135} id="animation1"/>
-                <img className="ma0" src={shadow} alt="shadow"/>
+                <img className="ma0" src={shadow} alt="shadow" style={shadowStyle}/>
               </div>
               <h2 className="mt4 f4 fw5 color-content mb0">{data.title[0]}</h2>
               <p className="lh-copy mw5 center tl f5 fw3 color-content2">{data.content[0]}</p>
@@ -37,7 +40,7 @@ class Section1 extends Component {
             <div className="fl w-100 w-third-l ph2 tc mt0-l mt4">
               <div className="mw320 center w-70">
                 <LottieControl data1={animationData2o} data2={animationData2l} open={true} offset={-135} id="animation2"/>
-                <img className="ma0" src={shadow} alt="shadow"/>
+                <img className="ma0" src={shadow} alt="shadow" style={shadowStyle}/>
               </div>
               <h2 className="mt4 f4 fw5 color-content mb0">{data.title[1]}</h2>
               <p className="lh-copy mw5 center tl f5 fw3 color-content2">{data.content[1]}</p>
@@ -45,7 +48,7 @@ class Section1 extends Component {
             <div className="fl w-100 w-third-l ph2 tc mt0-l mt4">
               <div className="mw320 center w-70">
                 <LottieControl data1={animationData3o} data2={animationData3l} open={true} offset={-135} id="animation3"/>
-                <img className="ma0" src={shadow} alt="shadow"/>
+                <img className="ma0" src={shadow} alt="shadow" style={shadowStyle}/>
               </div>
               <h2 className="mt4 f4 fw5 color-content mb0">{data.title[2]}</h2>
               <p className="lh-copy mw5 center tl f5 fw3 color-content2">{data.content[1]}</p>
