@@ -18,9 +18,14 @@ class Section2 extends Component {
       background: "#f7f8fa",
       borderTop: "2px #dbe1e9 solid"
     }
+    var innerShadow = {
+      top: "-168px",
+      position: "relative",
+      boxShadow: "inset 0 0 10px rgba(86,86,86,.42)",
+      width: "100vw"
+    }
     return (
       <section id={gData["sections"][2]} style={sectionStyle}>
-        <div id="trigger2"/>
         <Controller>
           <Scene
             classToggle="start"
@@ -30,10 +35,11 @@ class Section2 extends Component {
             {(progress, event) => {
               console.log(progress);
               return (
-                <div id="arrowTrigger" className="content ph4-ns ph2 mw8 center">
+                <div id="arrowTrigger" className="content">
                   <Header title={data.sectionTitle} color="#333333" margin={false}/>
                   <p className="tagline f4 fw4 color-content2 tc mt4 lh-copy ph2">{data.tagline}</p>
-                  <div className="arrows mb4 mt5 f3">
+                  <div className="arrows mb4 mt5 f3 z2 relative">
+                    <div id="trigger2"/>
                     <button className="z2 relative arrowlinks ph5 tc">
                       <img className="mr2" src={tone1} width="48" alt="icons"/>
                       <p className="z10 relative">{data.section[0]}</p>
@@ -46,6 +52,16 @@ class Section2 extends Component {
                       <img className="ml4 mr2" src={tone3} width="48" alt="icons"/>
                       <p className="z10 relative">{data.section[2]}</p>
                     </button>
+                  </div>
+                  <div id="section3-content" className="cf bg-white" style={innerShadow}>
+                    <div className="pv5 ph4-ns ph2 mw8 center h5">
+                      <div className="fl w-100 w-50-l relative">
+                        <p>test</p>
+                      </div>
+                      <div className="fl w-100 w-50-l relative">
+                        <p>test</p>
+                      </div>
+                    </div>
                   </div>
                 </div>
               )

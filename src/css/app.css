@@ -283,11 +283,6 @@ section {
   justify-content: center;
 }
 
-.arrows {
-	transform: translateX(-16px);
-	transition: all .2s cubic-bezier(0.23, 1, 0.32, 1);
-}
-
 .tab button {
   background: linear-gradient(to bottom, rgba(255,255,255,1) 0%,rgba(255,202,202,1) 100%);
   float: left;
@@ -381,18 +376,39 @@ section {
 
 .tagline {
 	opacity: 1;
-	transition: opacity .2s cubic-bezier(0.23, 1, 0.32, 1);
+	transition: all .2s cubic-bezier(0.23, 1, 0.32, 1) .3s;
 }
 
 #arrowTrigger.start {
 	/*position: fixed;*/
 }
 
+.arrows {
+	transform: translateX(-16px);
+	transition: all .2s cubic-bezier(0.23, 1, 0.32, 1) .3s;
+}
+
 #arrowTrigger.start .arrows {
 	transform: scale(.75) translate(-12px, -120px);
+	transition: all .2s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
 #arrowTrigger.start .tagline {
 	opacity: 0;
-	transition: opacity .2s cubic-bezier(0.23, 1, 0.32, 1);
+	transition: all .2s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+#section3-content {
+	opacity: 0;
+	overflow: hidden;
+	transform: translateZ(0) scaleY(0);
+	transform-origin: top;
+	transition: all .4s ease-in-out;
+}
+
+.start #section3-content {
+	max-height: 400px;
+	opacity: 1;
+	transform: translateZ(0) scaleY(1);
+	transition: all .4s ease-in-out;
 }
