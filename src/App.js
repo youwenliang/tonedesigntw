@@ -45,10 +45,10 @@ class App extends Component {
         <Section2 data={this.state.data}/>
         <Section3 data={this.state.data}/>
         <Section4 data={this.state.data}/>
-        <Clients/>
+        <Clients data={this.state.data}/>
         <Works/>
-        <Contact/>
-        <Faq/>
+        <Contact data={this.state.data}/>
+        <Faq data={this.state.data}/>
         <Footer/>
       </div>
     );

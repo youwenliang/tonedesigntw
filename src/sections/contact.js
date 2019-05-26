@@ -3,7 +3,10 @@ import Button from '../components/button.js';
 import gData from '../data/data.js';
 import $ from 'jquery';
 
-import background from '../images/cta-background.svg';
+import bg1 from '../images/cta-background.svg';
+import bg2 from '../images/cta-background.svg';
+import bg3 from '../images/cta-background.svg';
+
 import waves from '../images/cta-waves.svg';
 import tone from '../images/cta-tone.svg';
 
@@ -28,8 +31,10 @@ class Contact extends Component {
     });
   }
   render() {
+    var bg = [bg1, bg2, bg3];
+    var data = this.props.data[gData["sections"][7]];
     var sectionStyle = {
-  		backgroundImage: "url("+waves+"), url("+tone+"), url("+background+")",
+  		backgroundImage: "url("+waves+"), url("+tone+"), url("+bg[data.id - 1]+")",
   		backgroundPosition: "right 95%, 85% 50%, center top",
   		backgroundSize: this.state.mobile ? "960px, 700px, cover" : "contain, 700px, cover", 
   		backgroundRepeat: "no-repeat, no-repeat, no-repeat",

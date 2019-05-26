@@ -3,26 +3,70 @@ import Header from '../components/header.js';
 import gData from '../data/data.js';
 import $ from 'jquery';
 
-import icon1_1 from '../images/icons/圖-1.svg';
-import icon1_2 from '../images/icons/圖-2.svg';
-import icon1_3 from '../images/icons/圖-3.svg';
-import icon1_4 from '../images/icons/圖-4.svg';
-import icon1_5 from '../images/icons/圖-5.svg';
-import icon2_1 from '../images/icons/影片-1.svg';
-import icon2_2 from '../images/icons/影片-2.svg';
-import icon2_3 from '../images/icons/影片-3.svg';
-import icon2_4 from '../images/icons/影片-4.svg';
-import icon2_5 from '../images/icons/影片-5.svg';
-import icon3_1 from '../images/icons/網站-1.svg';
-import icon3_2 from '../images/icons/網站-2.svg';
-import icon3_3 from '../images/icons/網站-3.svg';
-import icon3_4 from '../images/icons/網站-4.svg';
-import icon3_5 from '../images/icons/網站-5.svg';
+import icon1_1_1 from '../images/icons/圖-1.svg';
+import icon1_1_2 from '../images/icons/圖-2.svg';
+import icon1_1_3 from '../images/icons/圖-3.svg';
+import icon1_1_4 from '../images/icons/圖-4.svg';
+import icon1_1_5 from '../images/icons/圖-5.svg';
+import icon1_2_1 from '../images/icons/影片-1.svg';
+import icon1_2_2 from '../images/icons/影片-2.svg';
+import icon1_2_3 from '../images/icons/影片-3.svg';
+import icon1_2_4 from '../images/icons/影片-4.svg';
+import icon1_2_5 from '../images/icons/影片-5.svg';
+import icon1_3_1 from '../images/icons/網站-1.svg';
+import icon1_3_2 from '../images/icons/網站-2.svg';
+import icon1_3_3 from '../images/icons/網站-3.svg';
+import icon1_3_4 from '../images/icons/網站-4.svg';
+import icon1_3_5 from '../images/icons/網站-5.svg';
+
+import icon2_1_1 from '../images/icons/圖-2.svg';
+import icon2_1_2 from '../images/icons/圖-1.svg';
+import icon2_1_3 from '../images/icons/圖-3.svg';
+import icon2_1_4 from '../images/icons/圖-4.svg';
+import icon2_1_5 from '../images/icons/圖-5.svg';
+import icon2_2_1 from '../images/icons/影片-1.svg';
+import icon2_2_2 from '../images/icons/影片-2.svg';
+import icon2_2_3 from '../images/icons/影片-3.svg';
+import icon2_2_4 from '../images/icons/影片-4.svg';
+import icon2_2_5 from '../images/icons/影片-5.svg';
+import icon2_3_1 from '../images/icons/網站-1.svg';
+import icon2_3_2 from '../images/icons/網站-2.svg';
+import icon2_3_3 from '../images/icons/網站-3.svg';
+import icon2_3_4 from '../images/icons/網站-4.svg';
+import icon2_3_5 from '../images/icons/網站-5.svg';
+
+import icon3_1_1 from '../images/icons/圖-1.svg';
+import icon3_1_2 from '../images/icons/圖-2.svg';
+import icon3_1_3 from '../images/icons/圖-3.svg';
+import icon3_1_4 from '../images/icons/圖-4.svg';
+import icon3_1_5 from '../images/icons/圖-5.svg';
+import icon3_2_1 from '../images/icons/影片-1.svg';
+import icon3_2_2 from '../images/icons/影片-2.svg';
+import icon3_2_3 from '../images/icons/影片-3.svg';
+import icon3_2_4 from '../images/icons/影片-4.svg';
+import icon3_2_5 from '../images/icons/影片-5.svg';
+import icon3_3_1 from '../images/icons/網站-1.svg';
+import icon3_3_2 from '../images/icons/網站-2.svg';
+import icon3_3_3 from '../images/icons/網站-3.svg';
+import icon3_3_4 from '../images/icons/網站-4.svg';
+import icon3_3_5 from '../images/icons/網站-5.svg';
 
 var icons = [
-  icon1_1, icon1_2, icon1_3, icon1_4, icon1_5, 
-  icon2_1, icon2_2, icon2_3, icon2_4, icon2_5, 
-  icon3_1, icon3_2, icon3_3, icon3_4, icon3_5, 
+  [
+    icon1_1_1, icon1_1_2, icon1_1_3, icon1_1_4, icon1_1_5, 
+    icon1_2_1, icon1_2_2, icon1_2_3, icon1_2_4, icon1_2_5, 
+    icon1_3_1, icon1_3_2, icon1_3_3, icon1_3_4, icon1_3_5
+  ],
+  [
+    icon2_1_1, icon2_1_2, icon2_1_3, icon2_1_4, icon2_1_5, 
+    icon2_2_1, icon2_2_2, icon2_2_3, icon2_2_4, icon2_2_5, 
+    icon2_3_1, icon2_3_2, icon2_3_3, icon2_3_4, icon2_3_5
+  ],
+  [
+    icon3_1_1, icon3_1_2, icon3_1_3, icon3_1_4, icon3_1_5, 
+    icon3_2_1, icon3_2_2, icon3_2_3, icon3_2_4, icon3_2_5, 
+    icon3_3_1, icon3_3_2, icon3_3_3, icon3_3_4, icon3_3_5
+  ],
 ]
 
 class Section4 extends Component {
@@ -70,7 +114,7 @@ class Section4 extends Component {
       var content = (
         <div className="fl w-20-l w-100 pv2 ph0 tc" key={i}>
           <div className="flex flex-column-l flex-row justify-center items-center">
-            <img src={icons[i]} width="85" alt="icons" style={mw85}/>
+            <img src={icons[data.id - 1][i]} width="85" alt="icons" style={mw85}/>
             <div className="color-content2 tl tc-l ml4 ml0-l">
               <h3 className="f4 fw5 color-content mb0 fw4 mt0 mt4-l">{data.title[x][y]}</h3>
               <p className="f5 fw3 color-content2 lh-copy mb0 mb2-l mw5-l ph3-l ph0">{data.content[x][y]}</p>
@@ -104,15 +148,19 @@ class Section4 extends Component {
       zIndex: 1
     }
 
+    var color = [
+      "color1", "color2", "color3"
+    ]
+
     return (
       <section id={gData["sections"][4]} style={sectionStyle}>
         <div className="content ph4-ns ph2 mw8 center relative">
           <Header title={data.sectionTitle} color="#4C5B7F" margin={true}/>
           
           <div className="tab mb4 mt5 f4-ns f5">
-            <button className="tablinks active ph5-l ph3 tc" onClick={(e) => this.handleClick(e, "content1")}>{data.section[0]}</button>
-            <button className="tablinks ph5-l ph3 tc" onClick={(e) => this.handleClick(e, "content2")}>{data.section[1]}</button>
-            <button className="tablinks ph5-l ph3 tc" onClick={(e) => this.handleClick(e, "content3")}>{data.section[2]}</button>
+            <button className={color[data.id - 1]+" tablinks active ph5-l ph3 tc"} onClick={(e) => this.handleClick(e, "content1")}>{data.section[0]}</button>
+            <button className={color[data.id - 1]+" tablinks ph5-l ph3 tc"} onClick={(e) => this.handleClick(e, "content2")}>{data.section[1]}</button>
+            <button className={color[data.id - 1]+" tablinks ph5-l ph3 tc"} onClick={(e) => this.handleClick(e, "content3")}>{data.section[2]}</button>
           </div>
           <div className="relative">
             <div id="content1" className="tabcontent active cf mt5-ns mt3">

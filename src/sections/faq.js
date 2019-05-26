@@ -24,6 +24,8 @@ class Faq extends Component {
   		background: "#f7f8fa"
   	}
 
+    var data = this.props.data[gData["sections"][8]];
+
   	var qContent = [
   		[
   		 "這是一段問題的敘述，這是一段問題的敘述這是一段問題的敘述",
@@ -51,10 +53,19 @@ class Faq extends Component {
       position: "relative",
       top: "-1.3px"
     };
+    var bgColor = [
+      "linear-gradient(to right, rgba(255,151,142,1) 0%,rgba(255,91,130,1) 100%)",
+      "linear-gradient(to right, rgba(255,151,142,1) 0%,rgba(255,91,130,1) 100%)",
+      "linear-gradient(to right, rgba(255,151,142,1) 0%,rgba(255,91,130,1) 100%)",
+    ]
+    var color = {
+      background: bgColor[data.id - 1]
+    }
+
   	for(var i = 0; i < qContent.length; i++){
   		qList.push(
   		  <div className="relative" key={i}>
-  		  	<div className="collapsibleCircle absolute z1 white flex justify-center items-center f4 fw6">
+  		  	<div className="collapsibleCircle absolute z1 white flex justify-center items-center f4 fw6" style={color}>
             <p style={number}>{i+1}</p>
           </div>
 	  	    <button className="collapsible f4-ns f5 lh-copy fw4 color-content o-80">{qContent[i][0]}</button>

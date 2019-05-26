@@ -1,18 +1,27 @@
 import React, { Component } from 'react';
+// components
 import LottieControl from '../components/lottie.js';
+import Button from '../components/button.js';
+// images
 import shadow from '../images/cover-shadow.png';
 import scroll from '../images/scroll.svg';
-import bg from '../images/cover-bg.svg';
-import bg2 from '../images/cover-tone.svg';
-import bg3 from '../images/cover-waves.svg';
+import bg_tone from '../images/cover-tone.svg';
+import bg_waves from '../images/cover-waves.svg';
+
 import $ from 'jquery';
 import gData from '../data/data.js';
 import { Controller, Scene } from 'react-scrollmagic';
 import { Tween, Timeline } from 'react-gsap';
 
+// bg x 3
+import bg1 from '../images/cover-bg.svg';
+import bg2 from '../images/cover-bg.svg';
+import bg3 from '../images/cover-bg.svg';
 
-import Button from '../components/button.js';
-import * as animationDataCover from '../images/animations/data1_loop.json';
+// animation x 3
+import * as animation1 from '../images/animations/data1_loop.json';
+import * as animation2 from '../images/animations/data1_loop.json';
+import * as animation3 from '../images/animations/data1_loop.json';
 
 class Cover extends Component {
   constructor(props) {
@@ -68,11 +77,12 @@ class Cover extends Component {
       maxWidth: "500px",
       marginTop: "-100px"
     }
+    var bg = [bg1, bg2, bg3];
     var bgStyle = {
       top: 0,
       left: 0,
       backgroundColor: "#ffffff",
-      backgroundImage: "url("+bg+")",
+      backgroundImage: "url("+bg[data.id - 1]+")",
       backgroundSize: this.state.large ? "cover": "1800px",
       backgroundPosition: "center 0%",
       backgroundRepeat: "no-repeat"
@@ -80,7 +90,7 @@ class Cover extends Component {
     var bg2Style = {
       top: 0,
       left: 0,
-      backgroundImage: "url("+bg2+")",
+      backgroundImage: "url("+bg_tone+")",
       backgroundSize: "600px",
       backgroundPosition: "30% 35%",
       backgroundRepeat: "no-repeat"
@@ -88,11 +98,13 @@ class Cover extends Component {
     var bg3Style = {
       top: 0,
       left: 0,
-      backgroundImage: "url("+bg3+")",
+      backgroundImage: "url("+bg_waves+")",
       backgroundPosition: "left 5%",
       backgroundSize: this.state.mobile ? "960px" : "contain",
       backgroundRepeat: "no-repeat"
     }
+    var animations = [animation1, animation2, animation3];
+    var animationDataCover = animations[data.id - 1];
 
     var contents = this.state.mobile ? (
       <div className="cf ph2-ns pt2 flex items-center flex-column flex-row-l justify-center z1 relative">
