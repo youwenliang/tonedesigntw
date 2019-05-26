@@ -1,10 +1,15 @@
 import React, { Component } from 'react';
 import LottieControl from '../components/lottie.js';
-import shadow from '../images/shadow2.png';
+import shadow from '../images/cover-shadow.png';
 import scroll from '../images/scroll.svg';
-import bg from '../images/bg.svg';
+import bg from '../images/cover-bg.svg';
+import bg2 from '../images/cover-tone.svg';
+import bg3 from '../images/cover-waves.svg';
 import $ from 'jquery';
-import gData from '../data/data.js'
+import gData from '../data/data.js';
+import { Controller, Scene } from 'react-scrollmagic';
+import { Tween, Timeline } from 'react-gsap';
+
 
 import Button from '../components/button.js';
 import * as animationDataCover from '../images/animations/data1_loop.json';
@@ -13,7 +18,8 @@ class Cover extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      mobile: false
+      mobile: false,
+      large: false
     };
   }
   componentDidMount(){
@@ -23,6 +29,10 @@ class Cover extends Component {
         $this.setState({mobile:true});
       }
       else $this.setState({mobile:false});
+      if($(window).width() >= 1800) {
+        $this.setState({large:true});
+      }
+      else $this.setState({large:false});
     }
     $(window).on('resize orientationchange', checkMobile);
     $(document).ready(function(){
@@ -35,8 +45,6 @@ class Cover extends Component {
   	var coverStyle = {
   		width: "100%",
   		minHeight: "100vh",
-  		background: "linear-gradient(to right, rgba(255,151,142,1) 0%,rgba(255,91,130,1) 100%)",
-      //paddingTop: "74px"
   	}
     var shadowStyle = {
       position: "relative",
@@ -61,12 +69,31 @@ class Cover extends Component {
       marginTop: "-100px"
     }
     var bgStyle = {
-      position: "absolute",
-      width: "100vw",
-      height: "30vh",
-      zIndex: 0,
-      bottom: 0
+      top: 0,
+      left: 0,
+      backgroundColor: "#ffffff",
+      backgroundImage: "url("+bg+")",
+      backgroundSize: this.state.large ? "cover": "1800px",
+      backgroundPosition: "center 0%",
+      backgroundRepeat: "no-repeat"
     }
+    var bg2Style = {
+      top: 0,
+      left: 0,
+      backgroundImage: "url("+bg2+")",
+      backgroundSize: "600px",
+      backgroundPosition: "30% 35%",
+      backgroundRepeat: "no-repeat"
+    }
+    var bg3Style = {
+      top: 0,
+      left: 0,
+      backgroundImage: "url("+bg3+")",
+      backgroundPosition: "left 5%",
+      backgroundSize: this.state.mobile ? "960px" : "contain",
+      backgroundRepeat: "no-repeat"
+    }
+
     var contents = this.state.mobile ? (
       <div className="cf ph2-ns pt2 flex items-center flex-column flex-row-l justify-center z1 relative">
         <div className="fl w-100 w-50-l tr-l tc relative relative mt4" style={img}>
@@ -95,17 +122,52 @@ class Cover extends Component {
 
     return (
       <header id={gData["sections"][0]} className="cover flex justify-center items-center relative" style={coverStyle}>
-        <div className="content ph4 mw9-l center w-90-l w-100">
-          {contents}
-        </div>
+        <Controller>
+          <Scene
+            indicators={false}
+            duration="200%"
+            triggerHook="onEnter"
+          >
+            <Timeline
+              wrapper={<div className="content ph4 mw9-l center w-90-l w-100" />}
+            >
+              <Tween
+                position="0"
+                from={{
+                  yPercent: -40,
+                }}
+                to={{
+                    yPercent: 20,
+                }}
+              >
+              <div className="absolute w-100 h-100" style={bgStyle}/>
+              </Tween>
+              <Tween
+                position="0"
+                from={{
+                  yPercent: -25,
+                }}
+                to={{
+                    yPercent: 10,
+                }}
+              >
+              <div className="absolute w-100 h-100" style={bg2Style}/>
+              </Tween>
+              <div className="absolute w-100 h-100" style={bg3Style}/>
+              {contents}
+            </Timeline>
+          </Scene>
+        </Controller>
         <div style={scrollStyle}>
           <img src={scroll} width="40px" alt="arrow"/>
           <p className="ma2">Scroll</p>
         </div>
-        <img src={bg} style={bgStyle} alt="background"/>
       </header>
     );
   }
 }
 
 export default Cover;
+
+
+

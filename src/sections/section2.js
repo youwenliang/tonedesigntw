@@ -22,7 +22,8 @@ class Section2 extends Component {
       top: "-168px",
       position: "relative",
       boxShadow: "inset 0 0 10px rgba(86,86,86,.42)",
-      width: "100vw"
+      width: "100vw",
+      marginBottom: "-168px"
     }
     return (
       <section id={gData["sections"][2]} style={sectionStyle}>
@@ -36,7 +37,7 @@ class Section2 extends Component {
               console.log(progress);
               return (
                 <div id="arrowTrigger" className="content">
-                  <Header title={data.sectionTitle} color="#333333" margin={false}/>
+                  <Header title={data.sectionTitle} color="#4C5B7F" margin={false}/>
                   <p className="tagline f4 fw4 color-content2 tc mt4 lh-copy ph2">{data.tagline}</p>
                   <div className="arrows mb4 mt5 f3 z2 relative">
                     <div id="trigger2"/>

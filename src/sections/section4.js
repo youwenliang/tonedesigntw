@@ -107,7 +107,7 @@ class Section4 extends Component {
     return (
       <section id={gData["sections"][4]} style={sectionStyle}>
         <div className="content ph4-ns ph2 mw8 center relative">
-          <Header title={data.sectionTitle} color="#333333" margin={true}/>
+          <Header title={data.sectionTitle} color="#4C5B7F" margin={true}/>
           
           <div className="tab mb4 mt5 f4-ns f5">
             <button className="tablinks active ph5-l ph3 tc" onClick={(e) => this.handleClick(e, "content1")}>{data.section[0]}</button>

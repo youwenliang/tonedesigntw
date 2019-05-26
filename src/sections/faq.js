@@ -68,7 +68,7 @@ class Faq extends Component {
     return (
       <section id={gData["sections"][8]} style={sectionStyle}>
       	<div className="content ph4-ns ph2 mw56rem center">
-      	  <Header title={"常見問題"} color="#333333" margin={true}/>
+      	  <Header title={"常見問題"} color="#4C5B7F" margin={true}/>
       	  <div>
       	  	{qList}
       	  </div>

@@ -34,10 +34,10 @@ section {
 	padding: 5rem 0;
 }
 
-
 .ds {
 	overflow-y: hidden;
 }
+
 /* Loading Gif */
 #loading {
   position: fixed;
@@ -120,12 +120,12 @@ section {
 }
 
 .color-content {
-	color: #262626;
+	color: #4C5B7F;
 	letter-spacing: 1px;
 }
 
 .color-content2 {
-	color: #83838f;
+	color: #4C5B7F;
 	letter-spacing: 1px;
 }
 
@@ -376,7 +376,7 @@ section {
 
 .tagline {
 	opacity: 1;
-	transition: all .2s cubic-bezier(0.23, 1, 0.32, 1) .3s;
+	transition: all .2s cubic-bezier(0.23, 1, 0.32, 1) .4s;
 }
 
 #arrowTrigger.start {
@@ -385,7 +385,7 @@ section {
 
 .arrows {
 	transform: translateX(-16px);
-	transition: all .2s cubic-bezier(0.23, 1, 0.32, 1) .3s;
+	transition: all .2s cubic-bezier(0.23, 1, 0.32, 1) .4s;
 }
 
 #arrowTrigger.start .arrows {
@@ -399,7 +399,6 @@ section {
 }
 
 #section3-content {
-	opacity: 0;
 	overflow: hidden;
 	transform: translateZ(0) scaleY(0);
 	transform-origin: top;
@@ -408,7 +407,6 @@ section {
 
 .start #section3-content {
 	max-height: 400px;
-	opacity: 1;
 	transform: translateZ(0) scaleY(1);
 	transition: all .4s ease-in-out;
 }

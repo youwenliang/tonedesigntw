@@ -45,7 +45,7 @@ class Works extends Component {
     return (
       <section id={gData["sections"][6]} style={sectionStyle}>
         <div className="content ph4-ns ph2 mw9 center tc">
-          <Header title={"我們的作品"} color="#333333" margin={true}/>
+          <Header title={"我們的作品"} color="#4C5B7F" margin={true}/>
           <div className="flex justify-center">
             <div className="mb4" style={contentStyle}>
               <video id="home-video" className="home-video relative" width="100%" muted playsInline preload="auto" autoPlay>
