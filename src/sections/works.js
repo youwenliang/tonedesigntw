@@ -32,10 +32,11 @@ class Works extends Component {
   }
   render() {
     var sectionStyle = {
-      background: "#ffffff"
+      background: "#ffffff",
+      paddingBottom: 0
     }
     var contentStyle = {
-      width: "100%",
+      width: "80%",
       minWidth: "1024px",
       position: "relative",
       zIndex: 1,
@@ -57,8 +58,8 @@ class Works extends Component {
             </div>
           </div>
           <div className="z2 relative">
-            <Button content={"按鈕文字"}/>
-            <h2 className="mt4 f1375 fw4 normal color-content2">這是一段小文字敘述</h2>
+            <Button content={"按鈕文字"} scale={1.25}/>
+            <h2 className="mt4 f5-ns f6 fw4 normal color-content2">這是一段小文字敘述</h2>
           </div>
         </div>
       </section>

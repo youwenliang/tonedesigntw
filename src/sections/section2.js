@@ -16,7 +16,6 @@ class Section2 extends Component {
 
     var sectionStyle = {
       background: "#f7f8fa",
-      borderTop: "2px #dbe1e9 solid"
     }
     var innerShadow = {
       top: "-168px",
@@ -38,7 +37,7 @@ class Section2 extends Component {
               return (
                 <div id="arrowTrigger" className="content">
                   <Header title={data.sectionTitle} color="#4C5B7F" margin={false}/>
-                  <p className="tagline f4 fw4 color-content2 tc mt4 lh-copy ph2">{data.tagline}</p>
+                  <p className="tagline f5-ns f6 fw4 color-content2 tc mt4 lh-copy ph2">{data.tagline}</p>
                   <div className="arrows mb4 mt5 f3 z2 relative">
                     <div id="trigger2"/>
                     <button className="z2 relative arrowlinks ph5 tc">

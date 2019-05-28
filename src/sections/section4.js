@@ -100,8 +100,7 @@ class Section4 extends Component {
   	// import data
   	var data = this.props.data[gData["sections"][4]];
     var sectionStyle = {
-      background: "#ffffff",
-      borderTop: "2px #dbe1e9 solid"
+      background: "#f7f8fa",
     }
 
     var contentList = [];
@@ -116,8 +115,8 @@ class Section4 extends Component {
           <div className="flex flex-column-l flex-row justify-center items-center">
             <img src={icons[data.id - 1][i]} width="85" alt="icons" style={mw85}/>
             <div className="color-content2 tl tc-l ml4 ml0-l">
-              <h3 className="f4 fw5 color-content mb0 fw4 mt0 mt4-l">{data.title[x][y]}</h3>
-              <p className="f5 fw3 color-content2 lh-copy mb0 mb2-l mw5-l ph3-l ph0">{data.content[x][y]}</p>
+              <h3 className="f4-ns f5 fw5 color-content mb0 fw4 mt0 mt4-l">{data.title[x][y]}</h3>
+              <p className="f5-ns f6 fw3 color-content2 lh-copy mb0 mb2-l mw5-l ph3-l ph0">{data.content[x][y]}</p>
             </div>
           </div>
         </div>
@@ -158,11 +157,11 @@ class Section4 extends Component {
           <Header title={data.sectionTitle} color="#4C5B7F" margin={true}/>
           
           <div className="tab mb4 mt5 f4-ns f5">
-            <button className={color[data.id - 1]+" tablinks active ph5-l ph3 tc"} onClick={(e) => this.handleClick(e, "content1")}>{data.section[0]}</button>
-            <button className={color[data.id - 1]+" tablinks ph5-l ph3 tc"} onClick={(e) => this.handleClick(e, "content2")}>{data.section[1]}</button>
-            <button className={color[data.id - 1]+" tablinks ph5-l ph3 tc"} onClick={(e) => this.handleClick(e, "content3")}>{data.section[2]}</button>
+            <button className={color[data.id - 1]+" tablinks active ph3 tc"} onClick={(e) => this.handleClick(e, "content1")}>{data.section[0]}</button>
+            <button className={color[data.id - 1]+" tablinks ph3 tc"} onClick={(e) => this.handleClick(e, "content2")}>{data.section[1]}</button>
+            <button className={color[data.id - 1]+" tablinks ph3 tc"} onClick={(e) => this.handleClick(e, "content3")}>{data.section[2]}</button>
           </div>
-          <div className="relative">
+          <div className="relative w-90 center">
             <div id="content1" className="tabcontent active cf mt5-ns mt3">
               {contentList.slice(0,5)}
             </div>

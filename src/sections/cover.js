@@ -6,7 +6,6 @@ import Button from '../components/button.js';
 import shadow from '../images/cover-shadow.png';
 import scroll from '../images/scroll.svg';
 import bg_tone from '../images/cover-tone.svg';
-import bg_waves from '../images/cover-waves.svg';
 
 import $ from 'jquery';
 import gData from '../data/data.js';
@@ -91,18 +90,11 @@ class Cover extends Component {
       top: 0,
       left: 0,
       backgroundImage: "url("+bg_tone+")",
-      backgroundSize: "600px",
+      backgroundSize: "700px",
       backgroundPosition: "30% 35%",
       backgroundRepeat: "no-repeat"
     }
-    var bg3Style = {
-      top: 0,
-      left: 0,
-      backgroundImage: "url("+bg_waves+")",
-      backgroundPosition: "left 5%",
-      backgroundSize: this.state.mobile ? "960px" : "contain",
-      backgroundRepeat: "no-repeat"
-    }
+    
     var animations = [animation1, animation2, animation3];
     var animationDataCover = animations[data.id - 1];
 
@@ -115,7 +107,7 @@ class Cover extends Component {
         <div className="fl w-100 w-50-l tl-l tc mt4 mt0-l mw6-l mw9">
           <h1 className="w-100 f1-ns f2 white fw3 mt0">{data.title}</h1>
           <p className="w-100 center lh-copy f1375 white mb4 mt0 mw400">{data.content}</p>
-          <Button content={data.button}/>
+          <Button content={data.button} scale={1.25}/>
         </div>
       </div>
     ) : (
@@ -165,7 +157,6 @@ class Cover extends Component {
               >
               <div className="absolute w-100 h-100" style={bg2Style}/>
               </Tween>
-              <div className="absolute w-100 h-100" style={bg3Style}/>
               {contents}
             </Timeline>
           </Scene>

@@ -64,28 +64,28 @@ class Section1 extends Component {
           <Header title={data.sectionTitle} color="#4C5B7F" margin={true}/>
           <div className="cf ph2-ns pt2">
             <div className="fl w-100 w-third-l ph2 tc">
-              <div className="mw320 center w-70">
+              <div className="mw320 center w-60">
                 <LottieControl data1={animation1[data.id - 1][0]} data2={animation1[data.id - 1][1]} open={true} offset={-135} id="animation1"/>
                 <img className="ma0" src={shadow} alt="shadow" style={shadowStyle}/>
               </div>
-              <h2 className="mt4 f4 fw5 color-content mb0">{data.title[0]}</h2>
-              <p className="lh-copy mw5 center tl f5 fw3 color-content2">{data.content[0]}</p>
+              <h2 className="mt4 f4-ns f5 fw5 color-content mb0">{data.title[0]}</h2>
+              <p className="lh-copy mw5 center tl f5-ns f6 fw3 color-content2">{data.content[0]}</p>
             </div>
             <div className="fl w-100 w-third-l ph2 tc mt0-l mt4">
-              <div className="mw320 center w-70">
+              <div className="mw320 center w-60">
                 <LottieControl data1={animation2[data.id - 1][0]} data2={animation2[data.id - 1][1]} open={true} offset={-135} id="animation2"/>
                 <img className="ma0" src={shadow} alt="shadow" style={shadowStyle}/>
               </div>
-              <h2 className="mt4 f4 fw5 color-content mb0">{data.title[1]}</h2>
-              <p className="lh-copy mw5 center tl f5 fw3 color-content2">{data.content[1]}</p>
+              <h2 className="mt4 f4-ns f5 fw5 color-content mb0">{data.title[1]}</h2>
+              <p className="lh-copy mw5 center tl f5-ns f6 fw3 color-content2">{data.content[1]}</p>
             </div>
             <div className="fl w-100 w-third-l ph2 tc mt0-l mt4">
-              <div className="mw320 center w-70">
+              <div className="mw320 center w-60">
                 <LottieControl data1={animation3[data.id - 1][0]} data2={animation3[data.id - 1][1]} open={true} offset={-135} id="animation3"/>
                 <img className="ma0" src={shadow} alt="shadow" style={shadowStyle}/>
               </div>
-              <h2 className="mt4 f4 fw5 color-content mb0">{data.title[2]}</h2>
-              <p className="lh-copy mw5 center tl f5 fw3 color-content2">{data.content[1]}</p>
+              <h2 className="mt4 f4-ns f5 fw5 color-content mb0">{data.title[2]}</h2>
+              <p className="lh-copy mw5 center tl f5-ns f6 fw3 color-content2">{data.content[1]}</p>
             </div>
           </div>
         </div>
