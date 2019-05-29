@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Footer from './components/footer.js';
 import Scroll from './components/scroll.js';
-
+import Nav from './components/nav.js';
 import Cover from './sections/cover.js';
 import Section1 from './sections/section1.js';
 import Section2 from './sections/section2.js';
@@ -38,7 +38,7 @@ class App extends Component {
     return (
       <div className="App">
         <div id="loading" className="flex items-center justify-center"></div>
-        {/*<Nav/>*/}
+        <Nav/>
         <Scroll/>
         <Cover data={this.state.data}/>
         <Section1 data={this.state.data}/>

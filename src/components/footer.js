@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import logo from '../images/tonedesign.svg';
+import logo from '../images/tone-white.svg';
 
 class Footer extends Component {
   render() {
@@ -15,7 +15,7 @@ class Footer extends Component {
     return (
       <footer className="footer flex items-center" style={footerStyle}>
         <div className="content ph4 mw8 center w-100">
-          <img src={logo} height="45px" alt="Tone Design"/>
+          <img src={logo} width="200px" alt="Tone Design"/>
         </div>
       </footer>
     );

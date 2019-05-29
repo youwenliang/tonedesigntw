@@ -33,7 +33,7 @@ class Section2 extends Component {
             triggerElement={'#trigger2'}
           >
             {(progress, event) => {
-              console.log(progress);
+              // console.log(progress);
               return (
                 <div id="arrowTrigger" className="content">
                   <Header title={data.sectionTitle} color="#4C5B7F" margin={false}/>
