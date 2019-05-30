@@ -156,12 +156,12 @@ class Section4 extends Component {
         <div className="content ph4-ns ph2 mw8 center relative">
           <Header title={data.sectionTitle} color="#4C5B7F" margin={true}/>
           
-          <div className="tab mb4 mt5 f4-ns f5">
+          <div className="hide tab mb4 mt5 f4-ns f5">
             <button className={color[data.id - 1]+" tablinks active ph3 tc"} onClick={(e) => this.handleClick(e, "content1")}>{data.section[0]}</button>
             <button className={color[data.id - 1]+" tablinks ph3 tc"} onClick={(e) => this.handleClick(e, "content2")}>{data.section[1]}</button>
             <button className={color[data.id - 1]+" tablinks ph3 tc"} onClick={(e) => this.handleClick(e, "content3")}>{data.section[2]}</button>
           </div>
-          <div className="relative w-90 center">
+          <div className="hide relative w-90 center">
             <div id="content1" className="tabcontent active cf mt5-ns mt3">
               {contentList.slice(0,5)}
             </div>

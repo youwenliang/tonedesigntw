@@ -29,14 +29,14 @@ class Section3 extends Component {
         <div className="content ph4-ns ph2 mw9 center">
           <Header title={data.sectionTitle} color="#4C5B7F" margin={false}/>
           <div className="cf ph2-ns pt2 flex items-center flex-column flex-row-l">
-            <div className="fl w-100 w-50-l tc relative">
+            <div className="hide fl w-100 w-50-l tc relative">
               <img className="z1 relative w-80 center" src={circles[data.id - 1]} alt="test"/>
               <div className="absolute w-80 center" style={mask}>
-              	{/*<img src={waves} alt="test"/>*/}
-                <LottieControl data1={animationDataCircles} open={false} id="animationCircles" offset={0}/>
+              	<img src={waves} alt="test"/>
+                {/*<LottieControl data1={animationDataCircles} open={false} id="animationCircles" offset={0}/>*/}
               </div>
             </div>
-            <div className="fl w-100 w-50-l ph4 tl-l tc mw6 mt0">
+            <div className="hide fl w-100 w-50-l ph4 tl-l tc mw6 mt0">
               <h2 className="f4-ns f5 color-content fw5">{data.title}</h2>
               <p className="lh-copy f5-ns f6 fw3 color-content2 mb4 tl">{data.content}</p>
               <Button content={data.button}/>

@@ -48,7 +48,7 @@ class Works extends Component {
         <div className="content ph4-ns ph2 mw9 center tc">
           <Header title={"我們的作品"} color="#4C5B7F" margin={true}/>
           <div className="flex justify-center">
-            <div className="mb4" style={contentStyle}>
+            <div className="hide mb4" style={contentStyle}>
               <video id="home-video" className="home-video relative" width="100%" muted playsInline preload="auto" autoPlay>
                 <source src={portfolioVideoO} type="video/mp4"/>
               </video>
@@ -57,7 +57,7 @@ class Works extends Component {
               </video>
             </div>
           </div>
-          <div className="z2 relative">
+          <div className="hide z2 relative">
             <Button content={"按鈕文字"} scale={1.25}/>
             <h2 className="mt4 f5-ns f6 fw4 normal color-content2">這是一段小文字敘述</h2>
           </div>

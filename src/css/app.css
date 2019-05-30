@@ -459,3 +459,12 @@ section {
 	transform: translateZ(0) scaleY(1);
 	transition: all .4s ease-in-out;
 }
+
+.hide {
+  transition: all .4s ease-in-out; 
+}
+
+.hide.none {
+  opacity: 0;
+  transform: translateY(20px);
+}

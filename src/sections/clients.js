@@ -34,8 +34,8 @@ class Clients extends Component {
     var content = (
         <div className="content ph4-ns ph2 mw8 w-100 center z2 relative">
           <Header title={"我們的客戶"} color="#fff" margin={false}/>
-          <p className="f5-ns f6 fw4 white o-70 tc mv4 lh-copy ph2">這是一段關於我們的客戶的副標</p>
-          <div className="cf ph2-ns">
+          <p className="hide f5-ns f6 fw4 white o-70 tc mv4 lh-copy ph2">這是一段關於我們的客戶的副標</p>
+          <div className="hide cf ph2-ns">
             {logoList}
           </div>
         </div>

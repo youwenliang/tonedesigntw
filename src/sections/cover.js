@@ -94,7 +94,7 @@ class Cover extends Component {
       backgroundRepeat: "no-repeat"
     }
     var bgWStyle = {
-      top: "-160px",
+      top: "-140px",
       left: 0,
       width: this.state.large ? "100vw": "1800px",
     }
