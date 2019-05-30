@@ -7,11 +7,23 @@ class Nav extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      fixed: false
+      fixed: false,
+      mobile: false
     }
   }
   componentDidMount() {
     var $t = this;
+    function checkMobile() {
+      if($(window).width() <= 768) {
+        $t.setState({mobile:true});
+      }
+      else $t.setState({mobile:false});
+    }
+    $(window).on('resize orientationchange', checkMobile);
+    $(document).ready(function(){
+      checkMobile();
+    });
+
     var lastScrollTop = 0;
     // element should be replaced with the actual target element on which you have applied scroll, use window in case of no target element.
     window.addEventListener("scroll", function(){ // or window.addEventListener("scroll"....
@@ -50,15 +62,18 @@ class Nav extends Component {
     }
 
     var logo = this.state.fixed ? toneC : toneW;
+    var urls = this.state.mobile ? null : (
+      <ul className="flex flex-row justify-between f4 fw4">
+        <li><a href="#" style={link}>Work</a></li>
+        <li><a href="#" style={link}>Blog</a></li>
+        <li><a href="#" style={link}>Contact</a></li>
+      </ul>
+    )
 
     return (
-      <nav className="nav flex items-center justify-between flex-row ph4-ns ph2" style={navStyle}>
+      <nav className="nav flex items-center justify-between flex-row ph4-ns ph3" style={navStyle}>
         <img src={logo} width="200" />
-        <ul className="flex flex-row justify-between f4 fw4">
-          <li><a href="#" style={link}>Work</a></li>
-          <li><a href="#" style={link}>Blog</a></li>
-          <li><a href="#" style={link}>Contact</a></li>
-        </ul>
+        {urls}
       </nav>
     );
   }

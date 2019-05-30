@@ -50,14 +50,16 @@ class Cover extends Component {
     $(window).on('resize orientationchange', checkMobile);
     $(document).ready(function(){
       checkMobile();
+      let vh = window.innerHeight * 0.01;
+      $('.vh-100').css('height', 100 * vh+'px');
+      $('.min-vh-100').css('min-height', 100 * vh+'px');
     });
   }
   render() {
     // import data
     var data = this.props.data[gData["sections"][0]];
   	var coverStyle = {
-  		width: "100%",
-  		minHeight: "100vh",
+  		width: "100%"
   	}
     var shadowStyle = {
       position: "relative",
@@ -79,7 +81,7 @@ class Cover extends Component {
     }
     var img = {
       maxWidth: "500px",
-      marginTop: "-100px"
+      marginTop: this.state.mobile ? "0px" : "-100px"
     }
     var bg = [bg1, bg2, bg3];
     var bgStyle = {
@@ -92,7 +94,7 @@ class Cover extends Component {
       backgroundRepeat: "no-repeat"
     }
     var bgWStyle = {
-      top: "-140px",
+      top: "-160px",
       left: 0,
       width: this.state.large ? "100vw": "1800px",
     }
@@ -137,7 +139,7 @@ class Cover extends Component {
     )
 
     return (
-      <header id={gData["sections"][0]} className="cover flex justify-center items-center relative" style={coverStyle}>
+      <header id={gData["sections"][0]} className="cover flex justify-center items-center relative vh-100" style={coverStyle}>
         <Controller>
           <Scene
             indicators={false}
@@ -150,10 +152,10 @@ class Cover extends Component {
               <Tween
                 position="0"
                 from={{
-                  yPercent: -40,
+                  yPercent: -25,
                 }}
                 to={{
-                    yPercent: 20,
+                    yPercent: 10,
                 }}
               >
               {/*<div className="absolute w-100 h-100" style={bgStyle}/>*/}
@@ -164,10 +166,10 @@ class Cover extends Component {
               <Tween
                 position="0"
                 from={{
-                  yPercent: -25,
+                  yPercent: -10,
                 }}
                 to={{
-                    yPercent: 10,
+                    yPercent: 5,
                 }}
               >
               <div className="absolute w-100 h-100" style={bg2Style}/>

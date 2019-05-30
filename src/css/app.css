@@ -446,13 +446,16 @@ section {
 
 #section3-content {
 	overflow: hidden;
+	display: none;
 	transform: translateZ(0) scaleY(0);
 	transform-origin: top;
+	/*max-height: 0;*/
 	transition: all .4s ease-in-out;
 }
 
 .start #section3-content {
 	max-height: 400px;
+	display: block;
 	transform: translateZ(0) scaleY(1);
 	transition: all .4s ease-in-out;
 }
