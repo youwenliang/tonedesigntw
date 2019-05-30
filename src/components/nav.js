@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import $ from 'jquery';
 import toneC from '../images/tone-color.svg';
 import toneW from '../images/tone-white.svg';
 
@@ -16,13 +17,22 @@ class Nav extends Component {
     window.addEventListener("scroll", function(){ // or window.addEventListener("scroll"....
        var st = window.pageYOffset || document.documentElement.scrollTop; // Credits: "https://github.com/qeremy/so/blob/master/so.dom.js#L426"
        if (st > lastScrollTop){
-          $t.setState({fixed: false})
+          if(st > 80) $('.nav').addClass('hide');
        } else {
           // upscroll code
-          $t.setState({fixed: true})
+          $('.nav').removeClass('hide');
        }
        lastScrollTop = st <= 0 ? 0 : st; // For Mobile or negative scrolling
-       if(st <= 0) $t.setState({fixed: false})
+       if(st <= $(window).height()) {
+        $('.nav').addClass('hide');
+        setTimeout(function(){
+          $t.setState({fixed: false})
+        },200);
+        if(st < 80) {
+          $('.nav').removeClass('hide');
+        }
+       }
+       else $t.setState({fixed: true})
     }, false);
   }
   render() {

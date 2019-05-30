@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
 import Header from '../components/header.js';
 import Button from '../components/button.js';
+import LottieControl from '../components/lottie.js'
 import gData from '../data/data.js';
 
 import circle1 from '../images/circle.png';
 import circle2 from '../images/circle.png';
 import circle3 from '../images/circle.png';
 import waves from '../images/waves.png';
+import * as animationDataCircles from '../images/animations/circle_data.json';
 
 class Section3 extends Component {
   render() {
@@ -30,7 +32,8 @@ class Section3 extends Component {
             <div className="fl w-100 w-50-l tc relative">
               <img className="z1 relative w-80 center" src={circles[data.id - 1]} alt="test"/>
               <div className="absolute w-80 center" style={mask}>
-              	<img src={waves} alt="test"/>
+              	{/*<img src={waves} alt="test"/>*/}
+                <LottieControl data1={animationDataCircles} open={false} id="animationCircles" offset={0}/>
               </div>
             </div>
             <div className="fl w-100 w-50-l ph4 tl-l tc mw6 mt0">

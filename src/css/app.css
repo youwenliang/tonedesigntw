@@ -38,6 +38,15 @@ section {
 	overflow-y: hidden;
 }
 
+.nav {
+	transition: transform .2s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.nav.hide {
+	transform: translateY(-80px);
+	transition: transform .4s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
 .nav ul{
   list-style-type: none;
 }

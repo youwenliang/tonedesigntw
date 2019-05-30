@@ -22,6 +22,11 @@ import * as animation1 from '../images/animations/data1_loop.json';
 import * as animation2 from '../images/animations/data1_loop.json';
 import * as animation3 from '../images/animations/data1_loop.json';
 
+// animation x 3
+import * as animationW1 from '../images/animations/wave_data.json';
+import * as animationW2 from '../images/animations/wave_data.json';
+import * as animationW3 from '../images/animations/wave_data.json';
+
 class Cover extends Component {
   constructor(props) {
     super(props);
@@ -86,6 +91,11 @@ class Cover extends Component {
       backgroundPosition: "center 0%",
       backgroundRepeat: "no-repeat"
     }
+    var bgWStyle = {
+      top: "-140px",
+      left: 0,
+      width: this.state.large ? "100vw": "1800px",
+    }
     var bg2Style = {
       top: 0,
       left: 0,
@@ -96,7 +106,9 @@ class Cover extends Component {
     }
     
     var animations = [animation1, animation2, animation3];
+    var animationWaves = [animationW1, animationW2, animationW3];
     var animationDataCover = animations[data.id - 1];
+    var animationDataWaves = animationWaves[data.id - 1];
 
     var contents = this.state.mobile ? (
       <div className="cf ph2-ns pt2 flex items-center flex-column flex-row-l justify-center z1 relative">
@@ -144,7 +156,10 @@ class Cover extends Component {
                     yPercent: 20,
                 }}
               >
-              <div className="absolute w-100 h-100" style={bgStyle}/>
+              {/*<div className="absolute w-100 h-100" style={bgStyle}/>*/}
+              <div className="absolute h-100" style={bgWStyle}>
+                <LottieControl data1={animationDataWaves} open={false} id="animationWaves" offset={0}/>
+              </div>
               </Tween>
               <Tween
                 position="0"
