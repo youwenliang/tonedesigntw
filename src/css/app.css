@@ -3,7 +3,6 @@
 html {
 	height: 100%;
 	box-sizing: border-box;
-
 }
 
 *,
@@ -19,19 +18,33 @@ html {
 
 body {
 	position: relative;
-  margin: 0;
-  padding-bottom: 6rem;
-  min-height: 100%;
+  	margin: 0;
+  	padding-bottom: 6rem;
+  	min-height: 100%;
 	padding-bottom: 320px;
 	font-family: source-han-sans-traditional, sans-serif;
 	font-style: normal;
 	font-weight: 100;
 	overflow-x: hidden;
+	text-align: justify;
+	letter-spacing: 2px;
+}
+
+h1, h2, h3, p {
+	white-space: pre-wrap;
 }
 
 section {
 	width: 100%;
 	padding: 5rem 0;
+}
+
+.ls-medium {
+	letter-spacing: 2px !important;
+}
+
+.ls-large {
+	letter-spacing: 4px !important;
 }
 
 .ds {
@@ -141,12 +154,12 @@ section {
 
 .color-content {
 	color: #4C5B7F;
-	letter-spacing: 1px;
+	letter-spacing: 2px;
 }
 
 .color-content2 {
 	color: #4C5B7F;
-	letter-spacing: 1px;
+	letter-spacing: 2px;
 }
 
 /* Navigation */
@@ -247,6 +260,14 @@ section {
 	font-size: 1.625rem;
 }
 
+.f175 {
+	font-size: 1.75rem;
+}
+
+.f1875 {
+	font-size: 1.875rem;
+}
+
 .ls2 {
 	letter-spacing: 2px;
 }
@@ -258,6 +279,11 @@ section {
 .mw160 {
 	max-width: 160px;
 }
+
+.mw200 {
+	max-width: 200px;
+}
+
 .mw240 {
 	max-width: 240px;
 }
@@ -298,6 +324,11 @@ section {
 	z-index: 100;
 }
 
+.color-fade {
+	color: #8497ab;
+	letter-spacing: 1px;
+}
+
 .tab, .arrows {
   display: flex;
   justify-content: center;
@@ -309,20 +340,60 @@ section {
   outline: none;
   cursor: pointer;
   transition: 0.3s;
-  height: 60px;
+  height: 75px;
   margin: 0 8px;
   box-shadow: 0px 4px 16px rgba(0,0,0,.2);
-  max-width: 150px;
+  max-width: 200px;
 }
 
 @media screen and (min-width: 769px) {
   .tab button {
-    width: 150px;
+    width: 200px;
   }
 }
 
+.color-red {
+	color: #ff978e;
+}
+
+.lh-large {
+	line-height: 2;
+}
+.lh-medium {
+	line-height: 1.67;
+}
+
+.borderline {
+	border-top: 1px solid #dbe1e9;
+	width: 80%;
+	display: block;
+	height: 1px;
+	margin: auto;
+	position: relative;
+}
+
+.borderline.top {
+	top: -5rem;
+}
+.borderline.bottom {
+	bottom: -5rem;
+}
+
+.tag.color1 {
+  background: linear-gradient(to bottom, rgba(255,151,142,1) 0%,rgba(255,91,130,1) 100%);
+  color: white;
+}
+.tag.color2 {
+  background: linear-gradient(to bottom, rgba(255,151,142,1) 0%,rgba(255,91,130,1) 100%);
+  color: white;
+}
+.tag.color3 {
+  background: linear-gradient(to bottom, rgba(255,151,142,1) 0%,rgba(255,91,130,1) 100%);
+  color: white;
+}
+
 .tab button.color1 {
-	background: linear-gradient(to bottom, rgba(255,255,255,1) 0%,rgba(255,202,202,1) 100%);
+	background: linear-gradient(to bottom, rgba(255,255,255,1) 0%,rgba(255,236,236,1) 100%);
   	color: #ff978e;
 }
 .tab button.color2 {
@@ -335,11 +406,11 @@ section {
 }
 
 .tab button:nth-child(1) {
-	border-radius: 20px 0px 0px 20px;
+	border-radius: 28px 0px 0px 28px;
 }
 
 .tab button:nth-child(3) {
-	border-radius: 0px 20px 20px 0px;
+	border-radius: 0px 28px 28px 0px;
 }
 
 .tab button.color1.active {
@@ -365,6 +436,10 @@ section {
 
 .tabcontent.active {
 	display: block;
+}
+
+.tshadow {
+  text-shadow: "0 0 5px rgba(122,72,0,.2)";
 }
 
 #home-video-loop {

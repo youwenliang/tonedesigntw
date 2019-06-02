@@ -100,7 +100,7 @@ class Section4 extends Component {
   	// import data
   	var data = this.props.data[gData["sections"][4]];
     var sectionStyle = {
-      background: "#f7f8fa",
+      background: "#ffffff",
     }
 
     var contentList = [];
@@ -115,8 +115,8 @@ class Section4 extends Component {
           <div className="flex flex-column-l flex-row justify-center items-center">
             <img src={icons[data.id - 1][i]} width="85" alt="icons" style={mw85}/>
             <div className="color-content2 tl tc-l ml4 ml0-l">
-              <h3 className="f4-ns f5 fw5 color-content mb0 fw4 mt0 mt4-l">{data.title[x][y]}</h3>
-              <p className="f5-ns f6 fw3 color-content2 lh-copy mb0 mb2-l mw5-l ph3-l ph0">{data.content[x][y]}</p>
+              <h3 className="f4-ns f5 color-content mb0 fw4 mt0 mt3-l">{data.title[x][y]}</h3>
+              <p className="f5-ns f6 fw3 color-fade lh-copy mt2 mb0 mb2-l mw5-l ph3-l ph0">{data.content[x][y]}</p>
             </div>
           </div>
         </div>
@@ -140,9 +140,9 @@ class Section4 extends Component {
       width: "1px",
       position: "absolute",
       top: "90px",
-      left: this.state.mobile ? "55px" : 0,
-      right: this.state.mobile ? "auto" : 0,
-      transform: this.state.mobile ? "translateX(0)" : "translateX(-170px)",
+      left: 0,
+      right: 0,
+      transform: this.state.mobile ? "translateX(0)" : "translateX(-57px)",
       margin: "auto",
       zIndex: 1
     }
@@ -153,13 +153,14 @@ class Section4 extends Component {
 
     return (
       <section id={gData["sections"][4]} style={sectionStyle}>
+        <div className="borderline top"/>
         <div className="content ph4-ns ph2 mw8 center relative">
-          <Header title={data.sectionTitle} color="#4C5B7F" margin={true}/>
-          
-          <div className="hide tab mb4 mt5 f4-ns f5">
-            <button className={color[data.id - 1]+" tablinks active ph3 tc"} onClick={(e) => this.handleClick(e, "content1")}>{data.section[0]}</button>
-            <button className={color[data.id - 1]+" tablinks ph3 tc"} onClick={(e) => this.handleClick(e, "content2")}>{data.section[1]}</button>
-            <button className={color[data.id - 1]+" tablinks ph3 tc"} onClick={(e) => this.handleClick(e, "content3")}>{data.section[2]}</button>
+          <Header title={data.sectionTitle} color="#4C5B7F" margin={false}/>
+          <p className="tagline hide f4-ns f5 fw3 color-fade tc mt3 mb4 lh-medium ph2 ls-medium">{data.tagline}</p>
+          <div className="hide tab mb4 mt5 f4-ns f5 tracked">
+            <button className={color[data.id - 1]+" tablinks active ph4-ns ph3 tc"} onClick={(e) => this.handleClick(e, "content1")}>{data.section[0]}</button>
+            <button className={color[data.id - 1]+" tablinks ph4-ns ph3 tc"} onClick={(e) => this.handleClick(e, "content2")}>{data.section[1]}</button>
+            <button className={color[data.id - 1]+" tablinks ph4-ns ph3 tc"} onClick={(e) => this.handleClick(e, "content3")}>{data.section[2]}</button>
           </div>
           <div className="hide relative w-90 center">
             <div id="content1" className="tabcontent active cf mt5-ns mt3">

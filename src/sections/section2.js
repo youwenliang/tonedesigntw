@@ -37,7 +37,7 @@ class Section2 extends Component {
               return (
                 <div id="arrowTrigger" className="content">
                   <Header title={data.sectionTitle} color="#4C5B7F" margin={false}/>
-                  <p className="tagline hide o-70 f5-ns f6 fw4 color-content2 tc mt4 lh-copy ph2">{data.tagline}</p>
+                  <p className="tagline f4-ns f5 fw3 color-content tc mt4 mb4 lh-medium ls-medium ph2">{data.tagline}</p>
                   <div className="arrows mb4 mt5 f3 z2 relative">
                     <div id="trigger2"/>
                     <button className="z2 relative arrowlinks ph5 tc">

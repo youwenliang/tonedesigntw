@@ -3,6 +3,7 @@ import Footer from './components/footer.js';
 import Scroll from './components/scroll.js';
 import Nav from './components/nav.js';
 import Cover from './sections/cover.js';
+import Banner from './sections/banner.js';
 import Section1 from './sections/section1.js';
 import Section2 from './sections/section2.js';
 import Section3 from './sections/section3.js';
@@ -41,6 +42,7 @@ class App extends Component {
         <Nav/>
         <Scroll/>
         <Cover data={this.state.data}/>
+        <Banner data={this.state.data}/>
         <Section1 data={this.state.data}/>
         <Section2 data={this.state.data}/>
         <Section3 data={this.state.data}/>

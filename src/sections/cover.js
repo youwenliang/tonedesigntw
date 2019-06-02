@@ -6,6 +6,7 @@ import Button from '../components/button.js';
 import shadow from '../images/cover-shadow.png';
 import scroll from '../images/scroll.svg';
 import bg_tone from '../images/cover-tone.svg';
+import logo from '../images/tone-white.svg';
 
 import $ from 'jquery';
 import gData from '../data/data.js';
@@ -68,7 +69,6 @@ class Cover extends Component {
       zIndex: 1
     }
     var scrollStyle = {
-      display: "block",
       width: "100%",
       textAlign: "center",
       position: "absolute",
@@ -119,16 +119,18 @@ class Cover extends Component {
           <img src={shadow} width="90%" style={shadowStyle} alt="shadow"/>
         </div>
         <div className="fl w-100 w-50-l tl-l tc mt4 mt0-l mw6-l mw9">
-          <h1 className="w-100 f1-ns f2 white fw3 mt0">{data.title}</h1>
-          <p className="w-100 center lh-copy f1375 white mb4 mt0 mw400">{data.content}</p>
+          {/*<h1 className="w-100 f1-ns f2 white fw3 mt0">{data.title}</h1>*/}
+          <img src={logo} width="360px" alt="tone design" className="mb4"/>
+          <p className="w-100 center lh-copy ls-medium f1375 white mb4 mt0 mw400 fw4">{data.content}</p>
           <Button content={data.button} scale={1.25}/>
         </div>
       </div>
     ) : (
       <div className="cf ph2-ns pt2 flex items-center flex-column flex-row-l justify-center z1 relative">
         <div className="fl w-100 w-50-l tl-l tc mt0 mw6-l mw9">
-          <h1 className="w-100 f1-ns f2 white fw3 mt0">{data.title}</h1>
-          <p className="w-100 lh-copy f1375 white mb4 mt0 mw400">{data.content}</p>
+          {/*<h1 className="w-100 f1-ns f2 white fw3 mt0">{data.title}</h1>*/}
+          <img src={logo} width="360px" alt="tone design" className="mb4"/>
+          <p className="w-100 lh-copy ls-medium f1375 white mb4 mt0 mw400 fw4 tshadow">{data.content}</p>
           <Button content={data.button}/>
         </div>
         <div className="fl w-100 w-50-l tr-l tc relative">
@@ -178,7 +180,7 @@ class Cover extends Component {
             </Timeline>
           </Scene>
         </Controller>
-        <div style={scrollStyle}>
+        <div style={scrollStyle} className="dn db-ns">
           <img src={scroll} width="40px" alt="arrow"/>
           <p className="ma2">Scroll</p>
         </div>

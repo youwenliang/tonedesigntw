@@ -40,13 +40,11 @@ class Works extends Component {
       minWidth: "1024px",
       position: "relative",
       zIndex: 1,
-      marginTop: "-80px",
       marginBottom: "-10px"
     }
     return (
       <section id={gData["sections"][6]} style={sectionStyle}>
         <div className="content ph4-ns ph2 mw9 center tc">
-          <Header title={"我們的作品"} color="#4C5B7F" margin={true}/>
           <div className="flex justify-center">
             <div className="hide mb4" style={contentStyle}>
               <video id="home-video" className="home-video relative" width="100%" muted playsInline preload="auto" autoPlay>
@@ -58,8 +56,8 @@ class Works extends Component {
             </div>
           </div>
           <div className="hide z2 relative">
-            <Button content={"按鈕文字"} scale={1.25}/>
-            <h2 className="mt4 f5-ns f6 fw4 normal color-content2">這是一段小文字敘述</h2>
+            <h2 className="color-content f2 ls2 lh-copy fw4 ph2">看看我們的完整作品吧！</h2>
+            <Button content={"看完整案例！"} scale={1.25}/>
           </div>
         </div>
       </section>
