@@ -72,6 +72,22 @@ section {
   text-decoration: none; 
 }
 
+.circle-list {
+  list-style-type: none;
+}
+
+.circle-list li {
+  height: 36px;
+  margin: 12px 0;
+  padding-left: 8px;
+  position: relative;
+}
+
+.circle-list .collapsibleCircle {
+  top: -7px;
+  left: -40px;
+}
+
 /* Loading Gif */
 #loading {
   position: fixed;
@@ -264,8 +280,16 @@ section {
 	font-size: 1.75rem;
 }
 
+.f125 {
+  font-size: 1.25rem;
+}
+
 .f1875 {
 	font-size: 1.875rem;
+}
+
+.f225 {
+  font-size: 2.25rem;
 }
 
 .ls2 {
@@ -517,22 +541,6 @@ section {
 #arrowTrigger.start .tagline {
 	opacity: 0;
 	transition: all .2s cubic-bezier(0.23, 1, 0.32, 1);
-}
-
-#section3-content {
-	overflow: hidden;
-	display: none;
-	transform: translateZ(0) scaleY(0);
-	transform-origin: top;
-	/*max-height: 0;*/
-	transition: all .4s ease-in-out;
-}
-
-.start #section3-content {
-	max-height: 400px;
-	display: block;
-	transform: translateZ(0) scaleY(1);
-	transition: all .4s ease-in-out;
 }
 
 .hide {
