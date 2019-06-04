@@ -142,7 +142,7 @@ class Section4 extends Component {
       top: "90px",
       left: 0,
       right: 0,
-      transform: this.state.mobile ? "translateX(0)" : "translateX(-57px)",
+      transform: "translateX(-57px)",
       margin: "auto",
       zIndex: 1
     }

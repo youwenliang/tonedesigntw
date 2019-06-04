@@ -184,6 +184,12 @@ class Section2 extends Component {
       <Controller>
         <Scene pin duration={1800} classToggle="start" triggerElement={"#"+gData["sections"][2]} indicators={true} offset={"400px"}>
           {(progress, event) => {
+            if(progress == 0) {
+              $('.scrollmagic-pin-spacer').css({
+                "padding-bottom": 0,
+                "min-height": "inherit"
+              })
+            }
             if(progress < 0.33 && progress > 0) {
               trigger = ["active","",""]
               triggerCurrent = 1;
@@ -198,6 +204,10 @@ class Section2 extends Component {
             }
             if(event.type == "leave") {
               trigger = ["","",""]
+              $('.scrollmagic-pin-spacer').css({
+                "padding-bottom": 0,
+                "min-height": "inherit"
+              })
             }
 
             return (
