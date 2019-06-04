@@ -76,7 +76,7 @@ class Section1 extends Component {
           <h2 className={colors[data.id - 1]+" hide tag f4-ns f5 fw5 mt4-l mt5 mb4-l mb3 tc center ls-medium"} style={tag}>{data.title[i]}</h2>
           <div className="mw320 center w-60">
             <LottieControl data1={animations[i][data.id - 1][0]} data2={animations[i][data.id - 1][1]} open={true} offset={-135} id="animation1"/>
-            <img className="ma0" src={shadow} alt="shadow" style={shadowStyle}/>
+            <img className="ma0 hide" src={shadow} alt="shadow" style={shadowStyle}/>
           </div>              
           <p className="hide lh-copy mw200 center tl f5-ns f6 fw3 color-content2">{data.content[i]}</p>
         </div>

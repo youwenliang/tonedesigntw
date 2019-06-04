@@ -70,7 +70,8 @@ var animations = [
   [animation3a, animation3b, animation3c],
 ]
 
-var trigger = ["","",""]
+var trigger = ["","",""];
+var triggerCurrent = 0;
 
 class Section2 extends Component {
   constructor(props) {
@@ -105,6 +106,8 @@ class Section2 extends Component {
       position: "relative",
       boxShadow: "inset 0 0 10px rgba(86,86,86,.42)",
       width: "100vw",
+      height: "480px",
+      overflow: "hidden"
     }
     var number = {
       position: "relative",
@@ -123,19 +126,21 @@ class Section2 extends Component {
 
     var listContent = [];
     var subContent = {
-      marginTop: "32px",
+      position: "absolute",
+      top: 0,
+      left: 0,
+      right: 0,
+      margin: "32px auto 0 auto"
     }
     for(var i = 0; i < 3; i++) {
       var temp = (
         <div id={"content"+(i+1)} className="sub-content cf pv5 ph4-ns ph2 mw8 center" key={i} style={subContent}>
           <div className="fl w-100 w-50-l relative color-content pr5">
-            <h2 className="f225 fw5 mt0">{data.content[i]["title"]}</h2>
-            <h3 className="f125 fw4">{data.content[i]["tagline"]}</h3>
             <LottieControl data1={animations[data.id-1][i]} open={false} id="animationContent" offset={0}/>
-            <p className="fw3 lh-medium">{data.content[i]["paragraph"]}</p>
+            <h2 className="f175 fw4 mt4 lh-medium">{data.content[i]["tagline"]}</h2>
           </div>
           <div className="fl w-100 w-50-l relative pl5">
-            <p className="f6 color-fade fw4 mt3 mb4">{data.content[i]["smalltitle"][0]}</p>
+            {/*<p className="f6 color-fade fw4 mt3 mb4">{data.content[i]["smalltitle"][0]}</p>
             <ul className="circle-list fw3 color-content ls-medium">
               <li>
                 <div className="collapsibleCircle absolute z1 white flex justify-center items-center f4 fw6" style={color}><p style={number}>1</p></div>
@@ -149,7 +154,11 @@ class Section2 extends Component {
                 <div className="collapsibleCircle absolute z1 white flex justify-center items-center f4 fw6" style={color}><p style={number}>3</p></div>
                 {data.content[i]["smalllist"][2]}
               </li>
-            </ul>
+            </ul>*/}
+            <div className="color-content">
+              <h3 className="f1375 fw5 mb2">{data.content[i]["title"]}</h3>
+              <p className="fw3 lh-medium">{data.content[i]["paragraph"]}</p>
+            </div>
             <p className="f6 color-fade fw4 mt4 mb3">{data.content[i]["smalltitle"][1]}</p>
             <div className="cf fw5 f5 tc color-content">
               <div className="fl w-third">
@@ -173,15 +182,26 @@ class Section2 extends Component {
 
     return (
       <Controller>
-        <Scene duration={0} classToggle="start" triggerElement="#section3-content" indicators={true}>
+        <Scene pin duration={1800} classToggle="start" triggerElement={"#"+gData["sections"][2]} indicators={true} offset={"400px"}>
           {(progress, event) => {
-            if(event.type == "enter") {
+            if(progress < 0.33 && progress > 0) {
               trigger = ["active","",""]
-            } else if(event.type == "leave") {
+              triggerCurrent = 1;
+            }
+            else if(progress >= 0.33 && progress < 0.67) {
+              trigger = ["","active",""]
+              triggerCurrent = 2;
+            }
+            else if(progress >= 0.67 && progress < 1) {
+              trigger = ["","","active"]
+              triggerCurrent = 3;
+            }
+            if(event.type == "leave") {
               trigger = ["","",""]
             }
+
             return (
-            <section id={gData["sections"][2]} style={sectionStyle} className="">
+            <section id={gData["sections"][2]} style={sectionStyle} className="relative">
               <div id="arrowTrigger" className="content">
                 <Header title={data.sectionTitle} color="#4C5B7F" margin={false}/>
                 <p className="tagline f4-ns f5 fw3 color-content tc mt4 mb4 lh-medium ls-medium ph2">{data.tagline}</p>
@@ -199,7 +219,7 @@ class Section2 extends Component {
                     <p className="z10 relative">{data.section[2]}</p>
                   </button>
                 </div>
-                <div id="section3-content" className="cf bg-white relative" style={innerShadow}>
+                <div id="section3-content" className={"cf bg-white relative "+"active"+triggerCurrent} style={innerShadow}>
                   {listContent}
                 </div>
               </div>
