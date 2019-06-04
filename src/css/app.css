@@ -78,7 +78,7 @@ section {
 
 .circle-list li {
   height: 36px;
-  margin: 12px 0;
+  margin: 16px 0;
   padding-left: 8px;
   position: relative;
 }
@@ -521,7 +521,7 @@ section {
 
 .tagline {
 	opacity: 1;
-	transition: all .2s cubic-bezier(0.23, 1, 0.32, 1) .4s;
+	transition: all .4s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
 #arrowTrigger.start {
@@ -530,17 +530,47 @@ section {
 
 .arrows {
 	transform: translateX(-16px);
-	transition: all .2s cubic-bezier(0.23, 1, 0.32, 1) .4s;
+	transition: all .4s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
-#arrowTrigger.start .arrows {
+.start .header {
+	font-size: 2.25rem !important;
+}
+
+.start .arrows {
 	transform: scale(.75) translate(-12px, -120px);
-	transition: all .2s cubic-bezier(0.23, 1, 0.32, 1);
+	transition: all .4s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
-#arrowTrigger.start .tagline {
+.start .tagline {
 	opacity: 0;
-	transition: all .2s cubic-bezier(0.23, 1, 0.32, 1);
+	transition: all .4s cubic-bezier(0.23, 1, 0.32, 1);
+	max-height: 30px;
+}
+
+#section3-content {
+	max-height: 0px;
+	transition: all .4s cubic-bezier(0.23, 1, 0.32, 1) .4s;
+}
+.sub-content {
+	display: none;
+}
+
+.start #section3-content {
+	max-height: inherit;
+	transition: all .4s cubic-bezier(0.23, 1, 0.32, 1) .4s;
+}
+
+.start .sub-content {
+	display: block;
+}
+
+#arrowTrigger {
+	margin-bottom: 0px;
+}
+
+.start #arrowTrigger {
+	margin-bottom: -168px;
 }
 
 .hide {
