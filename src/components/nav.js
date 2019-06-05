@@ -28,23 +28,19 @@ class Nav extends Component {
     // element should be replaced with the actual target element on which you have applied scroll, use window in case of no target element.
     window.addEventListener("scroll", function(){ // or window.addEventListener("scroll"....
        var st = window.pageYOffset || document.documentElement.scrollTop; // Credits: "https://github.com/qeremy/so/blob/master/so.dom.js#L426"
-       if (st > lastScrollTop){
-          if(st > 80) $('.nav').addClass('hide');
-       } else {
-          // upscroll code
-          $('.nav').removeClass('hide');
-       }
        lastScrollTop = st <= 0 ? 0 : st; // For Mobile or negative scrolling
-       if(st <= $(window).height()) {
-        $('.nav').addClass('hide');
-        setTimeout(function(){
-          $t.setState({fixed: false})
-        },200);
-        if(st < 80) {
-          $('.nav').removeClass('hide');
-        }
+       if(st <= $(window).height() - 100) {
+          $t.setState({fixed: false});
+          if(st >= 80) {
+            $('.nav').addClass('hide');
+          } else {
+            $('.nav').removeClass('hide');
+          }
        }
-       else $t.setState({fixed: true})
+       else {
+          $t.setState({fixed: true})
+          $('.nav').removeClass('hide');
+       }
     }, false);
   }
   render() {
@@ -58,10 +54,11 @@ class Nav extends Component {
     }
 
     var link = {
-      color: this.state.fixed ? "#6e849b" : "#ffffff"
+      color: this.state.fixed ? "#6e849b" : "rgba(255,255,255,.5)"
     }
 
     var logo = this.state.fixed ? toneC : toneW;
+    var op = this.state.fixed ? "" : "o-50";
     var urls = this.state.mobile ? null : (
       <ul className="flex flex-row justify-between f4 fw4">
         <li><a href="#" style={link}>Work</a></li>
@@ -72,7 +69,7 @@ class Nav extends Component {
 
     return (
       <nav className="nav flex items-center justify-between flex-row ph4-ns ph3" style={navStyle}>
-        <img src={logo} width="200" />
+        <img src={logo} width="200" className={op}/>
         {urls}
       </nav>
     );

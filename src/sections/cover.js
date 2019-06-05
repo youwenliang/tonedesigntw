@@ -81,7 +81,11 @@ class Cover extends Component {
     }
     var img = {
       maxWidth: "500px",
-      marginTop: this.state.mobile ? "0px" : "-100px"
+      marginTop: this.state.mobile ? "0px" : "-100px",
+    }
+    var imgS = {
+      transformOrigin: "100% 60%",
+      transform: "scale(1.2) translate(120px,30px)"
     }
     var bg = [bg1, bg2, bg3];
     var bgStyle = {
@@ -103,7 +107,7 @@ class Cover extends Component {
       left: 0,
       backgroundImage: "url("+bg_tone+")",
       backgroundSize: "700px",
-      backgroundPosition: "30% 35%",
+      backgroundPosition: "30% 30%",
       backgroundRepeat: "no-repeat"
     }
     
@@ -114,7 +118,7 @@ class Cover extends Component {
 
     var contents = this.state.mobile ? (
       <div className="cf ph2-ns pt2 flex items-center flex-column flex-row-l justify-center z1 relative">
-        <div className="fl w-100 w-50-l tr-l tc relative relative mt4" style={img}>
+        <div className="fl w-100 w-50-l tr-l tc relative mt4" style={img}>
           <LottieControl data1={animationDataCover} open={false} id="animationCover" offset={0}/>
           <img src={shadow} width="90%" style={shadowStyle} alt="shadow"/>
         </div>
@@ -122,18 +126,18 @@ class Cover extends Component {
           {/*<h1 className="w-100 f1-ns f2 white fw3 mt0">{data.title}</h1>*/}
           <img src={logo} width="360px" alt="tone design" className="mb4"/>
           <p className="w-100 center lh-copy ls-medium f1375 white mb4 mt0 mw400 fw4">{data.content}</p>
-          <Button content={data.button} scale={1.25}/>
+          <Button content={data.button} shadow={true} scale={1.25}/>
         </div>
       </div>
     ) : (
       <div className="cf ph2-ns pt2 flex items-center flex-column flex-row-l justify-center z1 relative">
-        <div className="fl w-100 w-50-l tl-l tc mt0 mw6-l mw9">
+        <div className="fl w-100 w-50-l tl-l tc mt0 mw6-l mw9 mb5">
           {/*<h1 className="w-100 f1-ns f2 white fw3 mt0">{data.title}</h1>*/}
           <img src={logo} width="360px" alt="tone design" className="mb4"/>
           <p className="w-100 lh-copy ls-medium f1375 white mb4 mt0 mw400 fw4 tshadow">{data.content}</p>
-          <Button content={data.button}/>
+          <Button content={data.button} shadow={true}/>
         </div>
-        <div className="fl w-100 w-50-l tr-l tc relative">
+        <div className="fl w-100 w-50-l tr-l tc relative" style={imgS}>
           <LottieControl data1={animationDataCover} open={false} id="animationCover" offset={0}/>
           <img src={shadow} width="90%" style={shadowStyle} alt="shadow"/>
         </div>

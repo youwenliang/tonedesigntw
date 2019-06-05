@@ -25,7 +25,7 @@ class Works extends Component {
     }, false);
 
     $(window).scroll( function(){
-      if($(window).scrollTop() >= $('#'+gData["sections"][6]).offset().top) {
+      if($(window).scrollTop() >= $('#'+gData["sections"][6]).offset().top - $(window).height()*2/3) {
         video.play();
       }
     });
