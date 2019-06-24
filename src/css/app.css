@@ -21,7 +21,7 @@ body {
   	margin: 0;
   	padding-bottom: 6rem;
   	min-height: 100%;
-	padding-bottom: 320px;
+	padding-bottom: 200px;
 	font-family: source-han-sans-traditional, sans-serif;
 	font-style: normal;
 	font-weight: 100;
@@ -36,7 +36,15 @@ h1, h2, h3, p {
 
 section {
 	width: 100%;
-	padding: 5rem 0;
+	padding: 4.375rem 0;
+}
+
+section.sectionL {
+	padding: 5.6rem 0 !important;
+}
+
+.ls-none {
+	letter-spacing: 0px !important;
 }
 
 .ls-medium {
@@ -65,7 +73,7 @@ section {
 }
 
 .nav li {
-  margin: 0 10px;
+  margin: 0 20px;
 }
 
 .nav li a {
@@ -304,6 +312,10 @@ section {
 	max-width: 160px;
 }
 
+.mw1100 {
+	max-width: 1100px;
+}
+
 .mw200 {
 	max-width: 200px;
 }
@@ -324,12 +336,40 @@ section {
 	max-width: 640px;
 }
 
+.mw54rem {
+	max-width: 54rem;
+}
+
 .mw56rem {
 	max-width: 56rem;
 }
 
 .mw75rem {
 	max-width: 75rem;
+}
+
+.mb80 {
+	margin-bottom: 80px;
+}
+
+.mb60 {
+	margin-bottom: 60px;	
+}
+
+.mb50 {
+	margin-bottom: 50px;	
+}
+
+.mb25 {
+	margin-bottom: 25px;	
+}
+
+.mb30 {
+	margin-bottom: 30px;	
+}
+
+.mb40 {
+	margin-bottom: 40px;	
 }
 
 .z1 {
@@ -348,9 +388,34 @@ section {
 	z-index: 100;
 }
 
+.f30 {
+	font-size: 30px;
+}
+
+.f18 {
+	font-size: 18px;
+}
+
+.f35 {
+	font-size: 35px;
+}
+
+.f25 {
+	font-size: 25px;
+}
+
+.f15 {
+	font-size: 15px;
+}
+
 .color-fade {
 	color: #8497ab;
 	letter-spacing: 1px;
+}
+
+.more {
+	color: #ff978e;
+	letter-spacing: 0px;
 }
 
 .tab, .arrows {
@@ -364,10 +429,11 @@ section {
   outline: none;
   cursor: pointer;
   transition: 0.3s;
-  height: 75px;
+  height: 50px;
   margin: 0 8px;
   box-shadow: 0px 4px 16px rgba(0,0,0,.2);
-  max-width: 200px;
+  max-width: 140px;
+  font-size: 1rem;
 }
 
 @media screen and (min-width: 769px) {
@@ -430,11 +496,11 @@ section {
 }
 
 .tab button:nth-child(1) {
-	border-radius: 28px 0px 0px 28px;
+	border-radius: 20px 0px 0px 20px;
 }
 
 .tab button:nth-child(3) {
-	border-radius: 0px 28px 28px 0px;
+	border-radius: 0px 20px 20px 0px;
 }
 
 .tab button.color1.active {
@@ -493,6 +559,7 @@ section {
   display: flex;
   align-items: center;
   justify-content: center;
+  font-size: 27px;
 }
 
 .arrowlinks:before {
@@ -542,7 +609,7 @@ section {
 }
 
 .start .header {
-	font-size: 2.25rem !important;
+	font-size: 2.1875rem !important;
 	transition: all .5s cubic-bezier(0.23, 1, 0.32, 1) !important;
 }
 

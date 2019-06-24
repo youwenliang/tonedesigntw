@@ -132,12 +132,20 @@ class Section2 extends Component {
       right: 0,
       margin: "32px auto 0 auto"
     }
+    var moreArrow = {
+      position: "relative",
+      top: "3px",
+      marginLeft: "3px",
+    }
     for(var i = 0; i < 3; i++) {
       var temp = (
         <div id={"content"+(i+1)} className="sub-content cf pv5 ph4-ns ph2 mw8 center" key={i} style={subContent}>
           <div className="fl w-100 w-50-l relative color-content pr5">
             <LottieControl data1={animations[data.id-1][i]} open={false} id="animationContent" offset={0}/>
-            <h2 className="f175 fw4 mt4 lh-medium">{data.content[i]["tagline"]}</h2>
+            <h2 className="f25 fw4 mt4 lh-medium">{data.content[i]["tagline"]}</h2>
+            <p className="more fw4">
+              Learn more <span className="fw7 f125" style={moreArrow}>></span>
+            </p>
           </div>
           <div className="fl w-100 w-50-l relative pl5">
             {/*<p className="f6 color-fade fw4 mt3 mb4">{data.content[i]["smalltitle"][0]}</p>
@@ -156,22 +164,22 @@ class Section2 extends Component {
               </li>
             </ul>*/}
             <div className="color-content">
-              <h3 className="f1375 fw5 mb2">{data.content[i]["title"]}</h3>
-              <p className="fw3 lh-medium">{data.content[i]["paragraph"]}</p>
+              <h3 className="f4 fw5 mb25">{data.content[i]["title"]}</h3>
+              <p className="f5 fw3 lh-medium mv0">{data.content[i]["paragraph"]}</p>
             </div>
-            <p className="f6 color-fade fw4 mt4 mb3">{data.content[i]["smalltitle"][1]}</p>
-            <div className="cf fw5 f5 tc color-content">
+            <p className="f15 color-fade fw3 mt4 mb3">{data.content[i]["smalltitle"][1]}</p>
+            <div className="cf fw4 f5 tc color-content">
               <div className="fl w-third">
                 <img src={icons[data.id-1][i][0]} width="72px"/>
-                <p className="mv0">{data.content[i]["smallitem"][0]}</p>
+                <p className="f5 mv0">{data.content[i]["smallitem"][0]}</p>
               </div>
               <div className="fl w-third">
                 <img src={icons[data.id-1][i][1]} width="72px"/>
-                <p className="mv0">{data.content[i]["smallitem"][1]}</p>
+                <p className="f5 mv0">{data.content[i]["smallitem"][1]}</p>
               </div>
               <div className="fl w-third">
                 <img src={icons[data.id-1][i][2]} width="72px"/>
-                <p className="mv0">{data.content[i]["smallitem"][2]}</p>
+                <p className="f5 mv0">{data.content[i]["smallitem"][2]}</p>
               </div>
             </div>
           </div>
@@ -182,7 +190,7 @@ class Section2 extends Component {
 
     return (
       <Controller>
-        <Scene pin duration={3300} classToggle="start" triggerElement={"#"+gData["sections"][2]} indicators={false} offset={"400px"}>
+        <Scene pin duration={4500} classToggle="start" triggerElement={"#"+gData["sections"][2]} indicators={false} offset={"400px"}>
           {(progress, event) => {
             if(progress < 0.33 && progress > 0) {
               trigger = ["active","",""]
@@ -215,8 +223,8 @@ class Section2 extends Component {
             <section id={gData["sections"][2]} style={sectionStyle} className="relative">
               <div id="arrowTrigger" className="content">
                 <Header title={data.sectionTitle} color="#4C5B7F" margin={false}/>
-                <p className="tagline f4-ns f5 fw3 color-content tc mt4 mb4 lh-medium ls-medium ph2">{data.tagline}</p>
-                <div className="arrows mb4 mt5 f3 z2 relative">
+                <p className="tagline hide f4 fw3 color-content hide tc mt4 mb80 lh-medium ls-medium ph2">{data.tagline}</p>
+                <div className="arrows mb4 mt5 z2 relative">
                   <button className={"z2 relative arrowlinks ph5 tc "+trigger[0]}>
                     <img className="mr2" src={tone1} width="48" alt="icons"/>
                     <p className="z10 relative">{data.section[0]}</p>

@@ -85,7 +85,7 @@ class Cover extends Component {
     }
     var imgS = {
       transformOrigin: "100% 60%",
-      transform: "scale(1.2) translate(120px,30px)"
+      transform: "translate(20px,30px)"
     }
     var bg = [bg1, bg2, bg3];
     var bgStyle = {
@@ -124,16 +124,16 @@ class Cover extends Component {
         </div>
         <div className="fl w-100 w-50-l tl-l tc mt4 mt0-l mw6-l mw9">
           {/*<h1 className="w-100 f1-ns f2 white fw3 mt0">{data.title}</h1>*/}
-          <img src={logo} width="360px" alt="tone design" className="mb4"/>
+          <img src={logo} width="350px" alt="tone design" className="mb4"/>
           <p className="w-100 center lh-copy ls-medium f1375 white mb4 mt0 mw400 fw4">{data.content}</p>
-          <Button content={data.button} shadow={true} scale={1.25}/>
+          <Button content={data.button} shadow={true} scale={1}/>
         </div>
       </div>
     ) : (
       <div className="cf ph2-ns pt2 flex items-center flex-column flex-row-l justify-center z1 relative">
         <div className="fl w-100 w-50-l tl-l tc mt0 mw6-l mw9 mb5">
           {/*<h1 className="w-100 f1-ns f2 white fw3 mt0">{data.title}</h1>*/}
-          <img src={logo} width="360px" alt="tone design" className="mb4"/>
+          <img src={logo} width="350px" alt="tone design" className="mb4"/>
           <p className="w-100 lh-copy ls-medium f1375 white mb4 mt0 mw400 fw4 tshadow">{data.content}</p>
           <Button content={data.button} shadow={true}/>
         </div>
@@ -186,7 +186,7 @@ class Cover extends Component {
         </Controller>
         <div style={scrollStyle} className="dn db-ns">
           <img src={scroll} width="40px" alt="arrow"/>
-          <p className="ma2">Scroll</p>
+          <p className="ma2 i ls-none">Scroll</p>
         </div>
       </header>
     );

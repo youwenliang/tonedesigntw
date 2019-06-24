@@ -37,10 +37,11 @@ class Works extends Component {
     }
     var contentStyle = {
       width: "80%",
-      minWidth: "1024px",
+      minWidth: "1012px",
       position: "relative",
       zIndex: 1,
-      marginBottom: "-10px"
+      marginBottom: "-25px",
+      marginTop: "-15px"
     }
     return (
       <section id={gData["sections"][6]} style={sectionStyle}>
@@ -55,9 +56,9 @@ class Works extends Component {
               </video>
             </div>
           </div>
-          <div className="hide z2 relative">
-            <h2 className="color-content f2 ls2 lh-copy fw4 ph2">看看我們的完整作品吧！</h2>
-            <Button content={"看完整案例！"} scale={1.25}/>
+          <div className="hide z2 relative mb60 tc">
+            <h2 className="color-content f25 ls2 lh-copy fw4 ph2 mb50">看看我們的完整作品吧！</h2>
+            <Button content={"看完整案例！"} scale={1} ghost={true} center={true}/>
           </div>
         </div>
       </section>

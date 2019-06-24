@@ -44,7 +44,7 @@ class Faq extends Component {
        "可女點發！外的食是了了狀片後過的下件得。對傳今媽謝一……條舞是智麼止不，一體輕消年後風或人了化講新史容道賽：起體比這顯間產？實是嗎基招他即明房日獎經的營我人立，縣向失年自叫年拉界得黨紀？當與中組術，大親計根；對像持利料造一的得人自興。是玩他必，高三易？"
       ],
   		[
-       "這是一段問題的敘述，敘述這問題的敘述問題的敘述是一段問題的敘述",
+       "這是一段問題的敘述，敘述這問題的敘述問題一段問題的敘述",
        "可女點發！外的食是了了狀片後過的下件得。對傳今媽謝一……條舞是智麼止不，一體輕消年後風或人了化講新史容道賽：起體比這顯間產？實是嗎基招他即明房日獎經的營我人立，縣向失年自叫年拉界得黨紀？當與中組術，大親計根；對像持利料造一的得人自興。是玩他必，高三易？"
       ],
   	]
@@ -78,8 +78,9 @@ class Faq extends Component {
 
     return (
       <section id={gData["sections"][8]} style={sectionStyle}>
-      	<div className="content ph4-ns ph2 mw56rem center">
-      	  <Header title={"常見問題"} color="#4C5B7F" margin={true}/>
+      	<div className="content ph4-ns ph2 mw54rem center">
+      	  <Header title={"想知道什麼？"} color="#4C5B7F" margin={false}/>
+          <p className="tagline hide f4 fw3 color-fade tc mt4 mb80 lh-medium ls-medium ph2">運用消費者Persona，說出痛點引起共鳴</p>
       	  <div className="hide">
       	  	{qList}
       	  </div>

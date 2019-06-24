@@ -36,7 +36,7 @@ class Section1 extends Component {
       background: "#ffffff",
     }
     var shadowStyle = {
-      marginTop: "-20px"
+      marginTop: "-15px"
     }
 
     var animation1 = [
@@ -64,21 +64,22 @@ class Section1 extends Component {
     ]
 
     var tag = {
-      width: "150px",
-      padding: "8px 20px",
-      borderRadius: "8px"
+      width: "120px",
+      padding: "4px 20px",
+      borderRadius: "8px",
+      fontSize: "18px"
     }
 
     var contents = [];
     for(var i = 0; i < 3; i++) {
       var temp = (
         <div className="fl w-100 w-third-l ph2 tc" key={i}>
-          <h2 className={colors[data.id - 1]+" hide tag f4-ns f5 fw5 mt4-l mt5 mb4-l mb3 tc center ls-medium"} style={tag}>{data.title[i]}</h2>
+          <h2 className={colors[data.id - 1]+" hide tag fw4 mt0 mb30 tc center ls-medium"} style={tag}>{data.title[i]}</h2>
           <div className="mw320 center w-60">
             <LottieControl data1={animations[i][data.id - 1][0]} data2={animations[i][data.id - 1][1]} open={true} offset={-135} id="animation1"/>
-            <img className="ma0 hide" src={shadow} alt="shadow" style={shadowStyle}/>
+            <img className="ma0 hide mb25" src={shadow} alt="shadow" style={shadowStyle}/>
           </div>              
-          <p className="hide lh-copy mw200 center tl f5-ns f6 fw3 color-content2">{data.content[i]}</p>
+          <p className="hide lh-copy mw200 center tl f5-ns f6 fw4 color-content2 mt0 mb4">{data.content[i]}</p>
         </div>
       )
       contents.push(temp);
@@ -87,9 +88,9 @@ class Section1 extends Component {
 
     return (
       <section id={gData["sections"][1]} style={sectionStyle}>
-        <div className="content ph4-ns ph2 mw75rem center">
+        <div className="content ph4-ns ph2 mw56rem center">
           <Header title={data.sectionTitle} color="#4C5B7F" margin={false}/>
-          <p className="tagline hide f4-ns f5 fw3 color-fade tc mt3 mb4-l mb0 lh-medium ls-medium ph2">{data.tagline}</p>
+          <p className="tagline hide f4 fw3 color-fade tc mt4 mb80 lh-medium ls-medium ph2">{data.tagline}</p>
           <div className="cf ph2-ns pt2">
             {contents}
           </div>

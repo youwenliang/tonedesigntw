@@ -26,15 +26,15 @@ class Banner extends Component {
   }
   render() {
     var sectionStyle = {
-      background: "#ffffff"
+      background: "#ffffff",
     }
     return (
-      <section id="banner" style={sectionStyle}>
+      <section id="banner" className="sectionL" style={sectionStyle}>
         <div className="borderline top"/>
         <div className="mw8 tc center">
-          <img src={wave} width="80px" alt="wave"/>
-        	<h2 className="hide f1875 fw5 color-content ls-large">用內容，強化你的品牌價值。</h2>
-          <p className="tagline hide f4-ns f5 fw3 color-content tc mt3 mb4 lh-large ls-medium ph2">
+          <img src={wave} width="80px" alt="wave" className="mb30"/>
+        	<h2 className="hide f30 fw5 color-content ls-large mv0 mb40">用內容，強化你的品牌價值</h2>
+          <p className="tagline hide f125 fw3 color-content tc mt3 mb4 lh-large ls-medium ph2">
             Tone Design 運用資訊設計、視覺設計，結合 User Experience 設計，<br/>
             為不同階段的消費者旅程，設計出打動人心的內容，
           </p>

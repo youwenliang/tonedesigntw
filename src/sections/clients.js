@@ -26,15 +26,15 @@ class Clients extends Component {
   	var logoList = [];
   	for(var i = 0; i < logoURL.length; i++){
   		logoList.push(
-  			<div className="fl w-50 w-third-m w-25-l pv2 ph0 tc o-80" key={i}>
-  				<img src={logoURL[i]} alt={logoURL[i].split('=')[1]}/>
+  			<div className="fl w-50 w-third-m w-25-l ph0 tc o-80" key={i}>
+  				<img src={logoURL[i]} height={70} alt={logoURL[i].split('=')[1]}/>
   			</div>
   		)
   	}
     var content = (
-        <div className="content ph4-ns ph2 mw8 w-100 center z2 relative">
+        <div className="content ph4-ns ph2 mw54rem w-100 center z2 relative">
           <Header title={"合作客戶"} color="#fff" margin={false}/>
-          <p className="tagline hide f4-ns f5 fw3 color-red tc mt3 mb4 lh-medium ph2 ls-medium">運用消費者Persona，說出痛點引起共鳴。</p>
+          <p className="tagline hide f4 fw3 color-red tc mt4 mb80 lh-medium ls-medium ph2">運用消費者Persona，說出痛點引起共鳴</p>
           <div className="hide cf ph2-ns">
             {logoList}
           </div>
