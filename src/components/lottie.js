@@ -29,6 +29,7 @@ class LottieControl extends React.Component {
           <Scene
             offset={$t.props.offset}
             reverse={false}
+            indicators={$t.props.i}
             triggerElement={'#'+$t.props.id}
           >
             {(progress, event) => {
@@ -39,6 +40,7 @@ class LottieControl extends React.Component {
                     {
                       eventName: 'complete',
                       callback: () => {
+                        console.log($t.props.id+"---end")
                         $t.setState({
                           options: {
                             loop: true,

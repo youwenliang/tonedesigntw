@@ -30,7 +30,7 @@ class Section3 extends Component {
     }
     $(window).on('resize orientationchange', checkMobile);
     $(document).ready(function(){
-      checkMobile();
+      //checkMobile();
     });
   }
   render() {
@@ -64,9 +64,9 @@ class Section3 extends Component {
         <div className="absolute w-100 h-100" style={bg2Style}/>
         <div className="content ph4-ns ph2 mw9 center z1 relative">
           <div className="cf ph2-ns pt2 flex items-center flex-column flex-row-l">
-            <div className="hide fl w-100 w-50-l tc relative z-1">
+            <div className="fl w-100 w-50-l tc relative z-1">
               <div className="w-80 fr-l center">
-                <LottieControl data1={animationDataCircleso} data2={animationDataCirclesl} open={true} id="animationCircles" offset={-135} id="animationCircle"/>
+                <LottieControl data1={animationDataCircleso} data2={animationDataCirclesl} open={true} id="animationCircle" offset={35}/>
               </div>
             </div>
             <div className="hide fl w-100 w-50-l ph4 tl-l tc mw6 mt0">

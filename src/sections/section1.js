@@ -3,6 +3,7 @@ import Header from '../components/header.js';
 import LottieControl from '../components/lottie.js';
 import shadow from '../images/shadow.png';
 import gData from '../data/data.js';
+import $ from 'jquery';
 
 import * as animationData1_1o from '../images/animations/data4_open.json'
 import * as animationData1_1l from '../images/animations/data4_loop.json'
@@ -69,6 +70,7 @@ class Section1 extends Component {
       borderRadius: "8px",
       fontSize: "18px"
     }
+    var off = -1*($(window).height()/2 - 140);
 
     var contents = [];
     for(var i = 0; i < 3; i++) {
@@ -76,7 +78,7 @@ class Section1 extends Component {
         <div className="fl w-100 w-third-l ph2 tc" key={i}>
           <h2 className={colors[data.id - 1]+" hide tag fw4 mt0 mb30 tc center ls-medium"} style={tag}>{data.title[i]}</h2>
           <div className="mw320 center w-60">
-            <LottieControl data1={animations[i][data.id - 1][0]} data2={animations[i][data.id - 1][1]} open={true} offset={-135} id="animation1"/>
+            <LottieControl data1={animations[i][data.id - 1][0]} data2={animations[i][data.id - 1][1]} open={true} offset={off} id={"animation"+i}/>
             <img className="ma0 hide mb25" src={shadow} alt="shadow" style={shadowStyle}/>
           </div>              
           <p className="hide lh-copy mw200 center tl f5-ns f6 fw4 color-content2 mt0 mb4">{data.content[i]}</p>

@@ -188,9 +188,11 @@ class Section2 extends Component {
       listContent.push(temp);
     }
 
+    var off = $(window).height()/2 - 66 + "px"
+
     return (
       <Controller>
-        <Scene pin duration={4500} classToggle="start" triggerElement={"#"+gData["sections"][2]} indicators={false} offset={"400px"}>
+        <Scene pin duration={4500} classToggle="start" triggerElement={"#"+gData["sections"][2]} indicators={true} offset={off}>
           {(progress, event) => {
             if(progress < 0.33 && progress > 0) {
               trigger = ["active","",""]
@@ -220,7 +222,7 @@ class Section2 extends Component {
             }
 
             return (
-            <section id={gData["sections"][2]} style={sectionStyle} className="relative">
+            <section id={gData["sections"][2]} style={sectionStyle} className="relative sectionS">
               <div id="arrowTrigger" className="content">
                 <Header title={data.sectionTitle} color="#4C5B7F" margin={false}/>
                 <p className="tagline hide f4 fw3 color-content hide tc mt4 mb80 lh-medium ls-medium ph2">{data.tagline}</p>
