@@ -1,23 +1,39 @@
 import React, { Component } from 'react';
 import Header from '../components/header.js';
 import gData from '../data/data.js';
+import $ from 'jquery'
 
 class Faq extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      mobile: $(window).width() <= 768 ? true : false
+    };
+  }
   componentDidMount(){
-  	var coll = document.getElementsByClassName("collapsible");
-	var i;
+    var $this = this;
+    function checkMobile() {
+      if($(window).width() <= 768) {
+        $this.setState({mobile:true});
+      }
+      else $this.setState({mobile:false});
+    }
+    $(window).on('resize orientationchange', checkMobile);
 
-	for (i = 0; i < coll.length; i++) {
-	  coll[i].addEventListener("click", function() {
-	    this.classList.toggle("active");
-	    var content = this.nextElementSibling;
-	    if (content.style.maxHeight){
-	      content.style.maxHeight = null;
-	    } else {
-	      content.style.maxHeight = content.scrollHeight + "px";
-	    } 
-	  });
-	}
+  	var coll = document.getElementsByClassName("collapsible");
+	  var i;
+
+  	for (i = 0; i < coll.length; i++) {
+  	  coll[i].addEventListener("click", function() {
+  	    this.classList.toggle("active");
+  	    var content = this.nextElementSibling;
+  	    if (content.style.maxHeight){
+  	      content.style.maxHeight = null;
+  	    } else {
+  	      content.style.maxHeight = content.scrollHeight + "px";
+  	    } 
+  	  });
+  	}
   }
   render() {
     var sectionStyle = {
@@ -75,12 +91,12 @@ class Faq extends Component {
 		  </div>
   		)
   	}
-
+    var mb = this.state.mobile ? "mb60" : "mb80"
     return (
       <section id={gData["sections"][8]} style={sectionStyle}>
       	<div className="content ph4-ns ph2 mw54rem center">
       	  <Header title={"想知道什麼？"} color="#4C5B7F" margin={false}/>
-          <p className="tagline hide f4 fw3 color-fade tc mt4 mb80 lh-medium ls-medium ph2">運用消費者Persona，說出痛點引起共鳴</p>
+          <p className={"tagline hide f4 fw3 color-fade tc mt4-ns mt3 lh-medium ls-medium ph2 "+mb}>運用消費者Persona，說出痛點引起共鳴</p>
       	  <div className="hide">
       	  	{qList}
       	  </div>

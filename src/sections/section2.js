@@ -106,7 +106,7 @@ class Section2 extends Component {
       position: "relative",
       boxShadow: "inset 0 0 10px rgba(86,86,86,.42)",
       width: "100vw",
-      height: "480px",
+      height: "420px",
       overflow: "hidden"
     }
     var number = {
@@ -130,7 +130,7 @@ class Section2 extends Component {
       top: 0,
       left: 0,
       right: 0,
-      margin: "32px auto 0 auto"
+      margin: "0 auto"
     }
     var moreArrow = {
       position: "relative",
@@ -139,15 +139,15 @@ class Section2 extends Component {
     }
     for(var i = 0; i < 3; i++) {
       var temp = (
-        <div id={"content"+(i+1)} className="sub-content cf pv5 ph4-ns ph2 mw8 center" key={i} style={subContent}>
-          <div className="fl w-100 w-50-l relative color-content pr5">
+        <div id={"content"+(i+1)} className="sub-content cf pv5 ph4-ns ph2 mw54rem center" key={i} style={subContent}>
+          <div className="fl w-100 w-50-l relative color-content pr4">
             <LottieControl data1={animations[data.id-1][i]} open={false} id="animationContent" offset={0}/>
             <h2 className="f25 fw4 mt4 lh-medium">{data.content[i]["tagline"]}</h2>
             <p className="more fw4">
               Learn more <span className="fw7 f125" style={moreArrow}>></span>
             </p>
           </div>
-          <div className="fl w-100 w-50-l relative pl5">
+          <div className="fl w-100 w-50-l relative pl4">
             {/*<p className="f6 color-fade fw4 mt3 mb4">{data.content[i]["smalltitle"][0]}</p>
             <ul className="circle-list fw3 color-content ls-medium">
               <li>
@@ -192,7 +192,7 @@ class Section2 extends Component {
 
     return (
       <Controller>
-        <Scene pin duration={4500} classToggle="start" triggerElement={"#"+gData["sections"][2]} indicators={false} offset={off}>
+        <Scene pin duration={3600} classToggle="start" triggerElement={"#"+gData["sections"][2]} indicators={false} offset={off}>
           {(progress, event) => {
             if(progress < 0.33 && progress > 0) {
               trigger = ["active","",""]
@@ -225,7 +225,9 @@ class Section2 extends Component {
             <section id={gData["sections"][2]} style={sectionStyle} className="relative sectionS">
               <div id="arrowTrigger" className="content">
                 <Header title={data.sectionTitle} color="#4C5B7F" margin={false}/>
-                <p className="tagline hide f4 fw3 color-content hide tc mt4 mb80 lh-medium ls-medium ph2">{data.tagline}</p>
+                <div className="hide">
+                  <p className="tagline f4 fw3 color-content tc mt4 mb80 lh-medium ls-medium ph2">{data.tagline}</p>
+                </div>
                 <div className="arrows mb4 mt5 z2 relative">
                   <button className={"z2 relative arrowlinks ph5 tc "+trigger[0]}>
                     <img className="mr2" src={tone1} width="48" alt="icons"/>

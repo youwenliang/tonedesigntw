@@ -27,8 +27,21 @@ import * as animationData3_3o from '../images/animations/data6_open.json'
 import * as animationData3_3l from '../images/animations/data6_loop.json'
 
 class Section1 extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      mobile: $(window).width() <= 768 ? true : false
+    };
+  }
   componentDidMount(){
-    
+    var $this = this;
+    function checkMobile() {
+      if($(window).width() <= 768) {
+        $this.setState({mobile:true});
+      }
+      else $this.setState({mobile:false});
+    }
+    $(window).on('resize orientationchange', checkMobile);
   }
   render() {
     // import data
@@ -77,23 +90,23 @@ class Section1 extends Component {
       var temp = (
         <div className="fl w-100 w-third-l ph2 tc" key={i}>
           <h2 className={colors[data.id - 1]+" hide tag fw4 mt0 mb30 tc center ls-medium"} style={tag}>{data.title[i]}</h2>
-          <div className="mw320 center w-60">
+          <div className="mw240 center w-70">
             <LottieControl data1={animations[i][data.id - 1][0]} data2={animations[i][data.id - 1][1]} open={true} offset={off} id={"animation"+i}/>
             <img className="ma0 hide mb25" src={shadow} alt="shadow" style={shadowStyle}/>
           </div>              
-          <p className="hide lh-copy mw200 center tl f5-ns f6 fw4 color-content2 mt0 mb4">{data.content[i]}</p>
+          <p className="hide lh-copy mw200 center tl f5 fw3 color-content2 mt0 mb4-l mb5">{data.content[i]}</p>
         </div>
       )
       contents.push(temp);
     }
 
-
+    var mb = this.state.mobile ? "mb60" : "mb90"
     return (
       <section id={gData["sections"][1]} style={sectionStyle}>
-        <div className="content ph4-ns ph2 mw56rem center">
+        <div className="content ph4-ns ph2 mw61rem center">
           <Header title={data.sectionTitle} color="#4C5B7F" margin={false}/>
-          <p className="tagline hide f4 fw3 color-fade tc mt4 mb80 lh-medium ls-medium ph2">{data.tagline}</p>
-          <div className="cf ph2-ns pt2">
+          <p className={"tagline hide f4 fw3 color-fade tc mt4-ns mt3 lh-medium ls-medium ph2 "+mb}>{data.tagline}</p>
+          <div className="cf ph2-ns">
             {contents}
           </div>
         </div>

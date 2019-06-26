@@ -79,7 +79,7 @@ class Section4 extends Component {
   componentDidMount(){
     var $this = this;
     function checkMobile() {
-      if($(window).width() <= 507) {
+      if($(window).width() <= 959) {
         $this.setState({mobile:true});
       }
       else $this.setState({mobile:false});
@@ -106,21 +106,21 @@ class Section4 extends Component {
     var contentList = [];
     var mw85 = {
       minWidth: "70px",
-      marginBottom: "25px"
+      marginBottom: this.state.mobile ? "0px":"25px"
     }
     var mt13 = {
-      marginTop: "10px"
+      marginTop: this.state.mobile ? "0px" : "10px"
     }
     for(var i = 0; i <15; i++) {
       var x = Math.floor(i/5);
       var y = i%5;
       var content = (
-        <div className="fl w-20-l w-100 pv2 ph0 tc" key={i}>
+        <div className="fl w-20-l w-100 pv2-l pv3 ph0 tc" key={i}>
           <div className="flex flex-column-l flex-row justify-center items-center">
             <img src={icons[data.id - 1][i]} width="70" alt="icons" style={mw85}/>
-            <div className="color-content2 tl tc-l ml4 ml0-l">
-              <h3 className="f4-ns f5 color-content fw4 mv0">{data.title[x][y]}</h3>
-              <p className="f5-ns f6 fw3 color-fade lh-copy mv0 mw5-l ph3-l ph0" style={mt13}>{data.content[x][y]}</p>
+            <div className="color-content2 tl tc-l ml3 ml0-l miw150">
+              <h3 className="f4-ns f5 color-content fw4 mv0 dib db-l mr2 mr0-l">{data.title[x][y]}</h3>
+              <p className="f5-ns f6 fw3 color-fade lh-copy mv0 mw5-l ph3-l ph0 dib db-l" style={mt13}>{data.content[x][y]}</p>
             </div>
           </div>
         </div>
@@ -146,7 +146,7 @@ class Section4 extends Component {
       top: "90px",
       left: 0,
       right: 0,
-      transform: "translateX(-57px)",
+      transform: $(window).width() < 480 ? "translateX(-82px)" : "translateX(-92px)",
       margin: "auto",
       zIndex: 1
     }
@@ -154,19 +154,19 @@ class Section4 extends Component {
     var color = [
       "color1", "color2", "color3"
     ]
-
+    var mb = this.state.mobile ? "mb60" : "mb90"
     return (
       <section id={gData["sections"][4]} style={sectionStyle}>
         <div className="borderline top"/>
         <div className="content ph4-ns ph2 mw8 center relative">
           <Header title={data.sectionTitle} color="#4C5B7F" margin={false}/>
-          <p className="tagline hide f4 fw3 color-fade tc mt4 mb80 lh-medium ls-medium ph2">{data.tagline}</p>
-          <div className="hide tab mb50 mt5 f4-ns f5 tracked">
+          <p className={"tagline hide f4 fw3 color-fade tc mt4-ns mt3 lh-medium ls-medium ph2 "+mb}>{data.tagline}</p>
+          <div className="hide tab mb50 mt5 f4-ns f6 tracked">
             <button className={color[data.id - 1]+" tablinks active ph3 tc"} onClick={(e) => this.handleClick(e, "content1")}>{data.section[0]}</button>
             <button className={color[data.id - 1]+" tablinks ph3 tc"} onClick={(e) => this.handleClick(e, "content2")}>{data.section[1]}</button>
             <button className={color[data.id - 1]+" tablinks ph3 tc"} onClick={(e) => this.handleClick(e, "content3")}>{data.section[2]}</button>
           </div>
-          <div className="hide relative w-90 center">
+          <div className="hide relative w-100 ph4 center">
             <div id="content1" className="tabcontent active cf mt4-ns mt3">
               {contentList.slice(0,5)}
             </div>

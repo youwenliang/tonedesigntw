@@ -17,7 +17,7 @@ class Section3 extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      mobile: false
+      mobile: $(window).width() <= 959 ? true : false
     };
   }
   componentDidMount(){
@@ -29,13 +29,10 @@ class Section3 extends Component {
       else $this.setState({mobile:false});
     }
     $(window).on('resize orientationchange', checkMobile);
-    $(document).ready(function(){
-      //checkMobile();
-    });
   }
   render() {
-  	// import data
-  	var data = this.props.data[gData["sections"][3]];
+    // import data
+    var data = this.props.data[gData["sections"][3]];
     var sectionStyle = {
       background: "#ffffff",
     }
@@ -58,19 +55,26 @@ class Section3 extends Component {
       top: "3px",
       marginLeft: "3px",
     }
+
+    var scaleA = {
+      transform: "scale(1.1)",
+      maxWidth: "510px"
+    }
+
+    var mb = this.state.mobile ? "mb25" : "mb50"
     var circles = [circle1, circle2, circle3];
     return (
       <section id={gData["sections"][3]} style={sectionStyle} className="relative">
-        <div className="absolute w-100 h-100" style={bg2Style}/>
-        <div className="content ph4-ns ph2 mw9 center z1 relative">
+        <div className="absolute w-100 h-100 db-l dn" style={bg2Style}/>
+        <div className="content ph4-ns ph2 mw70rem center z1 relative">
           <div className="cf ph2-ns pt2 flex items-center flex-column flex-row-l">
             <div className="fl w-100 w-50-l tc relative z-1">
-              <div className="w-80 fr-l center">
+              <div className="w-90-ns w-100 fr-l center" style={scaleA}>
                 <LottieControl data1={animationDataCircleso} data2={animationDataCirclesl} open={true} id="animationCircle" offset={35}/>
               </div>
             </div>
-            <div className="hide fl w-100 w-50-l ph4 tl-l tc mw6 mt0">
-              <h1 className="f35 color-content fw4 mv0 mb50">{data.title}</h1>
+            <div className="hide fl w-100 w-50-l ph4-ns ph3 tl-l mw6 mt0">
+              <h1 className={"f35 color-content fw4 mv0 "+mb}>{data.title}</h1>
               <h3 className="f25 lh-medium color-content fw4 mv0 mb25">{data.smalltitle}</h3>
               <p className="lh-medium f5 fw3 color-content2 mb25 tl">{data.content}</p>
               <p className="more fw4 mv0">

@@ -7,7 +7,22 @@ import portfolioVideoL from '../images/videos/portfolio_loop.mp4';
 import $ from 'jquery';
 
 class Works extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      mobile: $(window).width() <= 768 ? true : false
+    };
+  }
   componentDidMount(){
+    var $this = this;
+    function checkMobile() {
+      if($(window).width() <= 768) {
+        $this.setState({mobile:true});
+      }
+      else $this.setState({mobile:false});
+    }
+    $(window).on('resize orientationchange', checkMobile);
+  
     var video = document.getElementById('home-video');
     var video_loop = document.getElementById('home-video-loop');
     video.load();
@@ -37,12 +52,14 @@ class Works extends Component {
     }
     var contentStyle = {
       width: "80%",
-      minWidth: "1012px",
+      minWidth: "1000px",
+      maxWidth: "1000px",
       position: "relative",
       zIndex: 1,
       marginBottom: "-25px",
       marginTop: "-15px"
     }
+    var mb = this.state.mobile ? "mb30" : "mb50";
     return (
       <section id={gData["sections"][6]} style={sectionStyle}>
         <div className="content ph4-ns ph2 mw9 center tc">
@@ -57,7 +74,7 @@ class Works extends Component {
             </div>
           </div>
           <div className="hide z2 relative mb60 tc">
-            <h2 className="color-content f25 ls2 lh-copy fw4 ph2 mb50">看看我們的完整作品吧！</h2>
+            <h2 className={"color-content f25 ls2 lh-copy fw4 ph2 "+mb}>看看我們的完整作品吧！</h2>
             <Button content={"看完整案例！"} scale={1} ghost={true} center={true}/>
           </div>
         </div>

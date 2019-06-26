@@ -165,7 +165,7 @@ class Cover extends Component {
                 }}
               >
               {/*<div className="absolute w-100 h-100" style={bgStyle}/>*/}
-              <div className="absolute h-100" style={bgWStyle}>
+              <div className="absolute vh-100" style={bgWStyle}>
                 <LottieControl data1={animationDataWaves} open={false} id="animationWaves" offset={0}/>
               </div>
               </Tween>

@@ -44,7 +44,7 @@ section.sectionL {
 }
 
 section.sectionS {
-	padding: 4.375rem 0 calc(100vh - 750px) 0 !important;
+	padding: 4.375rem 0 calc(100vh - 690px) 0 !important;
 }
 
 .ls-none {
@@ -280,6 +280,19 @@ section.sectionS {
 	}
 }
 
+@media screen and (max-width: 479px) {
+	.tagline {
+		font-size: 1.125rem !important;
+	}
+
+	section {
+		padding: 3.75rem 0;
+	}
+	section.sectionL {
+		padding: 4.375rem 0 !important;
+	}
+}
+
 .f25-l {
 	font-size: 2rem;
 }
@@ -310,6 +323,10 @@ section.sectionS {
 
 .ls1 {
 	letter-spacing: 1px;
+}
+
+.miw150 {
+	min-width: 150px;
 }
 
 .mw160 {
@@ -348,8 +365,20 @@ section.sectionS {
 	max-width: 56rem;
 }
 
+.mw61rem {
+	max-width: 61rem;
+}
+
+.mw70rem {
+	max-width: 70rem;
+}
+
 .mw75rem {
 	max-width: 75rem;
+}
+
+.mb90 {
+	margin-bottom: 90px;
 }
 
 .mb80 {
@@ -408,6 +437,22 @@ section.sectionS {
 	font-size: 25px;
 }
 
+@media screen and (max-width: 479px) {
+	.f35 {
+	font-size: 30px;
+	}
+	.f25 {
+		font-size: 20px;
+	}
+	.f30 {
+		font-size: 20px;
+	}
+	.f125 {
+		font-size: 1rem;
+		line-height: 1.8 !important;
+	}
+}
+
 .f15 {
 	font-size: 15px;
 }
@@ -433,16 +478,18 @@ section.sectionS {
   outline: none;
   cursor: pointer;
   transition: 0.3s;
-  height: 50px;
+  height: 37.5px;
   margin: 0 8px;
   box-shadow: 0px 4px 16px rgba(0,0,0,.2);
   max-width: 140px;
-  font-size: 1rem;
+  font-size: 0.75rem;
 }
 
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 480px) {
   .tab button {
     width: 200px;
+ 	font-size: 1rem;  
+ 	height: 50px; 
   }
 }
 

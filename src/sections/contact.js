@@ -19,7 +19,7 @@ class Contact extends Component {
   componentDidMount(){
     var $this = this;
     function checkMobile() {
-      if($(window).width() <= 959) {
+      if($(window).width() <= 479) {
       	$this.setState({mobile:true});
       }
       else $this.setState({mobile:false});
@@ -35,15 +35,17 @@ class Contact extends Component {
     var sectionStyle = {
   		backgroundImage: "url("+tone+"), url("+bg[data.id - 1]+")",
   		backgroundPosition: "85% 50%, center top",
-  		backgroundSize: "700px, cover", 
+  		backgroundSize: this.state.mobile ? "90vw, cover":"700px, cover", 
   		backgroundRepeat: "no-repeat, no-repeat",
-  		minHeight: "530px",
+  		minHeight: this.state.mobile ? "310px" : "530px",
       paddingBottom: 0
   	}
+
+    var mb = this.state.mobile ? "mb30" : "mb40";
     return (
       <section id={gData["sections"][7]} className="flex items-center" style={sectionStyle}>
       	<div className="hide content ph4-ns ph2 mw8 center tc">
-      	  <h2 className="white f30 ls2 lh-copy fw4 ph2 mb40 mv0 tshadow">有任何設計需求，歡迎聯繫我們！</h2>
+      	  <h2 className={"white f30 ls2 lh-copy fw4 ph2 mv0 tshadow "+mb}>"有任何設計需求，<br className="dn-ns db"/>歡迎聯繫我們！"</h2>
       	  <Button content={"填寫表單！"} shadow={true} scale={1} center={true}/>
       	</div>
       </section>

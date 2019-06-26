@@ -82,7 +82,7 @@ class Nav extends Component {
 
     return (
       <nav className="nav flex items-center justify-between flex-row ph5-ns ph3" style={navStyle}>
-        <img src={logo} width="180" className={op}/>
+        <img src={logo} width={this.state.mobile ? "130":"180"} className={op}/>
         {urls}
       </nav>
     );
