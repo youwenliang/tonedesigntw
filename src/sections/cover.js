@@ -126,7 +126,7 @@ class Cover extends Component {
           {/*<h1 className="w-100 f1-ns f2 white fw3 mt0">{data.title}</h1>*/}
           <img src={logo} width="350px" alt="tone design" className="mb4"/>
           <p className="w-100 center lh-copy ls-medium f1375 white mb4 mt0 mw400 fw4">{data.content}</p>
-          <Button content={data.button} shadow={true} scale={1}/>
+          <Button content={data.button} shadow={true} scale={1} center={true}/>
         </div>
       </div>
     ) : (

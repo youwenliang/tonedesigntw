@@ -84,10 +84,11 @@ class Section2 extends Component {
   componentDidMount(){
     var $this = this;
     function checkMobile() {
-      if($(window).width() <= 507) {
+      if($(window).width() <= 959) {
         $this.setState({mobile:true});
       }
       else $this.setState({mobile:false});
+      $('.sectionS').css({'width':'auto'});
     }
     $(window).on('resize orientationchange', checkMobile);
     $(document).ready(function(){
@@ -188,7 +189,7 @@ class Section2 extends Component {
       listContent.push(temp);
     }
 
-    var off = $(window).height()/2 - 66 + "px"
+    var off = $(window).height()/2 - 66 + "px";
 
     return (
       <Controller>
