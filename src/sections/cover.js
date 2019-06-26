@@ -51,9 +51,13 @@ class Cover extends Component {
     $(window).on('resize orientationchange', checkMobile);
     $(document).ready(function(){
       checkMobile();
-      let vh = window.innerHeight * 0.01;
-      $('.vh-100').css('height', 100 * vh+'px');
-      $('.min-vh-100').css('min-height', 100 * vh+'px');
+      if(this.state.mobile) {
+        let vh = window.innerHeight * 0.01;
+        $('.vh-100').css('height', 100 * vh+'px');
+        $('.min-vh-100').css('min-height', 100 * vh+'px');
+      }
+
+      $('#animationWaves').next().css({'height':'100vh'})
     });
   }
   render() {
@@ -98,9 +102,9 @@ class Cover extends Component {
       backgroundRepeat: "no-repeat"
     }
     var bgWStyle = {
-      top: "-140px",
+      top: "calc(10vw - 200px)",
       left: 0,
-      width: this.state.large ? "100vw": "1800px",
+      width: "100vw",
     }
     var bg2Style = {
       top: 0,
@@ -165,10 +169,11 @@ class Cover extends Component {
                 }}
               >
               {/*<div className="absolute w-100 h-100" style={bgStyle}/>*/}
+              
+              </Tween>
               <div className="absolute vh-100" style={bgWStyle}>
                 <LottieControl data1={animationDataWaves} open={false} id="animationWaves" offset={0}/>
               </div>
-              </Tween>
               <Tween
                 position="0"
                 from={{
