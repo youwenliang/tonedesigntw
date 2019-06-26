@@ -192,7 +192,7 @@ class Section2 extends Component {
 
     return (
       <Controller>
-        <Scene pin duration={4500} classToggle="start" triggerElement={"#"+gData["sections"][2]} indicators={true} offset={off}>
+        <Scene pin duration={4500} classToggle="start" triggerElement={"#"+gData["sections"][2]} indicators={false} offset={off}>
           {(progress, event) => {
             if(progress < 0.33 && progress > 0) {
               trigger = ["active","",""]
