@@ -13,9 +13,7 @@ class LottieControl extends React.Component {
         loop: this.props.open ? false : true,
         autoplay: this.props.open ? false : true,
         animationData: this.props.data1,
-        rendererSettings: {
-          preserveAspectRatio: 'xMidYMid slice'
-        }
+        rendererSettings: this.props.render ? {preserveAspectRatio: 'none'} : {preserveAspectRatio: 'xMidYMid slice'}
       }
     };
   }

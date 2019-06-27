@@ -64,7 +64,8 @@ class Cover extends Component {
     // import data
     var data = this.props.data[gData["sections"][0]];
   	var coverStyle = {
-  		width: "100%"
+  		width: "100%",
+      minHeight: "700px"
   	}
     var shadowStyle = {
       position: "relative",
@@ -101,10 +102,24 @@ class Cover extends Component {
       backgroundPosition: "center 0%",
       backgroundRepeat: "no-repeat"
     }
+    var wTop = 0;
+    if($(window).width() >= 1550) {
+      if($(window).height() > 953) wTop = "calc(715px - 46.15vw)";
+      else if($(window).height() <= 953 && $(window).height() > 700) wTop = "calc((100vh - 953px)/2 + 715px - 46.15vw)";
+      else wTop = "calc(-126.5px + 715px - 46.15vw)";
+    } else {
+      if($(window).height() > 953) wTop = 0;
+      else if($(window).height() <= 953 && $(window).height() > 700) wTop = "calc((100vh - 953px)/2)";
+      else wTop = "-126.5px";
+    }
+
+
     var bgWStyle = {
-      top: "calc(10vw - 200px)",
-      left: 0,
-      width: "100vw",
+      top: wTop,
+      left: $(window).width() >= 1550 ? 0 : "calc((100vw - 1550px)/2)",
+      width: $(window).width() >= 1550 ? "100vw" : "1550px",
+      height: "90vh",
+      transform: "translateY(-60px)"
     }
     var bg2Style = {
       top: 0,
@@ -120,6 +135,10 @@ class Cover extends Component {
     var animationDataCover = animations[data.id - 1];
     var animationDataWaves = animationWaves[data.id - 1];
 
+    var mw = {
+      maxWidth: "1100px"
+    }
+
     var contents = this.state.mobile ? (
       <div className="cf ph2-ns pt2 flex items-center flex-column flex-row-l justify-center z1 relative">
         <div className="fl w-100 w-50-l tr-l tc relative mt4" style={img}>
@@ -134,15 +153,15 @@ class Cover extends Component {
         </div>
       </div>
     ) : (
-      <div className="cf ph2-ns pt2 flex items-center flex-column flex-row-l justify-center z1 relative">
-        <div className="fl w-100 w-50-l tl-l tc mt0 mw6-l mw9 mb5">
+      <div className="cf ph2-ns pt2 flex items-center flex-column flex-row-l justify-center z1 relative" style={mw}>
+        <div className="fl w-100 w-40-l tl-l tc mt0 mw6-l mw9 mb5">
           {/*<h1 className="w-100 f1-ns f2 white fw3 mt0">{data.title}</h1>*/}
           <img src={logo} width="350px" alt="tone design" className="mb4"/>
           <p className="w-100 lh-copy ls-medium f1375 white mb4 mt0 mw400 fw4 tshadow">{data.content}</p>
           <Button content={data.button} shadow={true}/>
         </div>
-        <div className="fl w-100 w-50-l tr-l tc relative" style={imgS}>
-          <LottieControl data1={animationDataCover} open={false} id="animationCover" offset={0}/>
+        <div className="fl w-100 w-60-l tr-l tc relative" style={imgS}>
+          <LottieControl data1={animationDataCover} open={false} id="animationCover" offset={0} render={true}/>
           <img src={shadow} width="90%" style={shadowStyle} alt="shadow"/>
         </div>
       </div>
@@ -157,7 +176,7 @@ class Cover extends Component {
             triggerHook="onEnter"
           >
             <Timeline
-              wrapper={<div className="content ph4 mw9-l center w-90-l w-100" />}
+              wrapper={<div className="content ph4 center w-100" />}
             >
               <Tween
                 position="0"
@@ -171,7 +190,7 @@ class Cover extends Component {
               {/*<div className="absolute w-100 h-100" style={bgStyle}/>*/}
               
               </Tween>
-              <div className="absolute vh-100" style={bgWStyle}>
+              <div className="absolute" style={bgWStyle}>
                 <LottieControl data1={animationDataWaves} open={false} id="animationWaves" offset={0}/>
               </div>
               <Tween
