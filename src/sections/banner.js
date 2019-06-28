@@ -35,7 +35,7 @@ class Banner extends Component {
         <div className="mw8 tc center ph3">
           <img src={wave} width="80px" alt="wave" className="mb30"/>
         	<h2 className={"hide f30 fw5 color-content ls-large mv0 "+mb}>用內容，強化你的品牌價值</h2>
-          <p className="hide f125 fw3 color-content tc mt3 mb4 lh-large ls-medium ph2">
+          <p className="ph5 ph2-l center hide f125 fw3 color-content tc mt3 mb4 lh-large ls-medium">
             Tone Design 運用資訊設計、視覺設計，結合 User Experience 設計，<br className="db-l dn"/>
             為不同階段的消費者旅程，設計出打動人心的內容，
           </p>

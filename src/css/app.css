@@ -328,6 +328,9 @@ section.sectionS {
 .miw150 {
 	min-width: 150px;
 }
+.miw180 {
+	min-width: 180px;	
+}
 
 .mw160 {
 	max-width: 160px;

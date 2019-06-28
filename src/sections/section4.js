@@ -111,6 +111,7 @@ class Section4 extends Component {
     var mt13 = {
       marginTop: this.state.mobile ? "0px" : "10px"
     }
+    var miw = $(window).width() < 480 ? "miw150" : "miw180"
     for(var i = 0; i <15; i++) {
       var x = Math.floor(i/5);
       var y = i%5;
@@ -118,7 +119,7 @@ class Section4 extends Component {
         <div className="fl w-20-l w-100 pv2-l pv3 ph0 tc" key={i}>
           <div className="flex flex-column-l flex-row justify-center items-center">
             <img src={icons[data.id - 1][i]} width="70" alt="icons" style={mw85}/>
-            <div className="color-content2 tl tc-l ml3 ml0-l miw150">
+            <div className={"color-content2 tl tc-l ml3 ml0-l "+miw}>
               <h3 className="f4-ns f5 color-content fw4 mv0 dib db-l mr2 mr0-l">{data.title[x][y]}</h3>
               <p className="f5-ns f6 fw3 color-fade lh-copy mv0 mw5-l ph3-l ph0 dib db-l" style={mt13}>{data.content[x][y]}</p>
             </div>
@@ -146,7 +147,7 @@ class Section4 extends Component {
       top: "90px",
       left: 0,
       right: 0,
-      transform: $(window).width() < 480 ? "translateX(-82px)" : "translateX(-92px)",
+      transform: $(window).width() < 480 ? "translateX(-82px)" : "translateX(-98px)",
       margin: "auto",
       zIndex: 1
     }
