@@ -125,6 +125,10 @@ nav li a {
 	padding: 5rem 0;	
 }
 
+.ph24 {
+	padding: 0 24px;
+}
+
 .collapsible {
   background-color: transparent;
   color: #444;
@@ -188,6 +192,10 @@ nav li a {
 .color-content2 {
 	color: #4C5B7F;
 	letter-spacing: 2px;
+}
+
+.color-blue {
+	color: #505F81;
 }
 
 /* Navigation */
@@ -289,7 +297,7 @@ nav li a {
 		padding: 3.75rem 0;
 	}
 	section.sectionL {
-		padding: 4.375rem 0 !important;
+		padding: 5rem 0 !important;
 	}
 }
 

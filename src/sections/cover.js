@@ -7,6 +7,7 @@ import shadow from '../images/cover-shadow.png';
 import scroll from '../images/scroll.svg';
 import bg_tone from '../images/cover-tone.svg';
 import logo from '../images/tone-white.svg';
+import logoR from '../images/tone-red.svg';
 
 import $ from 'jquery';
 import gData from '../data/data.js';
@@ -65,13 +66,14 @@ class Cover extends Component {
     var data = this.props.data[gData["sections"][0]];
   	var coverStyle = {
   		width: "100%",
-      minHeight: "700px"
+      minHeight: $(window).width() < 480 ? "640px" : "700px"
   	}
     var shadowStyle = {
       position: "relative",
       top: "-30px",
       marginBottom: "-50px",
-      zIndex: 1
+      zIndex: 1,
+      maxWidth: $(window).width() < 480 ? "240px" : "360px"
     }
     var scrollStyle = {
       width: "100%",
@@ -82,11 +84,12 @@ class Cover extends Component {
       right: 0,
       margin: "auto",
       color: "#adbbcc",
-      zIndex: 1
     }
     var img = {
-      maxWidth: "500px",
-      marginTop: this.state.mobile ? "0px" : "-100px",
+      maxWidth: this.state.mobile ? "420px" : "500px",
+      marginTop: this.state.mobile ? "-40px" : "-100px",
+      transformOrigin: "center bottom",
+      transform: $(window).width() < 480 ? "scale(1.15)" : "scale(1)"
     }
     var imgS = {
       transformOrigin: "100% 60%",
@@ -145,10 +148,10 @@ class Cover extends Component {
           <LottieControl data1={animationDataCover} open={false} id="animationCover" offset={0}/>
           <img src={shadow} width="90%" style={shadowStyle} alt="shadow"/>
         </div>
-        <div className="fl w-100 w-50-l tl-l tc mt4 mt0-l mw6-l mw9">
+        <div className="fl w-100 w-50-l tl mt3 mt0-l">
           {/*<h1 className="w-100 f1-ns f2 white fw3 mt0">{data.title}</h1>*/}
-          <img src={logo} width="350px" alt="tone design" className="mb4"/>
-          <p className="w-100 center lh-copy ls-medium f1375 white mb4 mt0 mw400 fw4">{data.content}</p>
+          <img src={logoR} width={$(window).width()<480 ? "200px":"350px"} alt="tone design" className="mb4-l mb2"/>
+          <p className="w-100 center lh-copy ls-medium color-blue mb4 mt0 fw4 f3-ns f4" dangerouslySetInnerHTML={{__html:data.content}}></p>
           <Button content={data.button} shadow={true} scale={1} center={true}/>
         </div>
       </div>
@@ -157,7 +160,7 @@ class Cover extends Component {
         <div className="fl w-100 w-40-l tl-l tc mt0 mw6-l mw9 mb5">
           {/*<h1 className="w-100 f1-ns f2 white fw3 mt0">{data.title}</h1>*/}
           <img src={logo} width="350px" alt="tone design" className="mb4"/>
-          <p className="w-100 lh-copy ls-medium f1375 white mb4 mt0 mw400 fw4 tshadow">{data.content}</p>
+          <p className="w-100 lh-copy ls-medium f3 white mb4 mt0 mw400 fw4 tshadow" dangerouslySetInnerHTML={{__html:data.content}}></p>
           <Button content={data.button} shadow={true}/>
         </div>
         <div className="fl w-100 w-60-l tr-l tc relative" style={imgS}>
@@ -176,7 +179,7 @@ class Cover extends Component {
             triggerHook="onEnter"
           >
             <Timeline
-              wrapper={<div className="content ph4 center w-100" />}
+              wrapper={<div className="content ph4-ns ph24 center w-100" />}
             >
               <Tween
                 position="0"
@@ -208,7 +211,7 @@ class Cover extends Component {
             </Timeline>
           </Scene>
         </Controller>
-        <div style={scrollStyle} className="dn db-ns">
+        <div style={scrollStyle}>
           <img src={scroll} width="40px" alt="arrow"/>
           <p className="ma2 i ls-none">Scroll</p>
         </div>
