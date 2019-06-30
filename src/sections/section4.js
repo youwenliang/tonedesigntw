@@ -111,7 +111,7 @@ class Section4 extends Component {
     var mt13 = {
       marginTop: this.state.mobile ? "0px" : "10px"
     }
-    var miw = $(window).width() < 480 ? "miw150" : "miw180"
+    var miw = "miw180"
     for(var i = 0; i <15; i++) {
       var x = Math.floor(i/5);
       var y = i%5;
@@ -147,7 +147,7 @@ class Section4 extends Component {
       top: "90px",
       left: 0,
       right: 0,
-      transform: $(window).width() < 480 ? "translateX(-82px)" : "translateX(-98px)",
+      transform: "translateX(-98px)",
       margin: "auto",
       zIndex: 1
     }

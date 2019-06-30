@@ -4,6 +4,8 @@ import Button from '../components/button.js';
 import gData from '../data/data.js';
 import portfolioVideoO from '../images/videos/portfolio_open.mp4';
 import portfolioVideoL from '../images/videos/portfolio_loop.mp4';
+import portfolioVideoMO from '../images/videos/portfolioM_open.mp4';
+import portfolioVideoML from '../images/videos/portfolioM_loop.mp4';
 import $ from 'jquery';
 
 class Works extends Component {
@@ -51,25 +53,27 @@ class Works extends Component {
       paddingBottom: 0
     }
     var contentStyle = {
-      width: "80%",
-      minWidth: "1000px",
-      maxWidth: "1000px",
+      width: this.state.mobile ? "100%":"80%",
+      minWidth: this.state.mobile ? "auto":"1000px",
+      maxWidth: this.state.mobile ? "auto":"1000px",
       position: "relative",
       zIndex: 1,
       marginBottom: "-25px",
       marginTop: "-15px"
     }
     var mb = this.state.mobile ? "mb30" : "mb50";
+    var sourceO = this.state.mobile ? portfolioVideoMO : portfolioVideoO;
+    var sourceL = this.state.mobile ? portfolioVideoML : portfolioVideoL;
     return (
       <section id={gData["sections"][6]} style={sectionStyle}>
         <div className="content ph4-ns ph2 mw9 center tc">
           <div className="flex justify-center">
             <div className="hide mb4" style={contentStyle}>
               <video id="home-video" className="home-video relative" width="100%" muted playsInline preload="auto" autoPlay>
-                <source src={portfolioVideoO} type="video/mp4"/>
+                <source src={sourceO} type="video/mp4"/>
               </video>
               <video id="home-video-loop" className="home-video absolute" width="100%" muted playsInline preload="auto" loop>
-                <source src={portfolioVideoL} type="video/mp4"/>
+                <source src={sourceL} type="video/mp4"/>
               </video>
             </div>
           </div>
