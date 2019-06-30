@@ -120,8 +120,8 @@ class Section4 extends Component {
           <div className="flex flex-column-l flex-row justify-center items-center">
             <img src={icons[data.id - 1][i]} width="70" alt="icons" style={mw85}/>
             <div className={"color-content2 tl tc-l ml3 ml0-l "+miw}>
-              <h3 className="f4-ns f5 color-content fw4 mv0 dib db-l mr2 mr0-l">{data.title[x][y]}</h3>
-              <p className="f5-ns f6 fw3 color-fade lh-copy mv0 mw5-l ph3-l ph0 dib db-l" style={mt13}>{data.content[x][y]}</p>
+              <h3 className="f18 color-content fw4 mv0 dib db-l mr2 mr0-l">{data.title[x][y]}</h3>
+              <p className="f15 fw3 color-fade lh-copy mv0 mw5-l ph3-l ph0 dib db-l" style={mt13}>{data.content[x][y]}</p>
             </div>
           </div>
         </div>
@@ -133,7 +133,7 @@ class Section4 extends Component {
       width: "80%",
       height: "1px",
       position: "absolute",
-      top: "55px",
+      top: "48px",
       left: 0,
       right: 0,
       margin: "auto",
@@ -155,10 +155,10 @@ class Section4 extends Component {
     var color = [
       "color1", "color2", "color3"
     ]
-    var mb = this.state.mobile ? "mb60" : "mb90"
+    var mb = this.state.mobile ? "mb60" : "mb80"
     return (
       <section id={gData["sections"][4]} style={sectionStyle}>
-        <div className="borderline top"/>
+        <div className="borderline top small"/>
         <div className="content ph4-ns ph2 mw8 center relative">
           <Header title={data.sectionTitle} color="#4C5B7F" margin={false}/>
           <p className={"tagline hide f4 fw3 color-fade tc mt4-ns mt3 lh-medium ls-medium ph2 "+mb}>{data.tagline}</p>

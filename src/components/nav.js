@@ -74,7 +74,8 @@ class Nav extends Component {
       display: "flex",
       justifyContent: "center",
       alignItems: "center",
-      borderRadius: "6px"
+      borderRadius: "6px",
+      fontWeight: "400"
     }: {
       color: "rgba(255,255,255,.5)"
     }
@@ -88,7 +89,7 @@ class Nav extends Component {
     var urls = this.state.mobile ? (
       <img src={this.state.fixed ? openC : open} width="20" className="cp" onClick={this.openPanel.bind(this)}/>
       ) : (
-      <ul className="flex flex-row justify-between items-center f18 ls-none fw4">
+      <ul className="flex flex-row justify-between items-center f18 ls-none fw3">
         <li><a href="#" style={link}>Work</a></li>
         <li><a href="#" style={link}>Blog</a></li>
         <li><a href="#" style={buttonLink}>Contact</a></li>
@@ -118,7 +119,8 @@ class Panel extends Component {
       display: this.props.mobile ? "block" : "none",
       opacity: this.props.display ? 1 : 0,
       pointerEvents: this.props.display ? "auto" : "none",
-      transition: "opacity .2s cubic-bezier(0.23, 1, 0.32, 1)"
+      transition: "opacity .2s cubic-bezier(0.23, 1, 0.32, 1)",
+      background: "rgba(255,255,255,.95)"
     }
     var ulink = {
       marginTop: "104px"
@@ -129,12 +131,12 @@ class Panel extends Component {
       marginBottom: "50px"
     }
     return (
-      <div className="w-100 vh-100 fixed bg-white ph3" style={panelStyle}>
+      <div className="w-100 vh-100 fixed ph3" style={panelStyle}>
         <div className="flex items-center justify-between" style={{height: "66px"}}>
-          <img src={toneC} width="130"/>
+          <img src={toneC} width="130" className="o-0"/>
           <img src={close} width="20" className="cp" onClick={this.props.closePanel}/>
         </div>
-        <ul className="flex flex-column tc f18 ls-none fw4 pa0" style={ulink}>
+        <ul className="flex flex-column tc f18 ls-none fw3 pa0" style={ulink}>
           <li style={link}><a href="#">Work</a></li>
           <li style={link}><a href="#">Blog</a></li>
           <li style={link}><a href="#">Contact</a></li>

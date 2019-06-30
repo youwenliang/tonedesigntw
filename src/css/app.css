@@ -55,6 +55,10 @@ section.sectionS {
 	letter-spacing: 2px !important;
 }
 
+.ls-3 {
+	letter-spacing: 3px !important;
+}
+
 .ls-large {
 	letter-spacing: 4px !important;
 }
@@ -139,17 +143,17 @@ nav li a {
   border-bottom: 2px solid #dbe1e9;
   text-align: left;
   outline: none;
-  padding-left: 68px;
+  padding-left: 60px;
   padding-right: 56px;
   position: relative;
 }
 
 .collapsibleCircle {
-  top: 16px;
+  top: 18px;
   margin: auto;
   left: 16px;
-  width: 36px;
-  height: 36px;
+  width: 30px;
+  height: 30px;
   border-radius: 100%;
 }
 
@@ -275,13 +279,13 @@ nav li a {
 
 .f25 {
 	font-size: 2.5rem;
-	letter-spacing: 1px;
+	letter-spacing: 2px;
 }
 
 @media screen and (min-width: 769px) {
 	.f25-l {
 		font-size: 2.5rem;
-		letter-spacing: 1px;
+		letter-spacing: 2px;
 	}
 	.f2125 {
 		font-size: 2.125rem;
@@ -298,6 +302,15 @@ nav li a {
 	}
 	section.sectionL {
 		padding: 5rem 0 !important;
+	}
+	.borderline.top {
+		top: -5rem;
+	}
+	.borderline.top.small {
+		top: -3.75rem;
+	}
+	.borderline.bottom {
+		bottom: -5rem;
 	}
 }
 
@@ -346,6 +359,10 @@ nav li a {
 
 .mw1100 {
 	max-width: 1100px;
+}
+
+.mw180 {
+	max-width: 180px;
 }
 
 .mw200 {
@@ -416,6 +433,12 @@ nav li a {
 	margin-bottom: 40px;	
 }
 
+@media screen and (min-width: 30em) {
+	.mt4-ns {
+		margin-top: 1.6rem !important;
+	}
+}
+
 .z1 {
 	z-index: 1;
 }
@@ -434,6 +457,10 @@ nav li a {
 
 .f30 {
 	font-size: 30px;
+}
+
+.f15 {
+	font-size: 18px;
 }
 
 .f18 {
@@ -476,6 +503,11 @@ nav li a {
 .more {
 	color: #ff978e;
 	letter-spacing: 0px;
+	text-decoration: none;
+}
+
+.more:hover {
+	color: #ff5b82;
 }
 
 .cp {
@@ -498,8 +530,8 @@ nav li a {
   cursor: pointer;
   transition: 0.3s;
   height: 37.5px;
-  margin: 0 8px;
-  box-shadow: 0px 4px 16px rgba(0,0,0,.2);
+  margin: 0 5px;
+  box-shadow: 0 2px 6px rgba(0,0,0,.2);
   max-width: 140px;
   font-size: 0.75rem;
 }
@@ -533,22 +565,26 @@ nav li a {
 }
 
 .borderline.top {
-	top: -5rem;
+	top: -5.6rem;
 }
+.borderline.top.small {
+	top: -4.375rem;
+}
+
 .borderline.bottom {
-	bottom: -5rem;
+	bottom: -5.6rem;
 }
 
 .tag.color1 {
-  background: linear-gradient(to bottom, rgba(255,151,142,1) 0%,rgba(255,91,130,1) 100%);
+  background: linear-gradient(to right, rgba(255,151,142,1) 0%,rgba(255,91,130,1) 100%);
   color: white;
 }
 .tag.color2 {
-  background: linear-gradient(to bottom, rgba(255,151,142,1) 0%,rgba(255,91,130,1) 100%);
+  background: linear-gradient(to right, rgba(255,151,142,1) 0%,rgba(255,91,130,1) 100%);
   color: white;
 }
 .tag.color3 {
-  background: linear-gradient(to bottom, rgba(255,151,142,1) 0%,rgba(255,91,130,1) 100%);
+  background: linear-gradient(to right, rgba(255,151,142,1) 0%,rgba(255,91,130,1) 100%);
   color: white;
 }
 
@@ -604,6 +640,22 @@ nav li a {
 
 .bshadow {
   box-shadow: 0 12px 9px rgba(124,0,35,.1);
+  transition: all .25s cubic-bezier(0.23, 1, 0.32, 1);
+}
+.bshadow:hover {
+  background: linear-gradient(to left, rgba(253,187,5,1) 0%,rgba(253,187,5,1) 100%) !important;
+  box-shadow: 0 8px 6px rgba(124,0,35,.1);
+  transition: all .25s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.bshadow2 {
+  box-shadow: 0 12px 9px rgba(64,60,121,.1);
+  transition: all .25s cubic-bezier(0.23, 1, 0.32, 1);
+}
+.bshadow2:hover {
+  color: #505f81 !important;
+  box-shadow: 0 8px 6px rgba(64,60,121,.1);
+  transition: all .25s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
 #home-video-loop {
@@ -630,6 +682,7 @@ nav li a {
   align-items: center;
   justify-content: center;
   font-size: 27px;
+  letter-spacing: 0.6px !important;
 }
 
 .arrowlinks:before {

@@ -67,7 +67,8 @@ class Faq extends Component {
   	var qList = [];
     var number = {
       position: "relative",
-      top: "-1.3px"
+      top: "-1.3px",
+      left: "1px"
     };
     var bgColor = [
       "linear-gradient(to right, rgba(255,151,142,1) 0%,rgba(255,91,130,1) 100%)",
@@ -84,9 +85,9 @@ class Faq extends Component {
   		  	<div className="collapsibleCircle absolute z1 white flex justify-center items-center f4 fw6" style={color}>
             <p style={number}>{i+1}</p>
           </div>
-	  	    <button className="collapsible f4-ns f5 lh-copy fw4 color-content o-80">{qContent[i][0]}</button>
+	  	    <button className="collapsible f18 lh-copy fw4 color-content o-80">{qContent[i][0]}</button>
 			<div className="answers">
-			  <p className="lh-copy f5-ns f6 fw3 color-content2">{qContent[i][1]}</p>
+			  <p className="lh-copy f5 fw3 color-content2">{qContent[i][1]}</p>
 			</div>
 		  </div>
   		)

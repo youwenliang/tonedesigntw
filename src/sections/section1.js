@@ -79,22 +79,26 @@ class Section1 extends Component {
 
     var tag = {
       width: "120px",
-      padding: "4px 20px",
+      padding: "4.5px 20px",
       borderRadius: "8px",
       fontSize: "18px"
+    }
+    var tagContent = {
+      position: "relative",
+      top: "-1px"
     }
     var off = -1*($(window).height()/2 - 140);
 
     var contents = [];
     for(var i = 0; i < 3; i++) {
       var temp = (
-        <div className="fl w-100 w-third-l ph2 tc" key={i}>
-          <h2 className={colors[data.id - 1]+" hide tag fw4 mt0 mb30 tc center ls-medium"} style={tag}>{data.title[i]}</h2>
+        <div className="fl w-100 w-third-l ph3 tc" key={i}>
+          <h2 className={colors[data.id - 1]+" hide tag fw4 mt0 mb30 tc center ls-medium"} style={tag}><span style={tagContent}>{data.title[i]}</span></h2>
           <div className="mw240 center w-70">
             <LottieControl data1={animations[i][data.id - 1][0]} data2={animations[i][data.id - 1][1]} open={true} offset={off} id={"animation"+i}/>
-            <img className="ma0 hide mb25" src={shadow} alt="shadow" style={shadowStyle}/>
+            <img className="ma0 hide mb2" src={shadow} alt="shadow" style={shadowStyle}/>
           </div>              
-          <p className="hide lh-copy mw200 center tl f5 fw3 color-content2 mt0 mb4-l mb5">{data.content[i]}</p>
+          <p className="hide lh-medium mw180 center tl f5 fw3 color-content2 mt0 mb4-l mb5">{data.content[i]}</p>
         </div>
       )
       contents.push(temp);

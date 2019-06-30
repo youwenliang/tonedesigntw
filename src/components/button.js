@@ -43,10 +43,16 @@ class Button extends Component {
       color: "#6e849b"
     }
     var bshadow = this.props.shadow ? "bshadow" : "";
+    bshadow = this.props.ghost ? "bshadow2" : "bshadow";
     var center = this.props.center ? "center" : "";
+    var adjust = {
+      position: "relative",
+      top: "-1px",
+      transform: "translateX(6px)"
+    }
     return (
       <div className={"button tc f4-ns f5 br3 dib pointer fw4 flex items-center justify-center "+center+" "+bshadow} style={buttonStyle}>
-        {this.props.content}
+        <span style={adjust}>{this.props.content}</span>
       </div>
     );
   }

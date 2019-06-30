@@ -46,8 +46,8 @@ class Section3 extends Component {
       top: 0,
       left: 0,
       backgroundImage: "url("+bg_tone+")",
-      backgroundSize: "700px",
-      backgroundPosition: this.state.mobile ? "50% 70%" : "75% 26%",
+      backgroundSize: "520px",
+      backgroundPosition: this.state.mobile ? "50% 70%" : "75% 22%",
       backgroundRepeat: "no-repeat"
     }
     var moreArrow = {
@@ -68,7 +68,7 @@ class Section3 extends Component {
         <div className="absolute w-100 h-100 db-l dn" style={bg2Style}/>
         <div className="content ph4-ns ph2 mw70rem center z1 relative">
           <div className="cf ph2-ns pt2 flex items-center flex-column flex-row-l">
-            <div className="fl w-100 w-50-l tc relative z-1">
+            <div className="fl w-100 w-50-l tc relative z-1 pr3-l pr0">
               <div className="w-90-ns w-100 fr-l center" style={scaleA}>
                 <LottieControl data1={animationDataCircleso} data2={animationDataCirclesl} open={true} id="animationCircle" offset={35}/>
               </div>
@@ -76,10 +76,10 @@ class Section3 extends Component {
             <div className="hide fl w-100 w-50-l ph4-ns ph3 tl-l mw6 mt0">
               <h1 className={"f35 color-content fw4 mv0 "+mb}>{data.title}</h1>
               <h3 className="f25 lh-medium color-content fw4 mv0 mb25">{data.smalltitle}</h3>
-              <p className="lh-medium f5 fw3 color-content2 mb25 tl">{data.content}</p>
-              <p className="more fw4 mv0">
+              <p className="lh-medium f5 fw3 color-content2 mb25 tl mw400">{data.content}</p>
+              <a href="#" className="more"><p className="fw4 mv0">
                 Learn more <span className="fw7 f125" style={moreArrow}>></span>
-              </p>
+              </p></a>
             </div>
           </div>
         </div>

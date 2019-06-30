@@ -144,9 +144,9 @@ class Section2 extends Component {
           <div className="fl w-100 w-50-l relative color-content pr4">
             <LottieControl data1={animations[data.id-1][i]} open={false} id="animationContent" offset={0}/>
             <h2 className="f25 fw4 mt4 lh-medium">{data.content[i]["tagline"]}</h2>
-            <p className="more fw4">
+            <a href="#" className="more"><p className="fw4 mv0">
               Learn more <span className="fw7 f125" style={moreArrow}>></span>
-            </p>
+            </p></a>
           </div>
           <div className="fl w-100 w-50-l relative pl4">
             {/*<p className="f6 color-fade fw4 mt3 mb4">{data.content[i]["smalltitle"][0]}</p>

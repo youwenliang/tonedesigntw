@@ -151,7 +151,7 @@ class Cover extends Component {
         <div className="fl w-100 w-50-l tl mt3 mt0-l">
           {/*<h1 className="w-100 f1-ns f2 white fw3 mt0">{data.title}</h1>*/}
           <img src={logoR} width={$(window).width()<480 ? "200px":"350px"} alt="tone design" className="mb4-l mb2"/>
-          <p className="w-100 center lh-copy ls-medium color-blue mb4 mt0 fw4 f3-ns f4" dangerouslySetInnerHTML={{__html:data.content}}></p>
+          <p className="w-100 center lh-copy ls-3 color-blue mb4 mt0 fw4 f3-ns f4" dangerouslySetInnerHTML={{__html:data.content}}></p>
           <Button content={data.button} shadow={true} scale={1} center={true}/>
         </div>
       </div>
@@ -160,7 +160,7 @@ class Cover extends Component {
         <div className="fl w-100 w-40-l tl-l tc mt0 mw6-l mw9 mb5">
           {/*<h1 className="w-100 f1-ns f2 white fw3 mt0">{data.title}</h1>*/}
           <img src={logo} width="350px" alt="tone design" className="mb4"/>
-          <p className="w-100 lh-copy ls-medium f3 white mb4 mt0 mw400 fw4 tshadow" dangerouslySetInnerHTML={{__html:data.content}}></p>
+          <p className="w-100 lh-copy ls-3 f3 white mb4 mt0 mw400 fw4 tshadow" dangerouslySetInnerHTML={{__html:data.content}}></p>
           <Button content={data.button} shadow={true}/>
         </div>
         <div className="fl w-100 w-60-l tr-l tc relative" style={imgS}>
