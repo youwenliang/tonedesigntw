@@ -77,29 +77,72 @@ class Nav extends Component {
       borderRadius: "6px",
       fontWeight: "400"
     }: {
-      color: "rgba(255,255,255,.5)"
+      background: "transparent",
+      width: "110px",
+      height: "35px",
+      color: "white",
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center",
+      borderRadius: "6px",
+      fontWeight: "400",
+      border: "1px solid rgba(255,255,255,.8)",
+      color: "rgba(255,255,255,.8)"
+    }
+
+    var buttonA = {
+      color: this.state.fixed ? "#ffffff" : "rgba(255,255,255,.8)",
+      position: "relative",
+      top: "-1px"
     }
 
     var link = {
-      color: this.state.fixed ? "#505F81" : "rgba(255,255,255,.5)"
+      color: this.state.fixed ? "#505F81" : "rgba(255,255,255,.8)"
     }
 
     var logo = this.state.fixed ? toneC : toneW;
-    var op = this.state.fixed ? "" : "o-0";
     var urls = this.state.mobile ? (
       <img src={this.state.fixed ? openC : open} width="20" className="cp" onClick={this.openPanel.bind(this)}/>
       ) : (
       <ul className="flex flex-row justify-between items-center f18 ls-none fw3">
         <li><a href="#" style={link}>Work</a></li>
         <li><a href="#" style={link}>Blog</a></li>
-        <li><a href="#" style={buttonLink}>Contact</a></li>
+        <li style={buttonLink}><a href="#" style={buttonA}>Contact</a></li>
       </ul>
     )
+    var w, ty, tx;
+    if(this.state.mobile) {
+      if(this.state.fixed) {
+        w = "130"
+        ty = "0"
+        tx = "0"
+      }
+      else {
+        w = "160"
+        ty = "0.275px"
+        tx = "9px"
+      }
+    } else {
+      if(this.state.fixed) {
+        w = "180"
+        ty = "0"
+        tx = "0"
+      }
+      else {
+        w = "210"
+        ty = "24.425px";
+        tx = "10px"
+      }
+    }
+
+    var logoStyle = {
+      transform: "translate("+tx+","+ty+")"
+    }
     
     return (
       <nav>
         <div className="nav flex items-center justify-between flex-row ph5-l ph3" style={navStyle}>
-          <img src={logo} width={this.state.mobile ? "130":"180"} className={op}/>
+          <img src={logo} width={w} style = {logoStyle}/>
           {urls}
         </div>
         <Panel mobile={this.state.mobile} closePanel={this.closePanel.bind(this)} display={this.state.open}/>

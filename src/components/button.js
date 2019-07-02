@@ -39,8 +39,11 @@ class Button extends Component {
       letterSpacing: ".1rem",
       transform: "scale("+this.props.scale+")",
       transformOrigin: "center top",
-      border: "#ffdf00 3px solid",
-      color: "#6e849b"
+      border: "double 4px transparent",
+      color: "#6e849b",
+      backgroundImage: "linear-gradient(white, white), linear-gradient(to right, rgba(253,221,1,1) 0%,rgba(253,187,5,1) 100%)",
+      backgroundOrigin: "border-box",
+      backgroundClip: "content-box, border-box"
     }
     var bshadow = this.props.shadow ? "bshadow" : "";
     bshadow = this.props.ghost ? "bshadow2" : "bshadow";
@@ -51,9 +54,11 @@ class Button extends Component {
       transform: "translateX(6px)"
     }
     return (
-      <div className={"button tc f4-ns f5 br3 dib pointer fw4 flex items-center justify-center "+center+" "+bshadow} style={buttonStyle}>
-        <span style={adjust}>{this.props.content}</span>
-      </div>
+      <a href={this.props.link}>
+        <div className={"button tc f4-ns f5 br3 dib pointer fw4 flex items-center justify-center "+center+" "+bshadow} style={buttonStyle}>
+          <span style={adjust}>{this.props.content}</span>
+        </div>
+      </a>
     );
   }
 }

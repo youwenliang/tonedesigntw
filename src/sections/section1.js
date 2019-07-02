@@ -85,7 +85,8 @@ class Section1 extends Component {
     }
     var tagContent = {
       position: "relative",
-      top: "-1px"
+      top: "-1px",
+      left: "1px"
     }
     var off = -1*($(window).height()/2 - 140);
 

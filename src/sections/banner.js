@@ -3,6 +3,8 @@ import Button from '../components/button.js';
 import gData from '../data/data.js';
 import $ from 'jquery';
 import wave from '../images/wave-small@2x.png';
+import LottieControl from '../components/lottie.js';
+import * as animationWaves from '../images/animations/small_wave_data.json'
 
 class Banner extends Component {
   constructor(props) {
@@ -30,11 +32,16 @@ class Banner extends Component {
     }
     var mb = this.state.mobile ? "mb30" : "mb40";
     var mb1 = this.state.mobile ? "mb25" : "mb30";
+    var animation = {
+      width: "140px"
+    }
     return (
       <section id="banner" className="sectionL" style={sectionStyle}>
         <div className="borderline top"/>
         <div className="mw8 tc center ph3">
-          <img src={wave} width="80px" alt="wave" className={mb1}/>
+          <div className={mb1 + " center hide"} style={animation}>
+            <LottieControl data1={animationWaves} open={false} id="animationWaves" offset={0}/>
+          </div>
         	<h2 className={"hide f30 fw5 color-content ls-large mv0 "+mb}>用內容，強化你的品牌價值</h2>
           <p className="ph3 ph2-l center hide f125 fw3 color-content tc mt3 mb4-l mb0 lh-large ls-medium">
             Tone Design 運用資訊設計、視覺設計，結合 User Experience 設計，<br className="db-l dn"/>

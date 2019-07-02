@@ -68,14 +68,16 @@ class Works extends Component {
       <section id={gData["sections"][6]} style={sectionStyle}>
         <div className="content ph4-ns ph2 mw9 center tc">
           <div className="flex justify-center">
-            <div className="hide mb4" style={contentStyle}>
-              <video id="home-video" className="home-video relative" width="100%" muted playsInline preload="auto" autoPlay>
-                <source src={sourceO} type="video/mp4"/>
-              </video>
-              <video id="home-video-loop" className="home-video absolute" width="100%" muted playsInline preload="auto" loop>
-                <source src={sourceL} type="video/mp4"/>
-              </video>
-            </div>
+            <a href="#">
+              <div className="hide mb4" style={contentStyle}>
+                <video id="home-video" className="home-video relative" width="100%" muted playsInline preload="auto" autoPlay>
+                  <source src={sourceO} type="video/mp4"/>
+                </video>
+                <video id="home-video-loop" className="home-video absolute" width="100%" muted playsInline preload="auto" loop>
+                  <source src={sourceL} type="video/mp4"/>
+                </video>
+              </div>
+            </a>
           </div>
           <div className="hide z2 relative mb60 tc">
             <h2 className={"color-content f25 ls2 lh-copy fw4 ph2 "+mb}>看看我們的完整作品吧！</h2>

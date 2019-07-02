@@ -61,7 +61,7 @@ class Section3 extends Component {
       maxWidth: "510px"
     }
 
-    var mb = this.state.mobile ? "mb25" : "mb50"
+    var mb = this.state.mobile ? "mb25" : "mb40"
     var circles = [circle1, circle2, circle3];
     return (
       <section id={gData["sections"][3]} style={sectionStyle} className="relative">

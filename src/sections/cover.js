@@ -70,10 +70,10 @@ class Cover extends Component {
   	}
     var shadowStyle = {
       position: "relative",
-      top: "-30px",
+      top: "-47px",
       marginBottom: "-50px",
       zIndex: 1,
-      maxWidth: $(window).width() < 480 ? "240px" : "360px"
+      maxWidth: $(window).width() < 480 ? "240px" : "535px"
     }
     var scrollStyle = {
       width: "100%",
@@ -149,21 +149,19 @@ class Cover extends Component {
           <img src={shadow} width="90%" style={shadowStyle} alt="shadow"/>
         </div>
         <div className="fl w-100 w-50-l tl mt3 mt0-l">
-          {/*<h1 className="w-100 f1-ns f2 white fw3 mt0">{data.title}</h1>*/}
-          <img src={logoR} width={$(window).width()<480 ? "200px":"350px"} alt="tone design" className="mb4-l mb2"/>
-          <p className="w-100 center lh-copy ls-3 color-blue mb4 mt0 fw4 f3-ns f4" dangerouslySetInnerHTML={{__html:data.content}}></p>
+          <h1 className="color-blue f25px mb25 fw5 ls-medium" dangerouslySetInnerHTML={{__html:data.title}}></h1>
+          <p className="w-100 lh-medium ls-medium f18 color-blue mb40 mt4 mw400 fw4" dangerouslySetInnerHTML={{__html:data.content}}></p>
           <Button content={data.button} shadow={true} scale={1} center={true}/>
         </div>
       </div>
     ) : (
       <div className="cf ph2-ns pt2 flex items-center flex-column flex-row-l justify-center z1 relative" style={mw}>
         <div className="fl w-100 w-40-l tl-l tc mt0 mw6-l mw9 mb5">
-          {/*<h1 className="w-100 f1-ns f2 white fw3 mt0">{data.title}</h1>*/}
-          <img src={logo} width="350px" alt="tone design" className="mb4"/>
-          <p className="w-100 lh-copy ls-3 f3 white mb4 mt0 mw400 fw4 tshadow" dangerouslySetInnerHTML={{__html:data.content}}></p>
+          <h1 className="white f25rem tshadow1 mb30 fw5 ls-medium nowrap" dangerouslySetInnerHTML={{__html:data.title}}></h1>
+          <p className="w-100 lh-medium ls-medium f4 white mb70 mt4 mw400 fw4 tshadow2" dangerouslySetInnerHTML={{__html:data.content}}></p>
           <Button content={data.button} shadow={true}/>
         </div>
-        <div className="fl w-100 w-60-l tr-l tc relative" style={imgS}>
+        <div className="fl w-100 w-60-l tr relative" style={imgS}>
           <LottieControl data1={animationDataCover} open={false} id="animationCover" offset={0} render={true}/>
           <img src={shadow} width="90%" style={shadowStyle} alt="shadow"/>
         </div>

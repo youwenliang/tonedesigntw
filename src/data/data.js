@@ -4,8 +4,8 @@ var data = {
 		// Cover
 		"首頁": {
 			"id": 1,
-			"title": "這是首頁的大標題",
-			"content": "運用資訊設計、視覺設計，\n結合使用者體驗設計",
+			"title": "就<span class='titleline relative'>像玩樂高</span>一樣簡單",
+			"content": "TONE Design 運用資訊設計、\n結合 User Experience",
 			"button": "填寫表單！",
 		},
 		// Section 1

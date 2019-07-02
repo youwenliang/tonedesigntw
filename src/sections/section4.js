@@ -162,7 +162,7 @@ class Section4 extends Component {
         <div className="content ph4-ns ph2 mw8 center relative">
           <Header title={data.sectionTitle} color="#4C5B7F" margin={false}/>
           <p className={"tagline hide f4 fw3 color-fade tc mt4-ns mt3 lh-medium ls-medium ph2 "+mb}>{data.tagline}</p>
-          <div className="hide tab mb50 mt5 f4-ns f6 tracked">
+          <div className="hide tab mb50 mt5 f4-ns f6 ls-medium">
             <button className={color[data.id - 1]+" tablinks active ph3 tc"} onClick={(e) => this.handleClick(e, "content1")}>{data.section[0]}</button>
             <button className={color[data.id - 1]+" tablinks ph3 tc"} onClick={(e) => this.handleClick(e, "content2")}>{data.section[1]}</button>
             <button className={color[data.id - 1]+" tablinks ph3 tc"} onClick={(e) => this.handleClick(e, "content3")}>{data.section[2]}</button>
