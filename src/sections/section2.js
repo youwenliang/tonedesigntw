@@ -227,18 +227,18 @@ class Section2 extends Component {
               <div id="arrowTrigger" className="content">
                 <Header title={data.sectionTitle} color="#4C5B7F" margin={false}/>
                 <div className="hide">
-                  <p className="tagline f4 fw3 color-content tc mt4 mb80 lh-medium ls-medium ph2">{data.tagline}</p>
+                  <p className="tagline f4 fw3 color-content tc mt4 mb70 lh-medium ls-medium ph2">{data.tagline}</p>
                 </div>
                 <div className="arrows mb4 mt5 z2 relative">
-                  <button className={"z2 relative arrowlinks ph5 tc "+trigger[0]}>
+                  <button className={"z2 relative arrowlinks ph4 tc "+trigger[0]}>
                     <img className="mr2" src={tone1} width="48" alt="icons"/>
                     <p className="z10 relative">{data.section[0]}</p>
                   </button>
-                  <button className={"z1 relative arrowlinks ph5 tc "+trigger[1]}>
+                  <button className={"z1 relative arrowlinks ph4 tc "+trigger[1]}>
                     <img className="ml4 mr2" src={tone2} width="48" alt="icons"/>
                     <p className="z10 relative">{data.section[1]}</p>
                   </button>
-                  <button className={"relative arrowlinks ph5 tc "+trigger[2]}>
+                  <button className={"relative arrowlinks ph4 tc "+trigger[2]}>
                     <img className="ml4 mr2" src={tone3} width="48" alt="icons"/>
                     <p className="z10 relative">{data.section[2]}</p>
                   </button>

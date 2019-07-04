@@ -60,11 +60,17 @@ section.sectionL {
     padding: 5.6rem 0 !important;
 }
 
-section.sectionS {
-    padding: 4.375rem 0 calc(100vh - 690px) 0 !important;
+section.sectionS:not(.start) {
+    padding: 4.375rem 0 !important;
 }
 section.sectionS.start {
-    padding: calc(50vh - 365px) 0 calc(50vh - 243px) 0 !important;
+	padding: calc(50vh - 357px) 0 calc(50vh - 243px) 0 !important;
+    
+}
+@media screen and (max-height: 785px) {
+	section.sectionS.start {
+		padding: 36px 0 calc(100vh - 636px) 0 !important;
+	}
 }
 
 .ls-none {
@@ -726,29 +732,32 @@ nav li a {
     outline: none;
     cursor: pointer;
     transition: 0.3s;
-    height: 90px;
+    height: 66px;
     margin: 0;
     box-shadow: 0px 4px 16px rgba(0, 0, 0, .2);
     color: #ff978e;
-    padding: 0 32px;
-    width: 18vw;
-    min-width: 270px;
+    padding: 0 4px;
+    width: 220px;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 27px;
+    font-size: 23.33px;
     letter-spacing: 0.6px !important;
+}
+
+.arrowlinks p {
+	top: -2px;
 }
 
 .arrowlinks:before {
     content: '';
-    width: 68px;
-    height: 68px;
+    width: 51px;
+    height: 51px;
     display: block;
     transform: rotate(45deg);
     background: linear-gradient(45deg, rgba(255, 243, 243, 1) 0%, rgba(255, 255, 255, 1) 50%);
     position: absolute;
-    right: -32px;
+    right: -24px;
     top: 0;
     bottom: 0;
     margin: auto;
@@ -792,14 +801,14 @@ nav li a {
 }
 
 .start .arrows {
-    transform: scale(.75) translate(-12px, -120px);
+    transform: scale(.86) translate(-12px, -119px);
     transition: all .5s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
 .start .tagline {
     opacity: 0;
     transition: all .4s cubic-bezier(0.23, 1, 0.32, 1);
-    max-height: 15px;
+    max-height: 40px;
 }
 
 #section3-content {
