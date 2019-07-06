@@ -15,9 +15,9 @@ import { Controller, Scene } from 'react-scrollmagic';
 import { Tween, Timeline } from 'react-gsap';
 
 // bg x 3
-import bg1 from '../images/cover-bg.svg';
-import bg2 from '../images/cover-bg.svg';
-import bg3 from '../images/cover-bg.svg';
+import bg_mobile1 from '../images/cover-waves-mobile.svg';
+import bg_mobile2 from '../images/cover-waves-mobile.svg';
+import bg_mobile3 from '../images/cover-waves-mobile.svg';
 
 // animation x 3
 import * as animation1 from '../images/animations/data1_loop.json';
@@ -48,6 +48,7 @@ class Cover extends Component {
         $this.setState({large:true});
       }
       else $this.setState({large:false});
+      console.log($('#speaker').offset().top + "---" + $('#speaker').width());
     }
     $(window).on('resize orientationchange', checkMobile);
     $(document).ready(function(){
@@ -70,8 +71,8 @@ class Cover extends Component {
   	}
     var shadowStyle = {
       position: "relative",
-      top: "-47px",
-      marginBottom: "-50px",
+      top: $(window).width() < 959 ? "-30px" : "-50px",
+      marginBottom: $(window).width() < 959 ? "-30px" : "-50px",
       zIndex: 1,
       maxWidth: $(window).width() < 480 ? "240px" : "535px"
     }
@@ -95,16 +96,8 @@ class Cover extends Component {
       transformOrigin: "100% 60%",
       transform: "translate(20px,30px)"
     }
-    var bg = [bg1, bg2, bg3];
-    var bgStyle = {
-      top: 0,
-      left: 0,
-      backgroundColor: "#ffffff",
-      backgroundImage: "url("+bg[data.id - 1]+")",
-      backgroundSize: this.state.large ? "cover": "1800px",
-      backgroundPosition: "center 0%",
-      backgroundRepeat: "no-repeat"
-    }
+    var bg = [bg_mobile1, bg_mobile2, bg_mobile3];
+    
     var wTop = 0;
     if($(window).width() >= 1550) {
       if($(window).height() > 953) wTop = "calc(715px - 46.15vw)";
@@ -115,16 +108,30 @@ class Cover extends Component {
       else if($(window).height() <= 953 && $(window).height() > 700) wTop = "calc((100vh - 953px)/2)";
       else wTop = "-126.5px";
     }
+    var wmTop = 0;
+    if($(window).height() > 700) wmTop = "calc(50vh - 75.3vw - 90.3px)";
+    else wmTop = "calc(260px - 75.3vw)";
 
+    var wmsTop = 0;
+    if($(window).height() > 640) wmsTop = "calc(50vh + 21.95vw - 510px)";
+    else wmsTop = "calc(65.3vw - 345px)";
 
-    var bgWStyle = {
+    var bgWStyle = this.state.mobile ? {
+      top: $(window).width() < 480 ? wmsTop : wmTop,
+      left: $(window).width() < 480 ? "calc(50vw - 240px)":"0",
+      width: $(window).width() < 480 ? "480px":"100%",
+      height: "100%",
+      backgroundImage: "url("+bg[data.id - 1]+")",
+      backgroundSize: $(window).width() < 480 ? "480px":"contain",
+      backgroundRepeat: "no-repeat"
+    }:{
       top: wTop,
       left: $(window).width() >= 1550 ? 0 : "calc((100vw - 1550px)/2)",
       width: $(window).width() >= 1550 ? "100vw" : "1550px",
       height: "90vh",
       transform: "translateY(-60px)"
     }
-    var bg2Style = {
+    var bg2Style = this.state.mobile ? null : {
       top: 0,
       left: 0,
       backgroundImage: "url("+bg_tone+")",
@@ -141,17 +148,19 @@ class Cover extends Component {
     var mw = {
       maxWidth: "1100px"
     }
+    var mbh1 = $(window).width() < 480 ? "mb25" : "mb30";
+    var mbp = $(window).width() < 480 ? "mb40" : "mb70";
 
     var contents = this.state.mobile ? (
       <div className="cf ph2-ns pt2 flex items-center flex-column flex-row-l justify-center z1 relative">
-        <div className="fl w-100 w-50-l tr-l tc relative mt4" style={img}>
+        <div id="speaker" className="fl w-100 w-50-l tr-l tc relative mt4" style={img}>
           <LottieControl data1={animationDataCover} open={false} id="animationCover" offset={0}/>
           <img src={shadow} width="90%" style={shadowStyle} alt="shadow"/>
         </div>
-        <div className="fl w-100 w-50-l tl mt3 mt0-l">
-          <h1 className="color-blue f25px mb25 fw5 ls-medium" dangerouslySetInnerHTML={{__html:data.title}}></h1>
-          <p className="w-100 lh-medium ls-medium f18 color-blue mb40 mt4 mw400 fw4" dangerouslySetInnerHTML={{__html:data.content}}></p>
-          <Button content={data.button} shadow={true} scale={1} center={true}/>
+        <div className="fl w-100 w-50-l tl mt0">
+          <h1 className={"color-blue f25rem fw5 ls-medium nowrap mt0 "+mbh1} dangerouslySetInnerHTML={{__html:data.title}}></h1>
+          <p className={"w-100 lh-medium ls-medium f4-ns f18 color-blue mw400 fw4 "+mbp} dangerouslySetInnerHTML={{__html:data.content}}></p>
+          <Button content={data.button} shadow={true}/>
         </div>
       </div>
     ) : (
@@ -167,6 +176,9 @@ class Cover extends Component {
         </div>
       </div>
     )
+      
+
+    var waves = this.state.mobile ? null : (<LottieControl data1={animationDataWaves} open={false} id="animationWaves" offset={0}/>)
 
     return (
       <header id={gData["sections"][0]} className="cover flex justify-center items-center relative vh-100" style={coverStyle}>
@@ -192,7 +204,7 @@ class Cover extends Component {
               
               </Tween>
               <div className="absolute" style={bgWStyle}>
-                <LottieControl data1={animationDataWaves} open={false} id="animationWaves" offset={0}/>
+                {waves}
               </div>
               <Tween
                 position="0"
