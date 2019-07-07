@@ -32,6 +32,10 @@ body {
     letter-spacing: 2px;
 }
 
+body.noscroll {
+	overflow-y: hidden;
+}
+
 h1,
 h2,
 h3,
@@ -112,6 +116,24 @@ section.sectionS.start {
 nav ul {
     list-style-type: none;
 }
+
+.buttonLink {
+	background: transparent;
+}
+.buttonLink:hover {
+	background: rgba(255,255,255,.2);
+	transition: all .4s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.fixed .buttonLink {
+	background: linear-gradient(to left, rgba(253,221,1,1) 0%,rgba(253,187,5,1) 100%);
+	transition: all .4s cubic-bezier(0.23, 1, 0.32, 1);
+}
+.fixed .buttonLink:hover {
+	background: linear-gradient(to left, rgba(253,187,5,1) 0%,rgba(253,187,5,1) 100%) !important;
+}
+
+
 
 .nav li {
     margin: 0 20px;
@@ -756,7 +778,15 @@ nav li a {
 }
 
 .arrowlinks p {
-	top: -2px;
+	line-height: 65px;
+    margin: 0px;
+    width: 130px;
+    text-align: left;
+}
+
+.arrowlinks img {
+	transform: scale(1.2);
+	transform-origin: 0 center;
 }
 
 .arrowlinks:before {

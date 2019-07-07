@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Header from '../components/header.js';
 import Button from '../components/button.js';
 import gData from '../data/data.js';
 import $ from 'jquery';
@@ -42,8 +43,8 @@ class Banner extends Component {
           <div className={mb1 + " center hide"} style={animation}>
             <LottieControl data1={animationWaves} open={false} id="animationWaves" offset={0}/>
           </div>
-        	<h2 className={"hide f30 fw5 color-content ls-large mv0 "+mb}>用內容，強化你的品牌價值</h2>
-          <p className="ph3 ph2-l center hide f125 fw3 color-content tc mt3 mb4-l mb0 lh-large ls-medium">
+          <Header title={"用內容，強化你的品牌"} color="#4C5B7F" margin={false}/>
+          <p className="ph3 ph2-l center hide f125 fw3 color-content tc mt4-ns mt3 mb4-l mb0 lh-large ls-medium">
             Tone Design 運用資訊設計、視覺設計，結合 User Experience 設計，<br className="db-l dn"/>
             為不同階段的消費者旅程，設計出打動人心的內容，
           </p>

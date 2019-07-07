@@ -50,24 +50,36 @@ class Nav extends Component {
 
   closePanel() {
     this.setState({open: false})
+    $('body').removeClass('noscroll');
   }
   openPanel() {
     this.setState({open: true})
+    $('body').addClass('noscroll');
   }
 
   
   render() {
   	var navStyle = {
-      position: this.state.fixed ? "fixed" : "absolute",
       width: "100%",
-      height: "66px",
+      height: this.state.mobile?"55px":"66px",
+      maxWidth: "1440px",
+      left: 0,
+      right: 0,
+      margin: "auto",
+      fontFamily: "'Montserrat', sans-serif"
+    }
+
+    var position = this.state.fixed ? "fixed" : "absolute";
+
+    var bgNav = {
       background: this.state.fixed ? "white" : "transparent",
       zIndex: 100,
-      boxShadow: this.state.fixed ? "0px 2px 8px rgba(0,0,0,.15)" : "none"
+      width: "100%",
+      height: this.state.mobile?"55px":"66px",
+      boxShadow: this.state.fixed ? "0px 2px 8px rgba(0,0,0,.15)" : "none",
     }
 
     var buttonLink = this.state.fixed ? {
-      background: "linear-gradient(to left, rgba(253,221,1,1) 0%,rgba(253,187,5,1) 100%)",
       width: "110px",
       height: "35px",
       color: "white",
@@ -77,7 +89,6 @@ class Nav extends Component {
       borderRadius: "6px",
       fontWeight: "400"
     }: {
-      background: "transparent",
       width: "110px",
       height: "35px",
       color: "white",
@@ -93,7 +104,7 @@ class Nav extends Component {
     var buttonA = {
       color: this.state.fixed ? "#ffffff" : "rgba(255,255,255,.8)",
       position: "relative",
-      top: "-1px"
+      lineHeight: "34px"
     }
 
     var link = {
@@ -107,7 +118,7 @@ class Nav extends Component {
       <ul className="flex flex-row justify-between items-center f18 ls-none fw3">
         <li><a href="#" style={link}>Work</a></li>
         <li><a href="#" style={link}>Blog</a></li>
-        <li style={buttonLink}><a href="#" style={buttonA}>Contact</a></li>
+        <li className="buttonLink" style={buttonLink}><a href="#" style={buttonA}>Contact</a></li>
       </ul>
     )
     var w, ty, tx;
@@ -138,10 +149,18 @@ class Nav extends Component {
     var logoStyle = {
       transform: "translate("+tx+","+ty+")"
     }
+
+    var mw = {
+      maxWidth: "1440px",
+      left: 0,
+      right: 0,
+      margin: "auto",
+      width: "100%"
+    }
     
     return (
-      <nav>
-        <div className="nav flex items-center justify-between flex-row ph5-l ph3" style={navStyle}>
+      <nav className={"nav "+position} style={bgNav}>
+        <div className="flex items-center justify-between flex-row ph3" style={navStyle}>
           <img src={logo} width={w} style = {logoStyle}/>
           {urls}
         </div>
@@ -163,26 +182,29 @@ class Panel extends Component {
       opacity: this.props.display ? 1 : 0,
       pointerEvents: this.props.display ? "auto" : "none",
       transition: "opacity .2s cubic-bezier(0.23, 1, 0.32, 1)",
-      background: "rgba(255,255,255,.95)"
+      background: "rgba(255,255,255,.95)",
+      fontFamily: "'Montserrat', sans-serif"
     }
     var ulink = {
-      marginTop: "104px"
+      marginTop: "115px"
     }
     var link = {
-      color: "#505F81",
-      fontSize: "25px",
       marginBottom: "50px"
+    }
+    var linkA = {
+      color: "#505F81",
+      fontSize: "25px"
     }
     return (
       <div className="w-100 vh-100 fixed ph3" style={panelStyle}>
-        <div className="flex items-center justify-between" style={{height: "66px"}}>
-          <img src={toneC} width="130" className="o-0"/>
+        <div className="flex items-center justify-between" style={{height:"55px"}}>
+          <img src={toneC} width="130"/>
           <img src={close} width="20" className="cp" onClick={this.props.closePanel}/>
         </div>
         <ul className="flex flex-column tc f18 ls-none fw3 pa0" style={ulink}>
-          <li style={link}><a href="#">Work</a></li>
-          <li style={link}><a href="#">Blog</a></li>
-          <li style={link}><a href="#">Contact</a></li>
+          <li style={link}><a href="#" style={linkA}>Work</a></li>
+          <li style={link}><a href="#" style={linkA}>Blog</a></li>
+          <li style={link}><a href="#" style={linkA}>Contact</a></li>
         </ul>
       </div>
     )

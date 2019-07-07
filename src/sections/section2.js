@@ -222,6 +222,10 @@ class Section2 extends Component {
               })
             }
 
+            var font = {
+              fontFamily: "'Montserrat', sans-serif"
+            }
+
             return (
             <section id={gData["sections"][2]} style={sectionStyle} className="relative sectionS">
               <div id="arrowTrigger" className="content">
@@ -229,17 +233,17 @@ class Section2 extends Component {
                 <div className="hide">
                   <p className="tagline f4 fw3 color-content tc mt4 mb70 lh-medium ls-medium ph2">{data.tagline}</p>
                 </div>
-                <div className="arrows mb4 mt5 z2 relative">
+                <div className="arrows mb4 mt5 z2 relative" style={font}>
                   <button className={"z2 relative arrowlinks ph4 tc "+trigger[0]}>
-                    <img className="mr2" src={tone1} width="48" alt="icons"/>
+                    <img className="mr3" src={tone1} width="48" alt="icons"/>
                     <p className="z10 relative">{data.section[0]}</p>
                   </button>
                   <button className={"z1 relative arrowlinks ph4 tc "+trigger[1]}>
-                    <img className="ml4 mr2" src={tone2} width="48" alt="icons"/>
+                    <img className="ml4 mr3" src={tone2} width="48" alt="icons"/>
                     <p className="z10 relative">{data.section[1]}</p>
                   </button>
                   <button className={"relative arrowlinks ph4 tc "+trigger[2]}>
-                    <img className="ml4 mr2" src={tone3} width="48" alt="icons"/>
+                    <img className="ml4 mr3" src={tone3} width="48" alt="icons"/>
                     <p className="z10 relative">{data.section[2]}</p>
                   </button>
                 </div>

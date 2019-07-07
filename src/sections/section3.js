@@ -70,7 +70,7 @@ class Section3 extends Component {
           <div className="cf ph2-ns pt2 flex items-center flex-column flex-row-l">
             <div className="fl w-100 w-50-l tc relative z-1 pr3-l pr0">
               <div className="w-90-ns w-100 fr-l center" style={scaleA}>
-                <LottieControl data1={animationDataCircleso} data2={animationDataCirclesl} open={true} id="animationCircle" offset={35}/>
+                <LottieControl data1={animationDataCirclesl} open={false} id="animationCircle" offset={35}/>
               </div>
             </div>
             <div className="hide fl w-100 w-50-l ph4-ns ph3 tl-l mw6 mt0">

@@ -39,7 +39,7 @@ class Button extends Component {
       letterSpacing: ".1rem",
       transform: "scale("+this.props.scale+")",
       transformOrigin: "center top",
-      border: "double 4px transparent",
+      border: "double 3px transparent",
       color: "#6e849b",
       backgroundImage: "linear-gradient(white, white), linear-gradient(to right, rgba(253,221,1,1) 0%,rgba(253,187,5,1) 100%)",
       backgroundOrigin: "border-box",
@@ -50,7 +50,7 @@ class Button extends Component {
     var center = this.props.center ? "center" : "";
     var adjust = {
       position: "relative",
-      top: "-1px",
+      lineHeight: this.state.mobile ? "55px":"69px",
       transform: "translateX(6px)"
     }
     return (

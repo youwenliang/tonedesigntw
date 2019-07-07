@@ -42,7 +42,7 @@ class App extends Component {
         <Nav/>
         <Scroll/>
         <Cover data={this.state.data}/>
-        <Banner data={this.state.data}/>
+        {/*<Banner data={this.state.data}/>*/}
         <Section1 data={this.state.data}/>
         <Section2 data={this.state.data}/>
         <Section3 data={this.state.data}/>

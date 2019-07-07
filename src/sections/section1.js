@@ -4,6 +4,7 @@ import LottieControl from '../components/lottie.js';
 import shadow from '../images/shadow.png';
 import gData from '../data/data.js';
 import $ from 'jquery';
+import * as animationWaves from '../images/animations/small_wave_data.json'
 
 import * as animationData1_1o from '../images/animations/data4_open.json'
 import * as animationData1_1l from '../images/animations/data4_loop.json'
@@ -79,13 +80,14 @@ class Section1 extends Component {
 
     var tag = {
       width: "120px",
-      padding: "4.5px 20px",
+      padding: "0 20px",
       borderRadius: "8px",
-      fontSize: "18px"
+      fontSize: "18px",
+      height: "30px"
     }
     var tagContent = {
       position: "relative",
-      top: "-1px",
+      lineHeight: "29px",
       left: "1px"
     }
     var off = -1*($(window).height()/2 - 140);
@@ -97,7 +99,7 @@ class Section1 extends Component {
           <h2 className={colors[data.id - 1]+" hide tag fw4 mt0 mb30 tc center ls-medium"} style={tag}><span style={tagContent}>{data.title[i]}</span></h2>
           <div className="mw240 center w-70">
             <LottieControl data1={animations[i][data.id - 1][0]} data2={animations[i][data.id - 1][1]} open={true} offset={off} id={"animation"+i}/>
-            <img className="ma0 hide mb2" src={shadow} alt="shadow" style={shadowStyle}/>
+            <img className="ma0 hide mb2 dn-ns db" src={shadow} alt="shadow" style={shadowStyle}/>
           </div>              
           <p className="hide lh-medium mw180 center tl f5 fw3 color-content2 mt0 mb4-l mb5">{data.content[i]}</p>
         </div>
@@ -106,11 +108,27 @@ class Section1 extends Component {
     }
 
     var mb = this.state.mobile ? "mb60" : "mb90"
+    var mb2 = this.state.mobile ? "mb30" : "mb40";
+    var mb1 = this.state.mobile ? "mb25" : "mb30";
+    var animation = {
+      width: "140px"
+    }
     return (
       <section id={gData["sections"][1]} style={sectionStyle}>
+        <div className="borderline top small"/>
         <div className="content ph4-ns ph2 mw61rem center">
+          {/*
           <Header title={data.sectionTitle} color="#4C5B7F" margin={false}/>
-          <p className={"tagline hide f4 fw3 color-fade tc mt4-ns mt3 lh-medium ls-medium ph2 "+mb}>{data.tagline}</p>
+          <p className={"tagline hide f4 fw3 color-fade tc mt4-ns mt3 lh-medium ls-medium ph2 "+mb2}>{data.tagline}</p>
+          */}
+          <div className={mb1 + " center hide"} style={animation}>
+            <LottieControl data1={animationWaves} open={false} id="animationWaves" offset={0}/>
+          </div>
+          <Header title={"用內容，強化你的品牌"} color="#4C5B7F" margin={false}/>
+          <p className={"ph3 ph2-l center hide f125 fw3 color-content tc mt4-ns mt3 lh-large ls-medium "+mb}>
+            Tone Design 運用資訊設計、視覺設計，結合 User Experience 設計，<br className="db-l dn"/>
+            為不同階段的消費者旅程，設計出打動人心的內容，
+          </p>
           <div className="cf ph2-ns">
             {contents}
           </div>
