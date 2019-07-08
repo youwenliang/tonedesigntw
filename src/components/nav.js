@@ -137,12 +137,12 @@ class Nav extends Component {
       if(this.state.fixed) {
         w = "180"
         ty = "0"
-        tx = "0"
+        tx = "20px"
       }
       else {
         w = "210"
         ty = "24.425px";
-        tx = "10px"
+        tx = "30px"
       }
     }
 

@@ -50,13 +50,13 @@ class Button extends Component {
     var center = this.props.center ? "center" : "";
     var adjust = {
       position: "relative",
-      lineHeight: this.state.mobile ? "55px":"69px",
+      lineHeight: this.state.mobile ? "49px":"63px",
       transform: "translateX(6px)"
     }
     return (
       <a href={this.props.link}>
-        <div className={"button tc f4-ns f5 br3 dib pointer fw4 flex items-center justify-center "+center+" "+bshadow} style={buttonStyle}>
-          <span style={adjust}>{this.props.content}</span>
+        <div className={"button tc f4-ns f5 br3 dib pointer fw4 "+center+" "+bshadow} style={buttonStyle}>
+          <p className="ma0" style={adjust}>{this.props.content}</p>
         </div>
       </a>
     );

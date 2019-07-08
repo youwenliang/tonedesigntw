@@ -223,7 +223,7 @@ class Section2 extends Component {
             }
 
             var font = {
-              fontFamily: "'Montserrat', sans-serif"
+              fontFamily: "'Montserrat', sans-serif",
             }
 
             return (
@@ -236,15 +236,15 @@ class Section2 extends Component {
                 <div className="arrows mb4 mt5 z2 relative" style={font}>
                   <button className={"z2 relative arrowlinks ph4 tc "+trigger[0]}>
                     <img className="mr3" src={tone1} width="48" alt="icons"/>
-                    <p className="z10 relative">{data.section[0]}</p>
+                    <p className="fw5 z10 relative">{data.section[0]}</p>
                   </button>
                   <button className={"z1 relative arrowlinks ph4 tc "+trigger[1]}>
                     <img className="ml4 mr3" src={tone2} width="48" alt="icons"/>
-                    <p className="z10 relative">{data.section[1]}</p>
+                    <p className="fw5 z10 relative">{data.section[1]}</p>
                   </button>
                   <button className={"relative arrowlinks ph4 tc "+trigger[2]}>
                     <img className="ml4 mr3" src={tone3} width="48" alt="icons"/>
-                    <p className="z10 relative">{data.section[2]}</p>
+                    <p className="fw5 z10 relative">{data.section[2]}</p>
                   </button>
                 </div>
                 <div id="section3-content" className={"cf bg-white relative "+"active"+triggerCurrent} style={innerShadow}>
