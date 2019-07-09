@@ -17,21 +17,22 @@ class Contact extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      mobile: false
-    };
-  }
-  componentDidMount(){
-    var $this = this;
-    function checkMobile() {
-      if($(window).width() <= 479) {
-      	$this.setState({mobile:true});
-      }
-      else $this.setState({mobile:false});
+      mobile: $(window).width() <= 479 ? true : false
     }
-    $(window).on('resize orientationchange', checkMobile);
-    $(document).ready(function(){
-      checkMobile();
-    });
+    this.checkMobile = this.checkMobile.bind(this);
+  }
+  componentDidMount() {
+    var $t = this;
+    window.addEventListener('resize', $t.checkMobile, false);
+  }
+  componentWillUnmount(){
+    var $t = this;
+    window.removeEventListener('resize', $t.checkMobile, false);
+  }
+  checkMobile() {
+    var $t = this;
+    if($(window).width() <= 479) $t.setState({mobile:true});
+    else $t.setState({mobile:false});
   }
   render() {
     var bg = [bg1, bg2, bg3];

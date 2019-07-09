@@ -33,34 +33,30 @@ class Cover extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      mobile: false,
-      large: false
-    };
-  }
-  componentDidMount(){
-    var $this = this;
-    function checkMobile() {
-      if($(window).width() <= 959) {
-        $this.setState({mobile:true});
-      }
-      else $this.setState({mobile:false});
-      if($(window).width() >= 1800) {
-        $this.setState({large:true});
-      }
-      else $this.setState({large:false});
-      console.log($('#speaker').offset().top + "---" + $('#speaker').width());
+      mobile: $(window).width() <= 959 ? true : false
     }
-    $(window).on('resize orientationchange', checkMobile);
+    this.checkMobile = this.checkMobile.bind(this);
+  }
+  componentDidMount() {
+    var $t = this;
+    window.addEventListener('resize', $t.checkMobile, false);
     $(document).ready(function(){
-      checkMobile();
-      if(this.state.mobile) {
+      if($t.state.mobile) {
         let vh = window.innerHeight * 0.01;
         $('.vh-100').css('height', 100 * vh+'px');
         $('.min-vh-100').css('min-height', 100 * vh+'px');
       }
-
       $('#animationWaves').next().css({'height':'100vh'})
     });
+  }
+  componentWillUnmount(){
+    var $t = this;
+    window.removeEventListener('resize', $t.checkMobile, false);
+  }
+  checkMobile() {
+    var $t = this;
+    if($(window).width() <= 959) $t.setState({mobile:true});
+    else $t.setState({mobile:false});
   }
   render() {
     // import data

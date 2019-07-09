@@ -73,21 +73,22 @@ class Section4 extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      mobile: false
-    };
-  }
-  componentDidMount(){
-    var $this = this;
-    function checkMobile() {
-      if($(window).width() <= 959) {
-        $this.setState({mobile:true});
-      }
-      else $this.setState({mobile:false});
+      mobile: $(window).width() <= 959 ? true : false
     }
-    $(window).on('resize orientationchange', checkMobile);
-    $(document).ready(function(){
-      checkMobile();
-    });
+    this.checkMobile = this.checkMobile.bind(this);
+  }
+  componentDidMount() {
+    var $t = this;
+    window.addEventListener('resize', $t.checkMobile, false);
+  }
+  componentWillUnmount(){
+    var $t = this;
+    window.removeEventListener('resize', $t.checkMobile, false);
+  }
+  checkMobile() {
+    var $t = this;
+    if($(window).width() <= 959) $t.setState({mobile:true});
+    else $t.setState({mobile:false});
   }
 
   handleClick(e, t) {

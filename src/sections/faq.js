@@ -8,32 +8,35 @@ class Faq extends Component {
     super(props);
     this.state = {
       mobile: $(window).width() <= 768 ? true : false
-    };
-  }
-  componentDidMount(){
-    var $this = this;
-    function checkMobile() {
-      if($(window).width() <= 768) {
-        $this.setState({mobile:true});
-      }
-      else $this.setState({mobile:false});
     }
-    $(window).on('resize orientationchange', checkMobile);
+    this.checkMobile = this.checkMobile.bind(this);
+  }
+  componentDidMount() {
+    var $t = this;
+    window.addEventListener('resize', $t.checkMobile, false);
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
 
-  	var coll = document.getElementsByClassName("collapsible");
-	  var i;
-
-  	for (i = 0; i < coll.length; i++) {
-  	  coll[i].addEventListener("click", function() {
-  	    this.classList.toggle("active");
-  	    var content = this.nextElementSibling;
-  	    if (content.style.maxHeight){
-  	      content.style.maxHeight = null;
-  	    } else {
-  	      content.style.maxHeight = content.scrollHeight + "px";
-  	    } 
-  	  });
-  	}
+    for (i = 0; i < coll.length; i++) {
+      coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+          content.style.maxHeight = null;
+        } else {
+          content.style.maxHeight = content.scrollHeight + "px";
+        } 
+      });
+    }
+  }
+  componentWillUnmount(){
+    var $t = this;
+    window.removeEventListener('resize', $t.checkMobile, false);
+  }
+  checkMobile() {
+    var $t = this;
+    if($(window).width() <= 768) $t.setState({mobile:true});
+    else $t.setState({mobile:false});
   }
   render() {
     var sectionStyle = {

@@ -23,22 +23,22 @@ class Clients extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      fixed: false,
-      mobile: false
+      mobile: $(window).width() <= 768 ? true : false
     }
+    this.checkMobile = this.checkMobile.bind(this);
   }
   componentDidMount() {
     var $t = this;
-    function checkMobile() {
-      if($(window).width() <= 768) {
-        $t.setState({mobile:true});
-      }
-      else $t.setState({mobile:false});
-    }
-    $(window).on('resize orientationchange', checkMobile);
-    $(document).ready(function(){
-      checkMobile();
-    });
+    window.addEventListener('resize', $t.checkMobile, false);
+  }
+  componentWillUnmount(){
+    var $t = this;
+    window.removeEventListener('resize', $t.checkMobile, false);
+  }
+  checkMobile() {
+    var $t = this;
+    if($(window).width() <= 768) $t.setState({mobile:true});
+    else $t.setState({mobile:false});
   }
   render() {
   	var sectionStyle = {

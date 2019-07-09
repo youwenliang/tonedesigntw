@@ -7,17 +7,21 @@ class Footer extends Component {
     super(props);
     this.state = {
       mobile: $(window).width() <= 768 ? true : false
-    };
-  }
-  componentDidMount(){
-    var $this = this;
-    function checkMobile() {
-      if($(window).width() <= 768) {
-        $this.setState({mobile:true});
-      }
-      else $this.setState({mobile:false});
     }
-    $(window).on('resize orientationchange', checkMobile);
+    this.checkMobile = this.checkMobile.bind(this);
+  }
+  componentDidMount() {
+    var $t = this;
+    window.addEventListener('resize', $t.checkMobile, false);
+  }
+  componentWillUnmount(){
+    var $t = this;
+    window.removeEventListener('resize', $t.checkMobile, false);
+  }
+  checkMobile() {
+    var $t = this;
+    if($(window).width() <= 768) $t.setState({mobile:true});
+    else $t.setState({mobile:false});
   }
   render() {
   	var footerStyle = {

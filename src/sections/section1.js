@@ -32,17 +32,21 @@ class Section1 extends Component {
     super(props);
     this.state = {
       mobile: $(window).width() <= 768 ? true : false
-    };
-  }
-  componentDidMount(){
-    var $this = this;
-    function checkMobile() {
-      if($(window).width() <= 768) {
-        $this.setState({mobile:true});
-      }
-      else $this.setState({mobile:false});
     }
-    $(window).on('resize orientationchange', checkMobile);
+    this.checkMobile = this.checkMobile.bind(this);
+  }
+  componentDidMount() {
+    var $t = this;
+    window.addEventListener('resize', $t.checkMobile, false);
+  }
+  componentWillUnmount(){
+    var $t = this;
+    window.removeEventListener('resize', $t.checkMobile, false);
+  }
+  checkMobile() {
+    var $t = this;
+    if($(window).width() <= 768) $t.setState({mobile:true});
+    else $t.setState({mobile:false});
   }
   render() {
     // import data
@@ -122,7 +126,7 @@ class Section1 extends Component {
           <p className={"tagline hide f4 fw3 color-fade tc mt4-ns mt3 lh-medium ls-medium ph2 "+mb2}>{data.tagline}</p>
           */}
           <div className={mb1 + " center hide"} style={animation}>
-            <LottieControl data1={animationWaves} open={false} id="animationWaves" offset={0}/>
+            <LottieControl data1={animationWaves} open={false} id="animationWaving" offset={0}/>
           </div>
           <Header title={"用內容，強化你的品牌"} color="#4C5B7F" margin={false}/>
           <p className={"ph3 ph2-l center hide f125 fw3 color-content tc mt4-ns mt3 lh-large ls-medium "+mb}>

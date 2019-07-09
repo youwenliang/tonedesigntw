@@ -74,27 +74,6 @@ var trigger = ["","",""];
 var triggerCurrent = 0;
 
 class Section2 extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      mobile: false,
-      current: 0
-    };
-  }
-  componentDidMount(){
-    var $this = this;
-    function checkMobile() {
-      if($(window).width() <= 959) {
-        $this.setState({mobile:true});
-      }
-      else $this.setState({mobile:false});
-      $('.sectionS').css({'width':'auto'});
-    }
-    $(window).on('resize orientationchange', checkMobile);
-    $(document).ready(function(){
-      checkMobile();
-    });
-  }
   render() {
     // import data
     var data = this.props.data[gData["sections"][2]];
@@ -190,72 +169,74 @@ class Section2 extends Component {
     }
 
     var off = $(window).height()/2 - 66 + "px";
-
+    var dn = this.props.display ? "":"dn";
     return (
-      <Controller>
-        <Scene pin duration={3600} classToggle="start" triggerElement={"#"+gData["sections"][2]} indicators={false} offset={off}>
-          {(progress, event) => {
-            if(progress < 0.33 && progress > 0) {
-              trigger = ["active","",""]
-              triggerCurrent = 1;
-            }
-            else if(progress >= 0.33 && progress < 0.67) {
-              trigger = ["","active",""]
-              triggerCurrent = 2;
-              $('.scrollmagic-pin-spacer').css({
-                "margin-bottom": "500px"
-              })
-            }
-            else if(progress >= 0.67 && progress < 1) {
-              trigger = ["","","active"]
-              triggerCurrent = 3;
-              $('.scrollmagic-pin-spacer').css({
-                "margin-bottom": "500px"
-              })
-            }
-            if(event.type == "leave") {
-              trigger = ["","",""]
-              $('.scrollmagic-pin-spacer').css({
-                "min-height": "inherit",
-                "padding-bottom": 0,
-                "margin-bottom": 0
-              })
-            }
+      <div className={dn}>
+        <Controller>
+          <Scene pin duration={3600} classToggle="start" triggerElement={"#"+gData["sections"][2]} indicators={false} offset={off}>
+            {(progress, event) => {
+              if(progress < 0.33 && progress > 0) {
+                trigger = ["active","",""]
+                triggerCurrent = 1;
+              }
+              else if(progress >= 0.33 && progress < 0.67) {
+                trigger = ["","active",""]
+                triggerCurrent = 2;
+                $('.scrollmagic-pin-spacer').css({
+                  "margin-bottom": "500px"
+                })
+              }
+              else if(progress >= 0.67 && progress < 1) {
+                trigger = ["","","active"]
+                triggerCurrent = 3;
+                $('.scrollmagic-pin-spacer').css({
+                  "margin-bottom": "500px"
+                })
+              }
+              if(event.type == "leave") {
+                trigger = ["","",""]
+                $('.scrollmagic-pin-spacer').css({
+                  "min-height": "inherit",
+                  "padding-bottom": 0,
+                  "margin-bottom": 0
+                })
+              }
 
-            var font = {
-              fontFamily: "'Montserrat', sans-serif",
-            }
+              var font = {
+                fontFamily: "'Montserrat', sans-serif",
+              }
 
-            return (
-            <section id={gData["sections"][2]} style={sectionStyle} className="relative sectionS">
-              <div id="arrowTrigger" className="content">
-                <Header title={data.sectionTitle} color="#4C5B7F" margin={false}/>
-                <div className="hide">
-                  <p className="tagline f4 fw3 color-content tc mt4 mb70 lh-medium ls-medium ph2">{data.tagline}</p>
+              return (
+              <section id={gData["sections"][2]} style={sectionStyle} className="relative sectionS">
+                <div id="arrowTrigger" className="content">
+                  <Header title={data.sectionTitle} color="#4C5B7F" margin={false}/>
+                  <div className="hide">
+                    <p className="tagline f4 fw3 color-content tc mt4 mb70 lh-medium ls-medium ph2">{data.tagline}</p>
+                  </div>
+                  <div className="arrows mb4 mt5 z2 relative" style={font}>
+                    <button className={"z2 relative arrowlinks ph4 tc "+trigger[0]}>
+                      <img className="mr3" src={tone1} width="48" alt="icons"/>
+                      <p className="fw5 z10 relative">{data.section[0]}</p>
+                    </button>
+                    <button className={"z1 relative arrowlinks ph4 tc "+trigger[1]}>
+                      <img className="ml4 mr3" src={tone2} width="48" alt="icons"/>
+                      <p className="fw5 z10 relative">{data.section[1]}</p>
+                    </button>
+                    <button className={"relative arrowlinks ph4 tc "+trigger[2]}>
+                      <img className="ml4 mr3" src={tone3} width="48" alt="icons"/>
+                      <p className="fw5 z10 relative">{data.section[2]}</p>
+                    </button>
+                  </div>
+                  <div id="section3-content" className={"cf bg-white relative "+"active"+triggerCurrent} style={innerShadow}>
+                    {listContent}
+                  </div>
                 </div>
-                <div className="arrows mb4 mt5 z2 relative" style={font}>
-                  <button className={"z2 relative arrowlinks ph4 tc "+trigger[0]}>
-                    <img className="mr3" src={tone1} width="48" alt="icons"/>
-                    <p className="fw5 z10 relative">{data.section[0]}</p>
-                  </button>
-                  <button className={"z1 relative arrowlinks ph4 tc "+trigger[1]}>
-                    <img className="ml4 mr3" src={tone2} width="48" alt="icons"/>
-                    <p className="fw5 z10 relative">{data.section[1]}</p>
-                  </button>
-                  <button className={"relative arrowlinks ph4 tc "+trigger[2]}>
-                    <img className="ml4 mr3" src={tone3} width="48" alt="icons"/>
-                    <p className="fw5 z10 relative">{data.section[2]}</p>
-                  </button>
-                </div>
-                <div id="section3-content" className={"cf bg-white relative "+"active"+triggerCurrent} style={innerShadow}>
-                  {listContent}
-                </div>
-              </div>
-            </section>
-          )
-        }}
-        </Scene>
-      </Controller>
+              </section>
+            )
+          }}
+          </Scene>
+        </Controller>
+      </div>
     );
   }
 }
