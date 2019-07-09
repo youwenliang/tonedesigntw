@@ -6,9 +6,9 @@ import $ from 'jquery';
 import gData from '../data/data.js';
 import LottieControl from '../components/lottie.js';
 
-import tone1 from '../images/icons/tone-1.svg';
-import tone2 from '../images/icons/tone-2.svg';
-import tone3 from '../images/icons/tone-3.svg';
+import tone1 from '../images/icons/tone-1.png';
+import tone2 from '../images/icons/tone-2.png';
+import tone3 from '../images/icons/tone-3.png';
 
 import icon1a_1  from '../images/icons/a-1.svg';
 import icon1a_2  from '../images/icons/a-2.svg';

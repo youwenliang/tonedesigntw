@@ -90,7 +90,7 @@ class Cover extends Component {
       maxWidth: this.state.mobile ? "420px" : "500px",
       marginTop: this.state.mobile ? "-40px" : "-100px",
       transformOrigin: "center bottom",
-      transform: $(window).width() < 480 ? "scale(1.15)" : "scale(1)"
+      transform: $(window).width() < 480 ? "scale(1.05)" : "scale(1)"
     }
     var imgS = {
       transformOrigin: "100% 60%",
@@ -157,9 +157,9 @@ class Cover extends Component {
           <LottieControl data1={animationDataCover} open={false} id="animationCover" offset={0}/>
           <img src={shadow} width="90%" style={shadowStyle} alt="shadow"/>
         </div>
-        <div className="fl w-100 w-50-l tl mt0">
+        <div className="fl w-100 w-50-l tc mt0">
           <h1 className={"color-blue f25rem fw5 ls-medium nowrap mt0 "+mbh1} dangerouslySetInnerHTML={{__html:data.title}}></h1>
-          <p className={"w-100 lh-medium ls-medium f4-ns f18 color-blue mw400 fw4 "+mbp} dangerouslySetInnerHTML={{__html:data.content}}></p>
+          <p className={"w-100 lh-medium ls-medium f4-ns f18 color-blue mw400 center fw4 "+mbp} dangerouslySetInnerHTML={{__html:data.content}}></p>
           <Button content={data.button} shadow={true}/>
         </div>
       </div>
