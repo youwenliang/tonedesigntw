@@ -249,6 +249,27 @@ nav li a {
     transition: max-height 0.2s ease-out;
 }
 
+.opening {
+	height: 60px;
+	box-shadow: 0 4px 5px rgba(64,60,121,.1);
+	border-radius: 6px;
+	border: none;
+    outline: none;
+	background: linear-gradient(to right, rgba(255, 151, 142, 1) 0%, rgba(255, 91, 130, 1) 100%);
+	color: white;
+	font-size: 24px;
+	font-family: 'Montserrat', sans-serif
+}
+
+.opening.active {
+	box-shadow: 0 4px 5px rgba(64,60,121,0);
+}
+
+.opening2 .answers {
+	box-shadow: 0 4px 5px rgba(64,60,121,.1);
+	border-radius: 0 0 6px 6px;
+}
+
 .color-content {
     color: #4C5B7F;
     letter-spacing: 2px;

@@ -74,6 +74,22 @@ var trigger = ["","",""];
 var triggerCurrent = 0;
 
 class Section2m extends Component {
+  componentDidMount(){
+    var coll = document.getElementsByClassName("opening");
+    var i;
+
+    for (i = 0; i < coll.length; i++) {
+      coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+          content.style.maxHeight = null;
+        } else {
+          content.style.maxHeight = content.scrollHeight + "px";
+        } 
+      });
+    }
+  }
   render() {
     // import data
     var data = this.props.data[gData["sections"][2]];
@@ -81,10 +97,34 @@ class Section2m extends Component {
     var sectionStyle = {
       background: "#f7f8fa",
     }
+    var mb = "mb70"
     var dn = this.props.display ? "":"dn";
     return (
       <section id={gData["sections"][2]} style={sectionStyle} className={"relative "+dn}>
-        test
+        <div className="content ph4-ns ph2 mw54rem w-100 center z2 relative">
+          <Header title={data.sectionTitle} color="#4C5B7F" margin={false}/>
+          <p className={"tagline hide f4 fw3 color-fade tc mt4-ns mt3 lh-medium ls-medium ph2 "+mb}>{data.tagline}</p>
+          <div className="opening2">
+            <div className="mb50">
+              <button className="w-100 opening f18 lh-copy fw4">test1</button>
+              <div className="answers">
+                <p className="lh-copy f5 fw3 color-content2">content1</p>
+              </div>
+            </div>
+            <div className="mb50">
+              <button className="w-100 opening f18 lh-copy fw4">test2</button>
+              <div className="answers">
+                <p className="lh-copy f5 fw3 color-content2">content2</p>
+              </div>
+            </div>
+            <div className="">
+              <button className="w-100 opening f18 lh-copy fw4">test3</button>
+              <div className="answers">
+                <p className="lh-copy f5 fw3 color-content2">content3</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
     );
   }
