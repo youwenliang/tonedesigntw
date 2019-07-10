@@ -99,30 +99,52 @@ class Section2m extends Component {
     }
     var mb = "mb70"
     var dn = this.props.display ? "":"dn";
+    var content = function(i) {
+      var toneIcons = [tone1, tone2, tone3];
+      var mb50 = i===2 ? "" : "mb50";
+      return (
+        <div className={mb50}>
+          <button className="w-100 opening lh-copy fw4 flex items-center justify-center">
+            <img className="mr3" src={toneIcons[i]} width="48" alt="icons"/>
+            <p className="tl fw5 z10 relative">{data.section[i]}</p>
+          </button>
+          <div className="answers">
+            <div className="mw400 center">
+              <h2 className="f18 fw4 mt30 lh-medium color-content">{data.content[i]["tagline"]}</h2>
+              <LottieControl data1={animations[data.id-1][i]} open={false} id="animationContent" offset={0}/>
+              <div className="color-content">
+                <h3 className="f5 fw5 mb20">{data.content[i]["title"]}</h3>
+                <p className="f5 fw3 lh-medium mt0 mb30">{data.content[i]["paragraph"]}</p>
+              </div>
+              <p className="f12 color-fade fw3 mt4 mb3">{data.content[i]["smalltitle"][1]}</p>
+              <div className="cf fw4 f5 tc color-content mt0 mb70">
+                <div className="fl w-third">
+                  <img src={icons[data.id-1][i][0]} width="72px"/>
+                  <p className="f13 mv0">{data.content[i]["smallitem"][0]}</p>
+                </div>
+                <div className="fl w-third">
+                  <img src={icons[data.id-1][i][1]} width="72px"/>
+                  <p className="f13 mv0">{data.content[i]["smallitem"][1]}</p>
+                </div>
+                <div className="fl w-third">
+                  <img src={icons[data.id-1][i][2]} width="72px"/>
+                  <p className="f13 mv0">{data.content[i]["smallitem"][2]}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      )
+    }
     return (
       <section id={gData["sections"][2]} style={sectionStyle} className={"relative "+dn}>
         <div className="content ph4-ns ph2 mw54rem w-100 center z2 relative">
           <Header title={data.sectionTitle} color="#4C5B7F" margin={false}/>
           <p className={"tagline hide f4 fw3 color-fade tc mt4-ns mt3 lh-medium ls-medium ph2 "+mb}>{data.tagline}</p>
           <div className="opening2">
-            <div className="mb50">
-              <button className="w-100 opening f18 lh-copy fw4">test1</button>
-              <div className="answers">
-                <p className="lh-copy f5 fw3 color-content2">content1</p>
-              </div>
-            </div>
-            <div className="mb50">
-              <button className="w-100 opening f18 lh-copy fw4">test2</button>
-              <div className="answers">
-                <p className="lh-copy f5 fw3 color-content2">content2</p>
-              </div>
-            </div>
-            <div className="">
-              <button className="w-100 opening f18 lh-copy fw4">test3</button>
-              <div className="answers">
-                <p className="lh-copy f5 fw3 color-content2">content3</p>
-              </div>
-            </div>
+            {content(0)}
+            {content(1)}
+            {content(2)}
           </div>
         </div>
       </section>

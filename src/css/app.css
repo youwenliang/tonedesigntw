@@ -258,7 +258,12 @@ nav li a {
 	background: linear-gradient(to right, rgba(255, 151, 142, 1) 0%, rgba(255, 91, 130, 1) 100%);
 	color: white;
 	font-size: 24px;
-	font-family: 'Montserrat', sans-serif
+	font-family: 'Montserrat', sans-serif;
+	letter-spacing: 0.6px !important;
+}
+
+.opening p {
+	width: 150px;
 }
 
 .opening.active {
@@ -266,12 +271,13 @@ nav li a {
 }
 
 .opening2 .answers {
+	padding: 0 24px;
 	box-shadow: 0 4px 5px rgba(64,60,121,.1);
 	border-radius: 0 0 6px 6px;
 }
 
 .color-content {
-    color: #4C5B7F;
+    color: #505F81;
     letter-spacing: 2px;
 }
 
@@ -402,6 +408,14 @@ nav li a {
     font-size: 2rem;
 }
 
+.f12 {
+	font-size: 12px;
+}
+
+.f13 {
+	font-size: 13px;
+}
+
 .f2125 {
     font-size: 1.625rem;
 }
@@ -520,6 +534,9 @@ nav li a {
 
 .mb30 {
     margin-bottom: 30px;
+}
+.mt30 {
+	margin-top: 30px;
 }
 
 .mb40 {
