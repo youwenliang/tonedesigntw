@@ -103,7 +103,7 @@ class Section1 extends Component {
           <h2 className={colors[data.id - 1]+" hide tag fw4 mt0 mb30 tc center ls-medium"} style={tag}><span style={tagContent}>{data.title[i]}</span></h2>
           <div className="mw240 center w-70">
             <LottieControl data1={animations[i][data.id - 1][0]} data2={animations[i][data.id - 1][1]} open={true} offset={off} id={"animation"+i}/>
-            <img className="ma0 hide mb2 dn-ns db" src={shadow} alt="shadow" style={shadowStyle}/>
+            <img className="ma0 hide mb2 dn db-ns" src={shadow} alt="shadow" style={shadowStyle}/>
           </div>              
           <p className="hide lh-medium mw180 center tl f5 fw3 color-content2 mt0 mb4-l mb5">{data.content[i]}</p>
         </div>
@@ -111,7 +111,7 @@ class Section1 extends Component {
       contents.push(temp);
     }
 
-    var mb = this.state.mobile ? "mb60" : "mb90"
+    var mb = this.state.mobile ? "mb60 mw480" : "mb90"
     var mb1 = this.state.mobile ? "mb25" : "mb30";
     var animation = {
       width: "140px"
@@ -128,7 +128,7 @@ class Section1 extends Component {
             <LottieControl data1={animationWaves} open={false} id="animationWaving" offset={0}/>
           </div>
           <Header title={"用內容，強化你的品牌"} color="#4C5B7F" margin={false}/>
-          <p className={"ph3 ph2-l center hide f125 fw3 color-content tc mt4-ns mt3 lh-large ls-medium "+mb}>
+          <p className={"center ph3 ph2-l center hide f125 fw3 color-content tc mt4-ns mt3 lh-large ls-medium "+mb}>
             Tone Design 運用資訊設計、視覺設計，結合 User Experience 設計，<br className="db-l dn"/>
             為不同階段的消費者旅程，設計出打動人心的內容，
           </p>

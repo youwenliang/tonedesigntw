@@ -28,7 +28,7 @@ var data = {
 		"設計流程": {
 			"id": 1,
 			"sectionTitle": "設計流程",
-			"tagline": "好的行銷策略，要根據使用者旅程設定最吸引人的內容，\n並能轉變成多種形式，在不同的接觸點曝光。",
+			"tagline": "好的行銷策略，要根據使用者旅程設定最吸引人的內容，<br class='db-l dn'/> 並能轉變成多種形式，在不同的接觸點曝光。",
 			"section": ["Awareness", "Decision", "Loyalty"],
 			"content": [
 				{

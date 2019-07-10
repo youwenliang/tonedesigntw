@@ -212,7 +212,7 @@ class Section2 extends Component {
                 <div id="arrowTrigger" className="content">
                   <Header title={data.sectionTitle} color="#4C5B7F" margin={false}/>
                   <div className="hide">
-                    <p className="tagline f4 fw3 color-content tc mt4 mb70 lh-medium ls-medium ph2">{data.tagline}</p>
+                    <p className="tagline f4 fw3 color-content tc mt4 mb70 lh-medium ls-medium ph2" dangerouslySetInnerHTML={{__html:data.tagline}}></p>
                   </div>
                   <div className="arrows mb4 mt5 z2 relative" style={font}>
                     <button className={"z2 relative arrowlinks ph4 tc "+trigger[0]}>

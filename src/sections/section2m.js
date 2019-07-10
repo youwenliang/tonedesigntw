@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Header from '../components/header.js';
 import gData from '../data/data.js';
 import LottieControl from '../components/lottie.js';
+import $ from 'jquery';
 
 import arrowup from '../images/arrow-up.svg';
 import arrowdown from '../images/arrow-down.svg';
@@ -115,7 +116,7 @@ class Section2m extends Component {
     var upStyle = {
       position: "absolute",
       bottom: "0",
-      height: "56px",
+      height: "60px",
       left: 0,
       right: 0,
       margin: "auto"
@@ -135,13 +136,13 @@ class Section2m extends Component {
         <div className={mb50 + " relative"}>
           <button id={"opening"+i} className="w-100 opening lh-copy fw4 flex items-center justify-center cp">
             <img className="mr3" src={toneIcons[i]} width="48" alt="icons"/>
-            <p className="tl fw5 z10 relative">{data.section[i]}</p>
+            <p className="tl fw5 z10 relative mv0">{data.section[i]}</p>
           </button>
           <div className="answers relative">
             <div className="mw400 center">
               <h2 className="f18 fw4 mt30 lh-medium color-content">{data.content[i]["tagline"]}</h2>
               <LottieControl data1={animations[data.id-1][i]} open={false} id="animationContent" offset={0}/>
-              <div className="color-content">
+              <div className="color-content mt30">
                 <h3 className="f5 fw5 mb20">{data.content[i]["title"]}</h3>
                 <p className="f5 fw3 lh-medium mt0 mb30">{data.content[i]["paragraph"]}</p>
               </div>
@@ -169,12 +170,13 @@ class Section2m extends Component {
         </div>
       )
     }
+    var mw = $(window).width() >= 480 ? "mw480" : "mw300";
     return (
       <section id={gData["sections"][2]} style={sectionStyle} className={"relative "+dn}>
         <div className="content ph4-ns ph2 mw54rem w-100 center z2 relative">
           <Header title={data.sectionTitle} color="#4C5B7F" margin={false}/>
-          <p className={"tagline hide f4 fw3 color-fade tc mt4-ns mt3 lh-medium ls-medium ph2 "+mb}>{data.tagline}</p>
-          <div className="opening2">
+          <p className={"mw480 center tagline hide f4 fw3 color-fade tc mt4-ns mt3 lh-medium ls-medium ph3 ph2-l "+mb} dangerouslySetInnerHTML={{__html:data.tagline}}></p>
+          <div className={"opening2 center "+mw}>
             {content(0)}
             {content(1)}
             {content(2)}
