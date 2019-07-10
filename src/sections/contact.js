@@ -11,8 +11,6 @@ import bgm1 from '../images/cta-bg-new-mobile.svg';
 import bgm2 from '../images/cta-bg-new-mobile.svg';
 import bgm3 from '../images/cta-bg-new-mobile.svg';
 
-import tone from '../images/cta-tone.svg';
-
 class Contact extends Component {
   constructor(props) {
     super(props);

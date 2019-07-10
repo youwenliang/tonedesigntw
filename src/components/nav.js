@@ -20,11 +20,11 @@ class Nav extends Component {
     var $t = this;
     window.addEventListener('resize', $t.checkMobile, false);
 
-    var lastScrollTop = 0;
+    // var lastScrollTop = 0;
     // element should be replaced with the actual target element on which you have applied scroll, use window in case of no target element.
     window.addEventListener("scroll", function(){ // or window.addEventListener("scroll"....
        var st = window.pageYOffset || document.documentElement.scrollTop; // Credits: "https://github.com/qeremy/so/blob/master/so.dom.js#L426"
-       lastScrollTop = st <= 0 ? 0 : st; // For Mobile or negative scrolling
+       // lastScrollTop = st <= 0 ? 0 : st; // For Mobile or negative scrolling
        if(st <= $(window).height() - 100) {
           $t.setState({fixed: false});
           if(st >= 80) {
@@ -90,7 +90,6 @@ class Nav extends Component {
     }: {
       width: "110px",
       height: "35px",
-      color: "white",
       textAlign: "center",
       borderRadius: "6px",
       fontWeight: "400",
@@ -110,7 +109,7 @@ class Nav extends Component {
 
     var logo = this.state.fixed ? toneC : toneW;
     var urls = this.state.mobile ? (
-      <img src={this.state.fixed ? openC : open} width="20" className="cp" onClick={this.openPanel.bind(this)}/>
+      <img src={this.state.fixed ? openC : open} width="20" className="cp" onClick={this.openPanel.bind(this)} alt="menu"/>
       ) : (
       <ul className="flex flex-row justify-between items-center f18 ls-none fw3">
         <li><a href="#" style={link}>Work</a></li>
@@ -146,19 +145,11 @@ class Nav extends Component {
     var logoStyle = {
       transform: "translate("+tx+","+ty+")"
     }
-
-    var mw = {
-      maxWidth: "1440px",
-      left: 0,
-      right: 0,
-      margin: "auto",
-      width: "100%"
-    }
     
     return (
       <nav className={"nav "+position} style={bgNav}>
         <div className="flex items-center justify-between flex-row ph3" style={navStyle}>
-          <img src={logo} width={w} style = {logoStyle}/>
+          <img src={logo} width={w} style={logoStyle} alt="Tone Design"/>
           {urls}
         </div>
         <Panel mobile={this.state.mobile} closePanel={this.closePanel.bind(this)} display={this.state.open}/>
@@ -195,8 +186,8 @@ class Panel extends Component {
     return (
       <div className="w-100 vh-100 fixed ph3" style={panelStyle}>
         <div className="flex items-center justify-between" style={{height:"55px"}}>
-          <img src={toneC} width="130"/>
-          <img src={close} width="20" className="cp" onClick={this.props.closePanel}/>
+          <img src={toneC} width="130" alt="Tone Design"/>
+          <img src={close} width="20" className="cp" onClick={this.props.closePanel} alt="close"/>
         </div>
         <ul className="flex flex-column tc f18 ls-none fw3 pa0" style={ulink}>
           <li style={link}><a href="#" style={linkA}>Work</a></li>

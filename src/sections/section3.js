@@ -1,16 +1,10 @@
 import React, { Component } from 'react';
-import Header from '../components/header.js';
-import Button from '../components/button.js';
 import LottieControl from '../components/lottie.js'
 import gData from '../data/data.js';
 import $ from 'jquery';
 
-import circle1 from '../images/circle.png';
-import circle2 from '../images/circle.png';
-import circle3 from '../images/circle.png';
 import bg_tone from '../images/fade-tone.svg';
-import waves from '../images/waves.png';
-import * as animationDataCircleso from '../images/animations/data_service_open.json';
+//import * as animationDataCircleso from '../images/animations/data_service_open.json';
 import * as animationDataCirclesl from '../images/animations/data_service_loop.json';
 
 class Section3 extends Component {
@@ -40,12 +34,6 @@ class Section3 extends Component {
     var sectionStyle = {
       background: "#ffffff",
     }
-    var mask = {
-      top: 0,
-      left: 0,
-      right: 0,
-      zIndex: 0
-    }
     var bg2Style = {
       top: 0,
       left: 0,
@@ -66,7 +54,6 @@ class Section3 extends Component {
     }
 
     var mb = this.state.mobile ? "mb25" : "mb40"
-    var circles = [circle1, circle2, circle3];
     return (
       <section id={gData["sections"][3]} style={sectionStyle} className="relative">
         <div className="absolute w-100 h-100 db-l dn" style={bg2Style}/>

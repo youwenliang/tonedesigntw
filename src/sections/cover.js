@@ -6,8 +6,6 @@ import Button from '../components/button.js';
 import shadow from '../images/cover-shadow.png';
 import scroll from '../images/scroll.svg';
 import bg_tone from '../images/cover-tone.svg';
-import logo from '../images/tone-white.svg';
-import logoR from '../images/tone-red.svg';
 
 import $ from 'jquery';
 import gData from '../data/data.js';

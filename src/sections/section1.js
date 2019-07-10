@@ -112,7 +112,6 @@ class Section1 extends Component {
     }
 
     var mb = this.state.mobile ? "mb60" : "mb90"
-    var mb2 = this.state.mobile ? "mb30" : "mb40";
     var mb1 = this.state.mobile ? "mb25" : "mb30";
     var animation = {
       width: "140px"

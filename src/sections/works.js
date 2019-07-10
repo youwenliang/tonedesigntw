@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Header from '../components/header.js';
 import Button from '../components/button.js';
 import gData from '../data/data.js';
 import portfolioVideoO from '../images/videos/portfolio_open.mp4';

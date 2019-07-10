@@ -3,7 +3,7 @@ import Footer from './components/footer.js';
 import Scroll from './components/scroll.js';
 import Nav from './components/nav.js';
 import Cover from './sections/cover.js';
-import Banner from './sections/banner.js';
+//import Banner from './sections/banner.js';
 import Section1 from './sections/section1.js';
 import Section2 from './sections/section2.js';
 import Section2m from './sections/section2m.js';

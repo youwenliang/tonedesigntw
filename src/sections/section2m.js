@@ -1,8 +1,5 @@
 import React, { Component } from 'react';
 import Header from '../components/header.js';
-import { Controller, Scene } from 'react-scrollmagic';
-import { Tween, Timeline } from 'react-gsap';
-import $ from 'jquery';
 import gData from '../data/data.js';
 import LottieControl from '../components/lottie.js';
 
@@ -73,9 +70,6 @@ var animations = [
   [animation3a, animation3b, animation3c],
 ]
 
-var trigger = ["","",""];
-var triggerCurrent = 0;
-
 class Section2m extends Component {
   componentDidMount(){
     var coll = document.getElementsByClassName("opening");
@@ -136,7 +130,7 @@ class Section2m extends Component {
     var content = function(i) {
       var toneIcons = [tone1, tone2, tone3];
       var mb50 = i===2 ? "" : "mb50";
-      var down = i===2 ? "" : (<img src={arrowdown} width={32} style={downStyle}/>);
+      var down = i===2 ? "" : (<img src={arrowdown} width={32} style={downStyle} alt="arrow"/>);
       return (
         <div className={mb50 + " relative"}>
           <button id={"opening"+i} className="w-100 opening lh-copy fw4 flex items-center justify-center cp">
@@ -154,21 +148,21 @@ class Section2m extends Component {
               <p className="f12 color-fade fw3 mt4 mb3">{data.content[i]["smalltitle"][1]}</p>
               <div className="cf fw4 f5 tc color-content mt0 mb70">
                 <div className="fl w-third">
-                  <img src={icons[data.id-1][i][0]} width="72px"/>
+                  <img src={icons[data.id-1][i][0]} width="72px" alt={data.content[i]["smallitem"][0]}/>
                   <p className="f13 mv0">{data.content[i]["smallitem"][0]}</p>
                 </div>
                 <div className="fl w-third">
-                  <img src={icons[data.id-1][i][1]} width="72px"/>
+                  <img src={icons[data.id-1][i][1]} width="72px" alt={data.content[i]["smallitem"][1]}/>
                   <p className="f13 mv0">{data.content[i]["smallitem"][1]}</p>
                 </div>
                 <div className="fl w-third">
-                  <img src={icons[data.id-1][i][2]} width="72px"/>
+                  <img src={icons[data.id-1][i][2]} width="72px" alt={data.content[i]["smallitem"][2]}/>
                   <p className="f13 mv0">{data.content[i]["smallitem"][2]}</p>
                 </div>
               </div>
             </div>
             <div id={"closing"+i} className="ma0 w-100 cp flex items-center justify-center closing" style={upStyle}>
-              <img src={arrowup} width={28}/>
+              <img src={arrowup} width={28} alt="arrow"/>
             </div>
           </div>
           {down}

@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import Header from '../components/header.js';
 import { Controller, Scene } from 'react-scrollmagic';
-import { Tween, Timeline } from 'react-gsap';
 import $ from 'jquery';
 import gData from '../data/data.js';
 import LottieControl from '../components/lottie.js';
@@ -89,20 +88,22 @@ class Section2 extends Component {
       height: "420px",
       overflow: "hidden"
     }
+    /*
     var number = {
       position: "relative",
       top: "-1.3px",
       left: "1.5px",
       textAlign: "center"
     };
+    var color = {
+      background: bgColor[data.id - 1]
+    }
     var bgColor = [
       "linear-gradient(to right, rgba(255,151,142,1) 0%,rgba(255,91,130,1) 100%)",
       "linear-gradient(to right, rgba(255,151,142,1) 0%,rgba(255,91,130,1) 100%)",
       "linear-gradient(to right, rgba(255,151,142,1) 0%,rgba(255,91,130,1) 100%)",
     ]
-    var color = {
-      background: bgColor[data.id - 1]
-    }
+    */
 
     var listContent = [];
     var subContent = {
@@ -150,15 +151,15 @@ class Section2 extends Component {
             <p className="f15 color-fade fw3 mt4 mb3">{data.content[i]["smalltitle"][1]}</p>
             <div className="cf fw4 f5 tc color-content">
               <div className="fl w-third">
-                <img src={icons[data.id-1][i][0]} width="72px"/>
+                <img src={icons[data.id-1][i][0]} width="72px" alt={data.content[i]["smallitem"][0]}/>
                 <p className="f5 mv0">{data.content[i]["smallitem"][0]}</p>
               </div>
               <div className="fl w-third">
-                <img src={icons[data.id-1][i][1]} width="72px"/>
+                <img src={icons[data.id-1][i][1]} width="72px" alt={data.content[i]["smallitem"][1]}/>
                 <p className="f5 mv0">{data.content[i]["smallitem"][1]}</p>
               </div>
               <div className="fl w-third">
-                <img src={icons[data.id-1][i][2]} width="72px"/>
+                <img src={icons[data.id-1][i][2]} width="72px" alt={data.content[i]["smallitem"][2]}/>
                 <p className="f5 mv0">{data.content[i]["smallitem"][2]}</p>
               </div>
             </div>
@@ -193,7 +194,7 @@ class Section2 extends Component {
                   "margin-bottom": "500px"
                 })
               }
-              if(event.type == "leave") {
+              if(event.type === "leave") {
                 trigger = ["","",""]
                 $('.scrollmagic-pin-spacer').css({
                   "min-height": "inherit",
@@ -227,7 +228,7 @@ class Section2 extends Component {
                       <p className="fw5 z10 relative">{data.section[2]}</p>
                     </button>
                   </div>
-                  <div id="section3-content" className={"cf bg-white relative "+"active"+triggerCurrent} style={innerShadow}>
+                  <div id="section3-content" className={"cf bg-white relative active"+triggerCurrent} style={innerShadow}>
                     {listContent}
                   </div>
                 </div>
