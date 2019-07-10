@@ -249,6 +249,10 @@ nav li a {
     transition: max-height 0.2s ease-out;
 }
 
+.answers.close {
+	max-height: 0 !important;
+}
+
 .opening {
 	height: 60px;
 	box-shadow: 0 4px 5px rgba(64,60,121,.1);

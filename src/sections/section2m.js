@@ -6,6 +6,9 @@ import $ from 'jquery';
 import gData from '../data/data.js';
 import LottieControl from '../components/lottie.js';
 
+import arrowup from '../images/arrow-up.svg';
+import arrowdown from '../images/arrow-down.svg';
+
 import tone1 from '../images/icons/tone-1.png';
 import tone2 from '../images/icons/tone-2.png';
 import tone3 from '../images/icons/tone-3.png';
@@ -89,6 +92,22 @@ class Section2m extends Component {
         } 
       });
     }
+    var clo = document.getElementsByClassName("closing");
+    var j;
+    for (j = 0; j < clo.length; j++) {
+      clo[j].addEventListener("click", function() {
+        var num = this.id.split('ing')[1];
+        console.log(num);
+        var temp = document.getElementById("opening"+num);
+        temp.classList.remove('active');
+        var content = temp.nextElementSibling;
+        if (content.style.maxHeight){
+          content.style.maxHeight = null;
+        } else {
+          content.style.maxHeight = content.scrollHeight + "px";
+        } 
+      });
+    };
   }
   render() {
     // import data
@@ -99,16 +118,32 @@ class Section2m extends Component {
     }
     var mb = "mb70"
     var dn = this.props.display ? "":"dn";
+    var upStyle = {
+      position: "absolute",
+      bottom: "0",
+      height: "56px",
+      left: 0,
+      right: 0,
+      margin: "auto"
+    }
+    var downStyle = {
+      position: "absolute",
+      bottom: "-35px",
+      left: 0,
+      right: 0,
+      margin: "auto"
+    }
     var content = function(i) {
       var toneIcons = [tone1, tone2, tone3];
       var mb50 = i===2 ? "" : "mb50";
+      var down = i===2 ? "" : (<img src={arrowdown} width={32} style={downStyle}/>);
       return (
-        <div className={mb50}>
-          <button className="w-100 opening lh-copy fw4 flex items-center justify-center">
+        <div className={mb50 + " relative"}>
+          <button id={"opening"+i} className="w-100 opening lh-copy fw4 flex items-center justify-center cp">
             <img className="mr3" src={toneIcons[i]} width="48" alt="icons"/>
             <p className="tl fw5 z10 relative">{data.section[i]}</p>
           </button>
-          <div className="answers">
+          <div className="answers relative">
             <div className="mw400 center">
               <h2 className="f18 fw4 mt30 lh-medium color-content">{data.content[i]["tagline"]}</h2>
               <LottieControl data1={animations[data.id-1][i]} open={false} id="animationContent" offset={0}/>
@@ -132,7 +167,11 @@ class Section2m extends Component {
                 </div>
               </div>
             </div>
+            <div id={"closing"+i} className="ma0 w-100 cp flex items-center justify-center closing" style={upStyle}>
+              <img src={arrowup} width={28}/>
+            </div>
           </div>
+          {down}
         </div>
       )
     }
