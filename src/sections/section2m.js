@@ -131,17 +131,17 @@ class Section2m extends Component {
     var content = function(i) {
       var toneIcons = [tone1, tone2, tone3];
       var mb50 = i===2 ? "" : "mb50";
-      var down = i===2 ? "" : (<img src={arrowdown} width={32} style={downStyle} alt="arrow"/>);
+      var down = i===2 ? "" : (<img className="hide" src={arrowdown} width={32} style={downStyle} alt="arrow"/>);
       return (
         <div className={mb50 + " relative"}>
-          <button id={"opening"+i} className="w-100 opening lh-copy fw4 flex items-center justify-center cp">
+          <button id={"opening"+i} className="hide w-100 opening lh-copy fw4 flex items-center justify-center cp">
             <img className="mr3" src={toneIcons[i]} width="48" alt="icons"/>
             <p className="tl fw5 z10 relative mv0">{data.section[i]}</p>
           </button>
           <div className="answers relative">
             <div className="mw400 center">
               <h2 className="f18 fw4 mt30 lh-medium color-content">{data.content[i]["tagline"]}</h2>
-              <LottieControl data1={animations[data.id-1][i]} open={false} id="animationContent" offset={0}/>
+              <LottieControl data1={animations[data.id-1][i]} open={false} id="animationContentm" offset={0}/>
               <div className="color-content mt30">
                 <h3 className="f5 fw5 mb20">{data.content[i]["title"]}</h3>
                 <p className="f5 fw3 lh-medium mt0 mb30">{data.content[i]["paragraph"]}</p>

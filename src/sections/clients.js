@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import Header from '../components/header.js';
 import Parallax from '../components/parallax.js';
 import gData from '../data/data.js';
+
+import LazyLoad from 'react-lazy-load';
 import imgURL from '../images/taipei@2x.png';
 
 import logo1 from '../images/logos/1-1.svg';
@@ -50,7 +52,9 @@ class Clients extends Component {
   	for(var i = 0; i < logoURL.length; i++){
   		logoList.push(
   			<div className="fl w-50 w-third-m w-25-l ph0 tc o-80" key={i}>
-  				<img src={logoURL[i]} height={this.state.mobile? 40 : 65} alt={logoName[i]}/>
+          <LazyLoad height={this.state.mobile? 40 : 65} offsetVertical={50}>
+  				  <img src={logoURL[i]} alt={logoName[i]}/>
+          </LazyLoad>
   			</div>
   		)
   	}

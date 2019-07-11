@@ -36,7 +36,7 @@ class App extends Component {
     setTimeout(function(){
       document.getElementById('loading').classList.add('fade');
       document.body.classList.remove('ds');
-    },600);
+    },100);
     var $t = this;
     window.addEventListener('resize', $t.checkMobile, false);
   }
@@ -49,10 +49,10 @@ class App extends Component {
     if($(window).width() <= 959) $t.setState({mobile:true});
     else $t.setState({mobile:false});
   }
-  var loadingStyle = {
-    backgroundImage: "url("+loadingIcon+")"
-  }
   render() {
+    var loadingStyle = {
+      backgroundImage: "url("+loadingIcon+")"
+    }
     return (
       <div className="App">
         <div id="loading" className="flex items-center justify-center" style={loadingStyle}></div>

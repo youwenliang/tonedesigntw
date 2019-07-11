@@ -3,11 +3,13 @@ import ReactDOM from 'react-dom';
 import App from './App';
 import './index.css';
 import $ from 'jquery';
+import registerServiceWorker from './registerServiceWorker';
 
 ReactDOM.render(
   <App />,
-  document.getElementById('root')
+  document.getElementById('root')  
 );
+registerServiceWorker();
 
 $(document).ready(function(){
 	// Show hidden div on scroll

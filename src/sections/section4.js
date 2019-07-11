@@ -169,13 +169,13 @@ class Section4 extends Component {
             <button className={color[data.id - 1]+" tablinks ph3 tc"} onClick={(e) => this.handleClick(e, "content3")}>{data.section[2]}</button>
           </div>
           <div className="hide relative w-100 ph4 center">
-            <div id="content1" className="tabcontent active cf mt4-ns mt3">
+            <div id="content1line" className="tabcontent active cf mt4-ns mt3">
               {contentList.slice(0,5)}
             </div>
-            <div id="content2" className="tabcontent cf mt4-ns mt3">
+            <div id="content2line" className="tabcontent cf mt4-ns mt3">
               {contentList.slice(5,10)}
             </div>
-            <div id="content3" className="tabcontent cf mt4-ns mt3">
+            <div id="content3line" className="tabcontent cf mt4-ns mt3">
               {contentList.slice(10,15)}
             </div>
             <div id="yellow-line1" style={line1} className="db-l dn"></div>
