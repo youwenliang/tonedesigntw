@@ -13,6 +13,7 @@ import Clients from './sections/clients.js';
 import Works from './sections/works.js';
 import Contact from './sections/contact.js';
 import Faq from './sections/faq.js';
+import loadingIcon from './images/loading.gif';
 
 import data from './data/data.js';
 import $ from 'jquery';
@@ -48,10 +49,13 @@ class App extends Component {
     if($(window).width() <= 959) $t.setState({mobile:true});
     else $t.setState({mobile:false});
   }
+  var loadingStyle = {
+    backgroundImage: "url("+loadingIcon+")"
+  }
   render() {
     return (
       <div className="App">
-        <div id="loading" className="flex items-center justify-center"></div>
+        <div id="loading" className="flex items-center justify-center" style={loadingStyle}></div>
         <Nav/>
         <Scroll/>
         <Cover data={this.state.data}/>

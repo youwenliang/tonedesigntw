@@ -45,11 +45,12 @@ class Clients extends Component {
   		background: "#ffffff"
   	}
   	var logoURL = [logo1, logo2, logo3, logo4, logo5, logo6, logo7, logo8, logo9, logo10, logo11, logo12];
+    var logoName = ["國泰世華銀行","國泰金控","國泰人壽","Eatgether","g0v","泛科學","我們的島","pfizer","開放文化基金會","Acer","skymizer","臺北市立動物園"];
   	var logoList = [];
   	for(var i = 0; i < logoURL.length; i++){
   		logoList.push(
   			<div className="fl w-50 w-third-m w-25-l ph0 tc o-80" key={i}>
-  				<img src={logoURL[i]} height={this.state.mobile? 40 : 65} alt={logoURL[i].split('=')[1]}/>
+  				<img src={logoURL[i]} height={this.state.mobile? 40 : 65} alt={logoName[i]}/>
   			</div>
   		)
   	}
