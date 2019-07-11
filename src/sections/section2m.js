@@ -141,7 +141,7 @@ class Section2m extends Component {
           <div className="answers relative">
             <div className="mw400 center">
               <h2 className="f18 fw4 mt30 lh-medium color-content">{data.content[i]["tagline"]}</h2>
-              <LottieControl data1={animations[data.id-1][i]} open={false} id="animationMobileContent" offset={0}/>
+              <LottieControl data1={animations[data.id-1][i]} open={false} id={"animationMobileContent"+i} offset={0}/>
               <div className="color-content mt30">
                 <h3 className="f5 fw5 mb20 ls-small lh-medium" dangerouslySetInnerHTML={{__html:data.content[i]["title"]}}></h3>
                 <p className="f5 fw3 lh-medium mt0 mb30">{data.content[i]["paragraph"]}</p>
