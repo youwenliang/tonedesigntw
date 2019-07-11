@@ -135,13 +135,13 @@ class Section2m extends Component {
       return (
         <div className={mb50 + " relative"}>
           <button id={"opening"+i} className="hide w-100 opening lh-copy fw4 flex items-center justify-center cp">
-            <img className="mr3" src={toneIcons[i]} width="48" alt="icons"/>
+            <img className="mr3" src={toneIcons[i]} width="48" height="48" alt="icons"/>
             <p className="tl fw5 z10 relative mv0">{data.section[i]}</p>
           </button>
           <div className="answers relative">
             <div className="mw400 center">
               <h2 className="f18 fw4 mt30 lh-medium color-content">{data.content[i]["tagline"]}</h2>
-              <LottieControl data1={animations[data.id-1][i]} open={false} id="animationContentm" offset={0}/>
+              <LottieControl data1={animations[data.id-1][i]} open={false} id="animationMobileContent" offset={0}/>
               <div className="color-content mt30">
                 <h3 className="f5 fw5 mb20 ls-small lh-medium" dangerouslySetInnerHTML={{__html:data.content[i]["title"]}}></h3>
                 <p className="f5 fw3 lh-medium mt0 mb30">{data.content[i]["paragraph"]}</p>
@@ -172,7 +172,7 @@ class Section2m extends Component {
     }
     var mw = $(window).width() >= 480 ? "mw480" : "mw300";
     return (
-      <section id={gData["sections"][2]} style={sectionStyle} className={"relative "+dn}>
+      <section style={sectionStyle} className={"relative "+dn}>
         <div className="content ph4-ns ph2 mw54rem w-100 center z2 relative">
           <Header title={data.sectionTitle} color="#4C5B7F" margin={false}/>
           <p className={"mw480 center tagline hide f4 fw3 color-fade tc mt4-ns mt3 lh-medium ls-medium ph3 ph2-l "+mb} dangerouslySetInnerHTML={{__html:data.tagline}}></p>

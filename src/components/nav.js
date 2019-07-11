@@ -5,6 +5,7 @@ import toneW from '../images/tone-white.svg';
 import close from '../images/close-menu.svg';
 import open from '../images/open-menu.svg';
 import openC from '../images/open-menuC.svg';
+import data from '../data/data.js';
 
 class Nav extends Component {
   constructor(props) {
@@ -112,9 +113,9 @@ class Nav extends Component {
       <img src={this.state.fixed ? openC : open} width="20" className="cp" onClick={this.openPanel.bind(this)} alt="menu"/>
       ) : (
       <ul className="flex flex-row justify-between items-center f18 ls-none fw3">
-        <li><a href="http://works.tonedesign.com.tw/" style={link}>Work</a></li>
+        <li><a href={data["worksURL"]} style={link}>Work</a></li>
         <li><a href="#" style={link}>Blog</a></li>
-        <li className="buttonLink" style={buttonLink}><a href="https://toneproject.typeform.com/to/cLmHNY" target="_blank" style={buttonA}>Contact</a></li>
+        <li className="buttonLink" style={buttonLink}><a href={data["typeformURL"]} target="_blank" rel="noreferrer" style={buttonA}>Contact</a></li>
       </ul>
     )
     var w, ty, tx;
@@ -190,9 +191,9 @@ class Panel extends Component {
           <img src={close} width="20" className="cp" onClick={this.props.closePanel} alt="close"/>
         </div>
         <ul className="flex flex-column tc f18 ls-none fw3 pa0" style={ulink}>
-          <li style={link}><a href="http://works.tonedesign.com.tw/" style={linkA}>Work</a></li>
+          <li style={link}><a href={data["worksURL"]} style={linkA}>Work</a></li>
           <li style={link}><a href="#" style={linkA}>Blog</a></li>
-          <li style={link}><a href="https://toneproject.typeform.com/to/cLmHNY" target="_blank" style={linkA}>Contact</a></li>
+          <li style={link}><a href={data["typeformURL"]} target="_blank" rel="noreferrer" style={linkA}>Contact</a></li>
         </ul>
       </div>
     )

@@ -57,7 +57,7 @@ class Contact extends Component {
       <section id={gData["sections"][7]} className={flex + " relative"} style={sectionStyle}>
       	<div className="hide content ph0 mw8 center tc" style={align}>
       	  <h2 className={"white ls2 lh-copy fw4 ph2 mv0 tshadow nowrap "+mb}>"若您有相關設計需求，歡迎聯繫我們！"</h2>
-      	  <Button content={"聯繫 TONE"} shadow={true} scale={1} center={true} link={"https://toneproject.typeform.com/to/cLmHNY"} blank={true}/>
+      	  <Button content={"聯繫 TONE"} shadow={true} scale={1} center={true} link={gData["typeformURL"]} blank={true}/>
       	</div>
       </section>
     );

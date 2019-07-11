@@ -1,5 +1,7 @@
 var data = {
 	"sections": ["首頁", "section-1", "設計流程", "section-3", "第四區塊", "clients", "作品集", "聯絡我們", "常見問題"],
+	"typeformURL":"https://toneproject.typeform.com/to/cLmHNY",
+	"worksURL":"http://works.tonedesign.com.tw/",
 	"topic1": {
 		// Cover
 		"首頁": {

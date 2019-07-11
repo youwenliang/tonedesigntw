@@ -70,7 +70,7 @@ class Works extends Component {
       <section id={gData["sections"][6]} style={sectionStyle}>
         <div className="content ph4-ns ph2 mw9 center tc">
           <div className="flex justify-center">
-            <a href="http://works.tonedesign.com.tw/">
+            <a href={gData["worksformURL"]}>
               <div className="hide mb4" style={contentStyle}>
                 <video id="home-video" className="home-video relative" width="100%" muted playsInline preload="auto" autoPlay>
                   <source src={sourceO} type="video/mp4"/>

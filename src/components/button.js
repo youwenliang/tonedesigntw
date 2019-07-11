@@ -55,7 +55,7 @@ class Button extends Component {
     }
     var target = this.props.blank ? "_blank": "";
     return (
-      <a href={this.props.link} target={target}>
+      <a href={this.props.link} target={target} rel="noreferrer">
         <div className={"button tc f4-ns f5 br3 dib pointer fw4 "+center+" "+bshadow} style={buttonStyle}>
           <p className="ma0" style={adjust}>{this.props.content}</p>
         </div>

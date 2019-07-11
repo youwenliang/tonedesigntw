@@ -44,7 +44,7 @@ class Cover extends Component {
         $('.vh-100').css('height', 100 * vh+'px');
         $('.min-vh-100').css('min-height', 100 * vh+'px');
       }
-      $('#animationWaves').next().css({'height':'100vh'})
+      // $('#animationWaves').next().css({'height':'100vh'})
     });
   }
   componentWillUnmount(){
@@ -65,7 +65,7 @@ class Cover extends Component {
   	}
     var shadowStyle = {
       position: "relative",
-      top: $(window).width() < 959 ? "-30px" : "-50px",
+      top: this.state.mobile ? "-30px" : "-50px",
       marginBottom: $(window).width() < 959 ? "-30px" : "-50px",
       zIndex: 1,
       maxWidth: $(window).width() < 480 ? "240px" : "535px"
@@ -78,7 +78,8 @@ class Cover extends Component {
       left: 0,
       right: 0,
       margin: "auto",
-      color: "#adbbcc",
+      color: "#757575",
+      opacity: ".5"
     }
     var img = {
       maxWidth: this.state.mobile ? "420px" : "500px",
@@ -161,7 +162,7 @@ class Cover extends Component {
         <div className="fl w-100 w-50-l tc mt0">
           <h1 style={adh1} className={"color-blue f25rem fw5 ls-medium nowrap mt0 "+mbh1} dangerouslySetInnerHTML={{__html:data.title}}></h1>
           <p style={adp} className={"w-100 lh-medium ls-medium f4-ns f18 color-blue mw400 center fw4 "+mbp} dangerouslySetInnerHTML={{__html:data.content}}></p>
-          <Button content={data.button} shadow={true} link={"https://toneproject.typeform.com/to/cLmHNY"} blank={true}/>
+          <Button content={data.button} shadow={true} link={gData["typeformURL"]} blank={true}/>
         </div>
       </div>
     ) : (
@@ -169,7 +170,7 @@ class Cover extends Component {
         <div className="fl w-100 w-40-l tl-l tc mt0 mw6-l mw9 mb5">
           <h1 className="white f25rem tshadow1 mb30 fw5 ls-medium nowrap" dangerouslySetInnerHTML={{__html:data.title}}></h1>
           <p className="w-100 lh-medium ls-medium f4 white mb70 mt4 mw400 fw4 tshadow2" dangerouslySetInnerHTML={{__html:data.content}}></p>
-          <Button content={data.button} shadow={true} link={"https://toneproject.typeform.com/to/cLmHNY"} blank={true}/>
+          <Button content={data.button} shadow={true} link={gData["typeformURL"]} blank={true}/>
         </div>
         <div className="fl w-100 w-60-l tr relative" style={imgS}>
           <LottieControl data1={animationDataCover} open={false} id="animationCover" offset={0} render={true}/>
