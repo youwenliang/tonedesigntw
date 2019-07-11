@@ -45,7 +45,7 @@ class Nav extends Component {
   }
   checkMobile() {
     var $t = this;
-    if($(window).width() <= 479) $t.setState({mobile:true});
+    if($(window).width() <= 768) $t.setState({mobile:true});
     else $t.setState({mobile:false});
   }
 
@@ -112,9 +112,9 @@ class Nav extends Component {
       <img src={this.state.fixed ? openC : open} width="20" className="cp" onClick={this.openPanel.bind(this)} alt="menu"/>
       ) : (
       <ul className="flex flex-row justify-between items-center f18 ls-none fw3">
-        <li><a href="#" style={link}>Work</a></li>
+        <li><a href="http://works.tonedesign.com.tw/" style={link}>Work</a></li>
         <li><a href="#" style={link}>Blog</a></li>
-        <li className="buttonLink" style={buttonLink}><a href="#" style={buttonA}>Contact</a></li>
+        <li className="buttonLink" style={buttonLink}><a href="https://toneproject.typeform.com/to/cLmHNY" target="_blank" style={buttonA}>Contact</a></li>
       </ul>
     )
     var w, ty, tx;
@@ -190,9 +190,9 @@ class Panel extends Component {
           <img src={close} width="20" className="cp" onClick={this.props.closePanel} alt="close"/>
         </div>
         <ul className="flex flex-column tc f18 ls-none fw3 pa0" style={ulink}>
-          <li style={link}><a href="#" style={linkA}>Work</a></li>
+          <li style={link}><a href="http://works.tonedesign.com.tw/" style={linkA}>Work</a></li>
           <li style={link}><a href="#" style={linkA}>Blog</a></li>
-          <li style={link}><a href="#" style={linkA}>Contact</a></li>
+          <li style={link}><a href="https://toneproject.typeform.com/to/cLmHNY" target="_blank" style={linkA}>Contact</a></li>
         </ul>
       </div>
     )

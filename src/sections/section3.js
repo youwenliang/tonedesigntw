@@ -69,7 +69,7 @@ class Section3 extends Component {
               <h3 className="f25 lh-medium color-content fw4 mv0 mb25">{data.smalltitle}</h3>
               <p className="lh-medium f5 fw3 color-content2 mb25 tl mw400">{data.content}</p>
               <a href="#" className="more"><p className="fw4 mv0">
-                Learn more <span className="fw7 f125" style={moreArrow}>></span>
+                了解更多 <span className="fw7 f125" style={moreArrow}>></span>
               </p></a>
             </div>
           </div>

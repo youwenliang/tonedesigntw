@@ -65,7 +65,7 @@ class Clients extends Component {
     var content = (
         <div className="content ph4-ns ph2 mw54rem w-100 center z2 relative">
           <Header title={"合作客戶"} color="#fff" margin={false}/>
-          <p className={"tagline hide f4 fw3 color-red tc mt4-ns mt3 lh-medium ls-medium ph2 "+mb}>運用消費者Persona，<br className="dn-ns db"/>說出痛點引起共鳴</p>
+          <p className={"tagline hide f4 fw3 color-red tc mt4-ns mt3 lh-medium ls-medium ph2 "+mb}>眾多知名客戶選擇，值得業界信賴。</p>
           <div className="hide cf ph2-ns" style={mt}>
             {logoList}
           </div>

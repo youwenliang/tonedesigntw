@@ -70,7 +70,7 @@ class Works extends Component {
       <section id={gData["sections"][6]} style={sectionStyle}>
         <div className="content ph4-ns ph2 mw9 center tc">
           <div className="flex justify-center">
-            <a href="#">
+            <a href="http://works.tonedesign.com.tw/">
               <div className="hide mb4" style={contentStyle}>
                 <video id="home-video" className="home-video relative" width="100%" muted playsInline preload="auto" autoPlay>
                   <source src={sourceO} type="video/mp4"/>
@@ -82,8 +82,9 @@ class Works extends Component {
             </a>
           </div>
           <div className="hide z2 relative mb60 tc">
-            <h2 className={"color-content f25 ls2 lh-copy fw4 ph2 "+mb}>看看我們的完整作品吧！</h2>
-            <Button content={"看完整案例！"} scale={1} ghost={true} center={true}/>
+            <p className="color-fade f18 ls2 lh-copy fw4 ph2 mb3">想了解 TONE 更多嗎？</p>
+            <h2 className={"color-content f25 ls2 lh-copy fw4 ph2 "+mb}>看看 TONE design 的精彩作品吧！</h2>
+            <Button content={"TONE 作品集"} scale={1} ghost={true} center={true} link={"http://works.tonedesign.com.tw/"}/>
           </div>
         </div>
       </section>

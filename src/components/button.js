@@ -51,10 +51,11 @@ class Button extends Component {
     var adjust = {
       position: "relative",
       lineHeight: this.state.mobile ? "49px":"63px",
-      transform: "translateX(6px)"
+      transform: "translateX(0px)"
     }
+    var target = this.props.blank ? "_blank": "";
     return (
-      <a href={this.props.link}>
+      <a href={this.props.link} target={target}>
         <div className={"button tc f4-ns f5 br3 dib pointer fw4 "+center+" "+bshadow} style={buttonStyle}>
           <p className="ma0" style={adjust}>{this.props.content}</p>
         </div>

@@ -143,7 +143,7 @@ class Section2m extends Component {
               <h2 className="f18 fw4 mt30 lh-medium color-content">{data.content[i]["tagline"]}</h2>
               <LottieControl data1={animations[data.id-1][i]} open={false} id="animationContentm" offset={0}/>
               <div className="color-content mt30">
-                <h3 className="f5 fw5 mb20">{data.content[i]["title"]}</h3>
+                <h3 className="f5 fw5 mb20 ls-small lh-medium" dangerouslySetInnerHTML={{__html:data.content[i]["title"]}}></h3>
                 <p className="f5 fw3 lh-medium mt0 mb30">{data.content[i]["paragraph"]}</p>
               </div>
               <p className="f12 color-fade fw3 mt4 mb3">{data.content[i]["smalltitle"][1]}</p>

@@ -125,7 +125,7 @@ class Section2 extends Component {
             <LottieControl data1={animations[data.id-1][i]} open={false} id="animationContent" offset={0}/>
             <h2 className="f25 fw4 mt4 lh-medium">{data.content[i]["tagline"]}</h2>
             <a href="#" className="more"><p className="fw4 mv0">
-              Learn more <span className="fw7 f125" style={moreArrow}>></span>
+              了解更多 <span className="fw7 f125" style={moreArrow}>></span>
             </p></a>
           </div>
           <div className="fl w-100 w-50-l relative pl4">
@@ -145,7 +145,7 @@ class Section2 extends Component {
               </li>
             </ul>*/}
             <div className="color-content">
-              <h3 className="f4 fw5 mb25">{data.content[i]["title"]}</h3>
+              <h3 className="f4 fw5 mb25 ls-small lh-medium" dangerouslySetInnerHTML={{__html:data.content[i]["title"]}}></h3>
               <p className="f5 fw3 lh-medium mv0">{data.content[i]["paragraph"]}</p>
             </div>
             <p className="f15 color-fade fw3 mt4 mb3">{data.content[i]["smalltitle"][1]}</p>

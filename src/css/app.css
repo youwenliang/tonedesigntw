@@ -54,6 +54,7 @@ p {
     bottom: -3px;
     left: 0px;
     border-radius: 1.5px;
+    box-shadow: 0 0 5px rgba(122, 72, 0, .2);
 }
 
 @media screen and (max-width: 959px) {
@@ -87,6 +88,10 @@ section.sectionS.start {
 
 .ls-none {
     letter-spacing: 0px !important;
+}
+
+.ls-small {
+	letter-spacing: 1px !important;
 }
 
 .ls-medium {
@@ -168,7 +173,6 @@ nav li a {
     width: 100%;
     height: 100vh;
     background-color: #fff;
-    background-image: url(/images/loading.gif);
     background-repeat: no-repeat;
     background-size: 200px;
     background-position: center center;

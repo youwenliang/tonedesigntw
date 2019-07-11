@@ -127,11 +127,8 @@ class Section1 extends Component {
           <div className={mb1 + " center hide"} style={animation}>
             <LottieControl data1={animationWaves} open={false} id="animationWaving" offset={0}/>
           </div>
-          <Header title={"用內容，強化你的品牌"} color="#4C5B7F" margin={false}/>
-          <p className={"center ph3 ph2-l center hide f125 fw3 color-content tc mt4-ns mt3 lh-large ls-medium "+mb}>
-            Tone Design 運用資訊設計、視覺設計，結合 User Experience 設計，<br className="db-l dn"/>
-            為不同階段的消費者旅程，設計出打動人心的內容，
-          </p>
+          <Header title={data.sectionTitle} color="#4C5B7F" margin={false}/>
+          <p className={"center ph3 ph2-l center hide f125 fw3 color-content tc mt4-ns mt3 lh-large ls-medium "+mb} dangerouslySetInnerHTML={{__html:data.tagline}}></p>
           <div className="cf ph2-ns">
             {contents}
           </div>

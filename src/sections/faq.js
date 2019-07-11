@@ -89,18 +89,18 @@ class Faq extends Component {
             <p style={number}>{i+1}</p>
           </div>
 	  	    <button className="collapsible f18 lh-copy fw4 color-content o-80">{qContent[i][0]}</button>
-			<div className="answers">
-			  <p className="lh-copy f5 fw3 color-content2">{qContent[i][1]}</p>
-			</div>
-		  </div>
+    			<div className="answers">
+    			  <p className="lh-copy f5 fw3 color-content2">{qContent[i][1]}</p>
+    			</div>
+		    </div>
   		)
   	}
     var mb = this.state.mobile ? "mb60" : "mb80"
     return (
       <section id={gData["sections"][8]} style={sectionStyle}>
       	<div className="content ph4-ns ph2 mw54rem center">
-      	  <Header title={"想知道什麼？"} color="#4C5B7F" margin={false}/>
-          <p className={"tagline hide f4 fw3 color-fade tc mt4-ns mt3 lh-medium ls-medium ph2 "+mb}>運用消費者Persona，說出痛點引起共鳴</p>
+      	  <Header title={"合作 Q & A"} color="#4C5B7F" margin={false}/>
+          <p className={"tagline hide f4 fw3 color-fade tc mt4-ns mt3 lh-medium ls-medium ph2 "+mb}>影片製作預算多少？合作時程怎麼抓？這裡一次告訴你！</p>
       	  <div className="hide">
       	  	{qList}
       	  </div>
