@@ -32,7 +32,8 @@ class Button extends Component {
       transformOrigin: "center top",
       textShadow: "0 0 5px rgba(122,72,0,.2)",
       border: "#ffdf00 3px solid",
-      color: "white"
+      color: "white",
+      transition: "all .3s ease-in-out"
     } : {
       width: this.state.mobile ? "160px":"200px",
       height: this.state.mobile ? "56px":"70px",
@@ -43,7 +44,8 @@ class Button extends Component {
       color: "#6e849b",
       backgroundImage: "linear-gradient(white, white), linear-gradient(to right, rgba(253,221,1,1) 0%,rgba(253,187,5,1) 100%)",
       backgroundOrigin: "border-box",
-      backgroundClip: "content-box, border-box"
+      backgroundClip: "content-box, border-box",
+      transition: "all .3s ease-in-out"
     }
     var bshadow = this.props.shadow ? "bshadow" : "";
     bshadow = this.props.ghost ? "bshadow2" : "bshadow";

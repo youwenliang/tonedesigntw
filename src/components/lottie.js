@@ -10,7 +10,7 @@ class LottieControl extends React.Component {
       isStopped: false, 
       isPaused: false,
       options: {
-        loop: this.props.open ? false : true,
+        loop: this.props.open ? false : (this.props.noloop ? false : true),
         autoplay: this.props.open ? false : true,
         animationData: this.props.data1,
         rendererSettings: this.props.render ? {preserveAspectRatio: 'none'} : {preserveAspectRatio: 'xMidYMid slice'}
@@ -38,7 +38,7 @@ class LottieControl extends React.Component {
                     {
                       eventName: 'complete',
                       callback: () => {
-                        console.log($t.props.id+"---end")
+                        //console.log($t.props.id+"---end")
                         $t.setState({
                           options: {
                             loop: true,

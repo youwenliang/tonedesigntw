@@ -2,6 +2,7 @@ var data = {
 	"sections": ["首頁", "section-1", "設計流程", "section-3", "第四區塊", "clients", "作品集", "聯絡我們", "常見問題"],
 	"typeformURL":"https://toneproject.typeform.com/to/cLmHNY",
 	"worksURL":"http://works.tonedesign.com.tw/",
+	"blogURL":"https://medium.com/tone-design",
 	"topic1": {
 		// Cover
 		"首頁": {
@@ -14,7 +15,7 @@ var data = {
 		"section-1": {
 			"id": 1,
 			"sectionTitle": "用內容，強化你的品牌",
-			"tagline": "TONE design 結合資訊設計、視覺設計與 User Experience，<br className='db-l dn'/>搭配媒體推廣策略，<span class='fw6'>設計內容涵蓋影片、網站與資訊圖表</span>。",
+			"tagline": "TONE design 結合資訊設計、視覺設計與 User Experience，<br className='db-l dn'/>搭配媒體推廣策略，<span class='fw4'>設計內容涵蓋影片、網站與資訊圖表</span>。",
 			"title": [
 				"UX 設計",
 				"資訊設計",
@@ -29,13 +30,13 @@ var data = {
 		// Section 2
 		"設計流程": {
 			"id": 1,
-			"sectionTitle": "TONE 怎麼做設計？",
+			"sectionTitle": "我們怎麼做影片設計？",
 			"tagline": "以影片為例，面對不同的行銷需求，有哪些設計重點？",
 			"section": ["Awareness", "Decision", "Loyalty"],
 			"content": [
 				{
 					"tagline": "情境一：建立知名度\n讓更多人看到產品或服務",
-					"title": "影片重點：<br class='db dn-ns'/>吸引眼球，把路人變訪客！",
+					"title": "吸引眼球，把路人變訪客！",
 					"paragraph": "說出消費者的需求痛點，吸引目光並引起共鳴，再適時提供可行的解決方向，讓消費者與你的品牌產生連結，並留下良好的第一印象！",
 					"smalltitle": ["設計重點","建議的影片類型"],
 					"smalllist": ["運用消費者Persona，說出痛點引起共鳴。","幫助消費者釐清問題，找到對的解決方向。","可稍微帶到自己的品牌，建立印象與連結。"],
@@ -43,7 +44,7 @@ var data = {
 				},
 				{
 					"tagline": "情境二：提高轉換率\n讓產品成為更多人的選擇",
-					"title": "影片重點：<br class='db dn-ns'/>強化說服，把訪客變顧客！",
+					"title": "強化說服，把訪客變顧客！",
 					"paragraph": "在消費者尋找適合產品的決策過程中，影片能給予更詳細的產品資訊，幫助讓他們深入了解並產生更多信任，進而決定購買或使用！",
 					"smalltitle": ["設計重點","建議的影片類型"],
 					"smalllist": ["運用消費者Persona，說出痛點引起共鳴。","幫助消費者釐清問題，找到對的解決方向。","可稍微帶到自己的品牌，建立印象與連結。"],
@@ -51,7 +52,7 @@ var data = {
 				},
 				{
 					"tagline": "情境三：增加忠誠度\n成為顧客心中的第一順位",
-					"title": "影片重點：<br class='db dn-ns'/>適時互動，把顧客變粉絲！",
+					"title": "適時互動，把顧客變粉絲！",
 					"paragraph": "消費者初次接觸產品前後，若提供持續的教學或感謝訊息，能建立良好關係。讓消費者有好的體驗，他們會很願意把你推薦給更多人！",
 					"smalltitle": ["設計重點","建議的影片類型"],
 					"smalllist": ["運用消費者Persona，說出痛點引起共鳴。","幫助消費者釐清問題，找到對的解決方向。","可稍微帶到自己的品牌，建立印象與連結。"],

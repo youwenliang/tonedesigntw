@@ -91,7 +91,8 @@ class Section1 extends Component {
     }
     var tagContent = {
       position: "relative",
-      lineHeight: "29px",
+      height: "20px",
+      top: ".5px",
       left: "1px"
     }
     var off = -1*($(window).height()/2 - 140);
@@ -100,7 +101,7 @@ class Section1 extends Component {
     for(var i = 0; i < 3; i++) {
       var temp = (
         <div className="fl w-100 w-third-l ph3 tc" key={i}>
-          <h2 className={colors[data.id - 1]+" hide tag fw4 mt0 mb30 tc center ls-medium"} style={tag}><span style={tagContent}>{data.title[i]}</span></h2>
+          <h2 className={colors[data.id - 1]+" hide tag fw4 mt0 mb30 tc center ls-medium flex justify-center items-center"} style={tag}><span style={tagContent}>{data.title[i]}</span></h2>
           <div className="mw240 center w-70">
             <LottieControl data1={animations[i][data.id - 1][0]} data2={animations[i][data.id - 1][1]} open={true} offset={off} id={"animation"+i}/>
             <img className="ma0 hide mb2 dn db-ns" src={shadow} alt="shadow" style={shadowStyle}/>
@@ -125,7 +126,7 @@ class Section1 extends Component {
           <p className={"tagline hide f4 fw3 color-fade tc mt4-ns mt3 lh-medium ls-medium ph2 "+mb2}>{data.tagline}</p>
           */}
           <div className={mb1 + " center hide"} style={animation}>
-            <LottieControl data1={animationWaves} open={false} id="animationWaving" offset={0}/>
+            <LottieControl data1={animationWaves} open={false} noloop={true} id="animationWaving" offset={0}/>
           </div>
           <Header title={data.sectionTitle} color="#4C5B7F" margin={false}/>
           <p className={"center ph3 ph2-l center hide f125 fw3 color-content tc mt4-ns mt3 lh-large ls-medium "+mb} dangerouslySetInnerHTML={{__html:data.tagline}}></p>

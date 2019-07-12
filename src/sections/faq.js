@@ -70,8 +70,8 @@ class Faq extends Component {
   	var qList = [];
     var number = {
       position: "relative",
-      top: "-1.3px",
-      left: "1px"
+      top: "1.6px",
+      left: "1.2px"
     };
     var bgColor = [
       "linear-gradient(to right, rgba(255,151,142,1) 0%,rgba(255,91,130,1) 100%)",
@@ -99,7 +99,7 @@ class Faq extends Component {
     return (
       <section id={gData["sections"][8]} style={sectionStyle}>
       	<div className="content ph4-ns ph2 mw54rem center">
-      	  <Header title={"合作 Q & A"} color="#4C5B7F" margin={false}/>
+      	  <Header title={"合作 Q&A"} color="#4C5B7F" margin={false}/>
           <p className={"tagline hide f4 fw3 color-fade tc mt4-ns mt3 lh-medium ls-medium ph2 "+mb}>影片製作預算多少？合作時程怎麼抓？這裡一次告訴你！</p>
       	  <div className="hide">
       	  	{qList}

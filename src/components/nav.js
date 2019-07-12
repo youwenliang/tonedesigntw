@@ -114,7 +114,7 @@ class Nav extends Component {
       ) : (
       <ul className="flex flex-row justify-between items-center f18 ls-none fw3">
         <li><a href={data["worksURL"]} style={link}>Work</a></li>
-        <li><a href="#" style={link}>Blog</a></li>
+        <li><a href={data["blogURL"]} target="_blank" rel="noreferrer" style={link}>Blog</a></li>
         <li className="buttonLink" style={buttonLink}><a href={data["typeformURL"]} target="_blank" rel="noreferrer" style={buttonA}>Contact</a></li>
       </ul>
     )
@@ -192,7 +192,7 @@ class Panel extends Component {
         </div>
         <ul className="flex flex-column tc f18 ls-none fw3 pa0" style={ulink}>
           <li style={link}><a href={data["worksURL"]} style={linkA}>Work</a></li>
-          <li style={link}><a href="#" style={linkA}>Blog</a></li>
+          <li style={link}><a href={data["blogURL"]} target="_blank" rel="noreferrer" style={linkA}>Blog</a></li>
           <li style={link}><a href={data["typeformURL"]} target="_blank" rel="noreferrer" style={linkA}>Contact</a></li>
         </ul>
       </div>

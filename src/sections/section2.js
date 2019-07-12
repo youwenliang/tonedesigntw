@@ -145,7 +145,7 @@ class Section2 extends Component {
               </li>
             </ul>*/}
             <div className="color-content">
-              <h3 className="f4 fw5 mb25 ls-small lh-medium" dangerouslySetInnerHTML={{__html:data.content[i]["title"]}}></h3>
+              <h3 className="f4 fw4 mb25 ls-small lh-medium" dangerouslySetInnerHTML={{__html:data.content[i]["title"]}}></h3>
               <p className="f5 fw3 lh-medium mv0">{data.content[i]["paragraph"]}</p>
             </div>
             <p className="f15 color-fade fw3 mt4 mb3">{data.content[i]["smalltitle"][1]}</p>
