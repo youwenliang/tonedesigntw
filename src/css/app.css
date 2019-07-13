@@ -246,7 +246,7 @@ nav li a {
 }
 
 .answers {
-    padding: 0 18px;
+    padding: 0 40px;
     background-color: white;
     max-height: 0;
     overflow: hidden;
@@ -629,6 +629,12 @@ nav li a {
     color: #ff978e;
     letter-spacing: 0px;
     text-decoration: none;
+}
+
+.moreArrow {
+	position: relative;
+    top: 3px;
+    margin-left: 3px;
 }
 
 .more:hover {

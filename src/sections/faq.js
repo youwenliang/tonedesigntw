@@ -47,30 +47,26 @@ class Faq extends Component {
 
   	var qContent = [
   		[
-  		 "這是一段問題的敘述，這是一段問題的敘述這是一段問題的敘述",
-  		 "可女點發！外的食是了了狀片後過的下件得。對傳今媽謝一……條舞是智麼止不，一體輕消年後風或人了化講新史容道賽：起體比這顯間產？實是嗎基招他即明房日獎經的營我人立，縣向失年自叫年拉界得黨紀？當與中組術，大親計根；對像持利料造一的得人自興。是玩他必，高三易？"
+  		 "諮詢合作專案前，需要提供哪些初步資料？",
+  		 "開始合作前，建議您先以簡單文字描述這次專案的目的、希望解決的問題、主要目標對象、製作預算規模，並填寫下方的連結表單，讓我們能快速了解重點需求，加快處理速度喔！<a href='https://toneproject.typeform.com/to/cLmHNY' target='_blank' rel='noreferrer' class='more'><p class='fw4 mt2'>點此填寫聯繫表單 <span className='fw7 f125 moreArrow'>»</span></p></a>",
   		],
   		[
-  		 "這是一段問題，這是一段問題的敘述問題的敘述這是一段問題的敘述",
-       "可女點發！外的食是了了狀片後過的下件得。對傳今媽謝一……條舞是智麼止不，一體輕消年後風或人了化講新史容道賽：起體比這顯間產？實是嗎基招他即明房日獎經的營我人立，縣向失年自叫年拉界得黨紀？當與中組術，大親計根；對像持利料造一的得人自興。是玩他必，高三易？"
+  		 "專案的製作時程是多久？",
+       "平均來說，從需求確認到製作完稿，一隻2分鐘的解釋影片，至少需要約六到八週工作時間。一<span class='ls-small'>份 8~10 </span>頁的資訊懶人包，需要四到六週的製作時間。網站則視需求規格而定，但建議至少預留八週以上工作時間。"
   		],
   		[
-       "這是一段問題的敘述，問題的敘述這是一段問題的敘述",
-       "可女點發！外的食是了了狀片後過的下件得。對傳今媽謝一……條舞是智麼止不，一體輕消年後風或人了化講新史容道賽：起體比這顯間產？實是嗎基招他即明房日獎經的營我人立，縣向失年自叫年拉界得黨紀？當與中組術，大親計根；對像持利料造一的得人自興。是玩他必，高三易？"
+       "合作專案的報價如何計算？",
+       "針對專案報價，主要依照以下項目進行評估：<p class='mv2'>1. 資料內容量的多寡。<br/>2. 視覺風格或網站功能複雜程度。<br/>3. 專案需求時程長短。<br/></p>由於每個專案的狀況都不盡相同，若您希望能得知更詳細的報價資訊，建議您直接聯繫我們，以取得更精確的報價內容喔！<a href='https://toneproject.typeform.com/to/cLmHNY' target='_blank' rel='noreferrer' class='more'><p class='fw4 mt2'>點此填寫聯繫表單 <span className='fw7 f125 moreArrow'>»</span></p></a>",
       ],
   		[
-       "這是一段問題一段問題的敘述這的敘述是一段問題的敘述",
-       "可女點發！外的食是了了狀片後過的下件得。對傳今媽謝一……條舞是智麼止不，一體輕消年後風或人了化講新史容道賽：起體比這顯間產？實是嗎基招他即明房日獎經的營我人立，縣向失年自叫年拉界得黨紀？當與中組術，大親計根；對像持利料造一的得人自興。是玩他必，高三易？"
-      ],
-  		[
-       "這是一段問題的敘述，敘述這問題的敘述問題一段問題的敘述",
-       "可女點發！外的食是了了狀片後過的下件得。對傳今媽謝一……條舞是智麼止不，一體輕消年後風或人了化講新史容道賽：起體比這顯間產？實是嗎基招他即明房日獎經的營我人立，縣向失年自叫年拉界得黨紀？當與中組術，大親計根；對像持利料造一的得人自興。是玩他必，高三易？"
-      ],
+       "有沒<span class='ls-small'>有 SalesKit </span>或作品集可以下載或索取？",
+       "有喔！請點擊下方連結索取，我們會以最快的速度寄出！<a href='https://toneproject.typeform.com/to/jXgKRc' target='_blank' rel='noreferrer' class='more'><p class='fw4 mt2'>點此索取作品集 <span className='fw7 f125 moreArrow'>»</span></p></a>"
+      ]
   	]
   	var qList = [];
     var number = {
       position: "relative",
-      top: "1.6px",
+      top: "1.75px",
       left: "1.2px"
     };
     var bgColor = [
@@ -88,9 +84,9 @@ class Faq extends Component {
   		  	<div className="collapsibleCircle absolute z1 white flex justify-center items-center f4 fw6" style={color}>
             <p style={number}>{i+1}</p>
           </div>
-	  	    <button className="collapsible f18 lh-copy fw4 color-content o-80">{qContent[i][0]}</button>
+	  	    <button className="collapsible f18 lh-copy fw4 color-content o-80" dangerouslySetInnerHTML={{__html:qContent[i][0]}}></button>
     			<div className="answers">
-    			  <p className="lh-copy f5 fw3 color-content2">{qContent[i][1]}</p>
+    			  <p className="lh-copy f5 fw3 color-content2" dangerouslySetInnerHTML={{__html:qContent[i][1]}}></p>
     			</div>
 		    </div>
   		)
