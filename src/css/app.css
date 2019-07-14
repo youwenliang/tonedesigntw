@@ -211,12 +211,30 @@ nav li a {
 }
 
 .collapsibleCircle {
-    top: 16.5px;
-    margin: auto;
-    left: 16px;
-    width: 30px;
-    height: 30px;
-    border-radius: 100%;
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  text-align: center;
+  top: 16.5px;
+  margin: auto;
+  left: 16px;
+}
+
+.collapsibleCircle span {
+  display: inline-block;
+  color: white;
+  padding-top: 50%;
+  line-height: 1em;
+  margin-top: calc(-.5em + 1px);
+  font-size: 20px;
+  letter-spacing: 0 !important;
+}
+
+@-moz-document url-prefix() {
+  .collapsibleCircle span {
+    margin-top: calc(-.5em + 2px) !important;
+  }
 }
 
 .collapsible:after {
