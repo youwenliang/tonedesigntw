@@ -68,7 +68,7 @@ class Section3 extends Component {
               <h1 className={"f35 color-content fw4 mv0 "+mb}>{data.title}</h1>
               <h3 className="f25 lh-medium color-content fw4 mv0 mb25">{data.smalltitle}</h3>
               <p className="lh-medium f5 fw3 color-content2 mb25 tl mw400">{data.content}</p>
-              <a href="https://medium.com/tone-design/one-more-thing-b29b60932440" target="_blank" rel="noreferrer" className="more"><p className="fw4 mv0">
+              <a href="https://medium.com/tone-design/one-more-thing-b29b60932440" target="_blank" rel="noopener noreferrer" className="more"><p className="fw4 mv0">
                 了解更多 <span className="fw7 f125" style={moreArrow}>></span>
               </p></a>
             </div>

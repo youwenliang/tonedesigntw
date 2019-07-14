@@ -61,7 +61,7 @@ class Nav extends Component {
 
   
   render() {
-  	var navStyle = {
+    var navStyle = {
       width: "100%",
       height: this.state.mobile?"55px":"66px",
       maxWidth: "1440px",
@@ -114,8 +114,8 @@ class Nav extends Component {
       ) : (
       <ul className="flex flex-row justify-between items-center f18 ls-none fw3">
         <li><a href={data["worksURL"]} style={link}>Work</a></li>
-        <li><a href={data["blogURL"]} target="_blank" rel="noreferrer" style={link}>Blog</a></li>
-        <li className="buttonLink" style={buttonLink}><a href={data["typeformURL"]} target="_blank" rel="noreferrer" style={buttonA}>Contact</a></li>
+        <li><a href={data["blogURL"]} target="_blank" rel="noopener noreferrer" style={link}>Blog</a></li>
+        <li className="buttonLink" style={buttonLink}><a href={data["typeformURL"]} target="_blank" rel="noopener noreferrer" style={buttonA}>Contact</a></li>
       </ul>
     )
     var w, ty, tx;
@@ -192,8 +192,8 @@ class Panel extends Component {
         </div>
         <ul className="flex flex-column tc f18 ls-none fw3 pa0" style={ulink}>
           <li style={link}><a href={data["worksURL"]} style={linkA}>Work</a></li>
-          <li style={link}><a href={data["blogURL"]} target="_blank" rel="noreferrer" style={linkA}>Blog</a></li>
-          <li style={link}><a href={data["typeformURL"]} target="_blank" rel="noreferrer" style={linkA}>Contact</a></li>
+          <li style={link}><a href={data["blogURL"]} target="_blank" rel="noopener noreferrer" style={linkA}>Blog</a></li>
+          <li style={link}><a href={data["typeformURL"]} target="_blank" rel="noopener noreferrer" style={linkA}>Contact</a></li>
         </ul>
       </div>
     )
