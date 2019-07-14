@@ -66,8 +66,8 @@ class Faq extends Component {
   	var qList = [];
     var number = {
       position: "relative",
-      top: "1.75px",
-      left: "1.2px"
+      lineHeight: "31.5px",
+      left: "1px"
     };
     var bgColor = [
       "linear-gradient(to right, rgba(255,151,142,1) 0%,rgba(255,91,130,1) 100%)",
@@ -81,12 +81,12 @@ class Faq extends Component {
   	for(var i = 0; i < qContent.length; i++){
   		qList.push(
   		  <div className="relative" key={i}>
-  		  	<div className="collapsibleCircle absolute z1 white flex justify-center items-center f4 fw6" style={color}>
-            <p style={number}>{i+1}</p>
+  		  	<div className="collapsibleCircle absolute z1 white tc f4 fw6" style={color}>
+            <p className="ma0" style={number}>{i+1}</p>
           </div>
 	  	    <button className="collapsible f18 lh-copy fw4 color-content o-80" dangerouslySetInnerHTML={{__html:qContent[i][0]}}></button>
     			<div className="answers">
-    			  <p className="lh-copy f5 fw3 color-content2" dangerouslySetInnerHTML={{__html:qContent[i][1]}}></p>
+    			  <p className="lh-medium f5 fw3 color-content2" dangerouslySetInnerHTML={{__html:qContent[i][1]}}></p>
     			</div>
 		    </div>
   		)
