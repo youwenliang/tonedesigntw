@@ -6,7 +6,7 @@ class Footer extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      mobile: $(window).width() <= 768 ? true : false
+      mobile: $(window).width() <= 849 ? true : false
     }
     this.checkMobile = this.checkMobile.bind(this);
   }
@@ -20,13 +20,13 @@ class Footer extends Component {
   }
   checkMobile() {
     var $t = this;
-    if($(window).width() <= 768) $t.setState({mobile:true});
+    if($(window).width() <= 849) $t.setState({mobile:true});
     else $t.setState({mobile:false});
   }
   render() {
   	var footerStyle = {
   		width: "100%",
-  		height: this.state.mobile ? "190px":"200px",
+  		height: "200px",
   		background: "#4B5B7F",
       position: "absolute",
       right: 0,
@@ -38,11 +38,12 @@ class Footer extends Component {
       fontSize: this.state.mobile ? "14px" : "18px"
     }
     var column = this.state.mobile ? "tc flex-column justify-center" : "justify-between"
+    var mb = this.state.mobile ? "mb0" : ""
     return (
       <footer className="footer flex items-center" style={footerStyle}>
         <div className={"content ph4 mw1100 center w-100 flex "+column}>
           <img src={logo} width={this.state.mobile ? "160px":"220px"} className={this.state.mobile ? "center" : ""} alt="Tone Design"/>
-          <p className="ls-none fw3" style={footerText}>© 2019 TONE design, all rights reserved.</p>
+          <p className={"ls-none fw3 "+mb} style={footerText}>© 2019 TONE design, all rights reserved.</p>
         </div>
       </footer>
     );

@@ -13,7 +13,7 @@ class Nav extends Component {
     this.state = {
       fixed: false,
       open: false,
-      mobile: $(window).width() <= 768 ? true : false
+      mobile: $(window).width() <= 850 ? true : false
     }
     this.checkMobile = this.checkMobile.bind(this);
   }
@@ -46,17 +46,19 @@ class Nav extends Component {
   }
   checkMobile() {
     var $t = this;
-    if($(window).width() <= 768) $t.setState({mobile:true});
+    if($(window).width() <= 850) $t.setState({mobile:true});
     else $t.setState({mobile:false});
   }
 
   closePanel() {
     this.setState({open: false})
     $('body').removeClass('noscroll');
+    $('.panelU').removeClass('set');
   }
   openPanel() {
     this.setState({open: true})
     $('body').addClass('noscroll');
+    $('.panelU').addClass('set');
   }
 
   
@@ -64,11 +66,11 @@ class Nav extends Component {
     var navStyle = {
       width: "100%",
       height: this.state.mobile?"55px":"66px",
-      maxWidth: "1440px",
+      maxWidth: "1340px",
       left: 0,
       right: 0,
       margin: "auto",
-      fontFamily: "'Montserrat', sans-serif"
+      fontFamily: "Open Sans, sans-serif"
     }
 
     var position = this.state.fixed ? "fixed" : "absolute";
@@ -101,7 +103,7 @@ class Nav extends Component {
     var buttonA = {
       color: this.state.fixed ? "#ffffff" : "rgba(255,255,255,.8)",
       position: "relative",
-      lineHeight: "34px"
+      lineHeight: "35px"
     }
 
     var link = {
@@ -112,7 +114,7 @@ class Nav extends Component {
     var urls = this.state.mobile ? (
       <img src={this.state.fixed ? openC : open} width="20" className="cp" onClick={this.openPanel.bind(this)} alt="menu"/>
       ) : (
-      <ul className="flex flex-row justify-between items-center f18 ls-none fw3">
+      <ul className="flex flex-row justify-between items-center f18 ls-none fw4">
         <li><a href={data["worksURL"]} style={link}>Work</a></li>
         <li><a href={data["blogURL"]} target="_blank" rel="noopener noreferrer" style={link}>Blog</a></li>
         <li className="buttonLink" style={buttonLink}><a href={data["typeformURL"]} target="_blank" rel="noopener noreferrer" style={buttonA}>Contact</a></li>
@@ -172,13 +174,14 @@ class Panel extends Component {
       pointerEvents: this.props.display ? "auto" : "none",
       transition: "opacity .2s cubic-bezier(0.23, 1, 0.32, 1)",
       background: "rgba(255,255,255,.95)",
-      fontFamily: "'Montserrat', sans-serif"
+      fontFamily: "Open Sans, sans-serif",
+      letterSpacing: ".5px"
     }
     var ulink = {
-      marginTop: "115px"
+      marginTop: "116px"
     }
     var link = {
-      marginBottom: "50px"
+      marginBottom: "50px",
     }
     var linkA = {
       color: "#505F81",
@@ -187,10 +190,10 @@ class Panel extends Component {
     return (
       <div className="w-100 vh-100 fixed ph3" style={panelStyle}>
         <div className="flex items-center justify-between" style={{height:"55px"}}>
-          <img src={toneC} width="130" alt="Tone Design"/>
-          <img src={close} width="20" className="cp" onClick={this.props.closePanel} alt="close"/>
+          <img src={toneC} width="130" className="o-0" alt="Tone Design"/>
+          <img src={close} width="20" className="cp close-menu" onClick={this.props.closePanel} alt="close"/>
         </div>
-        <ul className="flex flex-column tc f18 ls-none fw3 pa0" style={ulink}>
+        <ul className="flex flex-column tc f18 fw4 pa0 panelU" style={ulink}>
           <li style={link}><a href={data["worksURL"]} style={linkA}>Work</a></li>
           <li style={link}><a href={data["blogURL"]} target="_blank" rel="noopener noreferrer" style={linkA}>Blog</a></li>
           <li style={link}><a href={data["typeformURL"]} target="_blank" rel="noopener noreferrer" style={linkA}>Contact</a></li>

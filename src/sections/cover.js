@@ -89,7 +89,7 @@ class Cover extends Component {
     }
     var imgS = {
       transformOrigin: "100% 60%",
-      transform: "translate(20px,30px)"
+      transform: "translate(37px,30px)"
     }
     var bg = [bg_mobile1, bg_mobile2, bg_mobile3];
     

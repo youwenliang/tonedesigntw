@@ -31,6 +31,9 @@ body {
     overflow-x: hidden;
     text-align: justify;
     letter-spacing: 2px;
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 body.noscroll {
@@ -195,6 +198,27 @@ nav li a {
     padding: 0 24px;
 }
 
+.panelU li {
+    transform: translateY(-15px);
+    opacity: 0;
+    transition-property: all;
+    transition-duration: .3s;
+}
+.panelU.set li {
+    transform: translateY(0px);
+    opacity: 1;
+}
+
+.panelU li:nth-child(1) {
+    transition-delay: .2s;
+}
+.panelU li:nth-child(2) {
+    transition-delay: .3s;
+}
+.panelU li:nth-child(3) {
+    transition-delay: .4s;
+}
+
 .collapsible {
     background-color: transparent;
     color: #444;
@@ -224,16 +248,18 @@ nav li a {
 .collapsibleCircle span {
   display: inline-block;
   color: white;
-  padding-top: 50%;
-  line-height: 1em;
-  margin-top: calc(-.5em + 1px);
+  line-height: 30px;
+  position: relative;
+  left: .5px;
+  top: -.5px;
   font-size: 20px;
+  font-weight: 500 !important;
   letter-spacing: 0 !important;
 }
 
 @-moz-document url-prefix() {
   .collapsibleCircle span {
-    margin-top: calc(-.5em + 2px) !important;
+    margin: -.5px 0 0 -.5px;
   }
 }
 
@@ -273,6 +299,15 @@ nav li a {
 
 .answers.close {
 	max-height: 0 !important;
+}
+
+.close-menu {
+    opacity: 0.5;
+    transition: all .3s;
+}
+
+.close-menu:hover {
+    opacity: 1;
 }
 
 .opening {
