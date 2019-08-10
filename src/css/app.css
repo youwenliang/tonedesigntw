@@ -972,14 +972,13 @@ nav li a {
 
 .start #section3-content {
     max-height: 480px;
-    transition: all .5s cubic-bezier(0.23, 1, 0.32, 1) .5s;
+    transition: all .5s ease-in-out .5s;
 }
 
 .start .sub-content {
     display: block;
     opacity: 0;
     z-index: -1;
-    transition: all .2s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
 .active1 .sub-content#content1,
@@ -988,8 +987,26 @@ nav li a {
 {
     opacity: 1;
     z-index: 1;
-    transition: all .4s cubic-bezier(0.23, 1, 0.32, 1) .2s;
+    transition: all .4s ease-in-out .2s;
 }
+
+
+.active1 .sub-content#content2,
+.active1 .sub-content#content3,
+.active2 .sub-content#content3,
+{
+    transform: translateX(80px);
+    transition: all .2s ease-in-out;
+}
+
+.active2 .sub-content#content1,
+.active3 .sub-content#content1,
+.active3 .sub-content#content2,
+{
+    transform: translateX(-80px);
+    transition: all .2s ease-in-out;
+}
+
 
 #arrowTrigger {
     margin-bottom: 0px;
