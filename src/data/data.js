@@ -7,7 +7,7 @@ var data = {
 		// Cover
 		"首頁": {
 			"id": 1,
-			"title": "好故事，<span class='titleline relative'>讓品牌更精彩</span>！",
+			"title": "好<span class='titleline relative'>設計</span>，讓品牌更精彩！",
 			"content": "TONE design 專精資訊設計，\n讓你的品牌像故事一樣精彩！",
 			"button": "聯繫 TONE",
 		},
@@ -15,7 +15,7 @@ var data = {
 		"section-1": {
 			"id": 1,
 			"sectionTitle": "用內容，強化你的品牌",
-			"tagline": "TONE design 結合資訊設計、視覺設計與 User Experience，<br className='db-l dn'/>搭配媒體推廣策略，<span class='fw4'>設計內容涵蓋影片、網站與資訊圖表</span>。",
+			"tagline": "TONE design 結合資訊設計、視覺設計與 User Experience，<br className='db-l dn'/>可配合不同媒體露出，設計內容涵蓋<span class='fw4'>影片</span>、<span class='fw4'>網站</span>與<span class='fw4'>資訊懶人包</span>。",
 			"title": [
 				"UX 設計",
 				"資訊設計",

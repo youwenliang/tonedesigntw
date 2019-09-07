@@ -60,7 +60,7 @@ class Faq extends Component {
       ],
   		[
        "有沒<span class='ls-small'>有 SalesKit </span>或作品集可以下載或索取？",
-       "有喔！請點擊下方連結索取，我們會以最快的速度寄出！<a href='https://toneproject.typeform.com/to/jXgKRc' target='_blank' rel='noreferrer' class='more'><p class='fw4 mt2'>點此索取作品集 <span className='fw7 f125 moreArrow'>»</span></p></a>"
+       "有的，歡迎您先到我們的作品集頁面，瀏覽 TONE design 的歷年專案。您也可以點擊下方連結索取 Sales kit，我們會以最快的速度寄出！<a href='https://toneproject.typeform.com/to/jXgKRc' target='_blank' rel='noreferrer' class='more'><p class='fw4 mt2 mb0'>點此瀏覽作品集 <span className='fw7 f125 moreArrow'>»</span></p></a><a href='https://toneproject.typeform.com/to/jXgKRc' target='_blank' rel='noreferrer' class='more'><p class='fw4 mt2'>點此索取 Sales kit <span className='fw7 f125 moreArrow'>»</span></p></a>"
       ]
   	]
   	var qList = [];
