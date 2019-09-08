@@ -42,9 +42,9 @@ import icon3c_2  from '../images/icons/c-2.svg';
 import icon3c_3  from '../images/icons/c-3.svg';
 
 // animation x 3
-import * as animation1a from '../images/animations/dataA.json';
-import * as animation1b from '../images/animations/dataB.json';
-import * as animation1c from '../images/animations/dataC.json';
+import * as animation1a from '../images/animations/data4_loop.json';
+import * as animation1b from '../images/animations/data5_loop.json';
+import * as animation1c from '../images/animations/data6_loop.json';
 import * as animation2a from '../images/animations/dataA.json';
 import * as animation2b from '../images/animations/dataB.json';
 import * as animation2c from '../images/animations/dataC.json';
@@ -52,7 +52,7 @@ import * as animation3a from '../images/animations/dataA.json';
 import * as animation3b from '../images/animations/dataB.json';
 import * as animation3c from '../images/animations/dataC.json';
 
-
+{/*
 var icons = [
   [
     [icon1a_1, icon1a_2, icon1a_3],[icon1b_1, icon1b_2, icon1b_3],[icon1c_1, icon1c_2, icon1c_3]
@@ -64,6 +64,7 @@ var icons = [
     [icon3a_1, icon3a_2, icon3a_3],[icon3b_1, icon3b_2, icon3b_3],[icon3c_1, icon3c_2, icon3c_3]
   ],
 ]
+*/}
 
 var animations = [
   [animation1a, animation1b, animation1c],
@@ -139,13 +140,16 @@ class Section2m extends Component {
             <p className="tl fw5 z10 relative mv0">{data.section[i]}</p>
           </button>
           <div className="answers relative">
-            <div className="mw400 center">
-              <h2 className="f18 fw4 mt30 lh-medium color-content">{data.content[i]["tagline"]}</h2>
-              <LottieControl data1={animations[data.id-1][i]} open={false} id={"animationMobileContent"+i} offset={0}/>
-              <div className="color-content mt30">
-                <h3 className="f5 fw4 mb20 ls-small lh-medium" dangerouslySetInnerHTML={{__html:data.content[i]["title"]}}></h3>
+            <div className="mw400 center tc">
+              <div className="expand-icons pa0 mt3 dib">
+                <LottieControl data1={animations[data.id-1][i]} open={false} id={"animationMobileContent"+i} offset={0}/>
+              </div>
+              <div className="color-content mt3 mb70 tl">
+                {/*<h3 className="f5 fw4 mb20 ls-small lh-medium" dangerouslySetInnerHTML={{__html:data.content[i]["title"]}}></h3>*/}
+                <h2 className="f18 fw4 mt3 lh-medium color-content">{data.content[i]["tagline"]}</h2>
                 <p className="f5 fw3 lh-medium mt0 mb30">{data.content[i]["paragraph"]}</p>
               </div>
+              {/*
               <p className="f12 color-fade fw3 mt4 mb3">{data.content[i]["smalltitle"][1]}</p>
               <div className="cf fw4 f5 tc color-content mt0 mb70">
                 <div className="fl w-third">
@@ -161,6 +165,7 @@ class Section2m extends Component {
                   <p className="f13 mv0">{data.content[i]["smallitem"][2]}</p>
                 </div>
               </div>
+              */}
             </div>
             <div id={"closing"+i} className="ma0 w-100 cp flex items-center justify-center closing" style={upStyle}>
               <img src={arrowup} width={28} alt="arrow"/>

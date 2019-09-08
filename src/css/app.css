@@ -47,6 +47,10 @@ p {
     white-space: pre-wrap;
 }
 
+.expand-icons > div {
+    max-width: 290px;
+}
+
 .titleline:before {
     content: '';
     width: 100%;

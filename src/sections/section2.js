@@ -40,9 +40,9 @@ import icon3c_2  from '../images/icons/c-2.svg';
 import icon3c_3  from '../images/icons/c-3.svg';
 
 // animation x 3
-import * as animation1a from '../images/animations/dataA.json';
-import * as animation1b from '../images/animations/dataB.json';
-import * as animation1c from '../images/animations/dataC.json';
+import * as animation1a from '../images/animations/data4_loop.json';
+import * as animation1b from '../images/animations/data5_loop.json';
+import * as animation1c from '../images/animations/data6_loop.json';
 import * as animation2a from '../images/animations/dataA.json';
 import * as animation2b from '../images/animations/dataB.json';
 import * as animation2c from '../images/animations/dataC.json';
@@ -51,6 +51,7 @@ import * as animation3b from '../images/animations/dataB.json';
 import * as animation3c from '../images/animations/dataC.json';
 
 
+{/*
 var icons = [
   [
     [icon1a_1, icon1a_2, icon1a_3],[icon1b_1, icon1b_2, icon1b_3],[icon1c_1, icon1c_2, icon1c_3]
@@ -62,6 +63,7 @@ var icons = [
     [icon3a_1, icon3a_2, icon3a_3],[icon3b_1, icon3b_2, icon3b_3],[icon3c_1, icon3c_2, icon3c_3]
   ],
 ]
+*/}
 
 var animations = [
   [animation1a, animation1b, animation1c],
@@ -121,12 +123,8 @@ class Section2 extends Component {
     for(var i = 0; i < 3; i++) {
       var temp = (
         <div id={"content"+(i+1)} className="sub-content cf pv5 ph4-ns ph2 mw54rem center" key={i} style={subContent}>
-          <div className="fl w-100 w-50-l relative color-content pr4">
+          <div className="fl w-100 w-50-l relative color-content pr4 expand-icons">
             <LottieControl data1={animations[data.id-1][i]} open={false} id={"animationContent"+i} offset={0}/>
-            <h2 className="f25 fw4 mt4 lh-medium">{data.content[i]["tagline"]}</h2>
-            <a href={data.content[i]["url"]} target="_blank" rel="noopener noreferrer" className="more"><p className="fw4 mv0">
-              了解更多 <span className="fw7 f125" style={moreArrow}>></span>
-            </p></a>
           </div>
           <div className="fl w-100 w-50-l relative pl4">
             {/*<p className="f6 color-fade fw4 mt3 mb4">{data.content[i]["smalltitle"][0]}</p>
@@ -145,9 +143,14 @@ class Section2 extends Component {
               </li>
             </ul>*/}
             <div className="color-content">
-              <h3 className="f4 fw4 mb25 ls-small lh-medium" dangerouslySetInnerHTML={{__html:data.content[i]["title"]}}></h3>
+              {/*<h3 className="f4 fw4 mb25 ls-small lh-medium" dangerouslySetInnerHTML={{__html:data.content[i]["title"]}}></h3>*/}
+              <h2 className="f25 fw4 mt4 lh-medium">{data.content[i]["tagline"]}</h2>
               <p className="f5 fw3 lh-medium mv0">{data.content[i]["paragraph"]}</p>
+              <a href={data.content[i]["url"]} target="_blank" rel="noopener noreferrer" className="more"><p className="fw4 mv3">
+              了解更多 <span className="fw7 f125" style={moreArrow}>></span>
+            </p></a>
             </div>
+            {/*
             <p className="f15 color-fade fw3 mt4 mb3">{data.content[i]["smalltitle"][1]}</p>
             <div className="cf fw4 f5 tc color-content">
               <div className="fl w-third">
@@ -163,6 +166,7 @@ class Section2 extends Component {
                 <p className="f5 mv0">{data.content[i]["smallitem"][2]}</p>
               </div>
             </div>
+            */}
           </div>
         </div>
       );

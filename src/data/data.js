@@ -30,7 +30,7 @@ var data = {
 		// Section 2
 		"設計流程": {
 			"id": 1,
-			"sectionTitle": "我們怎麼做影片設計？",
+			"sectionTitle": "我們怎麼做資訊設計？",
 			"tagline": "以影片為例，面對不同的行銷需求，有哪些設計重點？",
 			"section": ["Awareness", "Decision", "Loyalty"],
 			"content": [
