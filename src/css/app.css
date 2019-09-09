@@ -70,6 +70,31 @@ p {
 	}
 }
 
+.ds .cover-text > *,
+.ds .cover-text > a {
+    opacity: 0;
+    transform: translateX(-100px);
+}
+
+.cover-text > * {
+    opacity: 1;
+    transform: translateX(0);
+    transition-property: all;
+    transition-duration: .8s;
+    transition-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.cover-text > h1 {
+    transition-delay: .4s;
+}
+.cover-text > p {
+    transition-delay: .55s;
+}
+.cover-text > a {
+    transition-delay: .7s;
+}
+
+
 
 section {
     width: 100%;
