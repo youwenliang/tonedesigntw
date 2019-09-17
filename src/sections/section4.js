@@ -99,7 +99,7 @@ class Section4 extends Component {
 
   render() {
   	// import data
-  	var data = this.props.data[gData["sections"][4]];
+  	var data = this.props.data[gData["sections"][5]];
     var sectionStyle = {
       background: "#ffffff",
     }
@@ -158,7 +158,7 @@ class Section4 extends Component {
     ]
     var mb = this.state.mobile ? "mb60" : "mb80"
     return (
-      <section id={gData["sections"][4]} style={sectionStyle} className="dn">
+      <section id={gData["sections"][5]} style={sectionStyle} className="dn">
         <div className="borderline top small"/>
         <div className="content ph4-ns ph2 mw8 center relative">
           <Header title={data.sectionTitle} color="#4C5B7F" margin={false}/>

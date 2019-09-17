@@ -35,7 +35,7 @@ class Works extends Component {
     }, false);
 
     $(window).scroll( function(){
-      if($(window).scrollTop() >= $('#'+gData["sections"][6]).offset().top - $(window).height()*2/3) {
+      if($(window).scrollTop() >= $('#'+gData["sections"][7]).offset().top - $(window).height()*2/3) {
         video.play();
       }
     });
@@ -67,7 +67,7 @@ class Works extends Component {
     var sourceO = this.state.mobile ? portfolioVideoMO : portfolioVideoO;
     var sourceL = this.state.mobile ? portfolioVideoML : portfolioVideoL;
     return (
-      <section id={gData["sections"][6]} style={sectionStyle}>
+      <section id={gData["sections"][7]} style={sectionStyle}>
         <div className="content ph4-ns ph2 mw9 center tc">
           <div className="flex justify-center">
             <a href={gData["worksURL"]}>

@@ -1,5 +1,5 @@
 var data = {
-	"sections": ["首頁", "section-1", "設計流程", "section-3", "第四區塊", "clients", "作品集", "聯絡我們", "常見問題"],
+	"sections": ["首頁", "section-1", "設計流程", "CTA", "section-3", "第四區塊", "clients", "作品集", "聯絡我們", "常見問題"],
 	"typeformURL":"https://toneproject.typeform.com/to/cLmHNY",
 	"worksURL":"http://works.tonedesign.com.tw/",
 	"blogURL":"https://medium.com/tone-design",
@@ -62,6 +62,9 @@ var data = {
 					"url": "https://medium.com/tone-design/loyalty-8a396a744cbf"
 				},
 			]
+		},
+		"CTA": {
+
 		},
 		// Section 3
 		"section-3": {
@@ -142,6 +145,9 @@ var data = {
 			"sectionTitle": "這是各區塊中等標題",
 			"tagline": "這是一段會消失的副標題，不確定會有多少字大概兩行．",
 			"section": ["區塊一", "區塊二", "區塊三"]
+		},
+		"CTA": {
+
 		},
 		// Section 3
 		"section-3": {

@@ -43,7 +43,7 @@ class Faq extends Component {
   		background: "#f7f8fa"
   	}
 
-    var data = this.props.data[gData["sections"][8]];
+    var data = this.props.data[gData["sections"][9]];
 
   	var qContent = [
   		[
@@ -88,7 +88,7 @@ class Faq extends Component {
   	}
     var mb = this.state.mobile ? "mb60" : "mb80"
     return (
-      <section id={gData["sections"][8]} style={sectionStyle}>
+      <section id={gData["sections"][9]} style={sectionStyle}>
       	<div className="content ph4-ns ph2 mw54rem center">
       	  <Header title={"合作 Q&A"} color="#4C5B7F" margin={false}/>
           <p className={"tagline hide f4 fw3 color-fade tc mt4-ns mt3 lh-medium ls-medium ph2 "+mb}>影片製作預算多少？合作時程怎麼抓？這裡一次告訴你！</p>

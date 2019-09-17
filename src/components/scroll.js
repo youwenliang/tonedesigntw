@@ -4,7 +4,7 @@ import data from '../data/data.js';
 
 class Scroll extends Component {
   componentDidMount(){
-    var id = [data["sections"][0], data["sections"][2], data["sections"][6], data["sections"][7], data["sections"][8]];
+    var id = [data["sections"][0], data["sections"][2], data["sections"][7], data["sections"][8], data["sections"][9]];
     $('#section-nav a').click(function(){
       $('html, body').animate({
           scrollTop: $( $.attr(this, 'href') ).offset().top
@@ -29,9 +29,9 @@ class Scroll extends Component {
         <a className="nav-link active" href={"#"+data["sections"][0]}>{data["sections"][0]}</a>
         <a className="nav-link" href={"#"+data["sections"][2]}>{data["sections"][2]}</a>
         {/*<a className="nav-link" href={"#"+data["sections"][4]}>{data["sections"][4]}</a>*/}
-        <a className="nav-link" href={"#"+data["sections"][6]}>{data["sections"][6]}</a>
         <a className="nav-link" href={"#"+data["sections"][7]}>{data["sections"][7]}</a>
         <a className="nav-link" href={"#"+data["sections"][8]}>{data["sections"][8]}</a>
+        <a className="nav-link" href={"#"+data["sections"][9]}>{data["sections"][9]}</a>
       </div>
     );
   }

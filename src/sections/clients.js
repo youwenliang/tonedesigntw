@@ -73,7 +73,7 @@ class Clients extends Component {
     )
 
     return (
-      <section id={gData["sections"][5]} style={sectionStyle} className="relative pv0">
+      <section id={gData["sections"][6]} style={sectionStyle} className="relative pv0">
         <Parallax content={content} img={imgURL} mask={"#4c5b7f"}/>
       </section>
     );

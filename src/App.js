@@ -7,6 +7,7 @@ import Cover from './sections/cover.js';
 import Section1 from './sections/section1.js';
 import Section2 from './sections/section2.js';
 import Section2m from './sections/section2m.js';
+import CTA from './sections/cta.js';
 import Section3 from './sections/section3.js';
 import Section4 from './sections/section4.js';
 import Clients from './sections/clients.js';
@@ -63,6 +64,7 @@ class App extends Component {
         <Section1 data={this.state.data}/>
         <Section2 data={this.state.data} display={!this.state.mobile}/>
         <Section2m data={this.state.data} display={this.state.mobile}/>
+        <CTA data={this.state.data}/>
         <Section3 data={this.state.data}/>
         <Section4 data={this.state.data}/>
         <Clients data={this.state.data}/>
