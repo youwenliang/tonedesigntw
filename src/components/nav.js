@@ -115,7 +115,7 @@ class Nav extends Component {
       <img src={this.state.fixed ? openC : open} width="20" className="cp" onClick={this.openPanel.bind(this)} alt="menu"/>
       ) : (
       <ul className="flex flex-row justify-between items-center f18 ls-none fw4">
-        <li><a href={data["worksURL"]} style={link}>Work</a></li>
+        <li><a href={data["worksURL"]} target="_blank" rel="noopener noreferrer" style={link}>Work</a></li>
         <li><a href={data["blogURL"]} target="_blank" rel="noopener noreferrer" style={link}>Blog</a></li>
         <li className="buttonLink" style={buttonLink}><a href={data["typeformURL"]} target="_blank" rel="noopener noreferrer" style={buttonA}>Contact</a></li>
       </ul>

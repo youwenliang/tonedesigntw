@@ -56,6 +56,7 @@ class Section3 extends Component {
     var mb = this.state.mobile ? "mb25" : "mb40"
     return (
       <section id={gData["sections"][4]} style={sectionStyle} className="relative">
+        <div className="borderline top small"/>
         <div className="absolute w-100 h-100 db-l dn" style={bg2Style}/>
         <div className="content ph4-ns ph2 mw70rem center z1 relative">
           <div className="cf ph2-ns pt2 flex items-center flex-column flex-row-l">

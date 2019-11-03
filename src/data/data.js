@@ -64,6 +64,27 @@ var data = {
 			]
 		},
 		"CTA": {
+			"id": 1,
+			"content": [
+				{
+					"tagline": "讓更多人看到產品",
+					"title": "吸引眼球，把路人變",
+					"paragraph": "說出消費者的需求痛點，吸引目光並引起共鳴，再適時提供可行的解決方向，讓消費者與你的品牌產生連結，並留下良好的第一印象！",
+					"url": "https://medium.com/tone-design/a-testing-3ef8f4705284"
+				},
+				{
+					"tagline": "讓產品成為更多人",
+					"title": "強化說服，把訪客變",
+					"paragraph": "在消費者尋找適合產品的決策過程中，影片能給予更詳細的產品資訊，幫助讓他們深入了解並產生更多信任，進而決定購買或使用！",
+					"url": "https://medium.com/tone-design/decision-e5a0eb2f1699"
+				},
+				{
+					"tagline": "成為顧客心中的第",
+					"title": "適時互動，把顧客變",
+					"paragraph": "消費者初次接觸產品前後，若提供持續的教學或感謝訊息，能建立良好關係。讓消費者有好的體驗，他們會很願意把你推薦給更多人！",
+					"url": "https://medium.com/tone-design/loyalty-8a396a744cbf"
+				}
+			]
 
 		},
 		// Section 3

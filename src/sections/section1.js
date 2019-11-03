@@ -102,11 +102,11 @@ class Section1 extends Component {
       var temp = (
         <div className="fl w-100 w-third-l ph3 tc" key={i}>
           <h2 className={colors[data.id - 1]+" hide tag fw4 mt0 mb30 tc center ls-medium flex justify-center items-center"} style={tag}><span style={tagContent}>{data.title[i]}</span></h2>
-          <div className="mw240 center w-70">
-            <LottieControl data1={animations[i][data.id - 1][0]} data2={animations[i][data.id - 1][1]} open={true} offset={off} id={"animation"+i}/>
-            <img className="ma0 hide mb2 dn db-ns" src={shadow} alt="shadow" style={shadowStyle}/>
+          <div className="mw240 center w-70 hide">
+            <LottieControl data1={animations[i][data.id - 1][1]} open={false} offset={off} id={"animation"+i}/>
+            <img className="ma0 mb2 dn db-ns" src={shadow} alt="shadow" style={shadowStyle}/>
           </div>              
-          {/*<p className="hide lh-medium mw180 center tl f5 fw3 color-content2 mt0 mb4-l mb5">{data.content[i]}</p>*/}
+          <p className="hide lh-medium mw180 center tl f5 fw4 color-content2 mt0 mb4-l mb5">{data.content[i]}</p>
         </div>
       )
       contents.push(temp);
