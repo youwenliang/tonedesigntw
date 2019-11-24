@@ -58,7 +58,7 @@ class CTA extends Component {
       var temp = (
         <div className="fl w-third pa2" key={i}>
           <div className="fl w-100 relative mb3 expand-icons">
-            <LottieControl data1={animations[data.id-1][i]} open={false} id={"animationCTA0"} offset={0}/>
+            <LottieControl data1={animations[data.id-1][i]} open={true} noloop={true} id={"animationCTA0"} offset={0}/>
           </div>
           <div className="bg-white pa4 color-content">
               <h2 className="f25 fw4 mt4 mb1 lh-medium">{data.content[i]["tagline"]}</h2>

@@ -7,9 +7,9 @@ import $ from 'jquery';
 import arrowup from '../images/arrow-up.svg';
 import arrowdown from '../images/arrow-down.svg';
 
-import tone1 from '../images/icons/tone-1.png';
-import tone2 from '../images/icons/tone-2.png';
-import tone3 from '../images/icons/tone-3.png';
+import tone1 from '../images/icons/1.png';
+import tone2 from '../images/icons/2.png';
+import tone3 from '../images/icons/3.png';
 
 import icon1a_1  from '../images/icons/a-1.svg';
 import icon1a_2  from '../images/icons/a-2.svg';

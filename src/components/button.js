@@ -47,7 +47,7 @@ class Button extends Component {
       backgroundClip: "content-box, border-box",
       transition: "all .3s ease-in-out"
     }
-    var bshadow = this.props.shadow ? "bshadow" : "";
+    var bshadow = this.props.shadow ? "bshadow0" : "";
     bshadow = this.props.ghost ? "bshadow2" : "bshadow";
     var center = this.props.center ? "center" : "";
     var adjust = {

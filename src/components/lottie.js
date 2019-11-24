@@ -34,7 +34,7 @@ class LottieControl extends React.Component {
               return (
                 <Lottie 
                   options={$t.state.options}
-                  eventListeners={!this.props.open ? [] : [
+                  eventListeners={!this.props.open ? [] : (this.props.noloop ? []:[
                     {
                       eventName: 'complete',
                       callback: () => {
@@ -48,7 +48,7 @@ class LottieControl extends React.Component {
                         })
                       },
                     },
-                  ]}
+                  ])}
                   isStopped={this.state.isStopped}
                   isPaused={this.state.isPaused}
                 />

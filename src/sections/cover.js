@@ -168,7 +168,7 @@ class Cover extends Component {
     ) : (
       <div className="cf ph2-ns pt2 flex items-center flex-column flex-row-l justify-center z1 relative" style={mw}>
         <div className="fl w-100 w-40-l tl-l tc mt0 mw6-l mw9 mb5 cover-text">
-          <h1 className="white f25rem tshadow1 mb30 fw5 ls-medium nowrap" dangerouslySetInnerHTML={{__html:data.title}}></h1>
+          <h1 className="white f25rem tshadow0 mb30 fw5 ls-medium nowrap" dangerouslySetInnerHTML={{__html:data.title}}></h1>
           <p className="w-100 lh-medium ls-medium f4 white mb70 mt4 mw400 fw4 tshadow2" dangerouslySetInnerHTML={{__html:data.content}}></p>
           <Button content={data.button} shadow={true} link={gData["typeformURL"]} blank={true}/>
         </div>

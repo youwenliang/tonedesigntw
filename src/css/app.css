@@ -345,7 +345,7 @@ nav li a {
 	border-radius: 6px;
 	border: none;
     outline: none;
-	background: linear-gradient(to right, rgba(255, 151, 142, 1) 0%, rgba(255, 91, 130, 1) 100%);
+	background: linear-gradient(to right, rgba(255, 157, 122, 1) 0%, rgba(255, 111, 52, 1) 100%);
 	color: white;
 	font-size: 24px;
 	font-family: 'Montserrat', sans-serif;
@@ -424,7 +424,7 @@ nav li a {
     display: block;
     width: 12px;
     height: 12px;
-    background: rgba(225, 202, 202, .4);
+    background: rgba(255, 203, 198, .4);
     border-radius: 100%;
     position: absolute;
     right: 0px;
@@ -708,7 +708,7 @@ nav li a {
 }
 
 .more {
-    color: #ff978e;
+    color: #FF9D7A;
     letter-spacing: 0px;
     text-decoration: none;
 }
@@ -759,7 +759,7 @@ nav li a {
 }
 
 .color-red {
-    color: #ff978e;
+    color: #FF9D7A;
 }
 
 .lh-large {
@@ -792,33 +792,33 @@ nav li a {
 }
 
 .tag.color1 {
-    background: linear-gradient(to right, rgba(255, 151, 142, 1) 0%, rgba(255, 91, 130, 1) 100%);
+    background: linear-gradient(to right, rgba(255, 157, 122, 1) 0%, rgba(255, 111, 52, 1) 100%);
     color: white;
 }
 
 .tag.color2 {
-    background: linear-gradient(to right, rgba(255, 151, 142, 1) 0%, rgba(255, 91, 130, 1) 100%);
+    background: linear-gradient(to right, rgba(255, 157, 122, 1) 0%, rgba(255, 111, 52, 1) 100%);
     color: white;
 }
 
 .tag.color3 {
-    background: linear-gradient(to right, rgba(255, 151, 142, 1) 0%, rgba(255, 91, 130, 1) 100%);
+    background: linear-gradient(to right, rgba(255, 157, 122, 1) 0%, rgba(255, 111, 52, 1) 100%);
     color: white;
 }
 
 .tab button.color1 {
     background: linear-gradient(to bottom, rgba(255, 255, 255, 1) 0%, rgba(255, 236, 236, 1) 100%);
-    color: #ff978e;
+    color: #FF9D7A;
 }
 
 .tab button.color2 {
-    background: linear-gradient(to bottom, rgba(0, 0, 255, 1) 0%, rgba(255, 202, 202, 1) 100%);
-    color: #ff978e;
+    background: linear-gradient(to bottom, rgba(0, 0, 255, 1) 0%, rgba(255, 203, 198, 1) 100%);
+    color: #FF9D7A;
 }
 
 .tab button.color3 {
-    background: linear-gradient(to bottom, rgba(0, 255, 0, 1) 0%, rgba(255, 202, 202, 1) 100%);
-    color: #ff978e;
+    background: linear-gradient(to bottom, rgba(0, 255, 0, 1) 0%, rgba(255, 203, 198, 1) 100%);
+    color: #FF9D7A;
 }
 
 .tab button:nth-child(1) {
@@ -830,17 +830,17 @@ nav li a {
 }
 
 .tab button.color1.active {
-    background: linear-gradient(to bottom, rgba(255, 151, 142, 1) 0%, rgba(255, 91, 130, 1) 100%);
+    background: linear-gradient(to bottom, rgba(255, 157, 122, 1) 0%, rgba(255, 111, 52, 1) 100%);
     color: white;
 }
 
 .tab button.color2.active {
-    background: linear-gradient(to bottom, rgba(0, 0, 255, 1) 0%, rgba(255, 91, 130, 1) 100%);
+    background: linear-gradient(to bottom, rgba(0, 0, 255, 1) 0%, rgba(255, 111, 52, 1) 100%);
     color: white;
 }
 
 .tab button.color3.active {
-    background: linear-gradient(to bottom, rgba(0, 255, 0, 1) 0%, rgba(255, 91, 130, 1) 100%);
+    background: linear-gradient(to bottom, rgba(0, 255, 0, 1) 0%, rgba(255, 111, 52, 1) 100%);
     color: white;
 }
 
@@ -864,8 +864,17 @@ nav li a {
     text-shadow: 0 15px 9px rgba(124, 0, 35, .2);
 }
 
+.tshadow0 {
+    text-shadow: 0 15px 9px rgba(122, 20, 0, .2);
+}
+
 .tshadow2 {
     text-shadow: 0 0 5px rgba(124, 0, 35, .3);
+}
+
+.bshadow0 {
+    box-shadow: 0 12px 9px rgba(122, 20, 0, .2);
+    transition: all .25s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
 .bshadow {
@@ -890,6 +899,10 @@ nav li a {
     transition: all .25s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
+.covershadow {
+
+}
+
 #home-video-loop {
     z-index: -1;
     left: 0;
@@ -897,7 +910,7 @@ nav li a {
 }
 
 .arrowlinks {
-    background: linear-gradient(to right, rgba(255, 202, 202, 1) 0%, rgba(255, 255, 255, 1) 100%);
+    background: linear-gradient(to right, rgba(255, 203, 198, 1) 0%, rgba(255, 255, 255, 1) 100%);
     float: left;
     border: none;
     outline: none;
@@ -906,7 +919,7 @@ nav li a {
     height: 66px;
     margin: 0;
     box-shadow: 0px 4px 16px rgba(0, 0, 0, .2);
-    color: #ff978e;
+    color: #FF9D7A;
     padding: 0 4px;
     width: 220px;
     display: flex;
@@ -921,6 +934,7 @@ nav li a {
     margin: 0px;
     width: 130px;
     text-align: left;
+    letter-spacing: 3px;
 }
 
 .arrowlinks img {
@@ -948,12 +962,12 @@ nav li a {
 }
 
 .arrowlinks.active {
-    background: linear-gradient(to right, rgba(255, 151, 142, 1) 0%, rgba(255, 91, 130, 1) 100%);
+    background: linear-gradient(to right, rgba(255, 157, 122, 1) 0%, rgba(255, 111, 52, 1) 100%);
     color: white;
 }
 
 .arrowlinks.active:before {
-    background: linear-gradient(45deg, rgba(255, 107, 133, 1) 0%, rgba(255, 91, 130, 1) 50%);
+    background: linear-gradient(45deg, rgba(255, 118, 63, 1) 0%, rgba(255, 111, 52, 1) 50%);
 }
 
 .tagline {

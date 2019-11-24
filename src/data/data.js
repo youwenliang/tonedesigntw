@@ -32,7 +32,7 @@ var data = {
 			"id": 1,
 			"sectionTitle": "我們怎麼做資訊設計？",
 			"tagline": "以影片為例，面對不同的行銷需求，有哪些設計重點？",
-			"section": ["Awareness", "Decision", "Loyalty"],
+			"section": ["UX 設計", "資訊設計", "推廣策略"],
 			"content": [
 				{
 					"tagline": "情境一：建立知名度\n讓更多人看到產品或服務",
