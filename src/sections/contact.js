@@ -3,11 +3,11 @@ import Button from '../components/button.js';
 import gData from '../data/data.js';
 import $ from 'jquery';
 
-import bg1 from '../images/cta-bg-new.svg';
+import bg1 from '../images/cta-bg-new.jpg';
 import bg2 from '../images/cta-bg-new.svg';
 import bg3 from '../images/cta-bg-new.svg';
 
-import bgm1 from '../images/cta-bg-new-mobile.svg';
+import bgm1 from '../images/cta-bg-new-mobile.jpg';
 import bgm2 from '../images/cta-bg-new-mobile.svg';
 import bgm3 from '../images/cta-bg-new-mobile.svg';
 

@@ -40,9 +40,9 @@ import icon3c_2  from '../images/icons/c-2.svg';
 import icon3c_3  from '../images/icons/c-3.svg';
 
 // animation x 3
-import * as animation1a from '../images/animations/data4_loop.json';
-import * as animation1b from '../images/animations/data5_loop.json';
-import * as animation1c from '../images/animations/data6_loop.json';
+import * as animation1a from '../images/animations/A_loop_data.json';
+import * as animation1b from '../images/animations/B_loop_data.json';
+import * as animation1c from '../images/animations/C_loop_data.json';
 import * as animation2a from '../images/animations/dataA.json';
 import * as animation2b from '../images/animations/dataB.json';
 import * as animation2c from '../images/animations/dataC.json';

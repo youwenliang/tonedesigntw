@@ -4,9 +4,9 @@ import gData from '../data/data.js';
 import $ from 'jquery';
 import LottieControl from '../components/lottie.js';
 
-import * as animation1a from '../images/animations/dataA.json';
-import * as animation1b from '../images/animations/dataB.json';
-import * as animation1c from '../images/animations/dataC.json';
+import * as animation1a from '../images/animations/3A_data.json';
+import * as animation1b from '../images/animations/3B_data.json';
+import * as animation1c from '../images/animations/3C_data.json';
 import * as animation2a from '../images/animations/dataA.json';
 import * as animation2b from '../images/animations/dataB.json';
 import * as animation2c from '../images/animations/dataC.json';

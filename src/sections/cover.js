@@ -13,17 +13,17 @@ import { Controller, Scene } from 'react-scrollmagic';
 import { Tween, Timeline } from 'react-gsap';
 
 // bg x 3
-import bg_mobile1 from '../images/cover-waves-mobile.svg';
+import bg_mobile1 from '../images/cover-waves-mobile.jpg';
 import bg_mobile2 from '../images/cover-waves-mobile.svg';
 import bg_mobile3 from '../images/cover-waves-mobile.svg';
 
 // animation x 3
-import * as animation1 from '../images/animations/data1_loop.json';
+import * as animation1 from '../images/animations/open_data.json';
 import * as animation2 from '../images/animations/data1_loop.json';
 import * as animation3 from '../images/animations/data1_loop.json';
 
 // animation x 3
-import * as animationW1 from '../images/animations/data_bigwave_pink.json';
+import * as animationW1 from '../images/animations/wave_data_cover.json';
 import * as animationW2 from '../images/animations/data_bigwave_pink.json';
 import * as animationW3 from '../images/animations/data_bigwave_pink.json';
 
