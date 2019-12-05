@@ -98,10 +98,14 @@ class CTA extends Component {
         {dContent}
       </div>
     )
+
+    var mb = this.state.mobile ? "mb60 mw480" : "mb90"
     
     return (
       <section id={gData["sections"][3]} style={sectionStyle}>
         <div className="mw8 center ph3-ns">          
+          <Header title={data.sectionTitle} color="#4C5B7F" margin={false}/>
+          <p className={"center ph3 ph2-l center hide f125 fw3 color-content tc mt4-ns mt3 lh-large ls-medium "+mb} dangerouslySetInnerHTML={{__html:data.tagline}}></p>
           {content}
         </div>
       </section>

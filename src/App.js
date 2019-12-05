@@ -19,6 +19,7 @@ import loadingIcon from './images/loading.gif';
 import data from './data/data.js';
 import $ from 'jquery';
 import './App.css';
+import asset from './images/asset.png';
 
 class App extends Component {
   constructor(props) {
@@ -54,6 +55,22 @@ class App extends Component {
     var loadingStyle = {
       backgroundImage: "url("+loadingIcon+")"
     }
+    var bannerSection = {
+      background: "#505F81"
+    }
+    var buttonLink = {
+      width: "110px",
+      height: "35px",
+      textAlign: "center",
+      borderRadius: "6px",
+      fontWeight: "400",
+      border: "1px solid rgba(255,255,255,.8)",
+      color: "rgba(255,255,255,.8)",
+      textDecoration: "none",
+      lineHeight: "35px",
+      display: "block"
+    }
+
     return (
       <div className="App">
         <div id="loading" className="flex items-center justify-center" style={loadingStyle}></div>
@@ -70,6 +87,20 @@ class App extends Component {
         <Clients data={this.state.data}/>
         <Works/>
         <Contact data={this.state.data}/>
+        <section style={bannerSection}>
+          <div className="content ph4-ns ph2 mw70rem center z1 relative">
+          <div className="cf ph2-ns pt2 flex items-center flex-column flex-row-l">
+            <div className="hide fl w-100 w-50-l ph4-ns ph3 tl-l mw6 mt0">
+              <h3 className="f25 lh-medium white fw4 mv0 mb25">下載標題</h3>
+              <p className="lh-medium f5 fw3 white mb25 tl mw400">下載內文下載內文下載內文下載內文下載內文下載內文下載內文下載內文</p>
+              <a href="#" style={buttonLink} className="buttonLink">下載按鈕</a>
+            </div>
+            <div className="fl w-100 w-50-l tc relative z-1 pr3-l pr0">
+              <img src={asset} width="100%"/>
+            </div>
+          </div>
+        </div>
+        </section>
         <Faq data={this.state.data}/>
         <Footer/>
       </div>

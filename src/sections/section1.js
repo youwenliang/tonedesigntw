@@ -62,15 +62,13 @@ class Section1 extends Component {
 
     var tag = {
       width: "120px",
-      padding: "0 20px",
+      padding: "0 10px",
       borderRadius: "8px",
-      fontSize: "18px",
+      fontSize: "20px",
       height: "30px"
     }
     var tagContent = {
       position: "relative",
-      height: "20px",
-      top: ".5px",
       left: "1px"
     }
     var off = -1*($(window).height()/2 - 140);
@@ -79,7 +77,7 @@ class Section1 extends Component {
     for(var i = 0; i < 3; i++) {
       var temp = (
         <div className="fl w-100 w-third-l ph3 tc" key={i}>
-          <h2 className={colors[data.id - 1]+" hide tag fw4 mt0 mb30 tc center ls-medium flex justify-center items-center"} style={tag}><span style={tagContent}>{data.title[i]}</span></h2>
+          <h2 className={colors[data.id - 1]+" hide tag fw5 mt0 mb30 tc center ls-medium flex justify-center items-center"} style={tag}><span style={tagContent}>{data.title[i]}</span></h2>
           <div className="mw240 center w-70 hide">
             <LottieControl data1={animations[data.id - 1][i]} open={false} offset={off} id={"animation"+i}/>
             <img className="ma0 mb2 dn db-ns" src={shadow} alt="shadow" style={shadowStyle}/>
