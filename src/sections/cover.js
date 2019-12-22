@@ -18,12 +18,12 @@ import bg_mobile2 from '../images/cover-waves-mobile.svg';
 import bg_mobile3 from '../images/cover-waves-mobile.svg';
 
 // animation x 3
-import * as animation1 from '../images/animations/open_data.json';
+import * as animation1 from '../images/animations/open_data2.json';
 import * as animation2 from '../images/animations/data1_loop.json';
 import * as animation3 from '../images/animations/data1_loop.json';
 
 // animation x 3
-import * as animationW1 from '../images/animations/wave_data_cover.json';
+import * as animationW1 from '../images/animations/wave_data2.json';
 import * as animationW2 from '../images/animations/data_bigwave_pink.json';
 import * as animationW3 from '../images/animations/data_bigwave_pink.json';
 
@@ -79,7 +79,8 @@ class Cover extends Component {
       right: 0,
       margin: "auto",
       color: "#757575",
-      opacity: ".5"
+      opacity: ".5",
+      display: this.state.mobile ? "none" : "block"
     }
     var img = {
       maxWidth: this.state.mobile ? "420px" : "500px",

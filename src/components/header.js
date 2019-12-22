@@ -29,7 +29,7 @@ class Header extends Component {
   	}
     var m = this.props.margin ?  "mb5-ns mb4" : "mb0";
     return (
-      <h1 className={"header hide z10 relative tc center mt0 ls-large fw4 "+m} style={headerStyle}>
+      <h1 className={"header hide z10 relative tc center mt0 ph2 lh-copy ls-large fw4 "+m} style={headerStyle}>
         {this.props.title}
       </h1>
     );

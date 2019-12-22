@@ -9,6 +9,7 @@ import tone1 from '../images/icons/1.png';
 import tone2 from '../images/icons/2.png';
 import tone3 from '../images/icons/3.png';
 
+/*
 import icon1a_1  from '../images/icons/a-1.svg';
 import icon1a_2  from '../images/icons/a-2.svg';
 import icon1a_3  from '../images/icons/a-3.svg';
@@ -38,6 +39,7 @@ import icon3b_3  from '../images/icons/b-3.svg';
 import icon3c_1  from '../images/icons/c-1.svg';
 import icon3c_2  from '../images/icons/c-2.svg';
 import icon3c_3  from '../images/icons/c-3.svg';
+*/
 
 // animation x 3
 import * as animation1a from '../images/animations/A_loop_data.json';
@@ -51,7 +53,7 @@ import * as animation3b from '../images/animations/dataB.json';
 import * as animation3c from '../images/animations/dataC.json';
 
 
-{/*
+/*
 var icons = [
   [
     [icon1a_1, icon1a_2, icon1a_3],[icon1b_1, icon1b_2, icon1b_3],[icon1c_1, icon1c_2, icon1c_3]
@@ -63,7 +65,7 @@ var icons = [
     [icon3a_1, icon3a_2, icon3a_3],[icon3b_1, icon3b_2, icon3b_3],[icon3c_1, icon3c_2, icon3c_3]
   ],
 ]
-*/}
+*/
 
 var animations = [
   [animation1a, animation1b, animation1c],

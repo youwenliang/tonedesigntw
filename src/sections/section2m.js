@@ -11,6 +11,7 @@ import tone1 from '../images/icons/1.png';
 import tone2 from '../images/icons/2.png';
 import tone3 from '../images/icons/3.png';
 
+/*
 import icon1a_1  from '../images/icons/a-1.svg';
 import icon1a_2  from '../images/icons/a-2.svg';
 import icon1a_3  from '../images/icons/a-3.svg';
@@ -40,6 +41,7 @@ import icon3b_3  from '../images/icons/b-3.svg';
 import icon3c_1  from '../images/icons/c-1.svg';
 import icon3c_2  from '../images/icons/c-2.svg';
 import icon3c_3  from '../images/icons/c-3.svg';
+*/
 
 // animation x 3
 import * as animation1a from '../images/animations/data4_loop.json';
@@ -52,7 +54,7 @@ import * as animation3a from '../images/animations/dataA.json';
 import * as animation3b from '../images/animations/dataB.json';
 import * as animation3c from '../images/animations/dataC.json';
 
-{/*
+/*
 var icons = [
   [
     [icon1a_1, icon1a_2, icon1a_3],[icon1b_1, icon1b_2, icon1b_3],[icon1c_1, icon1c_2, icon1c_3]
@@ -64,7 +66,7 @@ var icons = [
     [icon3a_1, icon3a_2, icon3a_3],[icon3b_1, icon3b_2, icon3b_3],[icon3c_1, icon3c_2, icon3c_3]
   ],
 ]
-*/}
+*/
 
 var animations = [
   [animation1a, animation1b, animation1c],
@@ -129,6 +131,11 @@ class Section2m extends Component {
       right: 0,
       margin: "auto"
     }
+    var moreArrow = {
+      position: "relative",
+      top: "3px",
+      marginLeft: "3px",
+    }
     var content = function(i) {
       var toneIcons = [tone1, tone2, tone3];
       var mb50 = i===2 ? "" : "mb50";
@@ -148,6 +155,8 @@ class Section2m extends Component {
                 {/*<h3 className="f5 fw4 mb20 ls-small lh-medium" dangerouslySetInnerHTML={{__html:data.content[i]["title"]}}></h3>*/}
                 <h2 className="f18 fw4 mt3 lh-medium color-content">{data.content[i]["tagline"]}</h2>
                 <p className="f5 fw3 lh-medium mt0 mb30">{data.content[i]["paragraph"]}</p>
+                <a href={data.content[i]["url"]} target="_blank" rel="noopener noreferrer" className="more"><p className="fw4 mv3">
+              了解更多 <span className="fw7 f125" style={moreArrow}>></span></p></a>
               </div>
               {/*
               <p className="f12 color-fade fw3 mt4 mb3">{data.content[i]["smalltitle"][1]}</p>
@@ -175,7 +184,7 @@ class Section2m extends Component {
         </div>
       )
     }
-    var mw = $(window).width() >= 480 ? "mw480" : "mw300";
+    var mw = $(window).width() >= 480 ? "mw480" : "mw300s";
     return (
       <section style={sectionStyle} className={"relative "+dn}>
         <div className="content ph4-ns ph2 mw54rem w-100 center z2 relative">

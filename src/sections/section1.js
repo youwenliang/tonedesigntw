@@ -10,6 +10,11 @@ import * as animationData1_1 from '../images/animations/A_data.json'
 import * as animationData2_1 from '../images/animations/B_data.json'
 import * as animationData3_1 from '../images/animations/C_data.json'
 
+import * as animationData1_1o from '../images/animations/A_open_data2.json'
+import * as animationData2_1o from '../images/animations/B_open_data2.json'
+import * as animationData3_1o from '../images/animations/C_open_data2.json'
+
+
 import * as animationData1_2 from '../images/animations/A_data.json'
 import * as animationData2_2 from '../images/animations/B_data.json'
 import * as animationData3_2 from '../images/animations/C_data.json'
@@ -50,11 +55,15 @@ class Section1 extends Component {
     }
 
     var animation1 = [animationData1_1, animationData2_1, animationData3_1]
+    var animation1o = [animationData1_1o, animationData2_1o, animationData3_1o]
     var animation2 = [animationData1_2, animationData2_2, animationData3_2]
+    var animation2o = [animationData1_1o, animationData2_1o, animationData3_1o]
     var animation3 = [animationData1_3, animationData2_3, animationData3_3]
+    var animation3o = [animationData1_1o, animationData2_1o, animationData3_1o]
 
 
     var animations = [animation1, animation2, animation3];
+    var animationso = [animation1o, animation2o, animation3o];
 
     var colors = [
       "color1", "color2", "color3"
@@ -79,7 +88,7 @@ class Section1 extends Component {
         <div className="fl w-100 w-third-l ph3 tc" key={i}>
           <h2 className={colors[data.id - 1]+" hide tag fw5 mt0 mb30 tc center ls-medium flex justify-center items-center"} style={tag}><span style={tagContent}>{data.title[i]}</span></h2>
           <div className="mw240 center w-70 hide">
-            <LottieControl data1={animations[data.id - 1][i]} open={false} offset={off} id={"animation"+i}/>
+            <LottieControl data1={animationso[data.id - 1][i]} data2={animations[data.id - 1][i]} open={true} offset={off} id={"animation"+i}/>
             <img className="ma0 mb2 dn db-ns" src={shadow} alt="shadow" style={shadowStyle}/>
           </div>              
           <p className="hide lh-medium mw180 center tl f5 fw4 color-content2 mt0 mb4-l mb5">{data.content[i]}</p>

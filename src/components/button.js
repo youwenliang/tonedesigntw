@@ -28,7 +28,7 @@ class Button extends Component {
       width: this.state.mobile ? "160px":"200px",
       height: this.state.mobile ? "56px":"70px",
       letterSpacing: ".1rem",
-      transform: "scale("+this.props.scale+")",
+      /*transform: "scale("+this.props.scale+")",*/
       transformOrigin: "center top",
       textShadow: "0 0 5px rgba(122,72,0,.2)",
       border: "#ffdf00 3px solid",
@@ -38,7 +38,7 @@ class Button extends Component {
       width: this.state.mobile ? "160px":"200px",
       height: this.state.mobile ? "56px":"70px",
       letterSpacing: ".1rem",
-      transform: "scale("+this.props.scale+")",
+      /*transform: "scale("+this.props.scale+")",*/
       transformOrigin: "center top",
       border: "double 3px transparent",
       color: "#6e849b",

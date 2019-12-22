@@ -3,7 +3,7 @@ import Button from '../components/button.js';
 import gData from '../data/data.js';
 import $ from 'jquery';
 
-import bg1 from '../images/cta-bg-new.jpg';
+import bg1 from '../images/cta-bg-new.png';
 import bg2 from '../images/cta-bg-new.svg';
 import bg3 from '../images/cta-bg-new.svg';
 
@@ -56,8 +56,8 @@ class Contact extends Component {
     return (
       <section id={gData["sections"][8]} className={flex + " relative"} style={sectionStyle}>
       	<div className="hide content ph0 mw8 center tc" style={align}>
-      	  <h2 className={"white ls2 lh-copy fw4 ph2 mv0 tshadow nowrap "+mb}>"若您有相關設計需求，歡迎聯繫我們！"</h2>
-      	  <Button content={"聯繫 TONE"} shadow={true} scale={1} center={true} link={gData["typeformURL"]} blank={true}/>
+      	  <h2 className={"white ls2 lh-copy fw4 ph2 mv0 tshadow nowrap "+mb}>"有相關設計需求，歡迎聯繫！"</h2>
+      	  <Button content={"聯繫 TONE"} shadow={true} scale={1} center={true} link={"https://forms.gle/STg7tLYVwDHZWJHK7"} blank={true}/>
       	</div>
       </section>
     );

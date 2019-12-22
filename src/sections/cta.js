@@ -31,6 +31,9 @@ class CTA extends Component {
   componentDidMount() {
     var $t = this;
     window.addEventListener('resize', $t.checkMobile, false);
+    $('#eIcons1').css({
+      transform: "translateX(3px)"
+    });
   }
   componentWillUnmount(){
     var $t = this;
@@ -57,7 +60,7 @@ class CTA extends Component {
     for(var i = 0; i < 3; i++) {
       var temp = (
         <div className="fl w-third pa2" key={i}>
-          <div className="fl w-100 relative mb3 expand-icons">
+          <div className="fl w-100 relative mb3 expand-icons" id={"eIcons"+i}>
             <LottieControl data1={animations[data.id-1][i]} open={true} noloop={true} id={"animationCTA0"} offset={0}/>
           </div>
           <div className="bg-white pa4 color-content">
@@ -99,13 +102,15 @@ class CTA extends Component {
       </div>
     )
 
-    var mb = this.state.mobile ? "mb60 mw480" : "mb90"
+    // var mb = this.state.mobile ? "mb60 mw480" : "mb90"
     
     return (
       <section id={gData["sections"][3]} style={sectionStyle}>
         <div className="mw8 center ph3-ns">          
-          <Header title={data.sectionTitle} color="#4C5B7F" margin={false}/>
+          <Header title={data.sectionTitle} color="#4C5B7F" margin={true}/>
+          {/*
           <p className={"center ph3 ph2-l center hide f125 fw3 color-content tc mt4-ns mt3 lh-large ls-medium "+mb} dangerouslySetInnerHTML={{__html:data.tagline}}></p>
+          */}
           {content}
         </div>
       </section>

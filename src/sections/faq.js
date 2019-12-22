@@ -65,7 +65,7 @@ class Faq extends Component {
   	]
   	var qList = [];
     var bgColor = [
-      "linear-gradient(to right, rgba(255, 157, 122,1) 0%,rgba(255, 111, 52,1) 100%)",
+      "linear-gradient(to right, rgba(255, 157, 122,1) 0%,rgba(255, 105, 97,1) 100%)",
       "linear-gradient(to right, rgba(255,151,142,1) 0%,rgba(255,91,130,1) 100%)",
       "linear-gradient(to right, rgba(255,151,142,1) 0%,rgba(255,91,130,1) 100%)",
     ]

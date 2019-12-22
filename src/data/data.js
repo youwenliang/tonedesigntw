@@ -1,7 +1,7 @@
 var data = {
 	"sections": ["首頁", "section-1", "設計流程", "CTA", "section-3", "第四區塊", "clients", "作品集", "聯絡我們", "常見問題"],
 	"typeformURL":"https://toneproject.typeform.com/to/cLmHNY",
-	"worksURL":"http://works.tonedesign.com.tw/",
+	"worksURL":"http://works.tonedesign.com.tw/作品頁",
 	"blogURL":"https://medium.com/tone-design",
 	"topic1": {
 		// Cover
@@ -14,12 +14,12 @@ var data = {
 		// Section 1
 		"section-1": {
 			"id": 1,
-			"sectionTitle": "用內容，強化你的品牌",
-			"tagline": "TONE design 結合資訊設計、視覺設計與 User Experience，<br className='db-l dn'/>可配合不同媒體露出，設計內容涵蓋<span class='fw4'>影片</span>、<span class='fw4'>網站</span>與<span class='fw4'>資訊懶人包</span>。",
+			"sectionTitle": "用設計，強化你的品牌",
+			"tagline": "TONE design 專精產品介紹、角色設計和資料視覺化結案報告，可配合不同的 TA 和媒體規劃，製作影片、網站和資訊懶人包。",
 			"title": [
-				"ＵＸ設計",
-				"資訊設計",
-				"推廣策略"
+				"影片",
+				"網站",
+				"懶人包"
 			],
 			"content": [
 				"找出消費者旅程中每個階段的關鍵機會點。",
@@ -32,30 +32,30 @@ var data = {
 			"id": 1,
 			"sectionTitle": "我們怎麼做資訊設計？",
 			"tagline": "以影片為例，面對不同的行銷需求，有哪些設計重點？",
-			"section": ["UX 設計", "資訊設計", "推廣策略"],
+			"section": ["ＵＸ設計", "資訊設計", "推廣策略"],
 			"content": [
 				{
-					"tagline": "情境一：建立知名度\n讓更多人看到產品或服務",
+					"tagline": "指出消費者旅程中\n各階段的關鍵機會點",
 					"title": "吸引眼球，把路人變訪客！",
-					"paragraph": "說出消費者的需求痛點，吸引目光並引起共鳴，再適時提供可行的解決方向，讓消費者與你的品牌產生連結，並留下良好的第一印象！",
+					"paragraph": "為了有效溝通，一開始需要深入理解溝通對象的樣貌、需求，對於服務或產品有興趣的地方、行為改變的動機或阻礙，挖掘出合適的溝通切入機會點。",
 					"smalltitle": ["設計重點","建議的影片類型"],
 					"smalllist": ["運用消費者Persona，說出痛點引起共鳴。","幫助消費者釐清問題，找到對的解決方向。","可稍微帶到自己的品牌，建立印象與連結。"],
 					"smallitem": ["商業廣告","品牌影片","社群短片"],
 					"url": "https://medium.com/tone-design/a-testing-3ef8f4705284"
 				},
 				{
-					"tagline": "情境二：提高轉換率\n讓產品成為更多人的選擇",
+					"tagline": "將訊息資料轉化為\n消費者能理解並喜歡的",
 					"title": "強化說服，把訪客變顧客！",
-					"paragraph": "在消費者尋找適合產品的決策過程中，影片能給予更詳細的產品資訊，幫助讓他們深入了解並產生更多信任，進而決定購買或使用！",
+					"paragraph": "根據對溝通對象的理解，從中篩選、客製化資料內容，開始進行資料處理、文案腳本、資料視覺化、插畫和視覺設計、動態和網站製作等設計工作。",
 					"smalltitle": ["設計重點","建議的影片類型"],
 					"smalllist": ["運用消費者Persona，說出痛點引起共鳴。","幫助消費者釐清問題，找到對的解決方向。","可稍微帶到自己的品牌，建立印象與連結。"],
 					"smallitem": ["商業廣告","品牌影片","社群短片"],
 					"url": "https://medium.com/tone-design/decision-e5a0eb2f1699"
 				},
 				{
-					"tagline": "情境三：增加忠誠度\n成為顧客心中的第一順位",
+					"tagline": "在不同溝通接觸點\n製作合適的內容素材",
 					"title": "適時互動，把顧客變粉絲！",
-					"paragraph": "消費者初次接觸產品前後，若提供持續的教學或感謝訊息，能建立良好關係。讓消費者有好的體驗，他們會很願意把你推薦給更多人！",
+					"paragraph": "依照溝通對象的階段接觸點及媒體習慣，將設計產出客製成不同媒體平台合適投放的素材，讓各個接觸點都能曝光好的內容，達成有效溝通。",
 					"smalltitle": ["設計重點","建議的影片類型"],
 					"smalllist": ["運用消費者Persona，說出痛點引起共鳴。","幫助消費者釐清問題，找到對的解決方向。","可稍微帶到自己的品牌，建立印象與連結。"],
 					"smallitem": ["商業廣告","品牌影片","社群短片"],

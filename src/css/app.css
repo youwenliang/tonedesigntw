@@ -345,7 +345,7 @@ nav li a {
 	border-radius: 6px;
 	border: none;
     outline: none;
-	background: linear-gradient(to right, rgba(255, 157, 122, 1) 0%, rgba(255, 111, 52, 1) 100%);
+	background: linear-gradient(to right, rgba(255, 157, 122, 1) 0%, rgba(255, 105, 97, 1) 100%);
 	color: white;
 	font-size: 24px;
 	font-family: 'Montserrat', sans-serif;
@@ -399,6 +399,10 @@ nav li a {
     #section-nav {
         display: none;
     }
+}
+
+.nowrap {
+    white-space: nowrap;
 }
 
 #section-nav a {
@@ -570,6 +574,10 @@ nav li a {
 	max-width: 300px;	
 }
 
+.mw300s {
+    max-width: calc(100vw - 60px);   
+}
+
 .mw400 {
     max-width: 400px;
 }
@@ -723,6 +731,14 @@ nav li a {
     color: #ff5b82;
 }
 
+.button {
+    transition: all .3s;
+}
+
+.button:hover {
+    transform: scale(1.05);
+}
+
 .cp {
     cursor: pointer;
 }
@@ -792,17 +808,17 @@ nav li a {
 }
 
 .tag.color1 {
-    background: linear-gradient(to right, rgba(255, 157, 122, 1) 0%, rgba(255, 111, 52, 1) 100%);
+    background: linear-gradient(to right, rgba(255, 157, 122, 1) 0%, rgba(255, 105, 97, 1) 100%);
     color: white;
 }
 
 .tag.color2 {
-    background: linear-gradient(to right, rgba(255, 157, 122, 1) 0%, rgba(255, 111, 52, 1) 100%);
+    background: linear-gradient(to right, rgba(255, 157, 122, 1) 0%, rgba(255, 105, 97, 1) 100%);
     color: white;
 }
 
 .tag.color3 {
-    background: linear-gradient(to right, rgba(255, 157, 122, 1) 0%, rgba(255, 111, 52, 1) 100%);
+    background: linear-gradient(to right, rgba(255, 157, 122, 1) 0%, rgba(255, 105, 97, 1) 100%);
     color: white;
 }
 
@@ -830,17 +846,17 @@ nav li a {
 }
 
 .tab button.color1.active {
-    background: linear-gradient(to bottom, rgba(255, 157, 122, 1) 0%, rgba(255, 111, 52, 1) 100%);
+    background: linear-gradient(to bottom, rgba(255, 157, 122, 1) 0%, rgba(255, 105, 97, 1) 100%);
     color: white;
 }
 
 .tab button.color2.active {
-    background: linear-gradient(to bottom, rgba(0, 0, 255, 1) 0%, rgba(255, 111, 52, 1) 100%);
+    background: linear-gradient(to bottom, rgba(0, 0, 255, 1) 0%, rgba(255, 105, 97, 1) 100%);
     color: white;
 }
 
 .tab button.color3.active {
-    background: linear-gradient(to bottom, rgba(0, 255, 0, 1) 0%, rgba(255, 111, 52, 1) 100%);
+    background: linear-gradient(to bottom, rgba(0, 255, 0, 1) 0%, rgba(255, 105, 97, 1) 100%);
     color: white;
 }
 
@@ -962,12 +978,12 @@ nav li a {
 }
 
 .arrowlinks.active {
-    background: linear-gradient(to right, rgba(255, 157, 122, 1) 0%, rgba(255, 111, 52, 1) 100%);
+    background: linear-gradient(to right, rgba(255, 157, 122, 1) 0%, rgba(255, 105, 97, 1) 100%);
     color: white;
 }
 
 .arrowlinks.active:before {
-    background: linear-gradient(45deg, rgba(255, 118, 63, 1) 0%, rgba(255, 111, 52, 1) 50%);
+    background: linear-gradient(45deg, rgba(255, 118, 63, 1) 0%, rgba(255, 105, 97, 1) 50%);
 }
 
 .tagline {

@@ -51,7 +51,7 @@ class Clients extends Component {
   	var logoList = [];
   	for(var i = 0; i < logoURL.length; i++){
   		logoList.push(
-  			<div className="fl w-50 w-third-m w-25-l ph0 tc o-80 mv0-ns mv2" key={i}>
+  			<div className="fl w-50 w-third-m w-25-l ph0 tc o-80 mv0-ns mv3" key={i}>
           <LazyLoad height={this.state.mobile? 40 : 65} offsetVertical={50}>
   				  <img src={logoURL[i]} alt={logoName[i]}/>
           </LazyLoad>

@@ -54,26 +54,45 @@ class Section3 extends Component {
     }
 
     var mb = this.state.mobile ? "mb25" : "mb40"
+
+
+    var moreContent = this.state.mobile ? (
+      <div className="cf ph2-ns pt2 flex items-center flex-column flex-row-l">
+        <div className="hide fl w-100 w-50-l ph4 tl-l mw6 mt0">
+          <h1 className={"f35 color-content fw4 mv0 "+mb}>{data.title}</h1>
+          <h3 className="f25 lh-medium color-content fw4 mv0 mb25">{data.smalltitle}</h3>
+          <div className="w-90-ns w-100 fr-l center" style={scaleA}>
+            <LottieControl data1={animationDataCirclesl} open={false} id="animationCircle" offset={35}/>
+          </div>
+          <p className="lh-medium f5 fw3 color-content2 mb25 tl mw400">{data.content}</p>
+          <a href="https://medium.com/tone-design/one-more-thing-b29b60932440" target="_blank" rel="noopener noreferrer" className="more"><p className="fw4 mv0">
+            了解更多 <span className="fw7 f125" style={moreArrow}>></span>
+          </p></a>
+        </div>
+      </div>
+    ):(
+      <div className="cf ph2-ns pt2 flex items-center flex-column flex-row-l">
+        <div className="fl w-100 w-50-l tc relative z-1 pr3-l pr0">
+          <div className="w-90-ns w-100 fr-l center" style={scaleA}>
+            <LottieControl data1={animationDataCirclesl} open={false} id="animationCircle" offset={35}/>
+          </div>
+        </div>
+        <div className="hide fl w-100 w-50-l ph4 tl-l mw6 mt0">
+          <h1 className={"f35 color-content fw4 mv0 "+mb}>{data.title}</h1>
+          <h3 className="f25 lh-medium color-content fw4 mv0 mb25">{data.smalltitle}</h3>
+          <p className="lh-medium f5 fw3 color-content2 mb25 tl mw400">{data.content}</p>
+          <a href="https://medium.com/tone-design/one-more-thing-b29b60932440" target="_blank" rel="noopener noreferrer" className="more"><p className="fw4 mv0">
+            了解更多 <span className="fw7 f125" style={moreArrow}>></span>
+          </p></a>
+        </div>
+      </div>
+    )
     return (
       <section id={gData["sections"][4]} style={sectionStyle} className="relative">
         <div className="borderline top small"/>
         <div className="absolute w-100 h-100 db-l dn" style={bg2Style}/>
         <div className="content ph4-ns ph2 mw70rem center z1 relative">
-          <div className="cf ph2-ns pt2 flex items-center flex-column flex-row-l">
-            <div className="fl w-100 w-50-l tc relative z-1 pr3-l pr0">
-              <div className="w-90-ns w-100 fr-l center" style={scaleA}>
-                <LottieControl data1={animationDataCirclesl} open={false} id="animationCircle" offset={35}/>
-              </div>
-            </div>
-            <div className="hide fl w-100 w-50-l ph4-ns ph3 tl-l mw6 mt0">
-              <h1 className={"f35 color-content fw4 mv0 "+mb}>{data.title}</h1>
-              <h3 className="f25 lh-medium color-content fw4 mv0 mb25">{data.smalltitle}</h3>
-              <p className="lh-medium f5 fw3 color-content2 mb25 tl mw400">{data.content}</p>
-              <a href="https://medium.com/tone-design/one-more-thing-b29b60932440" target="_blank" rel="noopener noreferrer" className="more"><p className="fw4 mv0">
-                了解更多 <span className="fw7 f125" style={moreArrow}>></span>
-              </p></a>
-            </div>
-          </div>
+          {moreContent}
         </div>
       </section>
     );
