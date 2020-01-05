@@ -91,7 +91,7 @@ class Section1 extends Component {
             <LottieControl data1={animationso[data.id - 1][i]} data2={animations[data.id - 1][i]} open={true} offset={off} id={"animation"+i}/>
             <img className="ma0 mb2 dn db-ns" src={shadow} alt="shadow" style={shadowStyle}/>
           </div>              
-          <p className="hide lh-medium mw180 center tl f5 fw4 color-content2 mt0 mb4-l mb5">{data.content[i]}</p>
+          {/*<p className="hide lh-medium mw180 center tl f5 fw4 color-content2 mt0 mb4-l mb5">{data.content[i]}</p>*/}
         </div>
       )
       contents.push(temp);

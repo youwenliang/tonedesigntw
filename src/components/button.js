@@ -40,7 +40,7 @@ class Button extends Component {
       letterSpacing: ".1rem",
       /*transform: "scale("+this.props.scale+")",*/
       transformOrigin: "center top",
-      border: "double 3px transparent",
+      border: !this.props.border ? "0px" : "double 3px transparent",
       color: "#6e849b",
       backgroundImage: "linear-gradient(white, white), linear-gradient(to right, rgba(253,221,1,1) 0%,rgba(253,187,5,1) 100%)",
       backgroundOrigin: "border-box",
@@ -48,7 +48,7 @@ class Button extends Component {
       transition: "all .3s ease-in-out"
     }
     var bshadow = this.props.shadow ? "bshadow0" : "";
-    bshadow = this.props.ghost ? "bshadow2" : "bshadow";
+    bshadow = this.props.ghost ? (this.props.border ? "bshadow2":"bshadow3"): "bshadow";
     var center = this.props.center ? "center" : "";
     var adjust = {
       position: "relative",

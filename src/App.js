@@ -74,27 +74,30 @@ class App extends Component {
       display: "block"
     }
     */
+    var fontSize = {
+      fontSize: "17.6px"
+    }
 
     var SalesKit = this.state.mobile ? (
         <div className="cf ph2-ns pt2 flex items-center flex-column flex-row-l">
           <div className="fl w-100 w-50-l tc relative z-1 pr3-l pr0 hide">
-            <img className="mw640" src={asset} width="100%" alt="sales kit"/>
+            <img className="mw640 scale" src={asset} width="100%" alt="sales kit"/>
           </div>
           <div className="hide fl w-100 w-50-l ph4-ns ph3 tl-l mw6 mt0">
-            <h3 className="f35 lh-medium white fw5 mv0 mb25 i nowrap">順手帶走一份 Sales kit 吧！</h3>
-            <p className="lh-medium f5 fw4 white mb25 tl">動動手指下載 TONE design 的最新版 Sales kit，獲取更完整的設計作品資料！</p>
-            <Button content={"下載 Sales kit"} shadow={true} ghost={true} link={"https://forms.gle/Ah5Wfr7EMYvyHbUt7"} blank={true}/>
+            <h3 className="f35 lh-medium white fw5 mv0 mb25 i nowrap">外帶一份 Sales kit 吧！</h3>
+            <p className="lh-medium fw4 white mb25 tl" style={fontSize}>都看到這裡了，不如動動手指，下載 TONE design 最新版 Sales kit，獲取更完整的設計作品集吧！</p>
+            <Button content={"點此下載"} border={false} shadow={true} ghost={true} link={"https://forms.gle/Ah5Wfr7EMYvyHbUt7"} blank={true}/>
           </div>
         </div>
     ) : (
         <div className="cf ph2-ns pt2 flex items-center flex-column flex-row-l">
           <div className="hide fl w-100 w-50-l ph4-ns ph3 tl-l mw6 mt0">
-            <h3 className="f35 lh-medium white fw5 mv0 mb25 i nowrap">順手帶走一份 Sales kit 吧！</h3>
-            <p className="lh-medium f5 fw4 white mb25 tl">動動手指下載 TONE design 的最新版 Sales kit，獲取更完整的設計作品資料！</p>
-            <Button content={"下載 Sales kit"} shadow={true} ghost={true} link={"https://forms.gle/Ah5Wfr7EMYvyHbUt7"} blank={true}/>
+            <h3 className="f35 lh-medium white fw5 mv0 mb25 i nowrap">外帶一份 Sales kit 吧！</h3>
+            <p className="lh-medium f5 fw4 white mb25 tl" style={fontSize}>都看到這裡了，不如動動手指，下載 TONE design 最新版 Sales kit，獲取更完整的設計作品集吧！</p>
+            <Button content={"下載 Sales kit"} border={false} shadow={true} ghost={true} link={"https://forms.gle/Ah5Wfr7EMYvyHbUt7"} blank={true}/>
           </div>
           <div className="fl w-100 w-50-l tc relative z-1 pr3-l pr0 hide">
-            <img className="mw640" src={asset} width="100%" alt="sales kit"/>
+            <img className="mw640 scale" src={asset} width="100%" alt="sales kit"/>
           </div>
         </div>
     )

@@ -48,7 +48,7 @@ class Faq extends Component {
   	var qContent = [
   		[
   		 "諮詢合作專案前，需要提供哪些初步資料？",
-  		 "開始合作前，建議您先以簡單文字描述這次專案的目的、希望解決的問題、主要目標對象、製作預算規模，並填寫下方的連結表單，讓我們能快速了解重點需求，加快處理速度喔！<a href='https://toneproject.typeform.com/to/cLmHNY' target='_blank' rel='noreferrer' class='more'><p class='fw4 mt2'>點此填寫聯繫表單 <span className='fw7 f125 moreArrow'>»</span></p></a>",
+  		 "開始合作前，建議您先以簡單文字描述這次專案的目的、希望解決的問題、主要目標對象、製作預算規模，並填寫下方的連結表單，讓我們能快速了解重點需求，加快處理速度喔！<a href='https://forms.gle/STg7tLYVwDHZWJHK7' target='_blank' rel='noreferrer' class='more'><p class='fw4 mt2'>點此填寫聯繫表單 <span className='fw7 f125 moreArrow'>»</span></p></a>",
   		],
   		[
   		 "專案的製作時程是多久？",
@@ -56,11 +56,11 @@ class Faq extends Component {
   		],
   		[
        "合作專案的報價如何計算？",
-       "針對專案報價，主要依照以下項目進行評估：<p class='mv2'>1. 資料內容量的多寡。<br/>2. 視覺風格或網站功能複雜程度。<br/>3. 專案需求時程長短。<br/></p>由於每個專案的狀況都不盡相同，若您希望能得知更詳細的報價資訊，建議您直接聯繫我們，以取得更精確的報價內容喔！<a href='https://toneproject.typeform.com/to/cLmHNY' target='_blank' rel='noreferrer' class='more'><p class='fw4 mt2'>點此填寫聯繫表單 <span className='fw7 f125 moreArrow'>»</span></p></a>",
+       "針對專案報價，主要依照以下項目進行評估：<p class='mv2'>1. 資料內容量的多寡。<br/>2. 視覺風格或網站功能複雜程度。<br/>3. 專案需求時程長短。<br/></p>由於每個專案的狀況都不盡相同，若您希望能得知更詳細的報價資訊，建議您直接聯繫我們，以取得更精確的報價內容喔！<a href='https://forms.gle/STg7tLYVwDHZWJHK7' target='_blank' rel='noreferrer' class='more'><p class='fw4 mt2'>點此填寫聯繫表單 <span className='fw7 f125 moreArrow'>»</span></p></a>",
       ],
   		[
        "有沒<span class='ls-small'>有 SalesKit </span>或作品集可以下載或索取？",
-       "有的，歡迎您先到我們的作品集頁面，瀏覽 TONE design 的歷年專案。您也可以點擊下方連結索取 Sales kit，我們會以最快的速度寄出！<a href='https://toneproject.typeform.com/to/jXgKRc' target='_blank' rel='noreferrer' class='more'><p class='fw4 mt2 mb0'>點此瀏覽作品集 <span className='fw7 f125 moreArrow'>»</span></p></a><a href='https://toneproject.typeform.com/to/jXgKRc' target='_blank' rel='noreferrer' class='more'><p class='fw4 mt2'>點此索取 Sales kit <span className='fw7 f125 moreArrow'>»</span></p></a>"
+       "有的，歡迎您先到我們的作品集頁面，瀏覽 TONE design 的歷年專案。您也可以點擊下方連結索取 Sales kit，我們會以最快的速度寄出！<a href='https://toneproject.typeform.com/to/jXgKRc' target='_blank' rel='noreferrer' class='more'><p class='fw4 mt2 mb0'>點此瀏覽作品集 <span className='fw7 f125 moreArrow'>»</span></p></a><a href='https://forms.gle/Ah5Wfr7EMYvyHbUt7' target='_blank' rel='noreferrer' class='more'><p class='fw4 mt2'>點此索取 Sales kit <span className='fw7 f125 moreArrow'>»</span></p></a>"
       ]
   	]
   	var qList = [];

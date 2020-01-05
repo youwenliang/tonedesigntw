@@ -84,7 +84,7 @@ class Works extends Component {
           <div className="hide z2 relative mb60 tc">
             <p className="color-fade f18 ls2 lh-copy fw4 ph2 mb3">想了解 TONE 更多嗎？</p>
             <h2 className={"color-content f30 ls2 lh-copy fw4 ph2 "+mb}>看看我們的精彩作品吧！</h2>
-            <Button content={"TONE 作品集"} scale={1} blank={true} ghost={true} center={true} link={gData["worksURL"]}/>
+            <Button content={"TONE 作品集"} scale={1} blank={true} border={true} ghost={true} center={true} link={gData["worksURL"]}/>
           </div>
         </div>
       </section>

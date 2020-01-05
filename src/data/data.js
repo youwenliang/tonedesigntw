@@ -7,15 +7,15 @@ var data = {
 		// Cover
 		"首頁": {
 			"id": 1,
-			"title": "好<span class='titleline relative'>設計</span>，讓品牌更精彩！",
-			"content": "TONE design 專精資訊設計，\n讓你的品牌像故事一樣精彩！",
+			"title": "用<span class='titleline relative'>設計</span>，強化你的品牌",
+			"content": "TONE design 專精資訊設計，\n擅長產品介紹、角色設計和資料視覺化報告。",
 			"button": "聯繫 TONE",
 		},
 		// Section 1
 		"section-1": {
 			"id": 1,
-			"sectionTitle": "用設計，強化你的品牌",
-			"tagline": "TONE design 專精產品介紹、角色設計和資料視覺化結案報告，可配合不同的 TA 和媒體規劃，製作影片、網站和資訊懶人包。",
+			"sectionTitle": "好設計，讓品牌更精彩",
+			"tagline": "TONE design 專精資訊設計，擅長規劃產品介紹、角色設計和資料視覺化報告，\n可針對不同的目標對象與曝光策略，製作精彩生動的解釋影片、互動網站和資訊懶人包。",
 			"title": [
 				"影片",
 				"網站",
@@ -31,7 +31,7 @@ var data = {
 		"設計流程": {
 			"id": 1,
 			"sectionTitle": "我們怎麼做資訊設計？",
-			"tagline": "以影片為例，面對不同的行銷需求，有哪些設計重點？",
+			"tagline": "面對不同的行銷需求，有哪些設計重點？",
 			"section": ["ＵＸ設計", "資訊設計", "推廣策略"],
 			"content": [
 				{
