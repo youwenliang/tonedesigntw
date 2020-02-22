@@ -5,6 +5,7 @@ import gData from '../data/data.js';
 
 import LazyLoad from 'react-lazy-load';
 import imgURL from '../images/taipei@2x.png';
+import imgURLWebp from '../images/taipei2x.webp';
 
 import logo1 from '../images/logos/1-1.svg';
 import logo2 from '../images/logos/1-2.svg';
@@ -25,13 +26,32 @@ class Clients extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      mobile: $(window).width() <= 768 ? true : false
+      mobile: $(window).width() <= 768 ? true : false,
+      webp: false
     }
     this.checkMobile = this.checkMobile.bind(this);
   }
   componentDidMount() {
     var $t = this;
     window.addEventListener('resize', $t.checkMobile, false);
+    async function supportsWebp() {
+      if (!self.createImageBitmap) return false;
+      
+      const webpData = 'data:image/webp;base64,UklGRh4AAABXRUJQVlA4TBEAAAAvAAAAAAfQ//73v/+BiOh/AAA=';
+      const blob = await fetch(webpData).then(r => r.blob());
+      return createImageBitmap(blob).then(() => true, () => false);
+    }
+
+    (async () => {
+      if(await supportsWebp()) {
+        console.log('does support');
+        this.setState({webp: true});
+      }
+      else {
+        console.log('does not support');
+        this.setState({webp: false});
+      }
+    })();
   }
   componentWillUnmount(){
     var $t = this;
@@ -71,10 +91,11 @@ class Clients extends Component {
           </div>
         </div>
     )
+    var imgB = this.state.webp ? imgURLWebp : imgURL; 
 
     return (
       <section id={gData["sections"][6]} style={sectionStyle} className="relative pv0">
-        <Parallax content={content} img={imgURL} mask={"#4c5b7f"}/>
+        <Parallax content={content} img={imgB} mask={"#4c5b7f"}/>
       </section>
     );
   }

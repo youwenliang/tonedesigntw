@@ -17,6 +17,10 @@ import bg_mobile1 from '../images/cover-waves-mobile.jpg';
 import bg_mobile2 from '../images/cover-waves-mobile.svg';
 import bg_mobile3 from '../images/cover-waves-mobile.svg';
 
+import bgw_mobile1 from '../images/cover-waves-mobile.webp';
+import bgw_mobile2 from '../images/cover-waves-mobile.webp';
+import bgw_mobile3 from '../images/cover-waves-mobile.webp';
+
 // animation x 3
 import * as animation1 from '../images/animations/open_data2.json';
 import * as animation2 from '../images/animations/data1_loop.json';
@@ -31,7 +35,8 @@ class Cover extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      mobile: $(window).width() <= 959 ? true : false
+      mobile: $(window).width() <= 959 ? true : false,
+      webp: false
     }
     this.checkMobile = this.checkMobile.bind(this);
   }
@@ -46,6 +51,24 @@ class Cover extends Component {
       }
       // $('#animationWaves').next().css({'height':'100vh'})
     });
+    async function supportsWebp() {
+      if (!self.createImageBitmap) return false;
+      
+      const webpData = 'data:image/webp;base64,UklGRh4AAABXRUJQVlA4TBEAAAAvAAAAAAfQ//73v/+BiOh/AAA=';
+      const blob = await fetch(webpData).then(r => r.blob());
+      return createImageBitmap(blob).then(() => true, () => false);
+    }
+
+    (async () => {
+      if(await supportsWebp()) {
+        console.log('does support');
+        this.setState({webp: true});
+      }
+      else {
+        console.log('does not support');
+        this.setState({webp: false});
+      }
+    })();
   }
   componentWillUnmount(){
     var $t = this;
@@ -92,7 +115,7 @@ class Cover extends Component {
       transformOrigin: "100% 60%",
       transform: "translate(37px,30px)"
     }
-    var bg = [bg_mobile1, bg_mobile2, bg_mobile3];
+    var bg = this.state.webp ? [bgw_mobile1, bgw_mobile2, bgw_mobile3] : [bg_mobile1, bg_mobile2, bg_mobile3];
     
     var wTop = 0;
     if($(window).width() >= 1550) {

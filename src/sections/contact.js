@@ -6,22 +6,47 @@ import $ from 'jquery';
 import bg1 from '../images/cta-bg-new.png';
 import bg2 from '../images/cta-bg-new.svg';
 import bg3 from '../images/cta-bg-new.svg';
+import bgwebp1 from '../images/cta-bg-new.webp';
+import bgwebp2 from '../images/cta-bg-new.webp';
+import bgwebp3 from '../images/cta-bg-new.webp';
 
 import bgm1 from '../images/cta-bg-new-mobile.jpg';
 import bgm2 from '../images/cta-bg-new-mobile.svg';
 import bgm3 from '../images/cta-bg-new-mobile.svg';
+import bgmwebp1 from '../images/cta-bg-new-mobile.webp';
+import bgmwebp2 from '../images/cta-bg-new-mobile.webp';
+import bgmwebp3 from '../images/cta-bg-new-mobile.webp';
 
 class Contact extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      mobile: $(window).width() <= 479 ? true : false
+      mobile: $(window).width() <= 479 ? true : false,
+      webp: false
     }
     this.checkMobile = this.checkMobile.bind(this);
   }
   componentDidMount() {
     var $t = this;
     window.addEventListener('resize', $t.checkMobile, false);
+    async function supportsWebp() {
+      if (!self.createImageBitmap) return false;
+      
+      const webpData = 'data:image/webp;base64,UklGRh4AAABXRUJQVlA4TBEAAAAvAAAAAAfQ//73v/+BiOh/AAA=';
+      const blob = await fetch(webpData).then(r => r.blob());
+      return createImageBitmap(blob).then(() => true, () => false);
+    }
+
+    (async () => {
+      if(await supportsWebp()) {
+        console.log('does support');
+        this.setState({webp: true});
+      }
+      else {
+        console.log('does not support');
+        this.setState({webp: false});
+      }
+    })();
   }
   componentWillUnmount(){
     var $t = this;
@@ -33,11 +58,12 @@ class Contact extends Component {
     else $t.setState({mobile:false});
   }
   render() {
-    var bg = [bg1, bg2, bg3];
-    var bgm = [bgm1, bgm2, bgm3];
+    var bg = this.state.webp ? [bgwebp1, bgwebp2, bgwebp3]:[bg1, bg2, bg3];
+    var bgm = this.state.webp ? [bgmwebp1, bgmwebp2, bgmwebp3]:[bgm1, bgm2, bgm3];
     var data = this.props.data[gData["sections"][8]];
+    var bgI = this.state.mobile ? "url("+bgm[data.id - 1]+")" : "url("+bg[data.id - 1]+")";
     var sectionStyle = {
-  		backgroundImage: this.state.mobile ? "url("+bgm[data.id - 1]+")" : "url("+bg[data.id - 1]+")",
+  		backgroundImage: bgI,
   		backgroundPosition: "center top",
   		backgroundSize: "cover", 
   		backgroundRepeat: "no-repeat",
